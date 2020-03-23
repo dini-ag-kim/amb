@@ -4,7 +4,7 @@
     "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
     "type": "object",
     "default": {
-      "@context": "http://schema.org/"
+      "@context": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
     },
     "properties": {
       "@context": {
