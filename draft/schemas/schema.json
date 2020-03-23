@@ -1,0 +1,299 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "OER",
+    "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
+    "type": "object",
+    "default": {
+      "@context": "http://schema.org/"
+    },
+    "properties": {
+      "@context": {
+        "type": "string",
+        "format": "uri",
+        "enum": [
+          "http://schema.org/"
+        ],
+        "_display": {
+          "className": "hidden"
+        }
+      },
+      "id": {
+        "title": "URL",
+        "type": "string",
+        "format": "uri",
+        "_display": {
+          "placeholder": "The URL of the resource"
+        }
+      },
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "default": "CreativeWork",
+        "enum": [
+          "AudioObject",
+          "Book",
+          "Course",
+          "CreativeWork",
+          "DataDownload",
+          "ImageObject",
+          "PresentationDigitalDocument",
+          "SoftwareApplication",
+          "VideoObject"
+        ]
+      },
+      "name": {
+        "title": "Title",
+        "type": "string",
+        "_display": {
+          "rows": 2
+        }
+      },
+      "creator": {
+        "title": "Creator",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "title": "Type",
+              "type": "string",
+              "enum": [
+                "Person",
+                "Organization"
+              ]
+            },
+            "id": {
+              "title": "URL",
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "_display": {
+                  "placeholder": "The creator's name"
+                }
+            }
+          },
+          "required": [
+            "name",
+            "type"
+          ]
+        }
+      },
+      "description": {
+        "title": "Description",
+        "type": "string",
+        "_display": {
+          "rows": 5,
+          "placeholder": "A short description of the resource"
+        }
+      },
+      "about": {
+        "title": "Subject",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Concept"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "inScheme": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "enum": [
+                    "https://w3id.org/class/esc/scheme"
+                  ]
+                }
+              }
+            }
+          },
+          "required": [
+            "inScheme",
+            "id",
+            "type"
+          ],
+          "_widget": "SkohubLookup"
+        }
+      },
+      "license": {
+        "title": "License",
+        "type": "object",
+        "_widget": {
+          "type": "SkohubLookup",
+          "options": {
+            "url": "https://test.skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inScheme": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "https://oerworldmap.org/assets/json/licenses/"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "image": {
+        "title": "Image",
+        "type": "string",
+        "format": "uri",
+        "_display": {
+          "placeholder": "A link to an image of the resource"
+        }
+      },
+      "dateCreated": {
+        "title": "Creation Date",
+        "type": "string",
+        "format": "date",
+        "_display": {
+          "placeholder": "YYYY-MM-DD"
+        }
+      },
+      "inLanguage": {
+        "title": "Language",
+        "type": "string",
+        "_display": {
+          "placeholder": "The language of the resource"
+        }
+      },
+      "publisher": {
+        "title": "Publisher",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "title": "Type",
+              "type": "string",
+              "enum": [
+                "Organization"
+              ]
+            },
+            "id": {
+              "title": "URL",
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "_display": {
+                  "placeholder": "The publisher's name"
+                }
+            }
+          },
+          "required": [
+            "name",
+            "type"
+          ]
+        }
+      },
+      "learningResourceType": {
+        "title": "Learning Resource Type",
+        "type": "object",
+        "_widget": {
+          "type": "SkohubLookup",
+          "options": {
+            "url": "https://skohub.io/acka47/lrmi-resource-types/heads/master/purl.org/dcx/lrmi-vocabs/learningResourceType/"
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inScheme": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "http://purl.org/dcx/lrmi-vocabs/learningResourceType/"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "audience": {
+        "title": "Intended Audience",
+        "type": "object",
+        "_widget": {
+          "type": "SkohubLookup",
+          "options": {
+            "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inScheme": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "isBasedOn": {
+        "title": "Based on",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri",
+          "_display": {
+            "placeholder": "The URL of a resource this OER is based on"
+          }
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  }
+  
