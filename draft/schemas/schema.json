@@ -11,7 +11,7 @@
         "type": "string",
         "format": "uri",
         "enum": [
-          "http://schema.org/"
+          "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
         ],
         "_display": {
           "className": "hidden"
@@ -111,7 +111,7 @@
                 "id": {
                   "type": "string",
                   "enum": [
-                    "https://w3id.org/class/esc/scheme"
+                    "https://w3id.org/kim/hochschulfaechersystematik/scheme"
                   ]
                 }
               }
@@ -131,7 +131,7 @@
         "_widget": {
           "type": "SkohubLookup",
           "options": {
-            "url": "https://test.skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
+            "url": "https://skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
           }
         },
         "properties": {
