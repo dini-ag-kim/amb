@@ -1,139 +1,99 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "OER",
-    "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
-    "type": "object",
-    "default": {
-      "@context": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OER",
+  "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
+  "type": "object",
+  "default": {
+    "@context": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
+  },
+  "properties": {
+    "@context": {
+      "type": "string",
+      "format": "uri",
+      "enum": [
+        "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
+      ],
+      "_display": {
+        "className": "hidden"
+      }
     },
-    "properties": {
-      "@context": {
-        "type": "string",
-        "format": "uri",
-        "enum": [
-          "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
-        ],
-        "_display": {
-          "className": "hidden"
-        }
-      },
-      "id": {
-        "title": "URL",
-        "type": "string",
-        "format": "uri",
-        "_display": {
-          "placeholder": "The URL of the resource"
-        }
-      },
-      "type": {
-        "title": "Type",
-        "type": "string",
-        "default": "CreativeWork",
-        "enum": [
-          "AudioObject",
-          "Book",
-          "Course",
-          "CreativeWork",
-          "DataDownload",
-          "ImageObject",
-          "PresentationDigitalDocument",
-          "SoftwareApplication",
-          "VideoObject"
+    "id": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri",
+      "_display": {
+        "placeholder": "The URL of the resource"
+      }
+    },
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "default": "CreativeWork",
+      "enum": [
+        "AudioObject",
+        "Book",
+        "Course",
+        "CreativeWork",
+        "DataDownload",
+        "ImageObject",
+        "PresentationDigitalDocument",
+        "SoftwareApplication",
+        "VideoObject"
+      ]
+    },
+    "name": {
+      "title": "Title",
+      "type": "string",
+      "_display": {
+        "rows": 2
+      }
+    },
+    "creator": {
+      "title": "Creator",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "title": "Type",
+            "type": "string",
+            "enum": [
+              "Person",
+              "Organization"
+            ]
+          },
+          "id": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "_display": {
+              "placeholder": "The creator's name"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "type"
         ]
-      },
-      "name": {
-        "title": "Title",
-        "type": "string",
-        "_display": {
-          "rows": 2
-        }
-      },
-      "creator": {
-        "title": "Creator",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "title": "Type",
-              "type": "string",
-              "enum": [
-                "Person",
-                "Organization"
-              ]
-            },
-            "id": {
-              "title": "URL",
-              "type": "string",
-              "format": "uri"
-            },
-            "name": {
-              "title": "Name",
-              "type": "string",
-              "_display": {
-                  "placeholder": "The creator's name"
-                }
-            }
-          },
-          "required": [
-            "name",
-            "type"
-          ]
-        }
-      },
-      "description": {
-        "title": "Description",
-        "type": "string",
-        "_display": {
-          "rows": 5,
-          "placeholder": "A short description of the resource"
-        }
-      },
-      "about": {
-        "title": "Subject",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "Concept"
-              ]
-            },
-            "id": {
-              "type": "string",
-              "format": "uri"
-            },
-            "inScheme": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string",
-                  "enum": [
-                    "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-                  ]
-                }
-              }
-            }
-          },
-          "required": [
-            "inScheme",
-            "id",
-            "type"
-          ],
-          "_widget": "SkohubLookup"
-        }
-      },
-      "license": {
-        "title": "License",
+      }
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "_display": {
+        "rows": 5,
+        "placeholder": "A short description of the resource"
+      }
+    },
+    "about": {
+      "title": "Subject",
+      "type": "array",
+      "items": {
         "type": "object",
-        "_widget": {
-          "type": "SkohubLookup",
-          "options": {
-            "url": "https://skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
-          }
-        },
         "properties": {
           "type": {
             "type": "string",
@@ -151,331 +111,371 @@
               "id": {
                 "type": "string",
                 "enum": [
-                  "https://oerworldmap.org/assets/json/licenses/"
+                  "https://w3id.org/kim/hochschulfaechersystematik/scheme"
                 ]
               }
             }
           }
+        },
+        "required": [
+          "inScheme",
+          "id",
+          "type"
+        ],
+        "_widget": "SkohubLookup"
+      }
+    },
+    "license": {
+      "title": "License",
+      "type": "object",
+      "_widget": {
+        "type": "SkohubLookup",
+        "options": {
+          "url": "https://skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
         }
       },
-      "image": {
-        "title": "Image",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Concept"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "inScheme": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": [
+                "https://oerworldmap.org/assets/json/licenses/"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "title": "Image",
+      "type": "string",
+      "format": "uri",
+      "_display": {
+        "placeholder": "A link to an image of the resource"
+      }
+    },
+    "dateCreated": {
+      "title": "Creation Date",
+      "type": "string",
+      "format": "date",
+      "_display": {
+        "placeholder": "YYYY-MM-DD"
+      }
+    },
+    "inLanguage": {
+      "title": "Language",
+      "type": "string",
+      "enum": [
+        "aa",
+        "ab",
+        "ae",
+        "af",
+        "ak",
+        "am",
+        "an",
+        "ar",
+        "as",
+        "av",
+        "ay",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bh",
+        "bi",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "ca",
+        "ce",
+        "ch",
+        "co",
+        "cr",
+        "cs",
+        "cu",
+        "cv",
+        "cy",
+        "da",
+        "de",
+        "dv",
+        "dz",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fj",
+        "fo",
+        "fr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "gu",
+        "gv",
+        "ha",
+        "hi",
+        "ho",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "hz",
+        "ia",
+        "ie",
+        "ig",
+        "ii",
+        "ik",
+        "io",
+        "is",
+        "it",
+        "iu",
+        "ja",
+        "jv",
+        "ka",
+        "kg",
+        "ki",
+        "kj",
+        "kk",
+        "kl",
+        "km",
+        "kn",
+        "ko",
+        "kr",
+        "ks",
+        "ku",
+        "kv",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "li",
+        "ln",
+        "lo",
+        "lt",
+        "lu",
+        "lv",
+        "mg",
+        "mh",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mo",
+        "mr",
+        "ms",
+        "mt",
+        "my",
+        "na",
+        "nb",
+        "nd",
+        "ne",
+        "ng",
+        "nl",
+        "nn",
+        "no",
+        "nr",
+        "nv",
+        "nvi",
+        "ny",
+        "oc",
+        "oj",
+        "om",
+        "or",
+        "os",
+        "pa",
+        "pi",
+        "pl",
+        "ps",
+        "pt",
+        "qu",
+        "rm",
+        "rn",
+        "ro",
+        "ru",
+        "rw",
+        "sa",
+        "sc",
+        "sd",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "sl",
+        "sm",
+        "smi",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tl",
+        "tn",
+        "to",
+        "tr",
+        "ts",
+        "tt",
+        "tw",
+        "ty",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "ve",
+        "vi",
+        "vo",
+        "wa",
+        "wo",
+        "xh",
+        "yo",
+        "za",
+        "zh",
+        "zu"
+      ],
+      "_display": {
+        "placeholder": "The language of the resource"
+      }
+    },
+    "publisher": {
+      "title": "Publisher",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "title": "Type",
+            "type": "string",
+            "enum": [
+              "Organization"
+            ]
+          },
+          "id": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "_display": {
+              "placeholder": "The publisher's name"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "type"
+        ]
+      }
+    },
+    "learningResourceType": {
+      "title": "Learning Resource Type",
+      "type": "object",
+      "_widget": {
+        "type": "SkohubLookup",
+        "options": {
+          "url": "https://skohub.io/acka47/lrmi-resource-types/heads/master/purl.org/dcx/lrmi-vocabs/learningResourceType/"
+        }
+      },
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Concept"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "inScheme": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": [
+                "http://purl.org/dcx/lrmi-vocabs/learningResourceType/"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "audience": {
+      "title": "Intended Audience",
+      "type": "object",
+      "_widget": {
+        "type": "SkohubLookup",
+        "options": {
+          "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+        }
+      },
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Concept"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "inScheme": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": [
+                "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "isBasedOn": {
+      "title": "Based on",
+      "type": "array",
+      "items": {
         "type": "string",
         "format": "uri",
         "_display": {
-          "placeholder": "A link to an image of the resource"
+          "placeholder": "The URL of a resource this OER is based on"
         }
-      },
-      "dateCreated": {
-        "title": "Creation Date",
-        "type": "string",
-        "format": "date",
-        "_display": {
-          "placeholder": "YYYY-MM-DD"
-        }
-      },
-      "inLanguage": {
-        "title": "Language",
-        "type": "string",
-        "enum": [
-          "aa",
-          "ab",
-          "ae",
-          "af",
-          "ak",
-          "am",
-          "an",
-          "ar",
-          "as",
-          "av",
-          "ay",
-          "az",
-          "ba",
-          "be",
-          "bg",
-          "bh",
-          "bi",
-          "bm",
-          "bn",
-          "bo",
-          "br",
-          "bs",
-          "ca",
-          "ce",
-          "ch",
-          "co",
-          "cr",
-          "cs",
-          "cu",
-          "cv",
-          "cy",
-          "da",
-          "de",
-          "dv",
-          "dz",
-          "ee",
-          "el",
-          "en",
-          "eo",
-          "es",
-          "et",
-          "eu",
-          "fa",
-          "ff",
-          "fi",
-          "fj",
-          "fo",
-          "fr",
-          "fy",
-          "ga",
-          "gd",
-          "gl",
-          "gn",
-          "gu",
-          "gv",
-          "ha",
-          "hi",
-          "ho",
-          "hr",
-          "ht",
-          "hu",
-          "hy",
-          "hz",
-          "ia",
-          "ie",
-          "ig",
-          "ii",
-          "ik",
-          "io",
-          "is",
-          "it",
-          "iu",
-          "ja",
-          "jv",
-          "ka",
-          "kg",
-          "ki",
-          "kj",
-          "kk",
-          "kl",
-          "km",
-          "kn",
-          "ko",
-          "kr",
-          "ks",
-          "ku",
-          "kv",
-          "kw",
-          "ky",
-          "la",
-          "lb",
-          "lg",
-          "li",
-          "ln",
-          "lo",
-          "lt",
-          "lu",
-          "lv",
-          "mg",
-          "mh",
-          "mi",
-          "mk",
-          "ml",
-          "mn",
-          "mo",
-          "mr",
-          "ms",
-          "mt",
-          "my",
-          "na",
-          "nb",
-          "nd",
-          "ne",
-          "ng",
-          "nl",
-          "nn",
-          "no",
-          "nr",
-          "nv",
-          "nvi",
-          "ny",
-          "oc",
-          "oj",
-          "om",
-          "or",
-          "os",
-          "pa",
-          "pi",
-          "pl",
-          "ps",
-          "pt",
-          "qu",
-          "rm",
-          "rn",
-          "ro",
-          "ru",
-          "rw",
-          "sa",
-          "sc",
-          "sd",
-          "se",
-          "sg",
-          "si",
-          "sk",
-          "sl",
-          "sm",
-          "smi",
-          "sn",
-          "so",
-          "sq",
-          "sr",
-          "ss",
-          "st",
-          "su",
-          "sv",
-          "sw",
-          "ta",
-          "te",
-          "tg",
-          "th",
-          "ti",
-          "tk",
-          "tl",
-          "tn",
-          "to",
-          "tr",
-          "ts",
-          "tt",
-          "tw",
-          "ty",
-          "ug",
-          "uk",
-          "ur",
-          "uz",
-          "ve",
-          "vi",
-          "vo",
-          "wa",
-          "wo",
-          "xh",
-          "yo",
-          "za",
-          "zh",
-          "zu"
-        ],
-        "_display": {
-          "placeholder": "The language of the resource"
-        }
-      },
-      "publisher": {
-        "title": "Publisher",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "title": "Type",
-              "type": "string",
-              "enum": [
-                "Organization"
-              ]
-            },
-            "id": {
-              "title": "URL",
-              "type": "string",
-              "format": "uri"
-            },
-            "name": {
-              "title": "Name",
-              "type": "string",
-              "_display": {
-                  "placeholder": "The publisher's name"
-                }
-            }
-          },
-          "required": [
-            "name",
-            "type"
-          ]
-        }
-      },
-      "learningResourceType": {
-        "title": "Learning Resource Type",
-        "type": "object",
-        "_widget": {
-          "type": "SkohubLookup",
-          "options": {
-            "url": "https://skohub.io/acka47/lrmi-resource-types/heads/master/purl.org/dcx/lrmi-vocabs/learningResourceType/"
-          }
-        },
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "Concept"
-            ]
-          },
-          "id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "inScheme": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "enum": [
-                  "http://purl.org/dcx/lrmi-vocabs/learningResourceType/"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "audience": {
-        "title": "Intended Audience",
-        "type": "object",
-        "_widget": {
-          "type": "SkohubLookup",
-          "options": {
-            "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-          }
-        },
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "Concept"
-            ]
-          },
-          "id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "inScheme": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "enum": [
-                  "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "isBasedOn": {
-        "title": "Based on",
-        "type": "array",
-        "items": {
-          "type": "string",
-          "format": "uri",
-          "_display": {
-            "placeholder": "The URL of a resource this OER is based on"
-          }
-        }
-      },
+      }
+    },
     "required": [
       "id",
       "name"
