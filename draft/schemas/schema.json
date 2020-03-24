@@ -475,10 +475,10 @@
           "placeholder": "The URL of a resource this OER is based on"
         }
       }
-    },
-    "required": [
-      "id",
-      "name"
-    ]
-  }
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
 }
