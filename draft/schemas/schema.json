@@ -4,15 +4,20 @@
   "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
   "type": "object",
   "default": {
-    "@context": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "@vocab": "http://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "prefLabel": "skos:prefLabel",
+      "inScheme": "skos:inScheme",
+      "Concept": "skos:Concept"
+    }
   },
   "properties": {
     "@context": {
-      "type": "string",
-      "format": "uri",
-      "enum": [
-        "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context.jsonld"
-      ],
+      "type": "object",
+      "additionalProperties": true,
       "_display": {
         "className": "hidden"
       }
