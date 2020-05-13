@@ -136,7 +136,7 @@
       "_widget": {
         "type": "SkohubLookup",
         "options": {
-          "url": "https://skohub.io/literarymachine/skos/oerworldmap.org/assets/json/licenses/"
+          "url": "https://skohub.io/acka47/license-vocab/heads/master/oerworldmap.org/assets/json/licenses.json"
         }
       },
       "properties": {
