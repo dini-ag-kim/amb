@@ -134,7 +134,10 @@
       "title": "License",
       "type": "string",
       "format": "uri",
-      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
+      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
+      "_display": {
+        "placeholder": "URL of the Creative Commons license"
+      }
     },
     "image": {
       "title": "Image",
