@@ -132,36 +132,9 @@
     },
     "license": {
       "title": "License",
-      "type": "object",
-      "_widget": {
-        "type": "SkohubLookup",
-        "options": {
-          "url": "https://skohub.io/acka47/license-vocab/heads/master/oerworldmap.org/assets/json/licenses.json"
-        }
-      },
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Concept"
-          ]
-        },
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "inScheme": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "enum": [
-                "https://oerworldmap.org/assets/json/licenses/"
-              ]
-            }
-          }
-        }
-      }
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
     },
     "image": {
       "title": "Image",
