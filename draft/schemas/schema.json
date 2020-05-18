@@ -108,7 +108,8 @@
           },
           "id": {
             "type": "string",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*"
           },
           "inScheme": {
             "type": "object",
