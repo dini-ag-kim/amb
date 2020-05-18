@@ -41,14 +41,16 @@
         "id": "https://www.tutory.de"
       }
     ],
-    "audience": {
-      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
-      "prefLabel": {
-        "en_us": "student"
-      },
-      "type": "Concept",
-      "inScheme": {
-        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+    "audience": [
+      {
+        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+        "prefLabel": {
+          "en_us": "student"
+        },
+        "type": "Concept",
+        "inScheme": {
+          "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+        }
       }
-    }
+    ]
   }

@@ -414,32 +414,35 @@
     },
     "audience": {
       "title": "Intended Audience",
-      "type": "object",
-      "_widget": {
-        "type": "SkohubLookup",
-        "options": {
-          "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-        }
-      },
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Concept"
-          ]
+      "type": "array",
+      "items": {
+        "type": "object",
+        "_widget": {
+          "type": "SkohubLookup",
+          "options": {
+            "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+          }
         },
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "inScheme": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "enum": [
-                "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-              ]
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inScheme": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+                ]
+              }
             }
           }
         }
