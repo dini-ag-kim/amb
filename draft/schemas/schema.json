@@ -124,9 +124,7 @@
           }
         },
         "required": [
-          "inScheme",
-          "id",
-          "type"
+          "id"
         ],
         "_widget": "SkohubLookup"
       }
