@@ -4,4 +4,4 @@ before_script:
         npm install ajv-cli
 
 script:
-        ./test.sh
+        sh ./test.sh
