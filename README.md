@@ -17,7 +17,7 @@ Es ist geplant, eine HTML-Spezifikation zu ergänzen, wenn das Schema in einer e
 
 ## Zum Entwicklungsprozess
 
-Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs), die vor allem bei der Entwicklung der HTML-Spezifikation eine Rolle spielen. In diesem Projekt, wird zunächst das JSON Schema entwickelt.
+Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs), die vor allem bei der Entwicklung der HTML-Spezifikation eine Rolle spielen. In diesem Projekt wird zunächst das JSON Schema entwickelt.
 
 ### Beteiligte Personen
 
@@ -29,4 +29,4 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 
 ### Tests
 
-Schema-Tests werden gegen valide (`draft/examples/valid`) und invalide (`draft/examples/invalid`) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ sh test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
+Schema-Tests werden gegen valide (`draft/examples/valid`) und invalide (`draft/examples/invalid`) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ bash test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
