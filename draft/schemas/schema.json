@@ -458,6 +458,33 @@
           "placeholder": "The URL of a resource this OER is based on"
         }
       }
+    },
+    "mainEntityOfPage": {
+      "title": "Beschreibungsseite/Metadaten",
+      "description": "This Object contains metametadata, i.e. information about the description of the OER.",
+      "type": "object",
+      "_display": {
+        "className": "hidden"
+      },
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "type": "string"
+        },
+        "dateCreated": {
+          "title": "Creation Date of the metadata",
+          "type": "string",
+          "format": "date"
+        },
+        "dateModified": {
+          "title": "Date of last modification of the metadata",
+          "type": "string",
+          "format": "date"
+        }
+      }
     }
   },
   "required": [
