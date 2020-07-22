@@ -382,12 +382,6 @@
     "learningResourceType": {
       "title": "Learning Resource Type",
       "type": "object",
-      "_widget": {
-        "type": "SkohubLookup",
-        "options": {
-          "url": "https://skohub.io/acka47/lrmi-resource-types/heads/master/purl.org/dcx/lrmi-vocabs/learningResourceType/"
-        }
-      },
       "properties": {
         "type": {
           "type": "string",
@@ -397,7 +391,8 @@
         },
         "id": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
         },
         "inScheme": {
           "type": "object",
@@ -405,12 +400,16 @@
             "id": {
               "type": "string",
               "enum": [
-                "http://purl.org/dcx/lrmi-vocabs/learningResourceType/"
+                "https://w3id.org/kim/hcrt/scheme"
               ]
             }
           }
         }
-      }
+      },
+      "required": [
+        "id"
+      ],
+      "_widget": "SkohubLookup"
     },
     "audience": {
       "title": "Intended Audience",
