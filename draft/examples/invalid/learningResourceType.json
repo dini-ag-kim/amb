@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@vocab": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prefLabel": "skos:prefLabel",
+    "inScheme": "skos:inScheme",
+    "Concept": "skos:Concept"
+  },
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": "Course",
+  "learningResourceType": {
+    "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
+  }
+}
