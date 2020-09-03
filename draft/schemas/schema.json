@@ -459,34 +459,61 @@
       }
     },
     "mainEntityOfPage": {
-      "title": "Beschreibungsseite/Metadaten",
-      "description": "This Object contains metametadata, i.e. information about the description of the OER.",
-      "type": "object",
+      "title": "Metadata/Structured descriptions",
+      "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
+      "type": "array",
       "_display": {
         "className": "hidden"
       },
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "URL of the metadata",
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string"
+          },
+          "provider": {
+            "title": "Metadata provider",
+            "description": "Quelle, von der die strukturierte Beschreibung (=Metadaten) zu dieser Ressource zur Verfügung gestellt werden.",
+            "type": "object",
+            "properties": {
+              "id": {
+                "title": "URI für den Provider",
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "title": "Typ",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          },
+          "dateCreated": {
+            "title": "Creation Date of the metadata",
+            "type": "string",
+            "format": "date"
+          },
+          "dateModified": {
+            "title": "Date of last modification of the metadata",
+            "type": "string",
+            "format": "date"
+          }
         },
-        "type": {
-          "type": "string"
-        },
-        "dateCreated": {
-          "title": "Creation Date of the metadata",
-          "type": "string",
-          "format": "date"
-        },
-        "dateModified": {
-          "title": "Date of last modification of the metadata",
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "required": [
-        "id"
-      ]
+        "required": [
+          "id"
+        ]
+      }
     }
   },
   "required": [
