@@ -1,13 +1,7 @@
 {
-  "@context": {
-    "id": "@id",
-    "type": "@type",
-    "@vocab": "http://schema.org/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "prefLabel": "skos:prefLabel",
-    "inScheme": "skos:inScheme",
-    "Concept": "skos:Concept"
-  },
+  "@context": [ 
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+  ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
   "type": "Course",

@@ -4,20 +4,20 @@
   "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
   "type": "object",
   "default": {
-    "@context": {
-      "id": "@id",
-      "type": "@type",
-      "@vocab": "http://schema.org/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "prefLabel": "skos:prefLabel",
-      "inScheme": "skos:inScheme",
-      "Concept": "skos:Concept"
-    }
+    "@context": [ 
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+    ]
   },
   "properties": {
     "@context": {
-      "type": "object",
-      "additionalProperties": true,
+      "type": "array",
+      "contains": {
+        "type": "string",
+        "format": "uri",
+        "enum": [
+          "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+        ]
+      },
       "_display": {
         "className": "hidden"
       }
