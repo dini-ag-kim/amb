@@ -1,0 +1,12 @@
+{
+    "@context": [ 
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+      {"presentedAt": "http://purl.org/ontology/bibo/presentedAt"}
+    ],
+    "name": "Beispielkurs",
+    "id": "https://example.org/oer",
+    "type": "Course",
+    "learningResourceType": {
+      "id": "https://w3id.org/kim/hcrt/course"
+    }
+  }
