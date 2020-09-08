@@ -18,7 +18,65 @@
     "@context": {
       "type": "object",
       "additionalProperties": true,
-      "_display": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "@id"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "@type"
+          ]
+        },
+        "@vocab": {
+          "type": "string",
+          "format": "uri",
+          "enum": [
+            "http://schema.org/",
+            "https://schema.org/"
+          ]
+        },
+        "skos": {
+          "type": "string",
+          "format": "uri",
+          "enum": [
+            "http://www.w3.org/2004/02/skos/core#"
+          ]
+        },
+        "prefLabel": {
+          "type": "string",
+          "enum": [
+            "skos:prefLabel",
+            "http://www.w3.org/2004/02/skos/core#prefLabel"
+          ]
+        },
+        "inScheme": {
+          "type": "string",
+          "enum": [
+            "skos:inScheme",
+            "http://www.w3.org/2004/02/skos/core#inScheme"
+          ]
+        },
+        "Concept": {
+          "type": "string",
+          "enum": [
+            "skos:Concept",
+            "http://www.w3.org/2004/02/skos/core#Concept"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "@vocab",
+        "prefLabel",
+        "inScheme",
+        "Concept"
+      ],
+      "display": {
         "className": "hidden"
       }
     },

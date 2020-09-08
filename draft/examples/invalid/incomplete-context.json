@@ -1,0 +1,19 @@
+{
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "@vocab": "http://schema.org/"
+    },
+    "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
+    "id": "https://www.tutory.de/w/fbbadf1a",
+    "image": "https://www.tutory.de/worksheet/fbbadf1a-145a-463d-9a43-1ae9965c86b9.jpg?width=1000",
+    "type": "CreativeWork",
+    "creator": [
+      {
+        "name": "HerunterS",
+        "type": "Person"
+      }
+    ],
+    "description": "Französisch-Arbeitsblatt",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  }
