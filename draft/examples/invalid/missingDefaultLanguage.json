@@ -1,8 +1,6 @@
 {
     "@context": [ 
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-      {"@language": "de"},
-      "https://json-ld.org/contexts/person.jsonld"
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
     ],
     "name": "Beispielkurs",
     "id": "https://example.org/oer",
