@@ -1,13 +1,13 @@
 {
-    "@context": [ 
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-      {"@language": "de"},
-      "https://json-ld.org/contexts/person.jsonld"
-    ],
-    "name": "Beispielkurs",
-    "id": "https://example.org/oer",
-    "type": "Course",
-    "learningResourceType": {
-      "id": "https://w3id.org/kim/hcrt/course"
-    }
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {"@language": "de"},
+    "https://json-ld.org/contexts/person.jsonld"
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": "Course",
+  "learningResourceType": {
+    "id": "https://w3id.org/kim/hcrt/course"
   }
+}

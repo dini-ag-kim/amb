@@ -1,12 +1,12 @@
 {
-    "@context": [ 
-      "https://schema.org",
-      {"@language": "de"}
-    ],
-    "name": "Beispielkurs",
-    "id": "https://example.org/oer",
-    "type": "Course",
-    "learningResourceType": {
-      "id": "https://w3id.org/kim/hcrt/course"
-    }
+  "@context": [
+    "https://schema.org",
+    {"@language": "de"}
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": "Course",
+  "learningResourceType": {
+    "id": "https://w3id.org/kim/hcrt/course"
   }
+}

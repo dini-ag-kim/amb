@@ -1,13 +1,15 @@
 {
-    "@context": [ 
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
     {"@language": "de"},
-      {"presentedAt": "http://purl.org/ontology/bibo/presentedAt"}
-    ],
-    "name": "Beispielkurs",
-    "id": "https://example.org/oer",
-    "type": "Course",
-    "learningResourceType": {
-      "id": "https://w3id.org/kim/hcrt/course"
+    {
+      "presentedAt": "http://purl.org/ontology/bibo/presentedAt"
     }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": "Course",
+  "learningResourceType": {
+    "id": "https://w3id.org/kim/hcrt/course"
   }
+}

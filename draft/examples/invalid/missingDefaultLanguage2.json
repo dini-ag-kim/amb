@@ -1,12 +1,12 @@
 {
-    "@context": [ 
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-      {"mbox": "http://xmlns.com/foaf/0.1/mbox"}
-    ],
-    "name": "Beispielkurs",
-    "id": "https://example.org/oer",
-    "type": "Course",
-    "learningResourceType": {
-      "id": "https://w3id.org/kim/hcrt/course"
-    }
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {"mbox": "http://xmlns.com/foaf/0.1/mbox"}
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": "Course",
+  "learningResourceType": {
+    "id": "https://w3id.org/kim/hcrt/course"
   }
+}
