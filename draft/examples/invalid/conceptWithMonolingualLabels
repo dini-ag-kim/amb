@@ -1,6 +1,7 @@
 {
   "@context": [ 
-    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {"@language": "de"}
   ],
     "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
     "id": "https://www.tutory.de/w/fbbadf1a",
@@ -16,9 +17,7 @@
     "about": [
       {
         "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
-        "prefLabel": {
-          "de": "Französisch"
-        },
+        "prefLabel": "Französisch",
         "type": "Concept",
         "inScheme": {
           "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
@@ -38,13 +37,19 @@
     "audience": [
       {
         "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
-        "prefLabel": {
-          "en": "student"
-        },
+        "prefLabel": "Lernende",
         "type": "Concept",
         "inScheme": {
           "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
         }
       }
-    ]
-  }
+    ],
+    "learningResourceType": {
+        "id": "https://w3id.org/kim/hcrt/course",
+        "prefLabel": "Kurs",
+        "type": "Concept",
+        "inScheme": {
+          "id": "https://w3id.org/kim/hcrt/scheme"
+        }
+    }
+}

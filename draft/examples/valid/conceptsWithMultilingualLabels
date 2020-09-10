@@ -17,7 +17,10 @@
       {
         "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
         "prefLabel": {
-          "de": "Französisch"
+          "de": "Französisch",
+          "en": "French",
+          "fr": "Français"
+
         },
         "type": "Concept",
         "inScheme": {
@@ -39,12 +42,25 @@
       {
         "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
         "prefLabel": {
-          "en": "student"
+          "en": "student",
+          "de": "Lernende"
         },
         "type": "Concept",
         "inScheme": {
           "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
         }
       }
-    ]
+    ],
+    "learningResourceType": {
+        "id": "https://w3id.org/kim/hcrt/course",
+        "prefLabel": {
+          "en": "Course",
+          "de": "Kurs"
+        },
+        "type": "Concept",
+        "inScheme": {
+          "id": "https://w3id.org/kim/hcrt/scheme"
+        }
+    }
+}
   }
