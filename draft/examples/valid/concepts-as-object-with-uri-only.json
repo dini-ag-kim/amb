@@ -1,36 +1,37 @@
 {
-  "@context": [ 
-    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {"@language": "de"}
   ],
-    "name": "Beispielressource",
-    "id": "https://example.org/oer",
-    "image": "https://example.org/oer/image.png",
-    "type": "CreativeWork",
-    "creator": [
-      {
-        "name": "HansD",
-        "type": "Person"
-      }
-    ],
-    "description": "Eine OER",
-    "about": [
-      {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/n059"
-      }
-    ],
-    "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-    "dateCreated": "2019-07-03",
-    "inLanguage": "fr",
-    "publisher": [
-      {
-        "type": "Organization",
-        "name": "Tutory",
-        "id": "https://www.tutory.de"
-      }
-    ],
-    "audience": [
-      {
-        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student"
-      }
-    ]
-  }
+  "name": "Beispielressource",
+  "id": "https://example.org/oer",
+  "image": "https://example.org/oer/image.png",
+  "type": "CreativeWork",
+  "creator": [
+    {
+      "name": "HansD",
+      "type": "Person"
+    }
+  ],
+  "description": "Eine OER",
+  "about": [
+    {
+      "id": "https://w3id.org/kim/hochschulfaechersystematik/n059"
+    }
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "dateCreated": "2019-07-03",
+  "inLanguage": "fr",
+  "publisher": [
+    {
+      "type": "Organization",
+      "name": "Tutory",
+      "id": "https://www.tutory.de"
+    }
+  ],
+  "audience": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student"
+    }
+  ]
+}

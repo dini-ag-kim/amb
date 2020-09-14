@@ -1,10 +1,7 @@
 {
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"},
-    {
-      "presentedAt": "http://purl.org/ontology/bibo/presentedAt"
-    }
+    {"@language": "de-AT"}
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
