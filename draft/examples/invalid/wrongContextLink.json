@@ -1,6 +1,6 @@
 {
-  "@context": [ 
-    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+  "@context": [
+    "https://schema.org",
     {"@language": "de"}
   ],
   "name": "Beispielkurs",

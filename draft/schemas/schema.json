@@ -1,524 +1,1317 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "OER",
-  "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
-  "type": "object",
-  "default": {
-    "@context": {
-      "id": "@id",
-      "type": "@type",
-      "@vocab": "http://schema.org/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "prefLabel": "skos:prefLabel",
-      "inScheme": "skos:inScheme",
-      "Concept": "skos:Concept"
+  "oneOf": [
+    {
+      "$ref": "#/definitions/OER"
     }
-  },
-  "properties": {
-    "@context": {
+  ],
+  "definitions": {
+    "OER": {
+      "title": "OER",
+      "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
       "type": "object",
-      "additionalProperties": true,
-      "_display": {
-        "className": "hidden"
-      }
-    },
-    "id": {
-      "title": "URL",
-      "type": "string",
-      "format": "uri",
-      "_display": {
-        "placeholder": "The URL of the resource"
-      }
-    },
-    "type": {
-      "title": "Type",
-      "type": "string",
-      "default": "CreativeWork",
-      "enum": [
-        "AudioObject",
-        "Book",
-        "Course",
-        "CreativeWork",
-        "DataDownload",
-        "ImageObject",
-        "PresentationDigitalDocument",
-        "SoftwareApplication",
-        "VideoObject"
-      ]
-    },
-    "name": {
-      "title": "Title",
-      "type": "string",
-      "_display": {
-        "rows": 2
-      }
-    },
-    "creator": {
-      "title": "Creator",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "title": "Type",
-            "type": "string",
-            "enum": [
-              "Person",
-              "Organization"
-            ]
-          },
-          "id": {
-            "title": "URL",
-            "type": "string",
-            "format": "uri"
-          },
-          "name": {
-            "title": "Name",
-            "type": "string",
-            "_display": {
-              "placeholder": "The creator's name"
-            }
-          }
-        },
-        "required": [
-          "name",
-          "type"
+      "default": {
+        "@context": [
+          "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
         ]
-      }
-    },
-    "description": {
-      "title": "Description",
-      "type": "string",
-      "_display": {
-        "rows": 5,
-        "placeholder": "A short description of the resource"
-      }
-    },
-    "about": {
-      "title": "Subject",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "Concept"
-            ]
-          },
-          "id": {
-            "type": "string",
-            "format": "uri",
-            "pattern": "^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*"
-          },
-          "inScheme": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "enum": [
-                  "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-                ]
-              }
-            }
-          }
-        },
-        "required": [
-          "id"
-        ],
-        "_widget": "SkohubLookup"
-      }
-    },
-    "license": {
-      "title": "License",
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
-      "_display": {
-        "placeholder": "URL of the Creative Commons license"
-      }
-    },
-    "image": {
-      "title": "Image",
-      "type": "string",
-      "format": "uri",
-      "_display": {
-        "placeholder": "A link to an image of the resource"
-      }
-    },
-    "dateCreated": {
-      "title": "Creation Date",
-      "type": "string",
-      "format": "date",
-      "_display": {
-        "placeholder": "YYYY-MM-DD"
-      }
-    },
-    "inLanguage": {
-      "title": "Language",
-      "type": "string",
-      "enum": [
-        "aa",
-        "ab",
-        "ae",
-        "af",
-        "ak",
-        "am",
-        "an",
-        "ar",
-        "as",
-        "av",
-        "ay",
-        "az",
-        "ba",
-        "be",
-        "bg",
-        "bh",
-        "bi",
-        "bm",
-        "bn",
-        "bo",
-        "br",
-        "bs",
-        "ca",
-        "ce",
-        "ch",
-        "co",
-        "cr",
-        "cs",
-        "cu",
-        "cv",
-        "cy",
-        "da",
-        "de",
-        "dv",
-        "dz",
-        "ee",
-        "el",
-        "en",
-        "eo",
-        "es",
-        "et",
-        "eu",
-        "fa",
-        "ff",
-        "fi",
-        "fj",
-        "fo",
-        "fr",
-        "fy",
-        "ga",
-        "gd",
-        "gl",
-        "gn",
-        "gu",
-        "gv",
-        "ha",
-        "hi",
-        "ho",
-        "hr",
-        "ht",
-        "hu",
-        "hy",
-        "hz",
-        "ia",
-        "ie",
-        "ig",
-        "ii",
-        "ik",
-        "io",
-        "is",
-        "it",
-        "iu",
-        "ja",
-        "jv",
-        "ka",
-        "kg",
-        "ki",
-        "kj",
-        "kk",
-        "kl",
-        "km",
-        "kn",
-        "ko",
-        "kr",
-        "ks",
-        "ku",
-        "kv",
-        "kw",
-        "ky",
-        "la",
-        "lb",
-        "lg",
-        "li",
-        "ln",
-        "lo",
-        "lt",
-        "lu",
-        "lv",
-        "mg",
-        "mh",
-        "mi",
-        "mk",
-        "ml",
-        "mn",
-        "mo",
-        "mr",
-        "ms",
-        "mt",
-        "my",
-        "na",
-        "nb",
-        "nd",
-        "ne",
-        "ng",
-        "nl",
-        "nn",
-        "no",
-        "nr",
-        "nv",
-        "nvi",
-        "ny",
-        "oc",
-        "oj",
-        "om",
-        "or",
-        "os",
-        "pa",
-        "pi",
-        "pl",
-        "ps",
-        "pt",
-        "qu",
-        "rm",
-        "rn",
-        "ro",
-        "ru",
-        "rw",
-        "sa",
-        "sc",
-        "sd",
-        "se",
-        "sg",
-        "si",
-        "sk",
-        "sl",
-        "sm",
-        "smi",
-        "sn",
-        "so",
-        "sq",
-        "sr",
-        "ss",
-        "st",
-        "su",
-        "sv",
-        "sw",
-        "ta",
-        "te",
-        "tg",
-        "th",
-        "ti",
-        "tk",
-        "tl",
-        "tn",
-        "to",
-        "tr",
-        "ts",
-        "tt",
-        "tw",
-        "ty",
-        "ug",
-        "uk",
-        "ur",
-        "uz",
-        "ve",
-        "vi",
-        "vo",
-        "wa",
-        "wo",
-        "xh",
-        "yo",
-        "za",
-        "zh",
-        "zu"
-      ],
-      "_display": {
-        "placeholder": "The language of the resource"
-      }
-    },
-    "publisher": {
-      "title": "Publisher",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "title": "Type",
-            "type": "string",
-            "enum": [
-              "Organization"
-            ]
-          },
-          "id": {
-            "title": "URL",
-            "type": "string",
-            "format": "uri"
-          },
-          "name": {
-            "title": "Name",
-            "type": "string",
-            "_display": {
-              "placeholder": "The publisher's name"
-            }
-          }
-        },
-        "required": [
-          "name",
-          "type"
-        ]
-      }
-    },
-    "learningResourceType": {
-      "title": "Learning Resource Type",
-      "type": "object",
+      },
       "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Concept"
-          ]
-        },
-        "id": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
-        },
-        "inScheme": {
-          "type": "object",
-          "properties": {
-            "id": {
+        "@context": {
+          "type": "array",
+          "minItems": 2,
+          "items": [
+            {
               "type": "string",
+              "format": "uri",
               "enum": [
-                "https://w3id.org/kim/hcrt/scheme"
+                "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@language": {
+                  "type": "string",
+                  "enum": [
+                    "aa",
+                    "ab",
+                    "ae",
+                    "af",
+                    "ak",
+                    "am",
+                    "an",
+                    "ar",
+                    "as",
+                    "av",
+                    "ay",
+                    "az",
+                    "ba",
+                    "be",
+                    "bg",
+                    "bh",
+                    "bi",
+                    "bm",
+                    "bn",
+                    "bo",
+                    "br",
+                    "bs",
+                    "ca",
+                    "ce",
+                    "ch",
+                    "co",
+                    "cr",
+                    "cs",
+                    "cu",
+                    "cv",
+                    "cy",
+                    "da",
+                    "de",
+                    "dv",
+                    "dz",
+                    "ee",
+                    "el",
+                    "en",
+                    "eo",
+                    "es",
+                    "et",
+                    "eu",
+                    "fa",
+                    "ff",
+                    "fi",
+                    "fj",
+                    "fo",
+                    "fr",
+                    "fy",
+                    "ga",
+                    "gd",
+                    "gl",
+                    "gn",
+                    "gu",
+                    "gv",
+                    "ha",
+                    "hi",
+                    "ho",
+                    "hr",
+                    "ht",
+                    "hu",
+                    "hy",
+                    "hz",
+                    "ia",
+                    "ie",
+                    "ig",
+                    "ii",
+                    "ik",
+                    "io",
+                    "is",
+                    "it",
+                    "iu",
+                    "ja",
+                    "jv",
+                    "ka",
+                    "kg",
+                    "ki",
+                    "kj",
+                    "kk",
+                    "kl",
+                    "km",
+                    "kn",
+                    "ko",
+                    "kr",
+                    "ks",
+                    "ku",
+                    "kv",
+                    "kw",
+                    "ky",
+                    "la",
+                    "lb",
+                    "lg",
+                    "li",
+                    "ln",
+                    "lo",
+                    "lt",
+                    "lu",
+                    "lv",
+                    "mg",
+                    "mh",
+                    "mi",
+                    "mk",
+                    "ml",
+                    "mn",
+                    "mo",
+                    "mr",
+                    "ms",
+                    "mt",
+                    "my",
+                    "na",
+                    "nb",
+                    "nd",
+                    "ne",
+                    "ng",
+                    "nl",
+                    "nn",
+                    "no",
+                    "nr",
+                    "nv",
+                    "nvi",
+                    "ny",
+                    "oc",
+                    "oj",
+                    "om",
+                    "or",
+                    "os",
+                    "pa",
+                    "pi",
+                    "pl",
+                    "ps",
+                    "pt",
+                    "qu",
+                    "rm",
+                    "rn",
+                    "ro",
+                    "ru",
+                    "rw",
+                    "sa",
+                    "sc",
+                    "sd",
+                    "se",
+                    "sg",
+                    "si",
+                    "sk",
+                    "sl",
+                    "sm",
+                    "smi",
+                    "sn",
+                    "so",
+                    "sq",
+                    "sr",
+                    "ss",
+                    "st",
+                    "su",
+                    "sv",
+                    "sw",
+                    "ta",
+                    "te",
+                    "tg",
+                    "th",
+                    "ti",
+                    "tk",
+                    "tl",
+                    "tn",
+                    "to",
+                    "tr",
+                    "ts",
+                    "tt",
+                    "tw",
+                    "ty",
+                    "ug",
+                    "uk",
+                    "ur",
+                    "uz",
+                    "ve",
+                    "vi",
+                    "vo",
+                    "wa",
+                    "wo",
+                    "xh",
+                    "yo",
+                    "za",
+                    "zh",
+                    "zu"
+                  ]
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "@language"
               ]
             }
-          }
-        }
-      },
-      "required": [
-        "id"
-      ],
-      "_widget": "SkohubLookup"
-    },
-    "audience": {
-      "title": "Intended Audience",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "_widget": {
-          "type": "SkohubLookup",
-          "options": {
-            "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+          ],
+          "additionalItems": true,
+          "_display": {
+            "className": "hidden"
           }
         },
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "Concept"
-            ]
-          },
-          "id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "inScheme": {
+        "id": {
+          "title": "URL",
+          "type": "string",
+          "format": "uri",
+          "_display": {
+            "placeholder": "The URL of the resource"
+          }
+        },
+        "type": {
+          "title": "Type",
+          "type": "string",
+          "default": "CreativeWork",
+          "enum": [
+            "AudioObject",
+            "Book",
+            "Course",
+            "CreativeWork",
+            "DataDownload",
+            "ImageObject",
+            "PresentationDigitalDocument",
+            "SoftwareApplication",
+            "VideoObject"
+          ]
+        },
+        "name": {
+          "title": "Title",
+          "type": "string",
+          "_display": {
+            "rows": 2
+          }
+        },
+        "creator": {
+          "title": "Creator",
+          "type": "array",
+          "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "type": {
+                "title": "Type",
                 "type": "string",
                 "enum": [
-                  "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+                  "Person",
+                  "Organization"
                 ]
-              }
-            }
-          }
-        }
-      }
-    },
-    "isBasedOn": {
-      "title": "Based on",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uri",
-        "_display": {
-          "placeholder": "The URL of a resource this OER is based on"
-        }
-      }
-    },
-    "mainEntityOfPage": {
-      "title": "Metadata/Structured descriptions",
-      "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
-      "type": "array",
-      "_display": {
-        "className": "hidden"
-      },
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "title": "URL of the metadata",
-            "type": "string",
-            "format": "uri"
-          },
-          "type": {
-            "type": "string"
-          },
-          "provider": {
-            "title": "Metadata provider",
-            "description": "Quelle, von der die strukturierte Beschreibung (=Metadaten) zu dieser Ressource zur Verfügung gestellt werden.",
-            "type": "object",
-            "properties": {
+              },
               "id": {
-                "title": "URI für den Provider",
+                "title": "URL",
                 "type": "string",
                 "format": "uri"
               },
+              "name": {
+                "title": "Name",
+                "type": "string",
+                "_display": {
+                  "placeholder": "The creator's name"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "type"
+            ]
+          }
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "_display": {
+            "rows": 5,
+            "placeholder": "A short description of the resource"
+          }
+        },
+        "about": {
+          "title": "Subject",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
               "type": {
-                "title": "Typ",
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "Concept"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*"
+              },
+              "inScheme": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "enum": [
+                      "https://w3id.org/kim/hochschulfaechersystematik/scheme"
+                    ]
+                  }
+                }
+              },
+              "prefLabel": {
+                "title": "The preferred label of the concept",
+                "description": "A localized string for prefLabel of a SKOS concept",
+                "$ref": "#/definitions/LocalizedString"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "_widget": "SkohubLookup"
+          }
+        },
+        "license": {
+          "title": "License",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
+          "_display": {
+            "placeholder": "URL of the Creative Commons license"
+          }
+        },
+        "image": {
+          "title": "Image",
+          "type": "string",
+          "format": "uri",
+          "_display": {
+            "placeholder": "A link to an image of the resource"
+          }
+        },
+        "dateCreated": {
+          "title": "Creation Date",
+          "type": "string",
+          "format": "date",
+          "_display": {
+            "placeholder": "YYYY-MM-DD"
+          }
+        },
+        "inLanguage": {
+          "title": "Language",
+          "type": "string",
+          "enum": [
+            "aa",
+            "ab",
+            "ae",
+            "af",
+            "ak",
+            "am",
+            "an",
+            "ar",
+            "as",
+            "av",
+            "ay",
+            "az",
+            "ba",
+            "be",
+            "bg",
+            "bh",
+            "bi",
+            "bm",
+            "bn",
+            "bo",
+            "br",
+            "bs",
+            "ca",
+            "ce",
+            "ch",
+            "co",
+            "cr",
+            "cs",
+            "cu",
+            "cv",
+            "cy",
+            "da",
+            "de",
+            "dv",
+            "dz",
+            "ee",
+            "el",
+            "en",
+            "eo",
+            "es",
+            "et",
+            "eu",
+            "fa",
+            "ff",
+            "fi",
+            "fj",
+            "fo",
+            "fr",
+            "fy",
+            "ga",
+            "gd",
+            "gl",
+            "gn",
+            "gu",
+            "gv",
+            "ha",
+            "hi",
+            "ho",
+            "hr",
+            "ht",
+            "hu",
+            "hy",
+            "hz",
+            "ia",
+            "ie",
+            "ig",
+            "ii",
+            "ik",
+            "io",
+            "is",
+            "it",
+            "iu",
+            "ja",
+            "jv",
+            "ka",
+            "kg",
+            "ki",
+            "kj",
+            "kk",
+            "kl",
+            "km",
+            "kn",
+            "ko",
+            "kr",
+            "ks",
+            "ku",
+            "kv",
+            "kw",
+            "ky",
+            "la",
+            "lb",
+            "lg",
+            "li",
+            "ln",
+            "lo",
+            "lt",
+            "lu",
+            "lv",
+            "mg",
+            "mh",
+            "mi",
+            "mk",
+            "ml",
+            "mn",
+            "mo",
+            "mr",
+            "ms",
+            "mt",
+            "my",
+            "na",
+            "nb",
+            "nd",
+            "ne",
+            "ng",
+            "nl",
+            "nn",
+            "no",
+            "nr",
+            "nv",
+            "nvi",
+            "ny",
+            "oc",
+            "oj",
+            "om",
+            "or",
+            "os",
+            "pa",
+            "pi",
+            "pl",
+            "ps",
+            "pt",
+            "qu",
+            "rm",
+            "rn",
+            "ro",
+            "ru",
+            "rw",
+            "sa",
+            "sc",
+            "sd",
+            "se",
+            "sg",
+            "si",
+            "sk",
+            "sl",
+            "sm",
+            "smi",
+            "sn",
+            "so",
+            "sq",
+            "sr",
+            "ss",
+            "st",
+            "su",
+            "sv",
+            "sw",
+            "ta",
+            "te",
+            "tg",
+            "th",
+            "ti",
+            "tk",
+            "tl",
+            "tn",
+            "to",
+            "tr",
+            "ts",
+            "tt",
+            "tw",
+            "ty",
+            "ug",
+            "uk",
+            "ur",
+            "uz",
+            "ve",
+            "vi",
+            "vo",
+            "wa",
+            "wo",
+            "xh",
+            "yo",
+            "za",
+            "zh",
+            "zu"
+          ],
+          "_display": {
+            "placeholder": "The language of the resource"
+          }
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "title": "Type",
+                "type": "string",
+                "enum": [
+                  "Organization"
+                ]
+              },
+              "id": {
+                "title": "URL",
+                "type": "string",
+                "format": "uri"
               },
               "name": {
                 "title": "Name",
-                "type": "string"
+                "type": "string",
+                "_display": {
+                  "placeholder": "The publisher's name"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "type"
+            ]
+          }
+        },
+        "learningResourceType": {
+          "title": "Learning Resource Type",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Concept"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
+            },
+            "inScheme": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "enum": [
+                    "https://w3id.org/kim/hcrt/scheme"
+                  ]
+                }
+              }
+            },
+            "prefLabel": {
+              "title": "The preferred label of the concept",
+              "description": "A localized string for prefLabel of a SKOS concept",
+              "$ref": "#/definitions/LocalizedString"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "_widget": "SkohubLookup"
+        },
+        "audience": {
+          "title": "Intended Audience",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "_widget": {
+              "type": "SkohubLookup",
+              "options": {
+                "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+              }
+            },
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Concept"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "inScheme": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "enum": [
+                      "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+                    ]
+                  }
+                }
+              },
+              "prefLabel": {
+                "title": "The preferred label of the concept",
+                "description": "A localized string for prefLabel of a SKOS concept",
+                "$ref": "#/definitions/LocalizedString"
               }
             },
             "required": [
               "id"
             ]
-          },
-          "dateCreated": {
-            "title": "Creation Date of the metadata",
-            "type": "string",
-            "format": "date"
-          },
-          "dateModified": {
-            "title": "Date of last modification of the metadata",
-            "type": "string",
-            "format": "date"
           }
         },
-        "required": [
-          "id"
-        ]
-      }
+        "isBasedOn": {
+          "title": "Based on",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "_display": {
+              "placeholder": "The URL of a resource this OER is based on"
+            }
+          }
+        },
+        "mainEntityOfPage": {
+          "title": "Metadata/Structured descriptions",
+          "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
+          "type": "array",
+          "_display": {
+            "className": "hidden"
+          },
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "title": "URL of the metadata",
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string"
+              },
+              "provider": {
+                "title": "Metadata provider",
+                "description": "Quelle, von der die strukturierte Beschreibung (=Metadaten) zu dieser Ressource zur Verfügung gestellt werden.",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "title": "URI für den Provider",
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "type": {
+                    "title": "Typ",
+                    "type": "string"
+                  },
+                  "name": {
+                    "title": "Name",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ]
+              },
+              "dateCreated": {
+                "title": "Creation Date of the metadata",
+                "type": "string",
+                "format": "date"
+              },
+              "dateModified": {
+                "title": "Date of last modification of the metadata",
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        }
+      },
+      "required": [
+        "@context",
+        "id",
+        "name"
+      ]
+    },
+    "LocalizedString": {
+      "title": "Localized String",
+      "description": "A language-tagged string using JSON-LD \"language maps\", see https://www.w3.org/TR/json-ld/#language-maps",
+      "type": "object",
+      "properties": {
+        "aa": {
+          "type": "string"
+        },
+        "ab": {
+          "type": "string"
+        },
+        "ae": {
+          "type": "string"
+        },
+        "af": {
+          "type": "string"
+        },
+        "ak": {
+          "type": "string"
+        },
+        "am": {
+          "type": "string"
+        },
+        "an": {
+          "type": "string"
+        },
+        "ar": {
+          "type": "string"
+        },
+        "as": {
+          "type": "string"
+        },
+        "av": {
+          "type": "string"
+        },
+        "ay": {
+          "type": "string"
+        },
+        "az": {
+          "type": "string"
+        },
+        "ba": {
+          "type": "string"
+        },
+        "be": {
+          "type": "string"
+        },
+        "bg": {
+          "type": "string"
+        },
+        "bh": {
+          "type": "string"
+        },
+        "bi": {
+          "type": "string"
+        },
+        "bm": {
+          "type": "string"
+        },
+        "bn": {
+          "type": "string"
+        },
+        "bo": {
+          "type": "string"
+        },
+        "br": {
+          "type": "string"
+        },
+        "bs": {
+          "type": "string"
+        },
+        "ca": {
+          "type": "string"
+        },
+        "ce": {
+          "type": "string"
+        },
+        "ch": {
+          "type": "string"
+        },
+        "co": {
+          "type": "string"
+        },
+        "cr": {
+          "type": "string"
+        },
+        "cs": {
+          "type": "string"
+        },
+        "cu": {
+          "type": "string"
+        },
+        "cv": {
+          "type": "string"
+        },
+        "cy": {
+          "type": "string"
+        },
+        "da": {
+          "type": "string"
+        },
+        "de": {
+          "type": "string"
+        },
+        "dv": {
+          "type": "string"
+        },
+        "dz": {
+          "type": "string"
+        },
+        "ee": {
+          "type": "string"
+        },
+        "el": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        },
+        "eo": {
+          "type": "string"
+        },
+        "es": {
+          "type": "string"
+        },
+        "et": {
+          "type": "string"
+        },
+        "eu": {
+          "type": "string"
+        },
+        "fa": {
+          "type": "string"
+        },
+        "ff": {
+          "type": "string"
+        },
+        "fi": {
+          "type": "string"
+        },
+        "fj": {
+          "type": "string"
+        },
+        "fo": {
+          "type": "string"
+        },
+        "fr": {
+          "type": "string"
+        },
+        "fy": {
+          "type": "string"
+        },
+        "ga": {
+          "type": "string"
+        },
+        "gd": {
+          "type": "string"
+        },
+        "gl": {
+          "type": "string"
+        },
+        "gn": {
+          "type": "string"
+        },
+        "gu": {
+          "type": "string"
+        },
+        "gv": {
+          "type": "string"
+        },
+        "ha": {
+          "type": "string"
+        },
+        "hi": {
+          "type": "string"
+        },
+        "ho": {
+          "type": "string"
+        },
+        "hr": {
+          "type": "string"
+        },
+        "ht": {
+          "type": "string"
+        },
+        "hu": {
+          "type": "string"
+        },
+        "hy": {
+          "type": "string"
+        },
+        "hz": {
+          "type": "string"
+        },
+        "ia": {
+          "type": "string"
+        },
+        "ie": {
+          "type": "string"
+        },
+        "ig": {
+          "type": "string"
+        },
+        "ii": {
+          "type": "string"
+        },
+        "ik": {
+          "type": "string"
+        },
+        "io": {
+          "type": "string"
+        },
+        "is": {
+          "type": "string"
+        },
+        "it": {
+          "type": "string"
+        },
+        "iu": {
+          "type": "string"
+        },
+        "ja": {
+          "type": "string"
+        },
+        "jv": {
+          "type": "string"
+        },
+        "ka": {
+          "type": "string"
+        },
+        "kg": {
+          "type": "string"
+        },
+        "ki": {
+          "type": "string"
+        },
+        "kj": {
+          "type": "string"
+        },
+        "kk": {
+          "type": "string"
+        },
+        "kl": {
+          "type": "string"
+        },
+        "km": {
+          "type": "string"
+        },
+        "kn": {
+          "type": "string"
+        },
+        "ko": {
+          "type": "string"
+        },
+        "kr": {
+          "type": "string"
+        },
+        "ks": {
+          "type": "string"
+        },
+        "ku": {
+          "type": "string"
+        },
+        "kv": {
+          "type": "string"
+        },
+        "kw": {
+          "type": "string"
+        },
+        "ky": {
+          "type": "string"
+        },
+        "la": {
+          "type": "string"
+        },
+        "lb": {
+          "type": "string"
+        },
+        "lg": {
+          "type": "string"
+        },
+        "li": {
+          "type": "string"
+        },
+        "ln": {
+          "type": "string"
+        },
+        "lo": {
+          "type": "string"
+        },
+        "lt": {
+          "type": "string"
+        },
+        "lu": {
+          "type": "string"
+        },
+        "lv": {
+          "type": "string"
+        },
+        "mg": {
+          "type": "string"
+        },
+        "mh": {
+          "type": "string"
+        },
+        "mi": {
+          "type": "string"
+        },
+        "mk": {
+          "type": "string"
+        },
+        "ml": {
+          "type": "string"
+        },
+        "mn": {
+          "type": "string"
+        },
+        "mo": {
+          "type": "string"
+        },
+        "mr": {
+          "type": "string"
+        },
+        "ms": {
+          "type": "string"
+        },
+        "mt": {
+          "type": "string"
+        },
+        "my": {
+          "type": "string"
+        },
+        "na": {
+          "type": "string"
+        },
+        "nb": {
+          "type": "string"
+        },
+        "nd": {
+          "type": "string"
+        },
+        "ne": {
+          "type": "string"
+        },
+        "ng": {
+          "type": "string"
+        },
+        "nl": {
+          "type": "string"
+        },
+        "nn": {
+          "type": "string"
+        },
+        "no": {
+          "type": "string"
+        },
+        "nr": {
+          "type": "string"
+        },
+        "nv": {
+          "type": "string"
+        },
+        "nvi": {
+          "type": "string"
+        },
+        "ny": {
+          "type": "string"
+        },
+        "oc": {
+          "type": "string"
+        },
+        "oj": {
+          "type": "string"
+        },
+        "om": {
+          "type": "string"
+        },
+        "or": {
+          "type": "string"
+        },
+        "os": {
+          "type": "string"
+        },
+        "pa": {
+          "type": "string"
+        },
+        "pi": {
+          "type": "string"
+        },
+        "pl": {
+          "type": "string"
+        },
+        "ps": {
+          "type": "string"
+        },
+        "pt": {
+          "type": "string"
+        },
+        "qu": {
+          "type": "string"
+        },
+        "rm": {
+          "type": "string"
+        },
+        "rn": {
+          "type": "string"
+        },
+        "ro": {
+          "type": "string"
+        },
+        "ru": {
+          "type": "string"
+        },
+        "rw": {
+          "type": "string"
+        },
+        "sa": {
+          "type": "string"
+        },
+        "sc": {
+          "type": "string"
+        },
+        "sd": {
+          "type": "string"
+        },
+        "se": {
+          "type": "string"
+        },
+        "sg": {
+          "type": "string"
+        },
+        "si": {
+          "type": "string"
+        },
+        "sk": {
+          "type": "string"
+        },
+        "sl": {
+          "type": "string"
+        },
+        "sm": {
+          "type": "string"
+        },
+        "smi": {
+          "type": "string"
+        },
+        "sn": {
+          "type": "string"
+        },
+        "so": {
+          "type": "string"
+        },
+        "sq": {
+          "type": "string"
+        },
+        "sr": {
+          "type": "string"
+        },
+        "ss": {
+          "type": "string"
+        },
+        "st": {
+          "type": "string"
+        },
+        "su": {
+          "type": "string"
+        },
+        "sv": {
+          "type": "string"
+        },
+        "sw": {
+          "type": "string"
+        },
+        "ta": {
+          "type": "string"
+        },
+        "te": {
+          "type": "string"
+        },
+        "tg": {
+          "type": "string"
+        },
+        "th": {
+          "type": "string"
+        },
+        "ti": {
+          "type": "string"
+        },
+        "tk": {
+          "type": "string"
+        },
+        "tl": {
+          "type": "string"
+        },
+        "tn": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        },
+        "tr": {
+          "type": "string"
+        },
+        "ts": {
+          "type": "string"
+        },
+        "tt": {
+          "type": "string"
+        },
+        "tw": {
+          "type": "string"
+        },
+        "ty": {
+          "type": "string"
+        },
+        "ug": {
+          "type": "string"
+        },
+        "uk": {
+          "type": "string"
+        },
+        "ur": {
+          "type": "string"
+        },
+        "uz": {
+          "type": "string"
+        },
+        "ve": {
+          "type": "string"
+        },
+        "vi": {
+          "type": "string"
+        },
+        "vo": {
+          "type": "string"
+        },
+        "wa": {
+          "type": "string"
+        },
+        "wo": {
+          "type": "string"
+        },
+        "xh": {
+          "type": "string"
+        },
+        "yo": {
+          "type": "string"
+        },
+        "za": {
+          "type": "string"
+        },
+        "zh": {
+          "type": "string"
+        },
+        "zu": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "suggested": [
+        "de",
+        "en"
+      ]
     }
-  },
-  "required": [
-    "@context",
-    "id",
-    "name"
-  ]
+  }
 }
