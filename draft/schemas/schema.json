@@ -1,752 +1,562 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "oneOf": [
-    {
-      "$ref": "#/definitions/OER"
-    }
-  ],
-  "definitions": {
-    "OER": {
-      "title": "OER",
-      "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
-      "type": "object",
-      "default": {
-        "@context": [
-          "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
-        ]
-      },
-      "properties": {
-        "@context": {
-          "type": "array",
-          "minItems": 2,
-          "items": [
-            {
-              "type": "string",
-              "format": "uri",
-              "enum": [
-                "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "@language": {
-                  "type": "string",
-                  "enum": [
-                    "aa",
-                    "ab",
-                    "ae",
-                    "af",
-                    "ak",
-                    "am",
-                    "an",
-                    "ar",
-                    "as",
-                    "av",
-                    "ay",
-                    "az",
-                    "ba",
-                    "be",
-                    "bg",
-                    "bh",
-                    "bi",
-                    "bm",
-                    "bn",
-                    "bo",
-                    "br",
-                    "bs",
-                    "ca",
-                    "ce",
-                    "ch",
-                    "co",
-                    "cr",
-                    "cs",
-                    "cu",
-                    "cv",
-                    "cy",
-                    "da",
-                    "de",
-                    "dv",
-                    "dz",
-                    "ee",
-                    "el",
-                    "en",
-                    "eo",
-                    "es",
-                    "et",
-                    "eu",
-                    "fa",
-                    "ff",
-                    "fi",
-                    "fj",
-                    "fo",
-                    "fr",
-                    "fy",
-                    "ga",
-                    "gd",
-                    "gl",
-                    "gn",
-                    "gu",
-                    "gv",
-                    "ha",
-                    "hi",
-                    "ho",
-                    "hr",
-                    "ht",
-                    "hu",
-                    "hy",
-                    "hz",
-                    "ia",
-                    "ie",
-                    "ig",
-                    "ii",
-                    "ik",
-                    "io",
-                    "is",
-                    "it",
-                    "iu",
-                    "ja",
-                    "jv",
-                    "ka",
-                    "kg",
-                    "ki",
-                    "kj",
-                    "kk",
-                    "kl",
-                    "km",
-                    "kn",
-                    "ko",
-                    "kr",
-                    "ks",
-                    "ku",
-                    "kv",
-                    "kw",
-                    "ky",
-                    "la",
-                    "lb",
-                    "lg",
-                    "li",
-                    "ln",
-                    "lo",
-                    "lt",
-                    "lu",
-                    "lv",
-                    "mg",
-                    "mh",
-                    "mi",
-                    "mk",
-                    "ml",
-                    "mn",
-                    "mo",
-                    "mr",
-                    "ms",
-                    "mt",
-                    "my",
-                    "na",
-                    "nb",
-                    "nd",
-                    "ne",
-                    "ng",
-                    "nl",
-                    "nn",
-                    "no",
-                    "nr",
-                    "nv",
-                    "nvi",
-                    "ny",
-                    "oc",
-                    "oj",
-                    "om",
-                    "or",
-                    "os",
-                    "pa",
-                    "pi",
-                    "pl",
-                    "ps",
-                    "pt",
-                    "qu",
-                    "rm",
-                    "rn",
-                    "ro",
-                    "ru",
-                    "rw",
-                    "sa",
-                    "sc",
-                    "sd",
-                    "se",
-                    "sg",
-                    "si",
-                    "sk",
-                    "sl",
-                    "sm",
-                    "smi",
-                    "sn",
-                    "so",
-                    "sq",
-                    "sr",
-                    "ss",
-                    "st",
-                    "su",
-                    "sv",
-                    "sw",
-                    "ta",
-                    "te",
-                    "tg",
-                    "th",
-                    "ti",
-                    "tk",
-                    "tl",
-                    "tn",
-                    "to",
-                    "tr",
-                    "ts",
-                    "tt",
-                    "tw",
-                    "ty",
-                    "ug",
-                    "uk",
-                    "ur",
-                    "uz",
-                    "ve",
-                    "vi",
-                    "vo",
-                    "wa",
-                    "wo",
-                    "xh",
-                    "yo",
-                    "za",
-                    "zh",
-                    "zu"
-                  ]
-                }
-              },
-              "additionalProperties": false,
-              "required": [
-                "@language"
-              ]
-            }
-          ],
-          "additionalItems": true,
-          "_display": {
-            "className": "hidden"
-          }
-        },
-        "id": {
-          "title": "URL",
+  "title": "OER",
+  "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
+  "type": "object",
+  "default": {
+    "@context": [
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+    ]
+  },
+  "properties": {
+    "@context": {
+      "type": "array",
+      "minItems": 2,
+      "items": [
+        {
           "type": "string",
           "format": "uri",
-          "_display": {
-            "placeholder": "The URL of the resource"
-          }
-        },
-        "type": {
-          "title": "Type",
-          "type": "string",
-          "default": "CreativeWork",
           "enum": [
-            "AudioObject",
-            "Book",
-            "Course",
-            "CreativeWork",
-            "DataDownload",
-            "ImageObject",
-            "PresentationDigitalDocument",
-            "SoftwareApplication",
-            "VideoObject"
+            "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
           ]
         },
-        "name": {
-          "title": "Title",
-          "type": "string",
-          "_display": {
-            "rows": 2
-          }
-        },
-        "creator": {
-          "title": "Creator",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "title": "Type",
-                "type": "string",
-                "enum": [
-                  "Person",
-                  "Organization"
-                ]
-              },
-              "id": {
-                "title": "URL",
-                "type": "string",
-                "format": "uri"
-              },
-              "name": {
-                "title": "Name",
-                "type": "string",
-                "_display": {
-                  "placeholder": "The creator's name"
-                }
-              }
-            },
-            "required": [
-              "name",
-              "type"
-            ]
-          }
-        },
-        "description": {
-          "title": "Description",
-          "type": "string",
-          "_display": {
-            "rows": 5,
-            "placeholder": "A short description of the resource"
-          }
-        },
-        "about": {
-          "title": "Subject",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": [
-                  "Concept"
-                ]
-              },
-              "id": {
-                "type": "string",
-                "format": "uri",
-                "pattern": "^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*"
-              },
-              "inScheme": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string",
-                    "enum": [
-                      "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-                    ]
-                  }
-                }
-              },
-              "prefLabel": {
-                "title": "The preferred label of the concept",
-                "description": "A localized string for prefLabel of a SKOS concept",
-                "$ref": "#/definitions/LocalizedString"
-              }
-            },
-            "required": [
-              "id"
-            ],
-            "_widget": "SkohubLookup"
-          }
-        },
-        "license": {
-          "title": "License",
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
-          "_display": {
-            "placeholder": "URL of the Creative Commons license"
-          }
-        },
-        "image": {
-          "title": "Image",
-          "type": "string",
-          "format": "uri",
-          "_display": {
-            "placeholder": "A link to an image of the resource"
-          }
-        },
-        "dateCreated": {
-          "title": "Creation Date",
-          "type": "string",
-          "format": "date",
-          "_display": {
-            "placeholder": "YYYY-MM-DD"
-          }
-        },
-        "inLanguage": {
-          "title": "Language",
-          "type": "string",
-          "enum": [
-            "aa",
-            "ab",
-            "ae",
-            "af",
-            "ak",
-            "am",
-            "an",
-            "ar",
-            "as",
-            "av",
-            "ay",
-            "az",
-            "ba",
-            "be",
-            "bg",
-            "bh",
-            "bi",
-            "bm",
-            "bn",
-            "bo",
-            "br",
-            "bs",
-            "ca",
-            "ce",
-            "ch",
-            "co",
-            "cr",
-            "cs",
-            "cu",
-            "cv",
-            "cy",
-            "da",
-            "de",
-            "dv",
-            "dz",
-            "ee",
-            "el",
-            "en",
-            "eo",
-            "es",
-            "et",
-            "eu",
-            "fa",
-            "ff",
-            "fi",
-            "fj",
-            "fo",
-            "fr",
-            "fy",
-            "ga",
-            "gd",
-            "gl",
-            "gn",
-            "gu",
-            "gv",
-            "ha",
-            "hi",
-            "ho",
-            "hr",
-            "ht",
-            "hu",
-            "hy",
-            "hz",
-            "ia",
-            "ie",
-            "ig",
-            "ii",
-            "ik",
-            "io",
-            "is",
-            "it",
-            "iu",
-            "ja",
-            "jv",
-            "ka",
-            "kg",
-            "ki",
-            "kj",
-            "kk",
-            "kl",
-            "km",
-            "kn",
-            "ko",
-            "kr",
-            "ks",
-            "ku",
-            "kv",
-            "kw",
-            "ky",
-            "la",
-            "lb",
-            "lg",
-            "li",
-            "ln",
-            "lo",
-            "lt",
-            "lu",
-            "lv",
-            "mg",
-            "mh",
-            "mi",
-            "mk",
-            "ml",
-            "mn",
-            "mo",
-            "mr",
-            "ms",
-            "mt",
-            "my",
-            "na",
-            "nb",
-            "nd",
-            "ne",
-            "ng",
-            "nl",
-            "nn",
-            "no",
-            "nr",
-            "nv",
-            "nvi",
-            "ny",
-            "oc",
-            "oj",
-            "om",
-            "or",
-            "os",
-            "pa",
-            "pi",
-            "pl",
-            "ps",
-            "pt",
-            "qu",
-            "rm",
-            "rn",
-            "ro",
-            "ru",
-            "rw",
-            "sa",
-            "sc",
-            "sd",
-            "se",
-            "sg",
-            "si",
-            "sk",
-            "sl",
-            "sm",
-            "smi",
-            "sn",
-            "so",
-            "sq",
-            "sr",
-            "ss",
-            "st",
-            "su",
-            "sv",
-            "sw",
-            "ta",
-            "te",
-            "tg",
-            "th",
-            "ti",
-            "tk",
-            "tl",
-            "tn",
-            "to",
-            "tr",
-            "ts",
-            "tt",
-            "tw",
-            "ty",
-            "ug",
-            "uk",
-            "ur",
-            "uz",
-            "ve",
-            "vi",
-            "vo",
-            "wa",
-            "wo",
-            "xh",
-            "yo",
-            "za",
-            "zh",
-            "zu"
-          ],
-          "_display": {
-            "placeholder": "The language of the resource"
-          }
-        },
-        "publisher": {
-          "title": "Publisher",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "title": "Type",
-                "type": "string",
-                "enum": [
-                  "Organization"
-                ]
-              },
-              "id": {
-                "title": "URL",
-                "type": "string",
-                "format": "uri"
-              },
-              "name": {
-                "title": "Name",
-                "type": "string",
-                "_display": {
-                  "placeholder": "The publisher's name"
-                }
-              }
-            },
-            "required": [
-              "name",
-              "type"
-            ]
-          }
-        },
-        "learningResourceType": {
-          "title": "Learning Resource Type",
+        {
           "type": "object",
           "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "Concept"
-              ]
-            },
-            "id": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
-            },
-            "inScheme": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string",
-                  "enum": [
-                    "https://w3id.org/kim/hcrt/scheme"
-                  ]
-                }
-              }
-            },
-            "prefLabel": {
-              "title": "The preferred label of the concept",
-              "description": "A localized string for prefLabel of a SKOS concept",
-              "$ref": "#/definitions/LocalizedString"
+            "@language": {
+              "$ref": "#/definitions/Language"
             }
           },
+          "additionalProperties": false,
           "required": [
-            "id"
-          ],
-          "_widget": "SkohubLookup"
-        },
-        "audience": {
-          "title": "Intended Audience",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "_widget": {
-              "type": "SkohubLookup",
-              "options": {
-                "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-              }
-            },
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": [
-                  "Concept"
-                ]
-              },
-              "id": {
-                "type": "string",
-                "format": "uri"
-              },
-              "inScheme": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string",
-                    "enum": [
-                      "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-                    ]
-                  }
-                }
-              },
-              "prefLabel": {
-                "title": "The preferred label of the concept",
-                "description": "A localized string for prefLabel of a SKOS concept",
-                "$ref": "#/definitions/LocalizedString"
-              }
-            },
-            "required": [
-              "id"
+            "@language"
+          ]
+        }
+      ],
+      "additionalItems": true,
+      "_display": {
+        "className": "hidden"
+      }
+    },
+    "id": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri",
+      "_display": {
+        "placeholder": "The URL of the resource"
+      }
+    },
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "default": "CreativeWork",
+      "enum": [
+        "AudioObject",
+        "Book",
+        "Course",
+        "CreativeWork",
+        "DataDownload",
+        "ImageObject",
+        "PresentationDigitalDocument",
+        "SoftwareApplication",
+        "VideoObject"
+      ]
+    },
+    "name": {
+      "title": "Title",
+      "type": "string",
+      "_display": {
+        "rows": 2
+      }
+    },
+    "creator": {
+      "title": "Creator",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "title": "Type",
+            "type": "string",
+            "enum": [
+              "Person",
+              "Organization"
             ]
+          },
+          "id": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "_display": {
+              "placeholder": "The creator's name"
+            }
           }
         },
-        "isBasedOn": {
-          "title": "Based on",
-          "type": "array",
-          "items": {
+        "required": [
+          "name",
+          "type"
+        ]
+      }
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "_display": {
+        "rows": 5,
+        "placeholder": "A short description of the resource"
+      }
+    },
+    "about": {
+      "title": "Subject",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
             "type": "string",
             "format": "uri",
-            "_display": {
-              "placeholder": "The URL of a resource this OER is based on"
-            }
-          }
-        },
-        "mainEntityOfPage": {
-          "title": "Metadata/Structured descriptions",
-          "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
-          "type": "array",
-          "_display": {
-            "className": "hidden"
+            "pattern": "^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*"
           },
-          "items": {
+          "inScheme": {
             "type": "object",
             "properties": {
               "id": {
-                "title": "URL of the metadata",
                 "type": "string",
-                "format": "uri"
-              },
-              "type": {
-                "type": "string"
-              },
-              "provider": {
-                "title": "Metadata provider",
-                "description": "Quelle, von der die strukturierte Beschreibung (=Metadaten) zu dieser Ressource zur Verfügung gestellt werden.",
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "title": "URI für den Provider",
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "type": {
-                    "title": "Typ",
-                    "type": "string"
-                  },
-                  "name": {
-                    "title": "Name",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "id"
+                "enum": [
+                  "https://w3id.org/kim/hochschulfaechersystematik/scheme"
                 ]
-              },
-              "dateCreated": {
-                "title": "Creation Date of the metadata",
-                "type": "string",
-                "format": "date"
-              },
-              "dateModified": {
-                "title": "Date of last modification of the metadata",
-                "type": "string",
-                "format": "date"
               }
-            },
-            "required": [
-              "id"
-            ]
+            }
+          },
+          "prefLabel": {
+            "title": "The preferred label of the concept",
+            "description": "A localized string for prefLabel of a SKOS concept",
+            "$ref": "#/definitions/LocalizedString"
           }
+        },
+        "required": [
+          "id"
+        ],
+        "_widget": "SkohubLookup"
+      }
+    },
+    "license": {
+      "title": "License",
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
+      "_display": {
+        "placeholder": "URL of the Creative Commons license"
+      }
+    },
+    "image": {
+      "title": "Image",
+      "type": "string",
+      "format": "uri",
+      "_display": {
+        "placeholder": "A link to an image of the resource"
+      }
+    },
+    "dateCreated": {
+      "title": "Creation Date",
+      "type": "string",
+      "format": "date",
+      "_display": {
+        "placeholder": "YYYY-MM-DD"
+      }
+    },
+    "inLanguage": {
+      "title": "Language",
+      "$ref": "#/definitions/Language",
+      "_display": {
+        "placeholder": "The language of the resource"
+      }
+    },
+    "publisher": {
+      "title": "Publisher",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "title": "Type",
+            "type": "string",
+            "enum": [
+              "Organization"
+            ]
+          },
+          "id": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "_display": {
+              "placeholder": "The publisher's name"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "type"
+        ]
+      }
+    },
+    "learningResourceType": {
+      "title": "Learning Resource Type",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Concept"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
+        },
+        "inScheme": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": [
+                "https://w3id.org/kim/hcrt/scheme"
+              ]
+            }
+          }
+        },
+        "prefLabel": {
+          "title": "The preferred label of the concept",
+          "description": "A localized string for prefLabel of a SKOS concept",
+          "$ref": "#/definitions/LocalizedString"
         }
       },
       "required": [
-        "@context",
-        "id",
-        "name"
+        "id"
+      ],
+      "_widget": "SkohubLookup"
+    },
+    "audience": {
+      "title": "Intended Audience",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "_widget": {
+          "type": "SkohubLookup",
+          "options": {
+            "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Concept"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inScheme": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+                ]
+              }
+            }
+          },
+          "prefLabel": {
+            "title": "The preferred label of the concept",
+            "description": "A localized string for prefLabel of a SKOS concept",
+            "$ref": "#/definitions/LocalizedString"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "isBasedOn": {
+      "title": "Based on",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "_display": {
+          "placeholder": "The URL of a resource this OER is based on"
+        }
+      }
+    },
+    "mainEntityOfPage": {
+      "title": "Metadata/Structured descriptions",
+      "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
+      "type": "array",
+      "_display": {
+        "className": "hidden"
+      },
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "URL of the metadata",
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string"
+          },
+          "provider": {
+            "title": "Metadata provider",
+            "description": "Quelle, von der die strukturierte Beschreibung (=Metadaten) zu dieser Ressource zur Verfügung gestellt werden.",
+            "type": "object",
+            "properties": {
+              "id": {
+                "title": "URI für den Provider",
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "title": "Typ",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          },
+          "dateCreated": {
+            "title": "Creation Date of the metadata",
+            "type": "string",
+            "format": "date"
+          },
+          "dateModified": {
+            "title": "Date of last modification of the metadata",
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "name"
+  ],
+  "definitions": {
+    "Language": {
+      "type": "string",
+      "enum": [
+        "aa",
+        "ab",
+        "ae",
+        "af",
+        "ak",
+        "am",
+        "an",
+        "ar",
+        "as",
+        "av",
+        "ay",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bh",
+        "bi",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "ca",
+        "ce",
+        "ch",
+        "co",
+        "cr",
+        "cs",
+        "cu",
+        "cv",
+        "cy",
+        "da",
+        "de",
+        "dv",
+        "dz",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fj",
+        "fo",
+        "fr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "gu",
+        "gv",
+        "ha",
+        "hi",
+        "ho",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "hz",
+        "ia",
+        "ie",
+        "ig",
+        "ii",
+        "ik",
+        "io",
+        "is",
+        "it",
+        "iu",
+        "ja",
+        "jv",
+        "ka",
+        "kg",
+        "ki",
+        "kj",
+        "kk",
+        "kl",
+        "km",
+        "kn",
+        "ko",
+        "kr",
+        "ks",
+        "ku",
+        "kv",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "li",
+        "ln",
+        "lo",
+        "lt",
+        "lu",
+        "lv",
+        "mg",
+        "mh",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mo",
+        "mr",
+        "ms",
+        "mt",
+        "my",
+        "na",
+        "nb",
+        "nd",
+        "ne",
+        "ng",
+        "nl",
+        "nn",
+        "no",
+        "nr",
+        "nv",
+        "nvi",
+        "ny",
+        "oc",
+        "oj",
+        "om",
+        "or",
+        "os",
+        "pa",
+        "pi",
+        "pl",
+        "ps",
+        "pt",
+        "qu",
+        "rm",
+        "rn",
+        "ro",
+        "ru",
+        "rw",
+        "sa",
+        "sc",
+        "sd",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "sl",
+        "sm",
+        "smi",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tl",
+        "tn",
+        "to",
+        "tr",
+        "ts",
+        "tt",
+        "tw",
+        "ty",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "ve",
+        "vi",
+        "vo",
+        "wa",
+        "wo",
+        "xh",
+        "yo",
+        "za",
+        "zh",
+        "zu"
       ]
     },
     "LocalizedString": {
