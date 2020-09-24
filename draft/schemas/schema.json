@@ -48,19 +48,30 @@
     },
     "type": {
       "title": "Type",
-      "type": "string",
-      "default": "CreativeWork",
-      "enum": [
-        "AudioObject",
-        "Book",
-        "Course",
-        "CreativeWork",
-        "DataDownload",
-        "ImageObject",
-        "PresentationDigitalDocument",
-        "SoftwareApplication",
-        "VideoObject"
-      ]
+      "type": "array",
+      "minItems": 1,
+      "items": [
+        {
+          "type": "string",
+          "enum": [
+            "LearningResource"
+          ]          
+        },
+        {
+          "type": "string",
+          "enum": [
+            "AudioObject",
+            "Book",
+            "Course",
+            "DataDownload",
+            "ImageObject",
+            "PresentationDigitalDocument",
+            "SoftwareApplication",
+            "VideoObject"
+          ]          
+        }
+      ],
+      "additionalItems": true
     },
     "name": {
       "title": "Title",

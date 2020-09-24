@@ -5,7 +5,10 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": "Course",
+  "type": [
+    "LearningResource", 
+    "Course"
+  ],
   "learningResourceType": {
     "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
   }

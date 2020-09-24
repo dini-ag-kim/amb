@@ -18,7 +18,9 @@
     }
   ],
   "image": "https://example.org/oer/image.png",
-  "type": "CreativeWork",
+  "type": [
+    "LearningResource"
+  ],
   "creator": [
     {
       "name": "HansD",

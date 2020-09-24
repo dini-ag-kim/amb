@@ -6,7 +6,10 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": "Course",
+  "type": [
+    "LearningResource", 
+    "Course"
+  ],
   "learningResourceType": {
     "id": "https://w3id.org/kim/hcrt/course"
   }
