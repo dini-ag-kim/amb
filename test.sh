@@ -6,13 +6,13 @@ set -e
 for version in "draft"; do
 	echo "Testing version: $version"
 
-	for schema_file in `ls $version/schemas`; do
-		echo "Testing $schema_file"
-		schema_name=$(echo "$schema_file" | cut -f 1 -d '.')
-		ajv test -s $version/schemas/$schema_file -d "$version/examples/valid/*.json" --valid
-		ajv test -s $version/schemas/$schema_file -d "$version/examples/invalid/*.json" --invalid
-		echo ""
-	done
+#	for ` $version/schemas/schema.json`; do
+#		echo "Testing $schema_file"
+#		schema_name=$(echo "$schema_file" | cut -f 1 -d '.')
+		ajv test -s $version/schemas/schema.json -r "$version/schemas/*.json" -d "$version/examples/valid/*.json" --valid
+		ajv test -s $version/schemas/schema.json -r "$version/schemas/*.json" -d "$version/examples/invalid/*.json" --invalid
+#		echo ""
+#	done
 done
 
 if [ $? -eq 0 ]
