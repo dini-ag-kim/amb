@@ -1,0 +1,10 @@
+{
+    "$id": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/name.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Title",
+    "description": "The title of the lerarning resource",
+    "type": "string",
+    "_display": {
+        "rows": 2
+    }
+}

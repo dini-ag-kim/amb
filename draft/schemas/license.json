@@ -1,0 +1,12 @@
+{
+    "$id": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/license.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "License",
+    "description": "A link to a CreativeCommons license",
+    "type": "string",
+    "format": "uri",
+    "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
+    "_display": {
+        "placeholder": "URL of the Creative Commons license"
+    }
+}
