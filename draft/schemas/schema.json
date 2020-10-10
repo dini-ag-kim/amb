@@ -5,7 +5,10 @@
   "type": "object",
   "default": {
     "@context": [
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld"
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+      {
+        "@language": "de"
+      }
     ]
   },
   "properties": {
