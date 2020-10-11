@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/Language.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/Language.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Language code",
     "description": "An enumeration of ISO 639-1.conformant two-digit language codes.",

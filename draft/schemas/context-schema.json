@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/context-schema.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/context-schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "JSON-LD Context",
     "description": "The JSON-LD context for the structured resource descriptions",
@@ -17,7 +17,7 @@
         "type": "object",
         "properties": {
           "@language": {
-            "$ref": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/Language.json"
+            "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/Language.json"
           }
         },
         "additionalProperties": false,

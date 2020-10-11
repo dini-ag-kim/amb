@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/dini-ag-kim/lrmi-profile/23-modularize/draft/schemas/name.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/name.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Title",
     "description": "The title of the lerarning resource",
