@@ -1,5 +1,5 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/LocalizedString.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/LocalizedString.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Localized String",
     "description": "A language-tagged string using JSON-LD \"language maps\", see https://www.w3.org/TR/json-ld/#language-maps",

@@ -1,5 +1,5 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/image.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Image",
     "type": "string",

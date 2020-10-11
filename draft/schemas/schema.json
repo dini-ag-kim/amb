@@ -13,52 +13,52 @@
   },
   "properties": {
     "@context": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/context-schema.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context-schema.json"
     },
     "id": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/id.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/id.json"
     },
     "type": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/type.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/type.json"
     },
     "name": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/name.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json"
     },
     "creator": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/creator.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json"
     },
     "description": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/description.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/description.json"
     },
     "about": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/about.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/about.json"
     },
     "license": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/license.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json"
     },
     "image": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/image.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json"
     },
     "dateCreated": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/dateCreated.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json"
     },
     "inLanguage": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/inLanguage.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/inLanguage.json"
     },
     "publisher": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/publisher.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/publisher.json"
     },
     "learningResourceType": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/learningResourceType.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json"
     },
     "audience": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/audience.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/audience.json"
     },
     "isBasedOn": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/isBasedOn.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isBasedOn.json"
     },
     "mainEntityOfPage": {
-      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/mainEntityOfPage.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json"
     }
   },
   "required": [

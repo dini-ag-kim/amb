@@ -1,9 +1,9 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/inLanguage.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/inLanguage.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Language",
     "description": "The language of the learning resource",
-    "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/Language.json",
+    "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/Language.json",
     "_display": {
       "placeholder": "The language of the resource"
     }

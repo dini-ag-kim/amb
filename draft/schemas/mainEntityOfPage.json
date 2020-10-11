@@ -1,5 +1,5 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/mainEntityOfPage.json",
+    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Metadata/Structured descriptions",
     "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
@@ -42,7 +42,7 @@
           ]
         },
         "dateCreated": {
-          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schemas/dateCreated.json"
+          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json"
         },
         "dateModified": {
           "title": "Date of last modification of the metadata",
