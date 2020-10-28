@@ -3,17 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Type",
     "description": "The type (rdf:type / @type) of the learning resource, taken from sub-classes of sdo:CreativeWork.",
-    "type": "string",
-    "default": "CreativeWork",
-    "enum": [
-        "AudioObject",
-        "Book",
-        "Course",
-        "CreativeWork",
-        "DataDownload",
-        "ImageObject",
-        "PresentationDigitalDocument",
-        "SoftwareApplication",
-        "VideoObject"
-    ]
+    "type": "array",
+    "_display": {
+        "className": "hidden"
+      },
+    "items": {
+        "type": "string"
+    }
 }

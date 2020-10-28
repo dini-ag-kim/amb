@@ -10,7 +10,9 @@
         "dateModified": "2020-02-02"
     },
     "image": "https://example.org/oer/image.png",
-    "type": "CreativeWork",
+    "type": [
+      "LearningResource"
+    ],
     "creator": [
       {
         "name": "HansD",
