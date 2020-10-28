@@ -59,6 +59,9 @@
     },
     "mainEntityOfPage": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json"
+    },
+    "keywords": {
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/keywords.json"
     }
   },
   "required": [
