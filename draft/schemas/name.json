@@ -2,7 +2,7 @@
     "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Title",
-    "description": "The title of the lerarning resource",
+    "description": "The title of the learning resource",
     "type": "string",
     "_display": {
         "rows": 2
