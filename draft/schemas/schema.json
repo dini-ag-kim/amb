@@ -70,6 +70,7 @@
   "required": [
     "@context",
     "id",
-    "name"
+    "name",
+    "type"
   ]
 }
