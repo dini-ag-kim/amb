@@ -85,14 +85,6 @@
             ],
             format: "markdown",
             localBiblio: {
-                // Siehe https://github.com/w3c/respec/wiki/localBiblio
-                // Bibliografische Referenzen, auf die innerhalb der Spezifikation
-                // mittels [[LOMv1.0]] bzw. [[Wikidata]] verwiesen werden kann. Es
-                // kann zwischen normativen Verweisen [[!LOMv1.0]] und informativen
-                // Verweisen [[?LOMv1.0]] unterschieden werden. Referenzen werden
-                // automatisch am Ende der Spezifikation gesammelt.
-                // Referenzen, die bereits in der Datenbank SpecRef enthalten sind,
-                // müssen hier nicht aufgeführt werden: https://www.specref.org/
                 "LRMI": {
                     title: "LRMI Concept Schemes",
                     href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
@@ -104,11 +96,8 @@
                     publisher: "W3C"
                 }
             },
-            logos: [
-                // Siehe https://github.com/w3c/respec/wiki/logos
-            ],
+            logos: [],
             otherLinks: [{
-                // Siehe https://github.com/w3c/respec/wiki/otherLinks
                 key: "Links zur Spezifikation",
                 data: [{
                     value: "Permalink zur aktuellsten Version",
@@ -133,78 +122,54 @@
             }],
             publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
             specStatus: "unofficial", // "unofficial" für Entwürfe, "base" für publizierte Versionen.
-            // subtitle: "[Untertitel]" // optional
+//          subtitle: "[Untertitel]" // optional
         };
     </script>
 </head>
 <body>
-
-<!--
-    Die Spezifikation muss in <section> Elemente gegliedert werden.
-    Abhängig vom Wert des @id-Attributs haben einige dieser Abschnitte
-    eine besondere Bedeutung und werden entsprechend von ReSpec anders
-    behandelt.
-    Jede <section> muss mit einer Überschrift beginnen. Diese ist stets
-    als <h2>-Überschrift bzw. im Markdown-Format mit ## zu kennzeichnen.
-    <section> können in einander verschachtelt werden. ReSpec erkennt
-    automatisch die Hierarchietiefe und formatiert die Überschrift
-    entsprechend. Jede <section> bildet zudem automatisch einen Eintrag
-    im Inhaltsverzeichnis.
-    Für weiterführende Hinweise und eine vollständige Dokumentation der
-    Möglichkeiten von ReSpec siehe den ReSpec Editor's Guide:
-    https://github.com/w3c/respec/wiki/ReSpec-Editor's-Guide
--->
-
-<section id="abstract" data-include="contents/abstract.md"></section>
-
-</section>
-
-<section id="conformance" data-include="contents/conformance.md"></section>
-
-<section id="technical-spec">
-<h2>Implementierung</h2>
-
-<section id="format" data-include="contents/format.md">
-<h2>Format</h2>
-</section>
-
-<section id="vocabulary" data-include="contents/vocabulary.md">
-<h2>Vokabular</h2>
-</section>
-
-<section id="examples">
-<h2>Beispiele</h2>
-
-<section id="full-example">
-<h2>Vollständiges Beispiel</h2>
-<pre class="example" data-include="examples/full-example.json" data-include-format="text"></pre>
-</section>
-
-</section>
-
-</section>
-
-<section id="schemas">
-<h2>Validierung</h2>
-
-<section id="json-schema">
-<h2>JSON Schema</h2>
-<pre data-include="schemas/service-card.json" data-include-format="text"></pre>
-<a href="schemas/service-card.json">Link zum Schema</a>
-</section>
-
-</section>
-
-<section id="glossary" class="appendix" data-include="contents/glossary.md">
-<h2>Glossar</h2>
-</section>
-
-<!--
-    Um das direkte Kommentieren des Entwurfs zu ermöglichen, sollte hypothes.is
-    eingebunden werden. Vor der Veröffentlichung einer stabilen Version sollte das
-    <script> Element entfernt werden.
--->
-<script src="https://hypothes.is/embed.js" async></script>
-
-</body>
-</html>
+    <section id="abstract" data-include="contents/abstract.md"></section>
+    
+    <section id="conformance" data-include="contents/conformance.md"></section>
+    
+    <section id="technical-spec">
+    <h2>Implementierung</h2>
+    
+    <section id="format" data-include="contents/format.md">
+    <h2>Format</h2>
+    </section>
+    
+    <section id="vocabulary" data-include="contents/vocabulary.md">
+    <h2>Vokabular</h2>
+    </section>
+    
+    <section id="examples">
+    <h2>Beispiele</h2>
+    
+    <section id="full-example">
+    <h2>Vollständiges Beispiel</h2>
+    <pre class="example" data-include="examples/full-example.json" data-include-format="text"></pre>
+    </section>
+    
+    </section>
+    
+    </section>
+    
+    <section id="schemas">
+    <h2>Validierung</h2>
+    
+    <section id="json-schema">
+    <h2>JSON Schema</h2>
+    <pre data-include="schemas/service-card.json" data-include-format="text"></pre>
+    <a href="schemas/service-card.json">Link zum Schema</a>
+    </section>
+    
+    </section>
+    
+    <section id="glossary" class="appendix" data-include="contents/glossary.md">
+    <h2>Glossar</h2>
+    </section>
+    
+    <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
+    <script src="https://hypothes.is/embed.js" async></script>
+    </body>
+    </html>
