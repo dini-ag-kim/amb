@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- Mit Hilfe des @lang Attributs wird die Sprache für ReSpec definiert. -->
+<html lang='de'>
+<head>
+    <meta charset='utf-8'>
+    <title>
+        LRMI-Profil für Hochschul-OER im deutschsprachigen Raum
+    </title>
+    <script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
+    <script class='remove'>
+        // ReSpec-Konfiguration
+        // Dokumentation: https://github.com/w3c/respec/wiki/Configuration-(respecConfig)
+        var respecConfig = {
+            editors: [{
+                // Siehe https://github.com/w3c/respec/wiki/editors
+                name: "Adrian Pohl",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "DINI AG KIM",
+                    href: "https://wiki.dnb.de/display/DINIAGKIM",
+                    class: "kim"
+                }, {
+                    name: "GitHub",
+                    href: "https://github.com/acka47",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/acka47",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Axel Klinger",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/axel-klinger",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/axel-klinger",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Fabian Steeg",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/fsteeg",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/fsteeg",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Mirjan Hoffmann",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/mirjan-hoffmann",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/mirjan-hoffmann",
+                    class: "gitlab"
+                }]
+            },  {
+                name: "Tobias Bülte",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/TobiasNx",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/TobiasNx",
+                    class: "gitlab"
+                }]
+            }
+            ],
+            format: "markdown",
+            localBiblio: {
+                // Siehe https://github.com/w3c/respec/wiki/localBiblio
+                // Bibliografische Referenzen, auf die innerhalb der Spezifikation
+                // mittels [[LOMv1.0]] bzw. [[Wikidata]] verwiesen werden kann. Es
+                // kann zwischen normativen Verweisen [[!LOMv1.0]] und informativen
+                // Verweisen [[?LOMv1.0]] unterschieden werden. Referenzen werden
+                // automatisch am Ende der Spezifikation gesammelt.
+                // Referenzen, die bereits in der Datenbank SpecRef enthalten sind,
+                // müssen hier nicht aufgeführt werden: https://www.specref.org/
+                "LOMv1.0": {
+                    title: "IEEE Standard for Learning Object Metadata",
+                    href: "https://ieeexplore.ieee.org/document/1032843/",
+                    status: "1484.12.1-2002",
+                    publisher: "IEEE"
+                },
+                "Wikidata": {
+                    title: "Wikidata",
+                    href: "https://www.wikidata.org/",
+                    publisher: "The Wikimedia Foundation, Inc."
+                }
+            },
+            logos: [
+                // Siehe https://github.com/w3c/respec/wiki/logos
+            ],
+            otherLinks: [{
+                // Siehe https://github.com/w3c/respec/wiki/otherLinks
+                key: "Links zur Spezifikation",
+                data: [{
+                    value: "Permalink zur aktuellsten Version",
+                    href: "https://w3id.org/kim/[spec]/latest/"
+                }, {
+                     // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
+                    value: "Permalink zu dieser Version",
+                    href: "https://w3id.org/kim/[spec]/[version]/"
+                }, {
+                    value: "Letzter Entwurf zur Kommentierung",
+                    href: "https://w3id.org/kim/[spec]/draft/"
+                }]
+            }, {
+                key: "Mitmachen",
+                data: [{
+                    value: "GitHub-Repository",
+                    href: "https://github.com/dini-ag-kim/lrmi-profile"
+                }, {
+                    value: "Änderungshistorie",
+                    href: "https://github.com/dini-ag-kim/lrmi-profile/commits/master"
+                }]
+            }],
+            publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
+            specStatus: "unofficial", // "unofficial" für Entwürfe, "base" für publizierte Versionen.
+            // subtitle: "[Untertitel]" // optional
+        };
+    </script>
+</head>
+<body>
+
+<!--
+    Die Spezifikation muss in <section> Elemente gegliedert werden.
+    Abhängig vom Wert des @id-Attributs haben einige dieser Abschnitte
+    eine besondere Bedeutung und werden entsprechend von ReSpec anders
+    behandelt.
+    Jede <section> muss mit einer Überschrift beginnen. Diese ist stets
+    als <h2>-Überschrift bzw. im Markdown-Format mit ## zu kennzeichnen.
+    <section> können in einander verschachtelt werden. ReSpec erkennt
+    automatisch die Hierarchietiefe und formatiert die Überschrift
+    entsprechend. Jede <section> bildet zudem automatisch einen Eintrag
+    im Inhaltsverzeichnis.
+    Für weiterführende Hinweise und eine vollständige Dokumentation der
+    Möglichkeiten von ReSpec siehe den ReSpec Editor's Guide:
+    https://github.com/w3c/respec/wiki/ReSpec-Editor's-Guide
+-->
+
+<section id="abstract">
+
+## Zusammenfassung
+
+Der Abschnitt "abstract" ist verpflichtend und enthält eine kurze Beschreibung
+der Spezifikation. Er hat keinen normativen Charakter und sollte daher keine
+Festlegungen oder Definitionen enthalten.
+
+<p class="copyright">
+Angaben innerhalb eines Absatzes mit der Klasse "copyright" werden im Header des
+Dokuments angezeigt und als Rechteangabe interpretiert.
+</p>
+
+</section>
+
+<section id="conformance">
+
+Dieser Abschnitt wird von ReSpec automatisch mit Inhalt gefüllt und muss lediglich
+als leerer Abschnitt an der gewünschten Stelle in die Spezifikation eingefügt
+werden. Eigene Inhalte werden den automatisch eingefügten Inhalten nachgestellt.
+ReSpec fügt hier beispielsweise die Unterscheidung von normativen und informativen
+Abschnitten ein und erläutert im Bedarfsfall die Bedeutung der Schlüsselwörter
+"MUSS", "KANN", "DARF", "SOLL" bzw. "DARF NICHT", "SOLL NICHT" etc. gemäß
+[[!RFC2119]].
+
+</section>
+
+<section id="main">
+
+## Hauptteil
+
+Enthält die eigentliche Spezifikation, die mit Hilfe weiterer Abschnitte beliebig
+untergegliedert werden kann. Es kann auch mehrere Abschnitte auf oberster Ebene
+geben, die dann unterschiedliche @id-Attribute haben müssen.
+
+Definitionen für Elemente werden mit <dfn>[Element]</dfn> gekennzeichnet. Von
+beliebiger anderer Stelle in der Spezifikation kann dann mittels <a>[Element]</a>
+auf diese Definition verwiesen werden.
+
+<p class="note">
+Angaben innerhalb eines Absatzes mit der Klasse "note" werden in einem grünen
+Kasten angezeigt und als informativer Hinweis interpretiert.
+</p>
+
+<pre class="example">
+Angaben innerhalb eines vorformatierten Absatzes mit der Klasse "example" werden als
+Beispiel interpretiert und entsprechend gekennzeichnet.
+</pre>
+
+</section>
+
+<section id="glossary" class="appendix">
+
+## Glossar
+
+Abschnitte mit der Klasse "appendix" werden ans Ende der Spezifikation gesetzt
+und im Inhaltsverzeichnis nicht nummeriert, sondern mit Buchstaben gekennzeichnet.
+
+Ein solcher Abschnitt kann beispielsweise ein Glossar enthalten, wobei jede hier
+mittels <abbr title="abbreviation">abbr</abbr> gekennzeichnete Abkürzung in der
+gesamten Spezifikation als solche markiert wird.
+
+</section>
+
+<!--
+    Um das direkte Kommentieren des Entwurfs zu ermöglichen, sollte hypothes.is
+    eingebunden werden. Vor der Veröffentlichung einer stabilen Version sollte das
+    <script> Element entfernt werden.
+-->
+<script src="https://hypothes.is/embed.js" async></script>
+
+</body>
+</html>
