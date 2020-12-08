@@ -184,7 +184,22 @@ Sprache(n) der OER-Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entspreche
 
 </section>
 
-PUBLISHER
+<section data-dfn-for="provider">
+
+### <dfn>publisher</dfn>
+
+Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value 	`Organization` und `name` Properties aufweisen.  KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dd>
+    <dd>`Object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+</dl>
+
+</section>
 
 <section data-dfn-for="learningResourceType">
 
@@ -220,92 +235,41 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
 
 </section>
 
-<section data-dfn-for="isAccessibleForFree">
+<section data-dfn-for="isBasedOn">
 
-### <dfn>isAccessibleForFree</dfn>
+### <dfn>isBasedOn</dfn>
 
-Sind Inhalte oder Dienste frei (ohne Authentifizierung) verfügbar?
+Verweis auf andere Ressource, von die beschriebene Ressource ein Derivat ist.
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`Boolean`</dd>
+    <dd>`String[]` (URL)</dd>
 </dl>
 
 </section>
 
-<section data-dfn-for="provider">
+<section data-dfn-for="mainEntityOfPage">
 
-### <dfn>provider</dfn>
+### <dfn>mainEntityOfPage</dfn>
 
-Anbieter des Dienstes. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
-    <dt>Typ</dd>
-    <dd>`Object[]`</dd>
-    <dt>Werte</dt>
-    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="availableChannel">
-
-### <dfn>availableChannel</dfn>
-
-Services, die angeboten werden. MUSS ein oder mehrere JSON-Objekte enthalten, die `ServiceChannel` und `WebAPI` gemäß [[!schema.org]] beschreiben.
+In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfasst, wie `id` der Landing-Page der Metadaten, Angaben zum Metadaten-Provider `provider`, wie `id`,`type` und `name`, Erstellungsdatum der Metadaten `dateCreated` und Änderungsdatum der Metadaten `dateModified
 
 <dl>
     <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
+    <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`Object[]`</dd>
-    <dt>Werte</dt>
-    <dd>Objekt vom Typ <a href="https://schema.org/ServiceChannel">ServiceChannel</a> und <a href="https://schema.org/WebAPI">WebAPI</a></dd>
+    <dd>`Object[]` (URL)</dd>
 </dl>
 
 </section>
 
-<section data-dfn-for="schemaVersion">
+<section data-dfn-for="keyword">
 
-### <dfn>schemaVersion</dfn>
+### <dfn>keyword</dfn>
 
-Version des Schemas.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
-    <dt>Typ</dt>
-    <dd>`String`</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="dateModified">
-
-### <dfn>dateModified</dfn>
-
-Letztes Änderungsdatum der Visitenkarte. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
-    <dt>Typ</dt>
-    <dd>`Date`</dd>
-    <dt>Werte</dt>
-    <dd>[[!ISO8601]]</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="sameAs">
-
-### <dfn>sameAs</dfn>
-
-Zugehörige Webseiten (GitHub, Docker, ...).
+Schlagworte zur Beschreibung des Inhalts der OER-Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
