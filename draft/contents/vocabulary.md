@@ -1,8 +1,8 @@
 ## Vokabular
 
-Als Vokabular für eine Visitenkarte dienen [[!schema.org]] und [[!LRMI]]. Alle Einträge können auf standardisierte Typen und Properties abgebildet werden.
+Als Vokabular für eine OER-Ressource dienen [[!schema.org]] und [[!LRMI]]. Alle Einträge können auf standardisierte Typen und Properties abgebildet werden.
 
-Im Folgenden wird die Struktur der Visitenkarte beschrieben. Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt. Wenn erforderlich wird der Wertebereich festgelegt und kurze Beispiele gegeben.
+Im Folgenden wird die Struktur eines OER-Metadatensatz beschrieben. Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt. Wenn erforderlich wird der Wertebereich festgelegt und kurze Beispiele gegeben.
 
 <section data-dfn-for="@context">
 
@@ -25,7 +25,7 @@ Der Link zum JSON-LD-Kontext für das Dokument. MUSS auf `https://schema.org/` g
 
 ### <dfn>id</dfn>
 
-Die URL, durch den der Service identifiziert wird. Das ist in der Regel die Homepage. Auf dieser URL MUSS die Visitenkarte abrufbar sein.
+Die URL, durch den die OER-Ressource identifiziert Auf dieser URL MUSS die OER-Ressource abrufbar sein. Es SOLL nicht eine URL sein, von der aus nur auf die OER-Ressource verwiesen wird.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -40,15 +40,16 @@ Die URL, durch den der Service identifiziert wird. Das ist in der Regel die Home
 
 ### <dfn>type</dfn>
 
-Art der Webseite. MUSS auf `https://schema.org/WebSite` und `https://schema.org/Service` gesetzt werden.
+Art der OER-Ressource. MUSS den Wert `https://schema.org/LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
+
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`String[]` (URL)</dd>
+    <dd>`string[]`</dd>
     <dt>Werte</dt>
-    <dd>`https://schema.org/WebSite` und `https://schema.org/Service`</dd>
+    <dd>`https://schema.org/LearningResource` und Unterklassen von CreativeWork</dd>
 </dl>
 
 </section>
@@ -57,7 +58,7 @@ Art der Webseite. MUSS auf `https://schema.org/WebSite` und `https://schema.org/
 
 ### <dfn>name</dfn>
 
-Name des Dienstes.
+Titel der OER-Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -68,11 +69,75 @@ Name des Dienstes.
 
 </section>
 
+<section data-dfn-for="creator">
+
+### <dfn>creator</dfn>
+
+Urheber:innen der OER-Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dd>
+    <dd>`Object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
+### <dfn>description</dfn>
+
+Beschreibung der OER-Ressource.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="about">
+
+### <dfn>about</dfn>
+
+Fach/Thema der Inhalte. MUSS einen Wert aus der Destatis Fächerklassifikation https://w3id.org/kim/hochschulfaechersystematik/scheme ODER aus SCHULBEREICH enthalten.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`String[]` (URI)</dd>
+    <dt>Werte</dt>
+    <dd>Werte aus https://w3id.org/kim/hochschulfaechersystematik/scheme</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="license">
+
+### <dfn>license</dfn>
+
+Lizenz der OER-Ressource. Wert Muss URI der entsprechenden CC-Lizenz nutzen.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Date Type</dt>
+    <dd>`String[]` (URL)</dd>
+</dl>
+
+</section>
+
 <section data-dfn-for="image">
 
 ### <dfn>image</dfn>
 
-Icon des Dienstes. KANN genutzt werden, um beispielsweise Suchergebnisse zu kennzeichnen.
+Thumbnail der OER-Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -80,22 +145,24 @@ Icon des Dienstes. KANN genutzt werden, um beispielsweise Suchergebnisse zu kenn
     <dt>Typ</dt>
     <dd>`String` (URL)</dd>
     <dt>Werte</dt>
-    <dd>Dateiformat: `svg` oder `png`<br>Größe: 64x64px</dd>
+    <dd></dd>
 </dl>
 
 </section>
 
-<section data-dfn-for="logo">
+<section data-dfn-for="dateCreated">
 
-### <dfn>logo</dfn>
+### <dfn>dateCreated</dfn>
 
-Logo des Dienstes.
+Erscheinungsdatum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String` (URL)</dd>
+    <dd>`Date`</dd>
+    <dt>Werte</dt>
+    <dd>[[!ISO8601]]</dd>
 </dl>
 
 </section>
@@ -104,7 +171,7 @@ Logo des Dienstes.
 
 ### <dfn>inLanguage</dfn>
 
-Sprache(n) des Hauptangebotes. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+Sprache(n) der OER-Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -117,26 +184,13 @@ Sprache(n) des Hauptangebotes. MUSS den Sprachcodes gemäß [[!BCP47]] entsprech
 
 </section>
 
-<section data-dfn-for="description">
+PUBLISHER
 
-### <dfn>description</dfn>
+<section data-dfn-for="learningResourceType">
 
-Beschreibung des Dienstes.
+### <dfn>learningResourceType</dfn>
 
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Typ</dt>
-    <dd>`String`</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="serviceType">
-
-### <dfn>serviceType</dfn>
-
-Art des Services. KANN einen `Service`-Subtyp von [[schema.org]] enthalten. Die Angabe eigener Werte ist zulässig, ein kontrolliertes Vokabular wird angestrebt.
+Art des OER-Lernmittels. MUSS Wert aus dem Vokabluar der Hochschulcampus Ressourcentypen sein (https://w3id.org/kim/hcrt/)
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -144,7 +198,7 @@ Art des Services. KANN einen `Service`-Subtyp von [[schema.org]] enthalten. Die 
     <dt>Typ</dt>
     <dd>`String[]`</dd>
     <dt>Werte</dt>
-    <dd><a href="http://schema.org/Service#subtypes">Subtyp von http://schema.org/Service</a>, `Repository`, `Referatory`, `Wiki`, `LMS` oder andere</dd>
+    <dd><a href=" https://w3id.org/kim/hcrt/">Wert aus Hochschulcampus Ressourcentypen</a></dd>
 </dl>
 
 </section>
@@ -162,23 +216,6 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
     <dd>`String[]` (URI)</dd>
     <dt>Werte</dt>
     <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="about">
-
-### <dfn>about</dfn>
-
-Fach/Thema der Inhalte. KANN einen `Thing`-Subtyp von [[schema.org]] enthalten.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Typ</dt>
-    <dd>`String[]` (URI)</dd>
-    <dt>Werte</dt>
-    <dd><a href="http://schema.org/Thing#subtypes">Subtyp von http://schema.org/Thing</a> oder andere</dd>
 </dl>
 
 </section>
@@ -211,23 +248,6 @@ Anbieter des Dienstes. MUSS ein oder mehrere JSON-Objekte enthalten, die mindest
     <dd>`Object[]`</dd>
     <dt>Werte</dt>
     <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="startDate">
-
-### <dfn>startDate</dfn>
-
-Launch-Datum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Typ</dt>
-    <dd>`Date`</dd>
-    <dt>Werte</dt>
-    <dd>[[!ISO8601]]</dd>
 </dl>
 
 </section>
@@ -277,21 +297,6 @@ Letztes Änderungsdatum der Visitenkarte. MUSS einem Datum gemäß [[!ISO8601]] 
     <dd>`Date`</dd>
     <dt>Werte</dt>
     <dd>[[!ISO8601]]</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="license">
-
-### <dfn>license</dfn>
-
-Lizenz(en) der angebotenen Inhalte.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Date Type</dt>
-    <dd>`String[]` (URL)</dd>
 </dl>
 
 </section>
