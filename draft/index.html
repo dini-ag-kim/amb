@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang='de'>
 <head>
-<meta charset='utf-8'>
-<title>
-LRMI-Profil für Hochschul-OER im deutschsprachigen Raum
-</title>
-<script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
-<script class='remove'>
-// ReSpec-Konfiguration
-// Dokumentation: https://github.com/w3c/respec/wiki/Configuration-(respecConfig)
-var respecConfig = {
-editors: [{
-// Siehe https://github.com/w3c/respec/wiki/editors
-name: "Adrian Pohl",
-company: "hbz",
-companyURL: "https://www.hbz-nrw.de/",
-extras: [{
-name: "DINI AG KIM",
-href: "https://wiki.dnb.de/display/DINIAGKIM",
-class: "kim"
-}, {
-name: "GitHub",
-href: "https://github.com/acka47",
-class: "github"
-}, {
-name: "GitLab",
-href: "https://gitlab.com/acka47",
-class: "gitlab"
-}]
-}, {
-name: "Axel Klinger",
-company: "TIB",
-companyURL: "https://www.tib.eu/",
-extras: [{
-name: "GitHub",
-href: "https://github.com/axel-klinger",
-class: "github"
-}, {
-name: "GitLab",
-href: "https://gitlab.com/axel-klinger",
-class: "gitlab"
-}]
-}, {
-name: "Fabian Steeg",
-company: "hbz",
-companyURL: "https://www.hbz-nrw.de/",
-extras: [{
-name: "GitHub",
-href: "https://github.com/fsteeg",
-class: "github"
-}, {
-name: "GitLab",
-href: "https://gitlab.com/fsteeg",
-class: "gitlab"
-}]
-}, {
-name: "Mirjan Hoffmann",
-company: "TIB",
-companyURL: "https://www.tib.eu/",
-extras: [{
-name: "GitHub",
-href: "https://github.com/mirjan-hoffmann",
-class: "github"
-}, {
-name: "GitLab",
-href: "https://gitlab.com/mirjan-hoffmann",
-class: "gitlab"
-}]
-},  {
-name: "Tobias Bülte",
-company: "hbz",
-companyURL: "https://www.hbz-nrw.de/",
-extras: [{
-name: "GitHub",
-href: "https://github.com/TobiasNx",
-class: "github"
-}, {
-name: "GitLab",
-href: "https://gitlab.com/TobiasNx",
-class: "gitlab"
-}]
-}],
-format: "markdown",
-localBiblio: {
-"LRMI": {
-title: "LRMI Concept Schemes",
-href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
-publisher: "DCMI"
-},
-"schema.org": {
-title: "schema.org Vocabulary",
-href: "https://schema.org",
-publisher: "W3C"
-}
-},
-logos: [],
-otherLinks: [{
-key: "Links zur Spezifikation",
-data: [{
-value: "Permalink zur aktuellsten Version",
-href: "https://w3id.org/kim/[spec]/latest/"
-}, {
- // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
-value: "Permalink zu dieser Version",
-href: "https://w3id.org/kim/[spec]/[version]/"
-}, {
-value: "Letzter Entwurf zur Kommentierung",
-href: "https://w3id.org/kim/[spec]/draft/"
-}]
-}, {
-key: "Mitmachen",
-data: [{
-value: "GitHub-Repository",
-href: "https://github.com/dini-ag-kim/lrmi-profile"
-}, {
-value: "Änderungshistorie",
-href: "https://github.com/dini-ag-kim/lrmi-profile/commits/master"
-}]
-}],
-publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
-specStatus: "unofficial"
-};
-</script>
+    <meta charset='utf-8'>
+    <title>
+        LRMI-Profil für Hochschul-OER im deutschsprachigen Raum
+    </title>
+    <script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
+    <script class='remove'>
+        // ReSpec-Konfiguration
+        // Dokumentation: https://github.com/w3c/respec/wiki/Configuration-(respecConfig)
+        var respecConfig = {
+            editors: [{
+                // Siehe https://github.com/w3c/respec/wiki/editors
+                name: "Adrian Pohl",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "DINI AG KIM",
+                    href: "https://wiki.dnb.de/display/DINIAGKIM",
+                    class: "kim"
+                }, {
+                    name: "GitHub",
+                    href: "https://github.com/acka47",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/acka47",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Axel Klinger",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/axel-klinger",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/axel-klinger",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Fabian Steeg",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/fsteeg",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/fsteeg",
+                    class: "gitlab"
+                }]
+            }, {
+                name: "Mirjan Hoffmann",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/mirjan-hoffmann",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/mirjan-hoffmann",
+                    class: "gitlab"
+                }]
+            },  {
+                name: "Tobias Bülte",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/",
+                extras: [{
+                    name: "GitHub",
+                    href: "https://github.com/TobiasNx",
+                    class: "github"
+                }, {
+                    name: "GitLab",
+                    href: "https://gitlab.com/TobiasNx",
+                    class: "gitlab"
+                }]
+            }],
+            format: "markdown",
+            localBiblio: {
+                "LRMI": {
+                    title: "LRMI Concept Schemes",
+                    href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
+                    publisher: "DCMI"
+                },
+                "schema.org": {
+                    title: "schema.org Vocabulary",
+                    href: "https://schema.org",
+                    publisher: "W3C"
+                }
+            },
+            logos: [],
+            otherLinks: [{
+                key: "Links zur Spezifikation",
+                data: [{
+                    value: "Permalink zur aktuellsten Version",
+                    href: "https://w3id.org/kim/[spec]/latest/"
+                }, {
+                     // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
+                    value: "Permalink zu dieser Version",
+                    href: "https://w3id.org/kim/[spec]/[version]/"
+                }, {
+                    value: "Letzter Entwurf zur Kommentierung",
+                    href: "https://w3id.org/kim/[spec]/draft/"
+                }]
+            }, {
+                key: "Mitmachen",
+                data: [{
+                    value: "GitHub-Repository",
+                    href: "https://github.com/dini-ag-kim/lrmi-profile"
+                }, {
+                    value: "Änderungshistorie",
+                    href: "https://github.com/dini-ag-kim/lrmi-profile/commits/master"
+                }]
+            }],
+            publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
+            specStatus: "unofficial"
+        };
+    </script>
 </head>
 <body>
 <section id="abstract" data-include="contents/abstract.md"></section>
@@ -143,8 +143,8 @@ specStatus: "unofficial"
 <h2>Beispiele</h2>
 
 <section id="full-example">
-<h2>Vollständiges Beispiel</h2>
-<pre class="example" data-include="examples/full-example.json" data-include-format="text"></pre>
+<h2>Beispiel</h2>
+<pre class="example" data-include="examples/valid/tutory-example.json" data-include-format="text"></pre>
 </section>
 
 </section>
@@ -156,8 +156,8 @@ specStatus: "unofficial"
 
 <section id="json-schema">
 <h2>JSON Schema</h2>
-<pre data-include="schemas/service-card.json" data-include-format="text"></pre>
-<a href="schemas/service-card.json">Link zum Schema</a>
+<pre data-include="schemas/schema.json" data-include-format="text"></pre>
+<a href="schemas/schema.json">Link zum Schema</a>
 </section>
 
 </section>
