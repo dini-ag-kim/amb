@@ -1,6 +1,6 @@
 ## Zusammenfassung
 
-Ein auf schema.org-/LRMI und Simple Knowledge Organization System ([[!SKOS-REFERENCE]]) basierendes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum.
+Ein auf schema.org-/LRMI und Simple Knowledge Organization System ([[?SKOS-REFERENCE]]) basierendes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum.
 
 Es wird als menschenlesbare HTML-Spezifikation in Kombination mit einem JSON Schema veröffentlicht.
 
