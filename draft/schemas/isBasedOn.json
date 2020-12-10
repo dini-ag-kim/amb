@@ -5,10 +5,40 @@
     "description": "Resources the described learning resources derived from.",
     "type": "array",
     "items": {
-      "type": "string",
-      "format": "uri",
-      "_display": {
-        "placeholder": "The URL of a resource this OER is based on"
-      }
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "type": "string",
+          "enum": [
+            "CreativeWork",
+            "LearningResource"
+          ]
+        },
+        "id": {
+          "title": "URL",
+          "type": "string",
+          "format": "uri"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "_display": {
+            "placeholder": "The title of the resource"
+          }
+        },
+        "creator": {
+          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json"
+        },
+        "license": {
+          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json"
+        },
+        "provider": {
+          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/provider.json"
+        }
+      },
+      "required": [
+        "name"
+      ]
     }
   }
