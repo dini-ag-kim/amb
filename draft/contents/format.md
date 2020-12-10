@@ -1,8 +1,6 @@
 ## Format
 
-Die Metadaten einer OER-Ressource werden durch ein JSON-Objekt repräsentiert. Neben allgemeinen Informationen zur Applikation werden auch die speziellen Services mitgeteilt, die extern nutzbar sind (z. B. Suche, Harvesting, Tools).
-
-Dieses JSON-Objekt MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#vocabulary">Vokabulars</a> beinhalten.
+Die Metadaten einer OER-Ressource werden durch ein JSON-Objekt repräsentiert. Dieses JSON-Objekt MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#vocabulary">Vokabulars</a> beinhalten.
 
 Der Metadaten-Satz einer OER-Ressource MUSS im JSON-LD-Format bereitgestellt werden, entweder als eigenes JSON-Dokument oder eingebettet in die Startseite. Die URL, hinter der sich das Dokument befindet, kann dann abgefragt und die resultierenden Inhalte ausgewertet werden.
 

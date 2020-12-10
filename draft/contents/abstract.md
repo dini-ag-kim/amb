@@ -1,14 +1,8 @@
 ## Zusammenfassung
 
-Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum, 
-zunächst entwickelt als JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. 
-Es ist das Default-Schema für das Webformular im SkoHub Editor.
+Ein auf schema.org-/LRMI und Simple Knowledge Organization System ([[!SKOS-REFERENCE]]) basierendes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum.
 
-
-Das Schema wird im Projekt "OERSI – OER Search Index" verwendet, 
-das gemeinsam von der Technischen Informationsbibliothek Hannover (TIB) und 
-dem Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz) durchgeführt wird. 
-Zum Hintergrund siehe auch die Folien unter http://slides.lobid.org/kim-ws-2020/.
+Es wird als menschenlesbare HTML-Spezifikation in Kombination mit einem JSON Schema veröffentlicht.
 
 <p class="copyright">
     <img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />

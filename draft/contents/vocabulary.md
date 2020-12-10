@@ -1,6 +1,6 @@
 ## Vokabular
 
-Als Vokabular für eine OER-Ressource dienen [[!schema.org]] und [[!LRMI]]. Alle Einträge können auf standardisierte Typen und Properties abgebildet werden.
+Als Basis-Vokabular für die Beschreibung einer Educational Resource dient [[!schema.org]]. Ergänzt wird schema.org durch SKOS (Simple Knowledge Organization System) für die Beschreibung referenzierter Werte eine kontrollierten Vokabulars.
 
 Im Folgenden wird die Struktur eines OER-Metadatensatz beschrieben. Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt. Wenn erforderlich wird der Wertebereich festgelegt und kurze Beispiele gegeben.
 
@@ -40,7 +40,7 @@ Die URL, durch den die OER-Ressource identifiziert Auf dieser URL MUSS die OER-R
 
 ### <dfn>type</dfn>
 
-Art der OER-Ressource. MUSS den Wert `https://schema.org/LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
+Art der OER-Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
 
 
 <dl>
@@ -49,7 +49,7 @@ Art der OER-Ressource. MUSS den Wert `https://schema.org/LearningResource` entha
     <dt>Typ</dt>
     <dd>`string[]`</dd>
     <dt>Werte</dt>
-    <dd>`https://schema.org/LearningResource` und Unterklassen von CreativeWork</dd>
+    <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
 </dl>
 
 <section id="type-example">
@@ -118,7 +118,7 @@ Fach/Thema der Inhalte. MUSS einen Wert aus der Destatis Fächerklassifikation h
     <dt>Typ</dt>
     <dd>`String[]` (URI)</dd>
     <dt>Werte</dt>
-    <dd>Werte aus https://w3id.org/kim/hochschulfaechersystematik/scheme</dd>
+    <dd>Werte aus `https://w3id.org/kim/hochschulfaechersystematik/scheme`</dd>
 </dl>
 
 </section>
@@ -127,7 +127,7 @@ Fach/Thema der Inhalte. MUSS einen Wert aus der Destatis Fächerklassifikation h
 
 ### <dfn>license</dfn>
 
-Lizenz der OER-Ressource. Wert Muss URI der entsprechenden CC-Lizenz nutzen.
+Lizenz der OER-Ressource. Wert MUSS URI der entsprechenden CC-Lizenz nutzen.
 
 <dl>
     <dt>Pflichtfeld</dt>
