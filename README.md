@@ -6,7 +6,7 @@
 
 A metadata profile based on schema.org/LRMI and SKOS for describing (Open) Educational Resources.
 
-JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json (See also the [SkoHub Editor](https://skohub.io/editor/) which is currently built from this schema.)
+JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json> (See also the [SkoHub Editor](https://skohub.io/editor/) which is currently built from this schema.)
 
  The profile will be published as a HTML spec in the near future.
 
@@ -14,7 +14,7 @@ JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.jso
 
 Ein auf schema.org-/LRMI und SKOS basierendes Metadatenprofil für die Beschreibung von (Open) Educational Resources mit Fokus auf den deutschsprachigen Raum.
 
-JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. (Siehe auch das Webformular im [SkoHub Editor](https://skohub.io/editor/), das auf Basis des Schemas generiert wird.)
+JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>. (Siehe auch das Webformular im [SkoHub Editor](https://skohub.io/editor/), das auf Basis des Schemas generiert wird.)
 
 Das Schema wird im Projekt "[OERSI – OER Search Index](https://gitlab.com/oersi)" verwendet, das gemeinsam von der Technischen Informationsbibliothek Hannover (TIB) und dem Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz) durchgeführt wird.
 Zum Hintergrund siehe auch die Folien unter [http://slides.lobid.org/kim-ws-2020/](http://slides.lobid.org/kim-ws-2020/).
