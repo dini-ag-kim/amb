@@ -81,5 +81,5 @@
                 "WebPageElement",
            ],
     },
-    "contains": {"const": "learningResource"}
+    "contains": {"const": "LearningResource"}
 }
