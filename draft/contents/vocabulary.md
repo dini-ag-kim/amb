@@ -14,7 +14,7 @@ Der Link zum JSON-LD-Kontext für das Dokument. MUSS auf `https://schema.org/` g
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`String` (URL)</dd>
+    <dd>`string` (URL)</dd>
     <dt>Werte</dt>
     <dd>`https://schema.org/`</dd>
 </dl>
@@ -31,7 +31,7 @@ Die URL, durch den die OER-Ressource identifiziert Auf dieser URL MUSS die OER-R
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`String` (URL)</dd>
+    <dd>`string` (URL)</dd>
 </dl>
 
 </section>
@@ -69,7 +69,7 @@ Titel der OER-Ressource.
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`String`</dd>
+    <dd>`string`</dd>
 </dl>
 
 </section>
@@ -84,7 +84,7 @@ Urheber:innen der OER-Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, d
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dd>
-    <dd>`Object[]`</dd>
+    <dd>`object[]`</dd>
     <dt>Werte</dt>
     <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 </dl>
