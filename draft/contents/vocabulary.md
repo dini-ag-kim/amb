@@ -101,7 +101,7 @@ Beschreibung der OER-Ressource.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String`</dd>
+    <dd>`string`</dd>
 </dl>
 
 </section>
@@ -116,7 +116,7 @@ Fach/Thema der Inhalte. MUSS einen Wert aus der Destatis Fächerklassifikation h
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String[]` (URI)</dd>
+    <dd>`string[]` (URI)</dd>
     <dt>Werte</dt>
     <dd>Werte aus `https://w3id.org/kim/hochschulfaechersystematik/scheme`</dd>
 </dl>
@@ -133,7 +133,7 @@ Lizenz der OER-Ressource. Wert MUSS URI der entsprechenden CC-Lizenz nutzen.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Date Type</dt>
-    <dd>`String[]` (URL)</dd>
+    <dd>`string[]` (URL)</dd>
 </dl>
 
 </section>
@@ -148,7 +148,7 @@ Thumbnail der OER-Ressource.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String` (URL)</dd>
+    <dd>`string` (URL)</dd>
     <dt>Werte</dt>
     <dd></dd>
 </dl>
@@ -182,7 +182,7 @@ Sprache(n) der OER-Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entspreche
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String[]`</dd>
+    <dd>`string[]`</dd>
     <dt>Werte</dt>
     <dd>[[!BCP47]]</dd>
 </dl>
@@ -199,7 +199,7 @@ Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dd>
-    <dd>`Object[]`</dd>
+    <dd>`object[]`</dd>
     <dt>Werte</dt>
     <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 </dl>
@@ -216,7 +216,7 @@ Art des OER-Lernmittels. MUSS Wert aus dem Vokabluar der Hochschulcampus Ressour
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`String[]`</dd>
+    <dd>`string[]`</dd>
     <dt>Werte</dt>
     <dd><a href=" https://w3id.org/kim/hcrt/">Wert aus Hochschulcampus Ressourcentypen</a></dd>
 </dl>
@@ -233,7 +233,7 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String[]` (URI)</dd>
+    <dd>`string[]` (URI)</dd>
     <dt>Werte</dt>
     <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
 </dl>
@@ -250,7 +250,7 @@ Verweis auf andere Ressource, von die beschriebene Ressource ein Derivat ist.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String[]` (URL)</dd>
+    <dd>`string[]` (URL)</dd>
 </dl>
 
 </section>
@@ -265,7 +265,7 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`Object[]` (URL)</dd>
+    <dd>`object[]` (URL)</dd>
 </dl>
 
 <section id="mainEntityOfPage-example">
@@ -285,7 +285,7 @@ Schlagworte zur Beschreibung des Inhalts der OER-Ressource.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`String[]` (URL)</dd>
+    <dd>`string[]` (URL)</dd>
 </dl>
 
 </section>
