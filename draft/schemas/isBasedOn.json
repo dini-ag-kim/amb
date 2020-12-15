@@ -9,11 +9,7 @@
       "properties": {
         "type": {
           "title": "Type",
-          "type": "string",
-          "enum": [
-            "CreativeWork",
-            "LearningResource"
-          ]
+          "type": "string"
         },
         "id": {
           "title": "URL",
