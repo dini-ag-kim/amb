@@ -10,7 +10,7 @@ Werden die Metadaten als JSON-Dokument angeboten, MUSS der `Content-Type` Header
 Content-Type: application/ld+json
 ```
 
-Die Datensatz MUSS auf eine der folgenden Arten in die Webseite eingebunden werden:
+Der Datensatz MUSS auf eine der folgenden Arten in die Webseite eingebunden werden:
 
 1. Ein `script` Element mit dem JSON der Visitenkarte MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
