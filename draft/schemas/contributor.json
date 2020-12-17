@@ -24,7 +24,7 @@
           "title": "Name",
           "type": "string",
           "_display": {
-            "placeholder": "The creator's name"
+            "placeholder": "The contributors' name"
           }
         }
       },
