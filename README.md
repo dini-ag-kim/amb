@@ -22,9 +22,11 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 ### Beteiligte Personen
 
 - Adrian Pohl (hbz & KIM), [@acka47](https://github.com/acka47) ([GitLab](https://gitlab.com/acka47))
-- Axel Klinger (TIB), [@axel-klinger](https://github.com/axel-klinger) ([GitLab](https://gitlab.com/axel-klinger))
+- Axel Klinger (TIB), [@axel-klinger](https://github.com/axel-klinger) ([GitLab](https://gitlab.com/axel-klinger)
 - Fabian Steeg (hbz), [@fsteeg](https://github.com/fsteeg) ([GitLab](https://gitlab.com/fsteeg))
-- Mirjan Hoffmann (TIB), ([GitLab](https://gitlab.com/mirjan))
+- Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann), ([GitLab](https://gitlab.com/mirjan))
+- Steffen Roertgen (GWDG), [@sroertgen](https://github.com/sroertgen)
+- Tobias Bülte (hbz), (@TobiasNx)[https://github.com/TobiasNx] ([GitLab](https://gitlab.com/TobiasNx))
 - *Ergänze dich selbst, wenn du Interesse hast mitzumachen*
 
 ### Tests
