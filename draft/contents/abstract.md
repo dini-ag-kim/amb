@@ -1,13 +1,11 @@
 ## Zusammenfassung
 
-Ein auf schema.org-/LRMI und Simple Knowledge Organization System ([[?SKOS-REFERENCE]]) basierendes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum.
-
-Es wird als menschenlesbare HTML-Spezifikation in Kombination mit einem JSON Schema veröffentlicht.
+Ein Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum. Er basiert hauptsächlich auf schema.org bzw. Learning Resource Metadata Initiative (LRMI) und nutzt dazu Teile von Simple Knowledge Organization System ([[?SKOS]]).
 
 <p class="copyright">
-    <img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+    <img alt="CC-BY" src="https://licensebuttons.net/p/zero/1.0/80x15.png" />
     Dieses Werk ist lizenziert unter
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-    Creative Commons Namensnennung/Weitergabe unter gleichen Bedingungen 4.0</a>.
+    <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+    Creative Commons Public Domain Dedication 1.0</a>.
 </p>
 
