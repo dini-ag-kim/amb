@@ -30,5 +30,6 @@ Die Profile unterscheiden sich in folgenden Hinsichten:
 | Quell-Schema  | LOM  | schema.org  |
 | Format  |  XML  |  JSON-LD |
 | Linked-Data-kompatibel  |  nein  |  ja  |
+| Bildungsbereich  |  Hochschule  |  Schule & Hochschule  |
 
 Beide Profile nutzen dieselben Werte für die Ausweisung des Ressourcentyps und die Zuweisung einer Ressource zu einem Fach. Die Werte kommen aus kontrollierten Vokabularen, die ebenfalls von KIM bereitgestellt werden: die [[!Hochschulfächersystematik]] und das Ressourcentypen-Vokabular [[!HCRT]]. Damit wird die Metadatenprofile weitestgehend interoperabel sein.
