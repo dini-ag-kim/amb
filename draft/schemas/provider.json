@@ -6,12 +6,12 @@
     "type": "object",
     "properties": {
         "id": {
-            "title": "URI für den Provider",
+            "title": "URL",
             "type": "string",
             "format": "uri"
         },
         "type": {
-            "title": "Typ",
+            "title": "Type",
             "type": "string"
         },
         "name": {
