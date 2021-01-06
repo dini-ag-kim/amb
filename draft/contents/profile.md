@@ -1,6 +1,6 @@
-## Vokabular
+## Profil
 
-Als Basis-Vokabular für die Beschreibung einer Educational Resource dient [[!schema.org]].
+Als Basis-Metadatenschema für die Beschreibung einer Educational Resource dient [[!schema.org]].
 Ergänzt wird schema.org durch [[!SKOS]] (Simple Knowledge Organization System) für die Beschreibung referenzierter Werte eines kontrollierten Vokabulars.
 
 Im Folgenden wird die Struktur eines OER-Metadatensatzes beschrieben.
@@ -28,9 +28,9 @@ Der Link zum JSON-LD-Kontext für das Dokument MUSS auf `https://schema.org/` ge
 
 ### <dfn>id</dfn>
 
-Die URL, durch den die OER-Ressource identifiziert wird.
-Auf dieser URL MUSS die OER-Ressource abrufbar sein.
-Es SOLL keine URL sein, von der aus nur auf die OER-Ressource verwiesen wird.
+Die URL, durch den die Ressource identifiziert wird.
+Auf dieser URL MUSS die Ressource abrufbar sein.
+Es SOLL keine URL sein, von der aus nur auf die Ressource verwiesen wird.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -45,7 +45,7 @@ Es SOLL keine URL sein, von der aus nur auf die OER-Ressource verwiesen wird.
 
 ### <dfn>type</dfn>
 
-Art der OER-Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
+Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
 
 
 <dl>
@@ -68,7 +68,7 @@ Art der OER-Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere 
 
 ### <dfn>name</dfn>
 
-Titel der OER-Ressource.
+Titel der Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -83,7 +83,7 @@ Titel der OER-Ressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der OER-Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -100,7 +100,7 @@ Urheber:innen der OER-Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, d
 
 ### <dfn>description</dfn>
 
-Beschreibung der OER-Ressource.
+Beschreibung der Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -133,7 +133,7 @@ MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hoc
 
 ### <dfn>license</dfn>
 
-Lizenz der OER-Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
+Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -148,7 +148,7 @@ Lizenz der OER-Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
 
 ### <dfn>image</dfn>
 
-Thumbnail der OER-Ressource.
+Thumbnail der Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -182,7 +182,7 @@ Erscheinungsdatum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entspreche
 
 ### <dfn>inLanguage</dfn>
 
-Sprache(n) der OER-Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 <dl>
     <dt>Pflichtfeld</dt>
@@ -290,7 +290,7 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
 
 ### <dfn>keywords</dfn>
 
-Schlagworte zur Beschreibung des Inhalts der OER-Ressource.
+Schlagworte zur Beschreibung des Inhalts der Ressource.
 
 <dl>
     <dt>Pflichtfeld</dt>

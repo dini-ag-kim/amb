@@ -1,18 +1,18 @@
-## Format
+## Format und Bereitstellung
 
-Die Metadaten einer OER-Ressource werden durch ein JSON-Objekt repräsentiert. Dieses JSON-Objekt MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#vocabulary">Vokabulars</a> beinhalten.
+Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten.
 
-Der Metadaten-Satz einer OER-Ressource MUSS im JSON-LD-Format bereitgestellt werden, entweder als eigenes JSON-Dokument oder eingebettet in die Startseite. Die URL, hinter der sich das Dokument befindet, kann dann abgefragt und die resultierenden Inhalte ausgewertet werden.
+Das Metadatendokument einer Ressource MUSS im JSON-LD-Format bereitgestellt werden, entweder als eigenständige Webressource oder eingebettet in die Bildungsressource selbst bzw. in ihre HTML-Beschreibungsseite.
 
-Werden die Metadaten als JSON-Dokument angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
+Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
 
 ```
 Content-Type: application/ld+json
 ```
 
-Der Datensatz MUSS auf eine der folgenden Arten in die Webseite eingebunden werden:
+Der Datensatz MUSS auf eine der folgenden Arten in die Bildungsressource oder ihre Beschreibungsseite eingebunden werden:
 
-1. Ein `script` Element mit dem JSON der Visitenkarte MUSS in den `head`-Bereich der Webseite eingebettet werden:
+1. Ein `script` Element mit dem JSON-Dokument MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
    ```
    <script type="application/ld+json">[...]</script>
@@ -23,7 +23,7 @@ ODER
 2. Ein `link` Element, das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
    ```
-   <link rel="meta" type="application/ld+json" href="[...]" title="Service-Description" />
+   <link rel="meta" type="application/ld+json" href="[...]" title="Resource metadata" />
    ```
 
 ODER
