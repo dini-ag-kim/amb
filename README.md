@@ -4,11 +4,11 @@
 
 **English description**
 
-A schema.org/LRMI-based profile for describing OER developed and published as JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. This currently is the default schema for [SkoHub Editor](https://skohub.io/editor/). An HTML specification is in development, see [draft](https://w3id.org/kim/lrmi-profile/draft/).
+A schema.org/LRMI-based profile for describing OER developed and published as JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. This is currently the default schema for [SkoHub Editor](https://skohub.io/editor/). An HTML specification is in development, see [draft](https://w3id.org/kim/lrmi-profile/draft/).
 
 ---
 
-Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum, zunächst entwickelt als JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. Es ist zu Zeit das Default-Schema für das Webformular im [SkoHub Editor](https://skohub.io/editor/). Eine HTML-Spezifikation ist in Entwicklung, siehe [draft](https://w3id.org/kim/lrmi-profile/draft/).
+Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum, zunächst entwickelt als JSON Schema: https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json. Es ist zur Zeit das Default-Schema für das Webformular im [SkoHub Editor](https://skohub.io/editor/). Eine HTML-Spezifikation ist in Entwicklung, siehe [draft](https://w3id.org/kim/lrmi-profile/draft/).
 
 ## Zum Entwicklungsprozess
 
