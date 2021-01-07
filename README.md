@@ -1,4 +1,4 @@
-# LRMI-Profil für Hochschul-OER im deutschsprachigen Raum
+# Metadatenprofil für Lehr-und Lernmaterialien im deutschsprachigen Raum
 
 ---
 
@@ -12,7 +12,7 @@ Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von OER mit
 
 ## Zum Entwicklungsprozess
 
-Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs), die vor allem bei der Entwicklung der HTML-Spezifikation eine Rolle spielen. In diesem Projekt wird zunächst das JSON Schema entwickelt.
+Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs).
 
 ### Beteiligte Personen
 

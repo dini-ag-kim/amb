@@ -1,0 +1,20 @@
+{
+    "@context": [ 
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+      {"@language": "de"}
+    ],
+    "name": "Beispielkurs",
+    "id": "https://example.org/oer",
+    "type": [
+      "Course",
+      "LearningResource"
+    ],
+    "contributor": [
+        {
+            "name": "Hans Dampf",
+            "type": "Person",
+            "id": "https://example.org/hansd"
+        }
+    ]
+  }
+  

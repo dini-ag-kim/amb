@@ -30,6 +30,9 @@
     "creator": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json"
     },
+    "contributor": {
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/contributor.json"
+    },
     "description": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/description.json"
     },
