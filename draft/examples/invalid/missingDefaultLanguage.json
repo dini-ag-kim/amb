@@ -8,7 +8,9 @@
       "LearningResource",
       "Course"
     ],
-    "learningResourceType": {
+    "learningResourceType": [
+      {
       "id": "https://w3id.org/kim/hcrt/course"
-    }
+      }
+    ]
   }

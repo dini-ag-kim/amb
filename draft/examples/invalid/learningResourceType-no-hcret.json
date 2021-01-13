@@ -9,7 +9,9 @@
     "LearningResource",
     "Course"
   ],
-  "learningResourceType": {
+  "learningResourceType": [
+    {
     "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
-  }
+    }
+  ]
 }
