@@ -9,7 +9,10 @@
       "properties": {
         "type": {
           "title": "Type",
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "id": {
           "title": "URL",

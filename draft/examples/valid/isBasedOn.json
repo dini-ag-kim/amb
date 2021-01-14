@@ -53,7 +53,7 @@
     "isBasedOn": [
         {
             "id": "https://example.org/remixed-resource.html",
-            "type": "LearningResource",
+            "type": [ "LearningResource" ],
             "name": "Remix me",
             "creator": [
                 {
