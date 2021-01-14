@@ -53,15 +53,17 @@
       }
     }
   ],
-  "learningResourceType": {
-    "id": "https://w3id.org/kim/hcrt/course",
-    "prefLabel": {
-      "en": "Course",
-      "de": "Kurs"
-    },
-    "type": "Concept",
-    "inScheme": {
-      "id": "https://w3id.org/kim/hcrt/scheme"
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course",
+      "prefLabel": {
+        "en": "Course",
+        "de": "Kurs"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hcrt/scheme"
+      }
     }
-  }
+  ]
 }

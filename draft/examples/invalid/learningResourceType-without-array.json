@@ -1,6 +1,6 @@
 {
-  "@context": [
-    "https://schema.org",
+  "@context": [ 
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
     {"@language": "de"}
   ],
   "name": "Beispielkurs",
@@ -9,9 +9,7 @@
     "LearningResource",
     "Course"
   ],
-  "learningResourceType": [
-    {
+  "learningResourceType": {
     "id": "https://w3id.org/kim/hcrt/course"
-    }
-  ]
+  }
 }
