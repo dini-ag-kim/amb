@@ -1,14 +1,14 @@
 {
-    "@context": [
-      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-      {
-        "@language": "de"
-      }
-    ],
-    "name": "Beispielkurs",
-    "id": "https://example.org/oer",
-    "type": [
-      "LearningResource",
-      "http://vivoweb.org/ontology/core#Course"
-    ]
-  }
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": [
+    "LearningResource",
+    "http://vivoweb.org/ontology/core#Course"
+  ]
+}

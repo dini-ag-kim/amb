@@ -37,7 +37,13 @@
     ],
     "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
     "dateCreated": "2019-07-03",
+<<<<<<< HEAD
     "inLanguage": "fr",
+=======
+    "inLanguage": [
+        "fr"
+    ],
+>>>>>>> 9dd03da... Format consitently to 2-spaces indention
     "publisher": [
         {
             "type": "Organization",
@@ -53,7 +59,9 @@
     "isBasedOn": [
         {
             "id": "https://example.org/remixed-resource.html",
-            "type": [ "LearningResource" ],
+            "type": [
+                "LearningResource"
+            ],
             "name": "Remix me",
             "creator": [
                 {

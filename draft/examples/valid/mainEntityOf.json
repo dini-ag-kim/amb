@@ -1,7 +1,9 @@
 {
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"}
+    {
+      "@language": "de"
+    }
   ],
   "name": "Beispielressource",
   "id": "https://example.org/oer",

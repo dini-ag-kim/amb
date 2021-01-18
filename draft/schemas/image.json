@@ -1,10 +1,10 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Image",
-    "type": "string",
-    "format": "uri",
-    "_display": {
-        "placeholder": "A link to an image of the resource"
-    }
+  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Image",
+  "type": "string",
+  "format": "uri",
+  "_display": {
+    "placeholder": "A link to an image of the resource"
+  }
 }

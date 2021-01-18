@@ -1,36 +1,36 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Creator",
-    "description": "The creator(s) of the learning resource",
-    "type": "array",
-    "items": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "title": "Type",
-          "type": "string",
-          "enum": [
-            "Person",
-            "Organization"
-          ]
-        },
-        "id": {
-          "title": "URL",
-          "type": "string",
-          "format": "uri"
-        },
-        "name": {
-          "title": "Name",
-          "type": "string",
-          "_display": {
-            "placeholder": "The creator's name"
-          }
-        }
+  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Creator",
+  "description": "The creator(s) of the learning resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": [
+          "Person",
+          "Organization"
+        ]
       },
-      "required": [
-        "name",
-        "type"
-      ]
-    }
+      "id": {
+        "title": "URL",
+        "type": "string",
+        "format": "uri"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "_display": {
+          "placeholder": "The creator's name"
+        }
+      }
+    },
+    "required": [
+      "name",
+      "type"
+    ]
   }
+}
