@@ -57,11 +57,6 @@ Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Wert
     <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
 </dl>
 
-<section id="type-example">
-<h2>Beispiel</h2>
-<pre class="example" data-include="draft/examples/valid/learningResourceType.json" data-include-format="text"></pre>
-</section>
-
 </section>
 
 <section data-dfn-for="name">
@@ -278,11 +273,6 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
     <dt>Typ</dt>
     <dd>`object[]` (URL)</dd>
 </dl>
-
-<section id="mainEntityOfPage-example">
-<h2>Beispiel</h2>
-<pre class="example" data-include="examples/valid/mainEntityOf.json" data-include-format="text"></pre>
-</section>
 
 </section>
 
