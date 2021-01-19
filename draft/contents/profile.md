@@ -17,7 +17,7 @@ Der Link zum JSON-LD-Kontext für das Dokument MUSS auf `https://schema.org/` ge
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`string` (URI)</dd>
     <dt>Werte</dt>
     <dd>`https://schema.org/`</dd>
 </dl>
@@ -36,7 +36,7 @@ Es SOLL keine URL sein, von der aus nur auf die Ressource verwiesen wird.
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`string` (URI)</dd>
 </dl>
 
 </section>
@@ -78,11 +78,11 @@ Titel der Ressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
 
 <dl>
     <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
+    <dd>nein</dd>
     <dt>Typ</dd>
     <dd>`object[]`</dd>
     <dt>Werte</dt>
@@ -92,6 +92,24 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die m
 </section>
 
 <section data-dfn-for="description">
+
+### <dfn>contributor</dfn>
+
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dd>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
 
 ### <dfn>description</dfn>
 
@@ -134,7 +152,7 @@ Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string[]` (URL)</dd>
+    <dd>`string[]` (URL entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
 </dl>
 
 </section>
@@ -149,7 +167,7 @@ Thumbnail der Ressource.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`string` (URI)</dd>
     <dt>Werte</dt>
     <dd></dd>
 </dl>
@@ -251,7 +269,41 @@ Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string[]` (URL)</dd>
+    <dd>`string[]` (URI)</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isPartOf">
+
+### <dfn>isPartOf</dfn>
+
+Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Property `id`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="hasPart">
+
+### <dfn>hasPart</dfn>
+
+Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Property `id`</dd>
 </dl>
 
 </section>
@@ -271,7 +323,7 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`object[]` (URL)</dd>
+    <dd>`object[]` (URI)</dd>
 </dl>
 
 </section>
