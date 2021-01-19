@@ -229,15 +229,15 @@ Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere
 
 ### <dfn>learningResourceType</dfn>
 
-Art des OER-Lernmittels. MUSS Wert aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) sein.
+Art des OER-Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string[]`</dd>
+    <dd>`object[]`</dd>
     <dt>Werte</dt>
-    <dd>Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
+    <dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
 </dl>
 
 </section>
