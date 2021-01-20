@@ -142,6 +142,21 @@ MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hoc
 
 </section>
 
+<section data-dfn-for="keywords">
+
+### <dfn>keywords</dfn>
+
+Schlagworte zur Beschreibung des Inhalts der Ressource.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`string[]`</dd>
+</dl>
+
+</section>
+
 <section data-dfn-for="license">
 
 ### <dfn>license</dfn>
@@ -324,21 +339,6 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
     <dd>nein</dd>
     <dt>Typ</dt>
     <dd>`object[]` (URI)</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="keywords">
-
-### <dfn>keywords</dfn>
-
-Schlagworte zur Beschreibung des Inhalts der Ressource.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Typ</dt>
-    <dd>`string[]`</dd>
 </dl>
 
 </section>
