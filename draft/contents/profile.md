@@ -249,25 +249,6 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 </section>
 
-<section data-dfn-for="provider">
-
-### <dfn>publisher</dfn>
-
-Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
-    <dt>Typ</dd>
-    <dd>`object[]`</dd>
-    <dt>Werte</dt>
-    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-    <dt>Validierung</dt>
-    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/publisher.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
 <section data-dfn-for="learningResourceType">
 
 ### <dfn>learningResourceType</dfn>
@@ -283,6 +264,25 @@ Art des OER-Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine 
     <dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
     <dt>Validierung</dt>
     <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="provider">
+
+### <dfn>publisher</dfn>
+
+Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dd>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/publisher.json">JSON Schema</a></dd>
 </dl>
 
 </section>
