@@ -1,9 +1,7 @@
 {
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {
-      "@language": "de"
-    }
+    {"@language": "de"}
   ],
   "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
   "id": "https://www.tutory.de/w/fbbadf1a",
@@ -15,13 +13,6 @@
     {
       "name": "HerunterS",
       "type": "Person"
-    }
-  ],
-  "contributor": [
-    {
-      "id": "https://example.org/id/nemo",
-      "type": "Person",
-      "name": "Nemo Niemand"
     }
   ],
   "description": "Französisch-Arbeitsblatt",
@@ -37,23 +28,15 @@
       }
     }
   ],
-  "keywords": [
-    "Französisch",
-    "Niveau A2"
-  ],
+  "keywords": [ "Französisch", "Niveau A2" ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
   "dateCreated": "2019-07-03",
   "inLanguage": "fr",
   "publisher": [
     {
-      "id": "https://www.tutory.de",
       "type": "Organization",
-      "name": "Tutory"
-    }
-  ],
-  "learningResourceType": [
-    {
-      "id": "https://w3id.org/kim/hcrt/worksheet"
+      "name": "Tutory",
+      "id": "https://www.tutory.de"
     }
   ],
   "audience": [
@@ -65,25 +48,6 @@
       "type": "Concept",
       "inScheme": {
         "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-      }
-    }
-  ],
-  "isBasedOn": [
-    {
-      "id": "https://example.org/source/1",
-      "type": [
-        "LearningResource"
-      ],
-      "name": "Quellressource"
-    }
-  ],
-  "mainEntityOfPage": [
-    {
-      "id": "https://www.tutory.de/entdecken/dokument/fbbadf1a",
-      "type": "WebPage",
-      "provider": {
-        "id": "https://oerworldmap.org/resource/urn:uuid:0d027f1a-5643-4a23-b7bc-8889aac25474",
-        "name": "Tutory"
       }
     }
   ]
