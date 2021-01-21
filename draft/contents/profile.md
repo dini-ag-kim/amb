@@ -11,15 +11,29 @@ Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele
 
 ### <dfn>@context</dfn>
 
-Der Link zum JSON-LD-Kontext für das Dokument MUSS auf `https://schema.org/` gesetzt werden.
+Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/lrmi-profile/draft/context.jsonld` und außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert.
+
+Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
+
+```json
+{
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+}
+```
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string` (URI)</dd>
+    <dd>`array`</dd>
     <dt>Werte</dt>
-    <dd>`https://schema.org/`</dd>
+    <dd>`https://w3id.org/kim/lrmi-profile/draft/context.jsonld`</dd>
+    <dd>`object`</dd>
     <dt>Validierung</dt>
     <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context-schema.json">JSON Schema</a></dd>
 </dl>
