@@ -11,15 +11,31 @@ Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele
 
 ### <dfn>@context</dfn>
 
-Der Link zum JSON-LD-Kontext für das Dokument MUSS auf `https://schema.org/` gesetzt werden.
+Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/lrmi-profile/draft/context.jsonld` und außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert.
+
+Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
+
+```json
+{
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+}
+```
 
 <dl>
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`array`</dd>
     <dt>Werte</dt>
-    <dd>`https://schema.org/`</dd>
+    <dd>`https://w3id.org/kim/lrmi-profile/draft/context.jsonld`</dd>
+    <dd>`object`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context-schema.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -36,7 +52,9 @@ Es SOLL keine URL sein, von der aus nur auf die Ressource verwiesen wird.
     <dt>Pflichtfeld</dt>
     <dd>ja</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`string` (URI)</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/id.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -55,12 +73,9 @@ Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Wert
     <dd>`string[]`</dd>
     <dt>Werte</dt>
     <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/type.json">JSON Schema</a></dd>
 </dl>
-
-<section id="type-example">
-<h2>Beispiel</h2>
-<pre class="example" data-include="draft/examples/valid/learningResourceType.json" data-include-format="text"></pre>
-</section>
 
 </section>
 
@@ -75,6 +90,8 @@ Titel der Ressource.
     <dd>ja</dd>
     <dt>Typ</dt>
     <dd>`string`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -83,20 +100,42 @@ Titel der Ressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
 
 <dl>
     <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
+    <dd>nein</dd>
     <dt>Typ</dd>
     <dd>`object[]`</dd>
     <dt>Werte</dt>
     <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json">JSON Schema</a></dd>
 </dl>
 
 </section>
 
 <section data-dfn-for="description">
+
+### <dfn>contributor</dfn>
+
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dd>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Properties `type` und `name`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/contributor.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
 
 ### <dfn>description</dfn>
 
@@ -107,6 +146,8 @@ Beschreibung der Ressource.
     <dd>nein</dd>
     <dt>Typ</dt>
     <dd>`string`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/description.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -125,6 +166,25 @@ MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hoc
     <dd>`string[]` (URI)</dd>
     <dt>Werte</dt>
     <dd>Werte aus <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">Destatis Fächerklassifikation</a> oder <a href= "http://w3id.org/openeduhub/vocabs/discipline">OpenEduHub-Fächersystematik</a></dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/about.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="keywords">
+
+### <dfn>keywords</dfn>
+
+Schlagworte zur Beschreibung des Inhalts der Ressource.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`string[]`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/keywords.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -139,7 +199,9 @@ Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string[]` (URL)</dd>
+    <dd>`string[]` (URL entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -154,8 +216,10 @@ Thumbnail der Ressource.
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string` (URL)</dd>
+    <dd>`string` (URI)</dd>
     <dt>Werte</dt>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json">JSON Schema</a></dd>
     <dd></dd>
 </dl>
 
@@ -174,6 +238,8 @@ Erscheinungsdatum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entspreche
     <dd>`Date`</dd>
     <dt>Werte</dt>
     <dd>[[!ISO8601]]</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -191,6 +257,27 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
     <dd>`string[]`</dd>
     <dt>Werte</dt>
     <dd>[[!BCP47]]</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/inLanguage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="learningResourceType">
+
+### <dfn>learningResourceType</dfn>
+
+Art des OER-Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>ja</dd>
+    <dt>Typ</dt>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -208,23 +295,8 @@ Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere
     <dd>`object[]`</dd>
     <dt>Werte</dt>
     <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="learningResourceType">
-
-### <dfn>learningResourceType</dfn>
-
-Art des OER-Lernmittels. MUSS Wert aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) sein.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>ja</dd>
-    <dt>Typ</dt>
-    <dd>`string[]`</dd>
-    <dt>Werte</dt>
-    <dd>Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/publisher.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -242,6 +314,8 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
     <dd>`string[]` (URI)</dd>
     <dt>Werte</dt>
     <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/audience.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -256,7 +330,47 @@ Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`string[]` (URL)</dd>
+    <dd>`string[]` (URI)</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isPartOf">
+
+### <dfn>isPartOf</dfn>
+
+Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Property `id`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isPartOf.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="hasPart">
+
+### <dfn>hasPart</dfn>
+
+Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+    <dt>Pflichtfeld</dt>
+    <dd>nein</dd>
+    <dt>Typ</dt>
+    <dd>`object[]`</dd>
+    <dt>Werte</dt>
+    <dd>JSON-Objekt mit Property `id`</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/hasPart.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -276,27 +390,9 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
     <dt>Pflichtfeld</dt>
     <dd>nein</dd>
     <dt>Typ</dt>
-    <dd>`object[]` (URL)</dd>
-</dl>
-
-<section id="mainEntityOfPage-example">
-<h2>Beispiel</h2>
-<pre class="example" data-include="examples/valid/mainEntityOf.json" data-include-format="text"></pre>
-</section>
-
-</section>
-
-<section data-dfn-for="keywords">
-
-### <dfn>keywords</dfn>
-
-Schlagworte zur Beschreibung des Inhalts der Ressource.
-
-<dl>
-    <dt>Pflichtfeld</dt>
-    <dd>nein</dd>
-    <dt>Typ</dt>
-    <dd>`string[]`</dd>
+    <dd>`object[]` (URI)</dd>
+    <dt>Validierung</dt>
+    <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
 </dl>
 
 </section>

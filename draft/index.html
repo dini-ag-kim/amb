@@ -38,15 +38,35 @@
             }],
             format: "markdown",
             localBiblio: {
+                "GND": {
+                    title: "Gemeinsame Normdatei (GND)",
+                    href: "https://www.dnb.de/gnd",
+                    publisher: "GND-Kooperative"
+                },
+                "JSON Schema": {
+                    title: "JSON Schema: A Media Type for Describing JSON Documents",
+                    href: "https://tools.ietf.org/html/draft-handrews-json-schema-02",
+                    publisher: "Internet Engineering Task Force "
+                },
                 "LRMI": {
                     title: "LRMI Concept Schemes",
                     href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
-                    publisher: "DCMI"
+                    publisher: "Dublin Core Metadata Initiative (DCMI)"
+                },
+                "ORCID": {
+                    title: "ORCID",
+                    href: "https://orcid.org/",
+                    publisher: "ORCID, Inc."
+                },
+                "ROR": {
+                    title: "Research Organization Registry",
+                    href: "https://ror.org/",
+                    publisher: "California Digital Library, Crossref, DataCite, and Digital Science"
                 },
                 "schema.org": {
                     title: "schema.org Vocabulary",
                     href: "https://schema.org",
-                    publisher: "W3C"
+                    publisher: "Schema.org W3C Community Group"
                 },
                 "SKOS": {
                     title: "Simple Knowledge Organization System",
@@ -56,7 +76,7 @@
                 "HS-OER-LOM": {
                     title: "LOM for Higher Education OER Repositories",
                     href: "https://w3id.org/kim/hs-oer-lom-profil/latest/",
-                    publisher: "KIM"
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
                 "Hochschulfächersystematik": {
                     title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
@@ -66,8 +86,13 @@
                 "HCRT": {
                     title: "Hochschulcampus Ressourcentypen",
                     href: "https://w3id.org/kim/hcrt/scheme",
-                    publisher: "KIM"
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
+                "Wikidata": {
+                    title: "Wikidata",
+                    href: "https://www.wikidata.org/",
+                    publisher: "The Wikimedia Foundation, Inc."
+                }
             },
             logos: [],
             otherLinks: [{
@@ -105,7 +130,7 @@
 
 <section id="introduction" class="informative" data-include="contents/introduction.md"></section>
 
-<section id="conformance" data-include="contents/conformance.md"></section>
+<section id="conformance"></section>
 
 <section id="format" data-include="contents/format.md">
 <h2>Format</h2>
@@ -115,25 +140,29 @@
 <h2>Profil</h2>
 </section>
 
+
+<section id="validation">
+
+## Validierung
+
+Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. Es ermöglicht, die eigenen Daten gegen das Profil zu validieren. Das Hauptschema verweist dabei auf Unterschemas für die einzelnen Properties. Diese Unterschemas sind im Abschnitt [Profil](#profile) bei der jeweiligen Property verlinkt.
+
+<section id="json-schema">
+    <h3>JSON Schema</h3>
+    <pre data-include="schemas/schema.json" data-include-format="text"></pre>
+    <a href="schemas/schema.json">Link zum Schema</a>
+</section>
+
+</section>
+
 <section id="examples" class="informative">
 <h2>Beispiele</h2>
 
 <section id="full-example">
-<h2>Beispiel</h2>
-<pre class="example" data-include="examples/valid/tutory-example.json" data-include-format="text"></pre>
-</section>
-
-</section>
-
-</section>
-
-<section id="schemas">
-<h2>Validierung</h2>
-
-<section id="json-schema">
-    <h2>JSON Schema</h2>
-    <pre data-include="schemas/schema.json" data-include-format="text"></pre>
-    <a href="schemas/schema.json">Link zum Schema</a>
+<h2>Beispiele aus dem Bereich Hochschule</h2>
+<pre class="example" title="Beschreibung eines Kurses" data-include="examples/valid/highered-course.json" data-include-format="text"></pre>
+<pre class="example" title="Beschreibung der Präsentation einer Kurseinheit" data-include="examples/valid/highered-course-part.json" data-include-format="text"></pre>
+<pre class="example" title="Beschreibung einer in eine Präsentation eingebetteten Grafik" data-include="examples/valid/highered-figure.json" data-include-format="text"></pre>
 </section>
 
 </section>
