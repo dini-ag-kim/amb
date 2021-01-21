@@ -140,6 +140,21 @@
 <h2>Profil</h2>
 </section>
 
+
+<section id="validation">
+
+## Validierung
+
+Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. Es ermöglicht, die eigenen Daten gegen das Profil zu validieren. Das Hauptschema verweist dabei auf Unterschemas für die einzelnen Properties. Diese Unterschemas sind im Abschnitt [Profil](#profile) bei der jeweiligen Property verlinkt.
+
+<section id="json-schema">
+    <h3>JSON Schema</h3>
+    <pre data-include="schemas/schema.json" data-include-format="text"></pre>
+    <a href="schemas/schema.json">Link zum Schema</a>
+</section>
+
+</section>
+
 <section id="examples" class="informative">
 <h2>Beispiele</h2>
 
@@ -148,19 +163,6 @@
 <pre class="example" title="Beschreibung eines Kurses" data-include="examples/valid/highered-course.json" data-include-format="text"></pre>
 <pre class="example" title="Beschreibung der Präsentation einer Kurseinheit" data-include="examples/valid/highered-course-part.json" data-include-format="text"></pre>
 <pre class="example" title="Beschreibung einer in eine Präsentation eingebetteten Grafik" data-include="examples/valid/highered-figure.json" data-include-format="text"></pre>
-</section>
-
-</section>
-
-</section>
-
-<section id="schemas">
-<h2>Validierung</h2>
-
-<section id="json-schema">
-    <h2>JSON Schema</h2>
-    <pre data-include="schemas/schema.json" data-include-format="text"></pre>
-    <a href="schemas/schema.json">Link zum Schema</a>
 </section>
 
 </section>
