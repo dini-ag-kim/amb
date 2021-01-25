@@ -141,7 +141,7 @@ Creative Commons Public Domain Dedication 1.0</a>.</p>
 
 ## Einleitung
 
-Metadaten sind beschreibende Daten, die das Auffinden von relevanten Wissensressourcen erleichtern sollen. Metadaten für Bildungsressourcen sollen das Finden und den Austausch von im Web verfügbaren Lehr- und Lernressourcen erleichtern.
+Metadaten sind beschreibende Daten, die das Auffinden von relevanten Wissensressourcen erleichtern sollen. Metadaten für Bildungsressourcen sollen das Finden und den Austausch von im Web verfügbaren Lehr- und Lernressourcen unterstützen.
 
 Es existieren bereits eine Menge unterschiedlicher Metadatenschemas für die Beschreibung von Webressourcen. Prominente Beispiele sind [[DC-Terms]] oder [[schema.org]]. Diese Schemas sind oft sehr allgemein gehalten, damit sie von einer Vielzahl von Angeboten sinnvoll nutzbar sind. Community- oder anwendungsspezifische Konkretisierungen, Erweiterungen oder auch Kombinationen von Metadatenschemas werden in sogenannten Metadatenprofilen (Englisch "metadata profiles", häufig auch "application profiles" genannt) festgehalten.
 
@@ -156,7 +156,7 @@ Diese Spezifikation des Profils ist so allgemein gehalten, dass sie sowohl den S
 
 ### Basis-Metadatenschemas
 
-Dieses Profil baut hauptsächlich auf [[schema.org]] auf und nutzt eine Untermenge von Typen und Properties von <https://schema.org/CreativeWork>. Viele der hier genutzten Elemente wurden durch die Learning Resource Metadata Intitiative ([[LRMI]]) in [[schema.org]] ergänzt.
+Dieses Profil baut hauptsächlich auf [[schema.org]] auf und nutzt eine Untermenge von Typen und Properties des schema.org-Typs [`CreativeWork`](https://schema.org/CreativeWork). Viele der hier genutzten Elemente wurden durch die Learning Resource Metadata Intitiative ([[LRMI]]) in [[schema.org]] ergänzt.
 
 Zudem verlangt das Profil die Nutzung kontrollierter Vokabulare, die [[SKOS]]-konform veröffentlicht wurden, weshalb auch einige wenige SKOS-Properties enthalten sind.
 
@@ -170,7 +170,7 @@ Die Profile unterscheiden sich in folgenden Hinsichten:
 |  ---  |  ---  |  ---  |
 | Quell-Schema  | LOM  | schema.org  |
 | Format  |  XML  |  JSON-LD |
-| Linked-Data-kompatibel  |  nein  |  ja  |
+| Linked-Data  |  nein  |  ja  |
 | Bildungsbereich  |  Hochschule  |  Schule & Hochschule  |
 
 Beide Profile nutzen dieselben Werte für die Ausweisung des Ressourcentyps und die Zuweisung einer Ressource zu einem Fach. Die Werte kommen aus kontrollierten Vokabularen, die ebenfalls von KIM bereitgestellt werden: die [[Hochschulfächersystematik]] und das Ressourcentypen-Vokabular [[HCRT]]. Somit werden die Metadatenprofile weitestgehend interoperabel sein.
@@ -453,7 +453,7 @@ Thumbnail der Ressource.
 
 ### <dfn>dateCreated</dfn>
 
-Erscheinungsdatum des Dienstes. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
+Erscheinungsdatum der Ressource. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -491,7 +491,7 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 ### <dfn>learningResourceType</dfn>
 
-Art des OER-Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
+Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -614,7 +614,7 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`object[]` (URI)</dd>
+<dd>`object[]`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
 </dl>
