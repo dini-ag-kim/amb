@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang='de'>
-
 <head>
     <meta charset='utf-8'>
-    <title>
-        LRMI-Profil
-    </title>
+    <title>LRMI-Profil</title>
     <script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
     <script class='remove'>
         // ReSpec-Konfiguration
@@ -124,20 +121,508 @@
         };
     </script>
 </head>
-
 <body>
-<section id="abstract" data-include="contents/abstract.md"></section>
 
-<section id="introduction" class="informative" data-include="contents/introduction.md"></section>
+<section id="abstract">
+
+## Zusammenfassung
+
+Ein Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum. Es basiert hauptsächlich auf [[?schema.org]] bzw. Learning Resource Metadata Initiative [[?LRMI]] und nutzt dazu Teile von Simple Knowledge Organization System [[?SKOS]].
+
+<p class="copyright">
+<img alt="CC-BY" src="https://licensebuttons.net/p/zero/1.0/80x15.png" />
+Dieses Werk ist lizenziert unter
+<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+Creative Commons Public Domain Dedication 1.0</a>.</p>
+
+</section>
+
+<section id="introduction" class="informative">
+
+## Einleitung
+
+Metadaten sind beschreibende Daten, die das Auffinden von relevanten Wissensressourcen erleichtern sollen. Metadaten für Bildungsressourcen sollen das Finden und den Austausch von im Web verfügbaren Lehr- und Lernressourcen unterstützen.
+
+Es existieren bereits eine Menge unterschiedlicher Metadatenschemas für die Beschreibung von Webressourcen. Prominente Beispiele sind [[DC-Terms]] oder [[schema.org]]. Diese Schemas sind oft sehr allgemein gehalten, damit sie von einer Vielzahl von Angeboten sinnvoll nutzbar sind. Community- oder anwendungsspezifische Konkretisierungen, Erweiterungen oder auch Kombinationen von Metadatenschemas werden in sogenannten Metadatenprofilen (Englisch "metadata profiles", häufig auch "application profiles" genannt) festgehalten.
+
+Metadatenprofile beschreiben also die Art und Weise der Nachnutzung existierender Metadatenschemas, indem sie folgende Informationen angeben:
+
+- Welche Properties (Metadatenfelder) und Typen aus welchen Metadatenschemas werden benutzt?
+- Welche zusätzlichen Einschränkungen bei der Nutzung sind festgelegt, z.B. Pflichtfelder, Wiederholbarkeit eines Feldes, Formatvorgaben für Werte, genutzte kontrollierte Vokabulare?
+
+### Bildungsbereiche
+
+Diese Spezifikation des Profils ist so allgemein gehalten, dass sie sowohl den Schul- als auch den Hochschulbereich abdeckt. Bei Unterschieden in beiden Bildungsbereichen (fachliche Zuordnung, Ressourcentyp) wird auf bereichsspezifische Best Practices verwiesen.
+
+### Basis-Metadatenschemas
+
+Dieses Profil baut hauptsächlich auf [[schema.org]] auf und nutzt eine Untermenge von Typen und Properties des schema.org-Typs [`CreativeWork`](https://schema.org/CreativeWork). Viele der hier genutzten Elemente wurden durch die Learning Resource Metadata Intitiative ([[LRMI]]) in [[schema.org]] ergänzt.
+
+Zudem verlangt das Profil die Nutzung kontrollierter Vokabulare, die [[SKOS]]-konform veröffentlicht wurden, weshalb auch einige wenige SKOS-Properties enthalten sind.
+
+### Beziehung zu HS-OER-LOM
+
+Mit diesem Metadatenprofil veröffentlicht das Kompetenzzentrum Interoperable Metadaten (KIM) eine zweite Spezifikation zur Auszeichnung von Lehr- und Lernressourcen mit Metadaten. Mit [[HS-OER-LOM]] wurde Anfang 2020 bereits ein LOM-basiertes Metadatenprofil veröffentlicht, das auf den Hochschulbereich zugeschnitten ist.
+
+Die Profile unterscheiden sich in folgenden Hinsichten:
+
+|   |   HS-OER-LOM    |   LRMI-Profil    |
+|  ---  |  ---  |  ---  |
+| Quell-Schema  | LOM  | schema.org  |
+| Format  |  XML  |  JSON-LD |
+| Linked-Data  |  nein  |  ja  |
+| Bildungsbereich  |  Hochschule  |  Schule & Hochschule  |
+
+Beide Profile nutzen dieselben Werte für die Ausweisung des Ressourcentyps und die Zuweisung einer Ressource zu einem Fach. Die Werte kommen aus kontrollierten Vokabularen, die ebenfalls von KIM bereitgestellt werden: die [[Hochschulfächersystematik]] und das Ressourcentypen-Vokabular [[HCRT]]. Somit werden die Metadatenprofile weitestgehend interoperabel sein.
+
+</section>
 
 <section id="conformance"></section>
 
-<section id="format" data-include="contents/format.md">
-<h2>Format</h2>
+<section id="format" >
+
+## Format und Bereitstellung
+
+Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten.
+
+Das Metadatendokument einer Ressource MUSS im JSON-LD-Format bereitgestellt werden, entweder eingebettet in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite oder als eigenständige Webressource – d.h. unter einer dedizierten URL.
+
+### In eine HTML-Seite eingebettete Metadaten
+
+Wenn die Metadaten in die Lernressource oder ihre Beschreibungsseite eingebettet werden, MUSS das JSON-Dokument in einem `script`-Element im `head`-Bereich der Webseite eingefügt werden:
+
+```
+<script type="application/ld+json">[...]</script>
+```
+
+### Metadaten als eigenständige Webressource
+
+Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
+
+```
+Content-Type: application/ld+json
+```
+
+Der Datensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite eingebunden werden:
+
+1. Ein `link` Element, das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
+
+```
+<link rel="meta" type="application/ld+json" href="[...]" title="Resource metadata" />
+```
+
+ODER
+
+2. Ein `Link` Header, der das JSON-Dokument referenziert, MUSS gemeinsam mit der Webseite ausgeliefert werden:
+
+```
+HTTP/1.1 200 OK
+Link: <[...]>; rel="meta"
+```
+
 </section>
 
-<section id="profile" data-include="contents/profile.md">
-<h2>Profil</h2>
+<section id="profile">
+
+## Profil
+
+Als Basis-Metadatenschema für die Beschreibung einer Educational Resource dient [[!schema.org]].
+Ergänzt wird schema.org durch [[!SKOS]] (Simple Knowledge Organization System) für die Beschreibung referenzierter Werte eines kontrollierten Vokabulars.
+
+Im Folgenden wird die Struktur eines OER-Metadatensatzes beschrieben.
+Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt.
+Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele gegeben.
+
+<section data-dfn-for="@context">
+
+### <dfn>@context</dfn>
+
+Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/lrmi-profile/draft/context.jsonld` und außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert.
+
+Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
+
+```json
+{
+"@context": [
+"https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+{
+"@language": "de"
+}
+],
+}
+```
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array`</dd>
+<dt>Werte</dt>
+<dd>`https://w3id.org/kim/lrmi-profile/draft/context.jsonld`</dd>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/context-schema.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="id">
+
+### <dfn>id</dfn>
+
+Die URL, durch den die Ressource identifiziert wird.
+Auf dieser URL MUSS die Ressource abrufbar sein.
+Es SOLL keine URL sein, von der aus nur auf die Ressource verwiesen wird.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`string` (URI)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/id.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="type">
+
+### <dfn>type</dfn>
+
+Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
+
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`string[]`</dd>
+<dt>Werte</dt>
+<dd>`LearningResource` und Unterklassen von CreativeWork</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/type.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="name">
+
+### <dfn>name</dfn>
+
+Titel der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`string`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="creator">
+
+### <dfn>creator</dfn>
+
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="contributor">
+
+### <dfn>contributor</dfn>
+
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/contributor.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
+
+### <dfn>description</dfn>
+
+Beschreibung der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/description.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="about">
+
+### <dfn>about</dfn>
+
+Fach/Thema der Inhalte.
+MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hochschulfaechersystematik/scheme) ODER aus der OpenEduHub-Fächersystematik für den Schulbereich (http://w3id.org/openeduhub/vocabs/discipline) enthalten.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]` (URI)</dd>
+<dt>Werte</dt>
+<dd>Werte aus <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">Destatis Fächerklassifikation</a> oder <a href= "http://w3id.org/openeduhub/vocabs/discipline">OpenEduHub-Fächersystematik</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/about.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="keywords">
+
+### <dfn>keywords</dfn>
+
+Schlagworte zur Beschreibung des Inhalts der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/keywords.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="license">
+
+### <dfn>license</dfn>
+
+Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]` (URL entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="image">
+
+### <dfn>image</dfn>
+
+Thumbnail der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` (URI)</dd>
+<dt>Werte</dt>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/image.json">JSON Schema</a></dd>
+<dd></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="dateCreated">
+
+### <dfn>dateCreated</dfn>
+
+Erscheinungsdatum der Ressource. MUSS einem Datum gemäß [[!ISO8601]] entsprechen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`Date`</dd>
+<dt>Werte</dt>
+<dd>[[!ISO8601]]</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="inLanguage">
+
+### <dfn>inLanguage</dfn>
+
+Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]`</dd>
+<dt>Werte</dt>
+<dd>[[!BCP47]]</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/inLanguage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="learningResourceType">
+
+### <dfn>learningResourceType</dfn>
+
+Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="provider">
+
+### <dfn>publisher</dfn>
+
+Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dd>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/publisher.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="audience">
+
+### <dfn>audience</dfn>
+
+Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]` (URI)</dd>
+<dt>Werte</dt>
+<dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/audience.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isBasedOn">
+
+### <dfn>isBasedOn</dfn>
+
+Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string[]` (URI)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isPartOf">
+
+### <dfn>isPartOf</dfn>
+
+Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isPartOf.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="hasPart">
+
+### <dfn>hasPart</dfn>
+
+Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object[]`</dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/hasPart.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="mainEntityOfPage">
+
+### <dfn>mainEntityOfPage</dfn>
+
+In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
+
+- `id` zur Angabe der Landing-Page der Metadaten
+- `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
+- `dateCreated` zur Angabe des Erstellungsdatums der Metadaten
+- `dateModified` zur Angabe des Änderungsdatum der Metadaten
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object[]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 </section>
 
 
@@ -148,9 +633,9 @@
 Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. Es ermöglicht, die eigenen Daten gegen das Profil zu validieren. Das Hauptschema verweist dabei auf Unterschemas für die einzelnen Properties. Diese Unterschemas sind im Abschnitt [Profil](#profile) bei der jeweiligen Property verlinkt.
 
 <section id="json-schema">
-    <h3>JSON Schema</h3>
-    <pre data-include="schemas/schema.json" data-include-format="text"></pre>
-    <a href="schemas/schema.json">Link zum Schema</a>
+<h3>JSON Schema</h3>
+<pre data-include="schemas/schema.json" data-include-format="text"></pre>
+<a href="schemas/schema.json">Link zum Schema</a>
 </section>
 
 </section>
@@ -167,8 +652,45 @@ Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. 
 
 </section>
 
-<section id="glossary" class="appendix" data-include="contents/glossary.md">
-<h2>Glossar</h2>
+<section id="glossary" class="appendix"">
+
+## Glossar
+
+<dl>
+<dt><abbr title="Application Programming Interface">API</abbr></dt>
+<dd>Application Programming Interface</dd>
+<dt><abbr title="Bundesministerium für Bildung und Forschung">BMBF</abbr></dt>
+<dd>Bundesministerium für Bildung und Forschung</dd>
+<dt><abbr title="Dublin Core">DC</abbr></dt>
+<dd>Dublin Core</dd>
+<dt><abbr title="Digital Object Identifier">DOI</abbr></dt>
+<dd>Digital Object Identifier</dd>
+<dt><abbr title="Digital Repositories Interoperability">DRI</abbr></dt>
+<dd>Digital Repositories Interoperability</dd>
+<dt><abbr title="Globally Unique Identifier">GUID</abbr></dt>
+<dd>Globally Unique Identifier</dd>
+<dt><abbr title="Hypertext Transfer Protocol">HTTP</abbr></dt>
+<dd>Hypertext Transfer Protocol</dd>
+<dt><abbr title="JavaScript Object Notation">JSON</abbr></dt>
+<dd>JavaScript Object Notation</dd>
+<dt><abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr></dt>
+<dd>JavaScript Object Notation for Linked Data</dd>
+<dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
+<dd>Learning Object Metadata</dd>
+<dt><abbr title="Learning Object Repository">LOR</abbr></dt>
+<dd>Learning Object Repository</dd>
+<dt><abbr title="Open Archives Initiative – Protocol for Metadata Harvesting">OAI-PMH</abbr></dt>
+<dd>Open Archives Initiative – Protocol for Metadata Harvesting</dd>
+<dt><abbr title="Open Educational Resource">OER</abbr></dt>
+<dd>Open Educational Resource</dd>
+<dt><abbr title="Uniform Resource Identifier">URI</abbr></dt>
+<dd>Uniform Resource Identifier</dd>
+<dt><abbr title="Uniform Resource Locator">URL</abbr></dt>
+<dd>Uniform Resource Locator</dd>
+<dt><abbr title="World Wide Web Consortium">W3C</abbr></dt>
+<dd>World Wide Web Consortium</dd>
+</dl>
+ 
 </section>
 
 <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
