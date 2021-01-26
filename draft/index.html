@@ -256,7 +256,7 @@ Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 <dt>Pflichtfeld</dt>
 <dd>ja</dd>
 <dt>Typ</dt>
-<dd>`array`</dd>
+<dd>`array[string/object]`</dd>
 <dt>Werte</dt>
 <dd>`https://w3id.org/kim/lrmi-profile/draft/context.jsonld`</dd>
 <dd>`object`</dd>
@@ -296,7 +296,7 @@ Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Wert
 <dt>Pflichtfeld</dt>
 <dd>ja</dd>
 <dt>Typ</dt>
-<dd>`string[]`</dd>
+<dd>`array[string]`</dd>
 <dt>Werte</dt>
 <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
 <dt>Validierung</dt>
@@ -332,7 +332,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dd>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
@@ -351,7 +351,7 @@ Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthal
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dd>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
@@ -389,7 +389,7 @@ MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hoc
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]` (URI)</dd>
+<dd>`array[string]` (URI)</dd>
 <dt>Werte</dt>
 <dd>Werte aus <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">Destatis Fächerklassifikation</a> oder <a href= "http://w3id.org/openeduhub/vocabs/discipline">OpenEduHub-Fächersystematik</a></dd>
 <dt>Validierung</dt>
@@ -408,7 +408,7 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]`</dd>
+<dd>`array[string]`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/keywords.json">JSON Schema</a></dd>
 </dl>
@@ -425,7 +425,7 @@ Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]` (URL entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
+<dd>`array[string]` (URL entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json">JSON Schema</a></dd>
 </dl>
@@ -480,7 +480,7 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]`</dd>
+<dd>`array[string]`</dd>
 <dt>Werte</dt>
 <dd>[[!BCP47]]</dd>
 <dt>Validierung</dt>
@@ -499,7 +499,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 <dt>Pflichtfeld</dt>
 <dd>ja</dd>
 <dt>Typ</dt>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
 <dt>Validierung</dt>
@@ -537,7 +537,7 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]` (URI)</dd>
+<dd>`array[string]` (URI)</dd>
 <dt>Werte</dt>
 <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
 <dt>Validierung</dt>
@@ -556,7 +556,7 @@ Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string[]` (URI)</dd>
+<dd>`array[string]` (URI)</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
 </dl>
