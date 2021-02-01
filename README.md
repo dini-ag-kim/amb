@@ -33,7 +33,7 @@ Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Rep
 
 `git clone git@github.com:dini-ag-kim/lrmi-profile.git ; cd lrmi-profile`
 
-Lasse einen Server im `lrmi-profile`-Verzeichnis laufen (for [`data-include`](https://github.com/w3c/respec/wiki/ReSpec-Editor's-Guide#inclusions--transformations) support):
+Lasse einen Server im `lrmi-profile`-Verzeichnis laufen:
 
 `python3 -m http.server`
 
