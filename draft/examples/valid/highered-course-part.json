@@ -38,7 +38,7 @@
   "license": "https://creativecommons.org/licenses/by-sa/4.0/",
   "image": "https://dini-ag-kim.github.io/lrmi-profile/draft/img/os08-image.png",
   "dateCreated": "2020-06-25",
-  "inLanguage": "en",
+  "inLanguage": [ "en" ],
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/slide",

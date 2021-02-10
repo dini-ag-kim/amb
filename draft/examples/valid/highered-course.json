@@ -37,7 +37,7 @@
     "Computer Structures"
   ],
   "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "inLanguage": "en",
+  "inLanguage": [ "en" ],
   "audience": [
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
