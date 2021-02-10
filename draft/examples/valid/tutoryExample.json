@@ -1,7 +1,9 @@
 {
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"}
+    {
+      "@language": "de"
+    }
   ],
   "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
   "id": "https://www.tutory.de/w/fbbadf1a",
@@ -28,7 +30,10 @@
       }
     }
   ],
-  "keywords": [ "Französisch", "Niveau A2" ],
+  "keywords": [
+    "Französisch",
+    "Niveau A2"
+  ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
   "dateCreated": "2019-07-03",
   "inLanguage": "fr",

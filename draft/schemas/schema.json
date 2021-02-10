@@ -65,11 +65,11 @@
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isBasedOn.json"
     },
     "isPartOf": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isPartOf.json"
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isPartOf.json"
     },
     "hasPart": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/hasPart.json"
-      },
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/hasPart.json"
+    },
     "mainEntityOfPage": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json"
     },

@@ -2,15 +2,12 @@
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
     {
-      "mbox": "http://xmlns.com/foaf/0.1/mbox"
+      "@language": "de"
     }
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource",
-    "Course"
-  ],
+  "type": "LearningResource",
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/course"

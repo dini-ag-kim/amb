@@ -1,46 +1,46 @@
 {
-    "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Learning Resource Type",
-    "description": "The learning resource type of the resouce, taken from the controlled HCRT list.",
-    "type": "array",
-    "_display": {
-      "className": "hidden"
-    },
-    "items": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Concept"
-          ]
-        },
-        "id": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
-        },
-        "inScheme": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "enum": [
-                "https://w3id.org/kim/hcrt/scheme"
-              ]
-            }
-          }
-        },
-        "prefLabel": {
-          "title": "The preferred label of the concept",
-          "description": "A localized string for prefLabel of a SKOS concept",
-          "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/LocalizedString.json"
-        }
-        },
-        "required": [
-          "id"
+  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Learning Resource Type",
+  "description": "The learning resource type of the resouce, taken from the controlled HCRT list.",
+  "type": "array",
+  "_display": {
+    "className": "hidden"
+  },
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "Concept"
         ]
       },
-    "_widget": "SkohubLookup"
-  }
+      "id": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
+      },
+      "inScheme": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "https://w3id.org/kim/hcrt/scheme"
+            ]
+          }
+        }
+      },
+      "prefLabel": {
+        "title": "The preferred label of the concept",
+        "description": "A localized string for prefLabel of a SKOS concept",
+        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/LocalizedString.json"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  },
+  "_widget": "SkohubLookup"
+}

@@ -1,7 +1,9 @@
 {
-  "@context": [ 
+  "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"}
+    {
+      "@language": "de"
+    }
   ],
   "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
   "id": "https://www.tutory.de/w/fbbadf1a",
@@ -20,4 +22,4 @@
       }
     }
   ]
- }
+}

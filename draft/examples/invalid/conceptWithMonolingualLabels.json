@@ -1,59 +1,61 @@
 {
-  "@context": [ 
+  "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"}
+    {
+      "@language": "de"
+    }
   ],
-    "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
-    "id": "https://www.tutory.de/w/fbbadf1a",
-    "image": "https://www.tutory.de/worksheet/fbbadf1a-145a-463d-9a43-1ae9965c86b9.jpg?width=1000",
-    "type": [
-      "LearningResource"
-    ],
-    "creator": [
-      {
-        "name": "HerunterS",
-        "type": "Person"
+  "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
+  "id": "https://www.tutory.de/w/fbbadf1a",
+  "image": "https://www.tutory.de/worksheet/fbbadf1a-145a-463d-9a43-1ae9965c86b9.jpg?width=1000",
+  "type": [
+    "LearningResource"
+  ],
+  "creator": [
+    {
+      "name": "HerunterS",
+      "type": "Person"
+    }
+  ],
+  "description": "Französisch-Arbeitsblatt",
+  "about": [
+    {
+      "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
+      "prefLabel": "Französisch",
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
       }
-    ],
-    "description": "Französisch-Arbeitsblatt",
-    "about": [
-      {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
-        "prefLabel": "Französisch",
-        "type": "Concept",
-        "inScheme": {
-          "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-        }
+    }
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "dateCreated": "2019-07-03",
+  "inLanguage": "fr",
+  "publisher": [
+    {
+      "type": "Organization",
+      "name": "Tutory",
+      "id": "https://www.tutory.de"
+    }
+  ],
+  "audience": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+      "prefLabel": "Lernende",
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
       }
-    ],
-    "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-    "dateCreated": "2019-07-03",
-    "inLanguage": "fr",
-    "publisher": [
-      {
-        "type": "Organization",
-        "name": "Tutory",
-        "id": "https://www.tutory.de"
+    }
+  ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course",
+      "prefLabel": "Kurs",
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hcrt/scheme"
       }
-    ],
-    "audience": [
-      {
-        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
-        "prefLabel": "Lernende",
-        "type": "Concept",
-        "inScheme": {
-          "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-        }
-      }
-    ],
-    "learningResourceType": [
-      {
-        "id": "https://w3id.org/kim/hcrt/course",
-        "prefLabel": "Kurs",
-        "type": "Concept",
-        "inScheme": {
-          "id": "https://w3id.org/kim/hcrt/scheme"
-        }  
-      }
-    ]
+    }
+  ]
 }

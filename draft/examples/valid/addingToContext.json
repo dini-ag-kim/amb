@@ -1,7 +1,9 @@
 {
   "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"},
+    {
+      "@language": "de"
+    },
     {
       "presentedAt": "http://purl.org/ontology/bibo/presentedAt"
     }
@@ -14,7 +16,7 @@
   ],
   "learningResourceType": [
     {
-    "id": "https://w3id.org/kim/hcrt/course"
+      "id": "https://w3id.org/kim/hcrt/course"
     }
   ]
 }

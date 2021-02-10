@@ -1,7 +1,9 @@
 {
-  "@context": [ 
+  "@context": [
     "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-    {"@language": "de"}
+    {
+      "@language": "de"
+    }
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
@@ -9,7 +11,9 @@
     "LearningResource",
     "Course"
   ],
-  "learningResourceType": {
-    "id": "https://w3id.org/kim/hcrt/course"
-  }
+  "learningResourceType": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
+    }
+  ]
 }

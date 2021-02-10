@@ -1,51 +1,51 @@
 {
-    "@context": [
-        "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
-        {
-            "@language": "de"
-        }
-    ],
-    "name": "Beispielressource",
-    "id": "https://example.org/oer",
-    "type": [
+  "@context": [
+    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielressource",
+  "id": "https://example.org/oer",
+  "type": [
+    "LearningResource"
+  ],
+  "creator": [
+    {
+      "name": "HansD",
+      "type": "Person"
+    }
+  ],
+  "isPartOf": [
+    {
+      "id": "https://example.org/broader",
+      "type": [
         "LearningResource"
-    ],
-    "creator": [
+      ],
+      "name": "Super-Ressource",
+      "creator": [
         {
-            "name": "HansD",
-            "type": "Person"
+          "name": "Skye Blue",
+          "type": "Person"
         }
-    ],
-    "isPartOf": [
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "hasPart": [
+    {
+      "id": "https://example.org/module",
+      "type": [
+        "LearningResource"
+      ],
+      "name": "Sub-Ressource",
+      "creator": [
         {
-            "id": "https://example.org/broader",
-            "type": [
-                "LearningResource"
-            ],
-            "name": "Super-Ressource",
-            "creator": [
-                {
-                    "name": "Skye Blue",
-                    "type": "Person"
-                }
-            ],
-            "license": "https://creativecommons.org/licenses/by/4.0/"
+          "name": "Skye Blue",
+          "type": "Person"
         }
-    ],
-    "hasPart": [
-        {
-            "id": "https://example.org/module",
-            "type": [
-                "LearningResource"
-            ],
-            "name": "Sub-Ressource",
-            "creator": [
-                {
-                    "name": "Skye Blue",
-                    "type": "Person"
-                }
-            ],
-            "license": "https://creativecommons.org/licenses/by/4.0/"
-        }
-    ]
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
 }
