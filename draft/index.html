@@ -187,7 +187,7 @@ Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Die
 
 Das Metadatendokument einer Ressource MUSS im JSON-LD-Format ([[JSON-LD11]]) bereitgestellt werden, entweder eingebettet in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite oder als eigenständige Webressource – d.h. unter einer dedizierten URL.
 
-Die [[JSONLD11]]-konforme Bereitstellung wird erreicht durch die Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context) mit dem <a>@context</a> Keyword.
+Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht durch die Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context) mit dem <a>@context</a> Keyword.
 
 ### In eine HTML-Seite eingebettete Metadaten
 
@@ -520,7 +520,7 @@ Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere
 <dt>Pflichtfeld</dt>
 <dd>ja</dd>
 <dt>Typ</dd>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
@@ -575,7 +575,7 @@ Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Te
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Objekt mit Property `id`</dd>
 <dt>Validierung</dt>
@@ -594,7 +594,7 @@ Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>JSON-Objekt mit Property `id`</dd>
 <dt>Validierung</dt>
@@ -618,7 +618,7 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`object[]`</dd>
+<dd>`array[object]`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
 </dl>
