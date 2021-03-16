@@ -12,5 +12,11 @@
     }
   ],
   "description": "Französisch-Arbeitsblatt",
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "mainEntityOfPage": [
+    {
+      "id": "https://www.tutory.de/entdecken/dokument/fbbadf1a",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
+  ]
 }

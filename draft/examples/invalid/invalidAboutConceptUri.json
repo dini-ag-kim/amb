@@ -21,5 +21,11 @@
         "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
       }
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "id": "https://www.tutory.de/entdecken/dokument/fbbadf1a",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

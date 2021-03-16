@@ -46,5 +46,10 @@
       ],
       "name": "OS08: Virtual Memory I"
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

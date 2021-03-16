@@ -28,10 +28,18 @@
         "title": "Date of last modification of the metadata",
         "type": "string",
         "format": "date"
+      },
+      "conformsTo": {
+        "title": "Link to the metadata profile the metadata complies with",
+        "type": "string",
+        "format": "uri",
+        "enum": [
+          "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+        ]
       }
     },
     "required": [
-      "id"
+      "conformsTo"
     ]
   }
 }

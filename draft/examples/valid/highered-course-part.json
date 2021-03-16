@@ -79,5 +79,10 @@
       ],
       "name": "A-32 two-level page table"
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

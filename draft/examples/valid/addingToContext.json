@@ -18,5 +18,11 @@
     {
       "id": "https://w3id.org/kim/hcrt/course"
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "id": "https://example.org/oer.json",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

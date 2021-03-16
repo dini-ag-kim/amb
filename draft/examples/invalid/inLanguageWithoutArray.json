@@ -20,5 +20,11 @@
   "description": "Eine OER",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
   "dateCreated": "2019-07-03",
-  "inLanguage": "fr"
+  "inLanguage": "fr",
+  "mainEntityOfPage": [
+    {
+      "id": "https://example.org/oer.json",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
+  ]
 }

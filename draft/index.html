@@ -609,14 +609,15 @@ Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil
 
 In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
 
-- `id` zur Angabe der Landing-Page der Metadaten
+- `conformsTo` ist das einzige Pflichtfeld in diesem Objekt und MUSS den einen Link auf dieses Metadatenprofil enthalten: `https://w3id.org/kim/lrmi-profile/2021mmdd/`
+- `id` zur Angabe der Landing-Page oder einer JSON-Datei mit der Ressourcenbeschreibung
 - `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
 - `dateCreated` zur Angabe des Erstellungsdatums der Metadaten
 - `dateModified` zur Angabe des Änderungsdatum der Metadaten
 
 <dl>
 <dt>Pflichtfeld</dt>
-<dd>nein</dd>
+<dd>ja</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Validierung</dt>

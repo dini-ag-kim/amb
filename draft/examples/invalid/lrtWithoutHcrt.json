@@ -15,5 +15,11 @@
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "id": "https://www.tutory.de/entdecken/dokument/fbbadf1a",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

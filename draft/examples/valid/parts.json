@@ -47,5 +47,11 @@
       ],
       "license": "https://creativecommons.org/licenses/by/4.0/"
     }
+  ],
+  "mainEntityOfPage": [
+    {
+      "id": "https://example.org/oer.json",
+      "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
+    }
   ]
 }

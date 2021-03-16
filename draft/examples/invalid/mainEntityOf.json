@@ -9,7 +9,8 @@
   "id": "https://example.org/oer",
   "mainEntityOfPage": {
     "dateCreated": "2020-01-01",
-    "dateModified": "2020-02-02"
+    "dateModified": "2020-02-02",
+    "conformsTo": "https://w3id.org/kim/lrmi-profile/2021mmdd/"
   },
   "image": "https://example.org/oer/image.png",
   "type": [
