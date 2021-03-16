@@ -205,10 +205,10 @@ Content-Type: application/ld+json
 
 Der Datensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite eingebunden werden:
 
-1. Ein `link` Element, das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
+1. Ein `link`-Element , das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
 ```
-<link rel="meta" type="application/ld+json" href="[...]" title="Resource metadata" />
+<link rel="describedby" type="application/ld+json" href="[...]" title="Resource metadata" />
 ```
 
 ODER
@@ -217,7 +217,7 @@ ODER
 
 ```
 HTTP/1.1 200 OK
-Link: <[...]>; rel="meta"
+Link: <[...]>; rel="describedby"
 ```
 
 </section>
