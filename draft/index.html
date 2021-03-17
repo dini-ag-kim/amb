@@ -199,10 +199,12 @@ Wenn die Metadaten in die Lernressource oder ihre Beschreibungsseite eingebettet
 
 ### Metadaten als eigenständige Webressource
 
-Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
+Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden. Ein HTTP Link Header zur Verlinkung auf dieses Profil KANN ebenefalls ergänzt werden.
 
 ```
+HTTP/1.1 200 OK
 Content-Type: application/ld+json
+Link: <https://w3id.org/kim/lrmi-profile/2021mmdd/>; rel="profile"
 ```
 
 Der Metadatensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite eingebunden werden:
@@ -210,7 +212,7 @@ Der Metadatensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw
 1. Ein `link`-Element , das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
 
 ```
-<link rel="describedby" type="application/ld+json" href="[...]" title="Resource metadata" />
+<link rel="describedby" type="application/ld+json" href="https://example.org/metadaten-dokument.json" title="Resource metadata" />
 ```
 
 ODER
@@ -219,7 +221,7 @@ ODER
 
 ```
 HTTP/1.1 200 OK
-Link: <[...]>; rel="describedby"
+Link: <https://example.org/metadaten-dokument.json>; rel="describedby"
 ```
 
 </section>
@@ -609,7 +611,7 @@ Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil
 
 In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
 
-- `conformsTo` ist das einzige Pflichtfeld in diesem Objekt und MUSS den einen Link auf dieses Metadatenprofil enthalten: `https://w3id.org/kim/lrmi-profile/2021mmdd/`
+- `conformsTo` ist das einzige Pflichtfeld in diesem Objekt und MUSS einen Link auf diese Version des Metadatenprofils enthalten: `https://w3id.org/kim/lrmi-profile/2021mmdd/`
 - `id` zur Angabe der Landing-Page oder einer JSON-Datei mit der Ressourcenbeschreibung
 - `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
 - `dateCreated` zur Angabe des Erstellungsdatums der Metadaten
@@ -693,7 +695,7 @@ Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. 
 <dt><abbr title="World Wide Web Consortium">W3C</abbr></dt>
 <dd>World Wide Web Consortium</dd>
 </dl>
- 
+
 </section>
 
 <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
