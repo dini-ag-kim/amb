@@ -37,7 +37,7 @@
     },
     "required": [
       "id"
-    ]
-  },
-  "_widget": "SkohubLookup"
+    ],
+    "_widget": "SkohubLookup"
+  }
 }
