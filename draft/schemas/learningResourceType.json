@@ -4,9 +4,6 @@
   "title": "Learning Resource Type",
   "description": "The learning resource type of the resouce, taken from the controlled HCRT list.",
   "type": "array",
-  "_display": {
-    "className": "hidden"
-  },
   "items": {
     "type": "object",
     "properties": {
