@@ -2,10 +2,7 @@
   "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Creation Date",
-  "description": "The creation date",
+  "description": "The creation date in YYYY-MM-DD format",
   "type": "string",
-  "format": "date",
-  "_display": {
-    "placeholder": "YYYY-MM-DD"
-  }
+  "format": "date"
 }

@@ -26,8 +26,5 @@
       ]
     }
   ],
-  "additionalItems": true,
-  "_display": {
-    "className": "hidden"
-  }
+  "additionalItems": true
 }

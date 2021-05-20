@@ -4,9 +4,6 @@
   "title": "Type",
   "description": "The type (rdf:type / @type) of the learning resource, taken from sub-classes of sdo:CreativeWork.",
   "type": "array",
-  "_display": {
-    "className": "hidden"
-  },
   "items": {
     "type": "string",
     "default": "learningResource",

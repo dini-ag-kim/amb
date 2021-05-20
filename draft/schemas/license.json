@@ -5,8 +5,5 @@
   "description": "A link to a CreativeCommons license",
   "type": "string",
   "format": "uri",
-  "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*",
-  "_display": {
-    "placeholder": "URL of the Creative Commons license"
-  }
+  "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
 }
