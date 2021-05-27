@@ -16,7 +16,7 @@
       "id": {
         "type": "string",
         "format": "uri",
-        "pattern": "^https:\/\/w3id.org\/kim\/hcrt\/.*"
+        "pattern": "(^https:\/\/w3id.org\/kim\/hcrt\/.*|http:\/\/w3id.org\/openeduhub\/vocabs\/learningResourceType\/.*)"
       },
       "inScheme": {
         "type": "object",
