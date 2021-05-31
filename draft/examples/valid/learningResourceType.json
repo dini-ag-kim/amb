@@ -14,6 +14,9 @@
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/course"
+    },
+    {
+      "id": "http://w3id.org/openeduhub/vocabs/learningResourceType/course"
     }
   ]
 }
