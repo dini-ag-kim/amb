@@ -28,6 +28,16 @@
       "inScheme": {
         "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
       }
+    },
+    {
+      "id": "http://w3id.org/openeduhub/vocabs/discipline/20002",
+      "prefLabel": {
+        "de": "Französisch"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://w3id.org/openeduhub/vocabs/discipline/"
+      }
     }
   ],
   "keywords": [
