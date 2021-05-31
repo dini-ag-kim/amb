@@ -22,10 +22,7 @@
       },
       "name": {
         "title": "Name",
-        "type": "string",
-        "_display": {
-          "placeholder": "The contributors' name"
-        }
+        "type": "string"
       }
     },
     "required": [

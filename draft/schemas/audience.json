@@ -6,12 +6,6 @@
   "type": "array",
   "items": {
     "type": "object",
-    "_widget": {
-      "type": "SkohubLookup",
-      "options": {
-        "url": "https://skohub.io/acka47/lrmi-audience-role/heads/master/purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-      }
-    },
     "properties": {
       "type": {
         "type": "string",

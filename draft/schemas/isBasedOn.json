@@ -21,10 +21,7 @@
       },
       "name": {
         "title": "Name",
-        "type": "string",
-        "_display": {
-          "placeholder": "The title of the resource"
-        }
+        "type": "string"
       },
       "creator": {
         "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/creator.json"

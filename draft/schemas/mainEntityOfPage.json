@@ -4,9 +4,6 @@
   "title": "Metadata/Structured descriptions",
   "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
   "type": "array",
-  "_display": {
-    "className": "hidden"
-  },
   "items": {
     "type": "object",
     "properties": {

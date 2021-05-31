@@ -6,8 +6,5 @@
   "type": "array",
   "items": {
     "type": "string"
-  },
-  "_display": {
-    "placeholder": "Tags describing the content of the resource"
   }
 }

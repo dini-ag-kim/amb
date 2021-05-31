@@ -4,8 +4,5 @@
   "title": "URL",
   "description": "The URL/URI of the resource",
   "type": "string",
-  "format": "uri",
-  "_display": {
-    "placeholder": "The URL of the resource"
-  }
+  "format": "uri"
 }

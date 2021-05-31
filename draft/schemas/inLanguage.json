@@ -6,8 +6,5 @@
   "type": "array",
   "items": {
     "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/Language.json"
-  },
-  "_display": {
-    "placeholder": "The language of the resource"
   }
 }
