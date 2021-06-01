@@ -78,12 +78,17 @@
                 "Hochschulfächersystematik": {
                     title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
                     href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
-                    publisher: "KIM"
+                    publisher: "DINI AG KIM"
                 },
                 "HCRT": {
                     title: "Hochschulcampus Ressourcentypen",
                     href: "https://w3id.org/kim/hcrt/scheme",
                     publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "Schulfächerliste": {
+                    "title": "Werteliste für allgemeinbildende Schulfächer",
+                    "href": "http://w3id.org/kim/schulfaecher/",
+                    "publisher": "DINI AG KIM"
                 },
                 "Wikidata": {
                     title: "Wikidata",
@@ -385,7 +390,7 @@ Beschreibung der Ressource.
 ### <dfn>about</dfn>
 
 Fach/Thema der Inhalte.
-MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hochschulfaechersystematik/scheme) ODER aus der Werteliste für allgemeinbildende Schulfächer der DINI-AG-KIM (http://w3id.org/kim/schulfaecher/) enthalten.
+MUSS einen Wert aus der [[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der DINI-AG-KIM enthalten.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -393,7 +398,7 @@ MUSS einen Wert aus der Destatis Fächerklassifikation (https://w3id.org/kim/hoc
 <dt>Typ</dt>
 <dd>`array[string (URI)]`</dd>
 <dt>Werte</dt>
-<dd>Werte aus <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">Destatis Fächerklassifikation</a> oder <a href="http://w3id.org/kim/schulfaecher/">Werteliste für allgemeinbildende Schulfächer der DINI-AG-KIM</a></dd>
+<dd>Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/about.json">JSON Schema</a></dd>
 </dl>
