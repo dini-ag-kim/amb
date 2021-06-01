@@ -50,6 +50,11 @@
                     href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
                     publisher: "Dublin Core Metadata Initiative (DCMI)"
                 },
+                "OEHRT": {
+                    title: "OpenEduHub Ressourcentypen",
+                    href: "http://w3id.org/openeduhub/vocabs/learningResourceType/",
+                    publisher: "OpenEduHub"
+                },
                 "ORCID": {
                     title: "ORCID",
                     href: "https://orcid.org/",
@@ -78,7 +83,7 @@
                 "Hochschulfächersystematik": {
                     title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
                     href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
-                    publisher: "DINI AG KIM"
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
                 "HCRT": {
                     title: "Hochschulcampus Ressourcentypen",
@@ -88,7 +93,7 @@
                 "Schulfächerliste": {
                     "title": "Werteliste für allgemeinbildende Schulfächer",
                     "href": "http://w3id.org/kim/schulfaecher/",
-                    "publisher": "DINI AG KIM"
+                    "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
                 "Wikidata": {
                     title: "Wikidata",
@@ -500,7 +505,7 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 ### <dfn>learningResourceType</dfn>
 
-Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus dem Vokabluar der Hochschulcampus Ressourcentypen (https://w3id.org/kim/hcrt/) ODER den OpenEduHub Ressourcentypen (http://w3id.org/openeduhub/vocabs/learningResourceType/) als URI enthalten MÜSSEN.
+Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus [[HCRT]] ODER [[OEHRT]] als URI enthalten MÜSSEN.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -508,7 +513,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Werte</dt>
-<dd>JSON-Object mit `id`-Wert aus <a href=" https://w3id.org/kim/hcrt/">Hochschulcampus Ressourcentypen</a> oder <a href="http://w3id.org/openeduhub/vocabs/learningResourceType/">OpenEduHub Ressourcentypen</a></dd>
+<dd>JSON-Object mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
 </dl>
