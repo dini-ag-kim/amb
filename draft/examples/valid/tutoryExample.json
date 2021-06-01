@@ -30,13 +30,13 @@
       }
     },
     {
-      "id": "http://w3id.org/openeduhub/vocabs/discipline/20002",
+      "id": "http://w3id.org/kim/schulfaecher/s1009",
       "prefLabel": {
         "de": "Französisch"
       },
       "type": "Concept",
       "inScheme": {
-        "id": "http://w3id.org/openeduhub/vocabs/discipline/"
+        "id": "http://w3id.org/kim/schulfaecher/"
       }
     }
   ],
