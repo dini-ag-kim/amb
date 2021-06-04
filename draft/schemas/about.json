@@ -16,7 +16,7 @@
       "id": {
         "type": "string",
         "format": "uri",
-        "pattern": "(^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*|http:\/\/w3id.org\/openeduhub\/vocabs\/discipline\/.*)"
+        "pattern": "(^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*|http:\/\/w3id.org\/kim\/schulfaecher\/.*)"
       },
       "inScheme": {
         "type": "object",
@@ -25,7 +25,7 @@
             "type": "string",
             "enum": [
               "https://w3id.org/kim/hochschulfaechersystematik/scheme",
-              "http://w3id.org/openeduhub/vocabs/discipline/"
+              "http://w3id.org/kim/schulfaecher/"
             ]
           }
         }
