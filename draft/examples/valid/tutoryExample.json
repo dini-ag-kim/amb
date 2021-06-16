@@ -44,8 +44,15 @@
     "Französisch",
     "Niveau A2"
   ],
+  "learningResourceType": [{
+      "id": "https://w3id.org/kim/hcrt/worksheet"
+    },
+    {
+      "id": "http://w3id.org/openeduhub/vocabs/learningResourceType/worksheet"
+    }
+  ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-  "dateCreated": "2019-07-03",
+  "dateCreated": "2019-07-02",
     "inLanguage": [
     "fr"
   ],
