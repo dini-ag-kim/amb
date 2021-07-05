@@ -20,16 +20,6 @@
   "description": "Französisch-Arbeitsblatt",
   "about": [
     {
-      "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
-      "prefLabel": {
-        "de": "Französisch"
-      },
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-      }
-    },
-    {
       "id": "http://w3id.org/kim/schulfaecher/s1009",
       "prefLabel": {
         "de": "Französisch"
