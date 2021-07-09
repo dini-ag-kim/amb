@@ -36,7 +36,9 @@
     "Operation Systems",
     "Computer Structures"
   ],
-  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license": {
+    "id": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
   "inLanguage": [ "en" ],
   "audience": [
     {

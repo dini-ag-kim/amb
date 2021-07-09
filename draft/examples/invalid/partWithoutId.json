@@ -28,7 +28,9 @@
           "type": "Person"
         }
       ],
-      "license": "https://creativecommons.org/licenses/by/4.0/"
+      "license": {
+        "id": "https://creativecommons.org/licenses/by/4.0/"
+      }
     }
   ],
   "hasPart": [
@@ -43,7 +45,9 @@
           "type": "Person"
         }
       ],
-      "license": "https://creativecommons.org/licenses/by/4.0/"
+      "license": {
+        "id": "https://creativecommons.org/licenses/by/4.0/"
+      }
     }
   ]
 }

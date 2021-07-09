@@ -3,7 +3,15 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "License",
   "description": "A link to a CreativeCommons license",
-  "type": "string",
-  "format": "uri",
-  "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
+    }
+  },
+  "required": [
+    "id"
+  ]
 }

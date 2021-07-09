@@ -35,7 +35,9 @@
       "id": "https://w3id.org/kim/hochschulfaechersystematik/n059"
     }
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "license": {
+    "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
   "dateCreated": "2019-07-03",
     "inLanguage": [
     "fr"
@@ -61,6 +63,8 @@
         "type": "Person"
       }
     ],
-    "license": "https://creativecommons.org/licenses/by/4.0/"
+    "license": {
+      "id": "https://creativecommons.org/licenses/by/4.0/"
+    }
   }
 }
