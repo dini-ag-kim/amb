@@ -558,6 +558,25 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
 
 </section>
 
+<section data-dfn-for="encoding">
+
+### <dfn>encoding</dfn>
+
+Möglichkeiten zum Download der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]` </dd>
+<dt>Werte</dt>
+<dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize`, `embedUrl`, `sha256`, `bitrate`, `encodingFormat` (MUSS bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten).</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/encoding.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 <section data-dfn-for="isBasedOn">
 
 ### <dfn>isBasedOn</dfn>

@@ -1,0 +1,55 @@
+{
+  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/encoding.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Encoding",
+  "description": "A media object that encodes this learning resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": [
+          "MediaObject"
+        ]
+      },
+      "contentUrl": {
+        "title": "Content URL",
+        "description": "The download URL of the media object",
+        "type": "string",
+        "format": "uri"
+      },
+      "encodingFormat": {
+        "title": "Encoding Format",
+        "description": "The media type of the media object, conforming to https://www.iana.org/assignments/media-types/media-types.xml",
+        "type": "string"
+      },
+      "contentSize": {
+        "title": "Content Size",
+        "description": "The size of the media object in (kilo/mega/giga) bytes.",
+        "type": "string"
+      },
+      "sha256": {
+        "title": "sha256",
+        "description": "The SHA-2 SHA256 hash of the content of the media object.",
+        "type": "string"
+      },
+      "embedUrl": {
+        "title": "Embed URL",
+        "description": "A URL pointing to a player for a video. In general, this is the information in the src element of an embed tag.",
+        "type": "string",
+        "format": "uri"
+      },
+      "bitrate": {
+        "title": "Bitrate",
+        "description": "The bitrate of an audio or video object.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "type",
+      "contentUrl"
+    ]
+  }
+}
