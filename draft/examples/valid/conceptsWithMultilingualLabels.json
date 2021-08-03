@@ -32,7 +32,9 @@
       }
     }
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "license": {
+    "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
   "dateCreated": "2019-07-03",
     "inLanguage": [
     "fr"

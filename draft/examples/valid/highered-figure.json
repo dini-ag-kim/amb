@@ -18,7 +18,9 @@
       "name": "Jens Lechtenbörger"
     }
   ],
-  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license": {
+    "id": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/image",
@@ -35,7 +37,9 @@
       "type": "Person",
       "name": "Max Hailperin"
     },
-    "license": "http://creativecommons.org/licenses/by-sa/3.0/"
+    "license": {
+      "id": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
   },
   "isPartOf": [
     {

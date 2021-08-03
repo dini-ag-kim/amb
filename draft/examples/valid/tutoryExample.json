@@ -41,7 +41,9 @@
       "id": "http://w3id.org/openeduhub/vocabs/learningResourceType/worksheet"
     }
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "license": {
+    "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
   "dateCreated": "2019-07-02",
     "inLanguage": [
     "fr"

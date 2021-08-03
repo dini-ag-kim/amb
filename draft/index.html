@@ -431,13 +431,13 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 
 ### <dfn>license</dfn>
 
-Lizenz der Ressource. Wert MUSS eine URI der entsprechenden CC-Lizenz sein.
+Lizenz der Ressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` enthält mit einem URI als Wert, der  dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*` entspricht.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[string (URI)]` (entsprechend dem RegEx-Muster `^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*`)</dd>
+<dd>`object`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json">JSON Schema</a></dd>
 </dl>
