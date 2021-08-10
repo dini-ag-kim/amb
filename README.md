@@ -4,11 +4,19 @@
 
 **English description**
 
-A schema.org/LRMI-based profile for describing OER developed and published as JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>. A draft HTML specification is at [https://w3id.org/kim/lrmi-profile/draft/](https://w3id.org/kim/lrmi-profile/draft/).
+A schema.org/LRMI-based profile for describing learning resources.
+- draft HTML specification: <https://w3id.org/kim/lrmi-profile/draft/>
+- JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>
 
 ---
 
-Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von OER mit Fokus auf den deutschsprachigen Raum, zunächst entwickelt als JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>. Eine HTML-Spezifikation ist in Entwicklung, siehe [https://w3id.org/kim/lrmi-profile/draft/](https://w3id.org/kim/lrmi-profile/draft/).
+Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von Lehr- und Lernressourcen mit Fokus auf den deutschsprachigen Raum.
+- HTML-Spezifikation: <https://w3id.org/kim/lrmi-profile/draft/>
+- JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>.
+
+### Status
+
+Entwurf
 
 ## Zum Entwicklungsprozess
 
