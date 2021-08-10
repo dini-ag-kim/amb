@@ -1,4 +1,4 @@
-# Metadatenprofil für Lehr-und Lernmaterialien im deutschsprachigen Raum
+# Allgemeines Metadatenprofil für Bildungsressourcen
 
 ---
 
