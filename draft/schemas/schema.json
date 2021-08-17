@@ -75,6 +75,9 @@
     },
     "keywords": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/keywords.json"
+    },
+    "encoding": {
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/encoding.json"
     }
   },
   "required": [
