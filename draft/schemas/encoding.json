@@ -47,9 +47,20 @@
         "type": "string"
       }
     },
-    "required": [
-      "type",
-      "contentUrl"
+    "anyOf": [
+      {
+        "required": [
+          "type",
+          "contentUrl"
+        ]
+      },
+      {
+        "required": [
+          "type",
+          "embedUrl"
+        ]
+      }
     ]
+
   }
 }
