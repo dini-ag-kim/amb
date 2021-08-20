@@ -2,7 +2,7 @@
   "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "License",
-  "description": "An object that links to an open source license. Creative Commons, GNU, Apache, MIT and BSD are allowed",
+  "description": "An object that links to an open source license. Public Domain, Creative Commons, GNU, Apache, MIT and BSD are allowed",
   "type": "object",
   "properties": {
     "id": {
@@ -10,7 +10,7 @@
       "format": "uri",
       "oneOf": [
         {
-          "description": "Creative Commons License",
+          "description": "Creative Commons License or Public Domain",
           "pattern": "^https:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
         },
         {
