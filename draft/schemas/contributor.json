@@ -23,11 +23,14 @@
       "name": {
         "title": "Name",
         "type": "string"
+      },
+      "affiliation": {
+        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/affiliation.json"
       }
-    },
-    "required": [
-      "name",
-      "type"
-    ]
-  }
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
 }
