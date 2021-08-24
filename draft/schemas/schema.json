@@ -49,6 +49,9 @@
     "dateCreated": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json"
     },
+    "datePublished": {
+      "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/datePublished.json"
+    },
     "inLanguage": {
       "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/inLanguage.json"
     },
