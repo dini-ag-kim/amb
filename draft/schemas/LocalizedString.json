@@ -173,6 +173,9 @@
     "ha": {
       "type": "string"
     },
+    "he": {
+      "type": "string"
+    },
     "hi": {
       "type": "string"
     },
@@ -195,6 +198,9 @@
       "type": "string"
     },
     "ia": {
+      "type": "string"
+    },
+    "id": {
       "type": "string"
     },
     "ie": {
@@ -317,9 +323,6 @@
     "mn": {
       "type": "string"
     },
-    "mo": {
-      "type": "string"
-    },
     "mr": {
       "type": "string"
     },
@@ -360,9 +363,6 @@
       "type": "string"
     },
     "nv": {
-      "type": "string"
-    },
-    "nvi": {
       "type": "string"
     },
     "ny": {
@@ -431,6 +431,9 @@
     "sg": {
       "type": "string"
     },
+    "sh": {
+      "type": "string"
+    },
     "si": {
       "type": "string"
     },
@@ -441,9 +444,6 @@
       "type": "string"
     },
     "sm": {
-      "type": "string"
-    },
-    "smi": {
       "type": "string"
     },
     "sn": {
@@ -543,6 +543,9 @@
       "type": "string"
     },
     "xh": {
+      "type": "string"
+    },
+    "yi": {
       "type": "string"
     },
     "yo": {
