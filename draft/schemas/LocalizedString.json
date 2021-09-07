@@ -50,9 +50,6 @@
     "bg": {
       "type": "string"
     },
-    "bh": {
-      "type": "string"
-    },
     "bi": {
       "type": "string"
     },
@@ -429,9 +426,6 @@
       "type": "string"
     },
     "sg": {
-      "type": "string"
-    },
-    "sh": {
       "type": "string"
     },
     "si": {
