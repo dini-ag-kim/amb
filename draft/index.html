@@ -338,7 +338,7 @@ Titel der Ressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -357,7 +357,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 
 ### <dfn>contributor</dfn>
 
-Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie weitere Properties enthalten KÖNNEN, z. B. `email`, `location`, `url`. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -368,6 +368,23 @@ Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthal
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/contributor.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="affiliation">
+
+### <dfn>affiliation</dfn>
+
+Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Lernressource. MUSS ein JSON-Objekt enthalten, das wiederum `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu  [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/affiliation.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -544,7 +561,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 
 ### <dfn>publisher</dfn>
 
-Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` und `name` Properties aufweisen. KANN weitere Properties enthalten, z. B. `email`, `location`, `url`.
+Die Organisation, über die die OER veröffentlicht wurde. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` und `name` Properties aufweisen.
 
 <dl>
 <dt>Pflichtfeld</dt>
