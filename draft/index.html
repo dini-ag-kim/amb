@@ -412,13 +412,15 @@ Beschreibung der Ressource.
 ### <dfn>about</dfn>
 
 Fach/Thema der Inhalte.
-MUSS einen Wert aus der [[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der DINI-AG-KIM enthalten.
+MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus der
+[[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der DINI-AG-KIM
+enthalten MÜSSEN.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[string (URI)]`</dd>
+<dd>`array[object]`</dd>
 <dt>Werte</dt>
 <dd>Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM</a></dd>
 <dt>Validierung</dt>
