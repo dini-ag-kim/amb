@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/audience.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/audience.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Intended Audience",
   "description": "The audience the educational resource is intended for.",
@@ -31,7 +31,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/LocalizedString.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/LocalizedString.json"
       }
     },
     "required": [

@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/license.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/license.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "License",
   "description": "An object that links to an open source license. Public Domain, Creative Commons, GNU, Apache, MIT and BSD are allowed",

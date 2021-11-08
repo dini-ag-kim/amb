@@ -5,14 +5,14 @@
 **English description**
 
 A schema.org/LRMI-based profile for describing learning resources.
-- draft HTML specification: <https://w3id.org/kim/lrmi-profile/draft/>
-- JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>
+- draft HTML specification: <https://w3id.org/kim/amb/draft/>
+- JSON Schema: <https://dini-ag-kim.github.io/amb/draft/schemas/schema.json>
 
 ---
 
 Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von Lehr- und Lernressourcen mit Fokus auf den deutschsprachigen Raum.
-- HTML-Spezifikation: <https://w3id.org/kim/lrmi-profile/draft/>
-- JSON Schema: <https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json>.
+- HTML-Spezifikation: <https://w3id.org/kim/amb/draft/>
+- JSON Schema: <https://dini-ag-kim.github.io/amb/draft/schemas/schema.json>.
 
 ### Status
 
@@ -37,11 +37,11 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 #### Ansicht der HTML-Spezifikation im Browser
 
 
-Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Repo und wechsle in das `lrmi-profile`-Verzeichnis:
+Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Repo und wechsle in das `amb`-Verzeichnis:
 
-`git clone git@github.com:dini-ag-kim/lrmi-profile.git ; cd lrmi-profile`
+`git clone git@github.com:dini-ag-kim/amb.git ; cd amb`
 
-Lasse einen Server im `lrmi-profile`-Verzeichnis laufen:
+Lasse einen Server im `amb`-Verzeichnis laufen:
 
 `python3 -m http.server`
 
@@ -49,7 +49,7 @@ Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localh
 
 #### Tests
 
-Schema-Tests werden gegen valide ([draft/examples/valid](https://github.com/dini-ag-kim/lrmi-profile/tree/master/draft/examples/valid)) und invalide ([draft/examples/invalid](https://github.com/dini-ag-kim/lrmi-profile/tree/master/draft/examples/invalid)) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ bash test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
+Schema-Tests werden gegen valide ([draft/examples/valid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/valid)) und invalide ([draft/examples/invalid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/invalid)) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ bash test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
 
 ### Weiterführende Informationen
 

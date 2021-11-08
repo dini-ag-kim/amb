@@ -1,7 +1,7 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/dateCreated.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/dateCreated.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Creation Date",
   "description": "The creation date in ISO 8601 format: YYYY-MM-DD",
-  "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/iso8601date.json"
+  "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/iso8601date.json"
 }

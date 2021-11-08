@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/learningResourceType.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/learningResourceType.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Learning Resource Type",
   "description": "The learning resource type of the resource, taken from the controlled HCRT list or the OpenEduHub vocabulary for learningResourceType",
@@ -33,7 +33,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/LocalizedString.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/LocalizedString.json"
       }
     },
     "required": [

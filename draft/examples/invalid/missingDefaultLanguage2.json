@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+    "https://w3id.org/kim/amb/draft/context.jsonld",
     {
       "mbox": "http://xmlns.com/foaf/0.1/mbox"
     }

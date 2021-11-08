@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/hasPart.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/hasPart.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Has part",
   "description": "Resources that are part of the described learning resource",
@@ -8,13 +8,13 @@
     "type": "object",
     "properties": {
       "id": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/id.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/id.json"
       },
       "type": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/type.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/type.json"
       },
       "name": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/name.json"
       }
     },
     "required": [
