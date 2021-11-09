@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/isPartOf.json",
+  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/isPartOf.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Is part of",
   "description": "Resources the described learning resource is part of.",
@@ -8,13 +8,13 @@
     "type": "object",
     "properties": {
       "id": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/id.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/id.json"
       },
       "type": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/type.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/type.json"
       },
       "name": {
-        "$ref": "https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/name.json"
+        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/name.json"
       }
     },
     "required": [
