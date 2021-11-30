@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/context-schema.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/context-schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "JSON-LD Context",
   "description": "The JSON-LD context for the structured resource descriptions",
@@ -17,7 +17,7 @@
       "type": "object",
       "properties": {
         "@language": {
-          "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/Language.json"
+          "$ref": "https://w3id.org/kim/amb/draft/schemas/Language.json"
         }
       },
       "additionalProperties": false,

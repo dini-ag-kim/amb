@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/isBasedOn.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/isBasedOn.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Based on",
   "description": "Resources the described learning resources derived from.",
@@ -24,13 +24,13 @@
         "type": "string"
       },
       "creator": {
-        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/creator.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/creator.json"
       },
       "license": {
-        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/license.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/license.json"
       },
       "provider": {
-        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/provider.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
       }
     },
     "required": [

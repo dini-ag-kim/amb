@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/provider.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/provider.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Provider",
   "description": "Quelle, von der eine Bildungsressource oder deren Metadaten zur Verfügung gestellt werden.",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/name.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/name.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Title",
   "description": "The title of the learning resource",

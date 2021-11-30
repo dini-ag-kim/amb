@@ -6,13 +6,13 @@
 
 A schema.org/LRMI-based profile for describing learning resources.
 - draft HTML specification: <https://w3id.org/kim/amb/draft/>
-- JSON Schema: <https://dini-ag-kim.github.io/amb/draft/schemas/schema.json>
+- JSON Schema: <https://w3id.org/kim/amb/draft/schemas/schema.json>
 
 ---
 
 Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von Lehr- und Lernressourcen mit Fokus auf den deutschsprachigen Raum.
 - HTML-Spezifikation: <https://w3id.org/kim/amb/draft/>
-- JSON Schema: <https://dini-ag-kim.github.io/amb/draft/schemas/schema.json>.
+- JSON Schema: <https://w3id.org/kim/amb/draft/schemas/schema.json>.
 
 ### Status
 
