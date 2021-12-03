@@ -16,6 +16,6 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - run: |
-        npm install -g ajv-cli@3.0.0
+        npm install -g ajv-cli ajv-formats
         chmod +x ./test.sh
         bash ./test.sh
