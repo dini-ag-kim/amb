@@ -555,9 +555,5 @@
       "type": "string"
     }
   },
-  "additionalProperties": false,
-  "suggested": [
-    "de",
-    "en"
-  ]
+  "additionalProperties": false
 }
