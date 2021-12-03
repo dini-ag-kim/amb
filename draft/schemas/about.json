@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/about.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/about.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Subject",
   "description": "The subject of the learning resource, taken from Destatis classification or OpenEduHub-Fächersystematik",
@@ -33,7 +33,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",
-        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/LocalizedString.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
       }
     },
     "required": [

@@ -1,5 +1,5 @@
 {
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/contributor.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/contributor.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Contributor",
   "description": "Contributor(s) to the creation of the learning resource",
@@ -25,7 +25,7 @@
         "type": "string"
       },
       "affiliation": {
-        "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/affiliation.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/affiliation.json"
       }
     }
   },

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://dini-ag-kim.github.io/amb/draft/schemas/schema.json",
+  "$id": "https://w3id.org/kim/amb/draft/schemas/schema.json",
   "title": "OER",
   "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
   "type": "object",
@@ -17,70 +17,70 @@
   },
   "properties": {
     "@context": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/context-schema.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/context-schema.json"
     },
     "id": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/id.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
     },
     "type": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/type.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/type.json"
     },
     "name": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/name.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/name.json"
     },
     "creator": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/creator.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/creator.json"
     },
     "contributor": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/contributor.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/contributor.json"
     },
     "description": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/description.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/description.json"
     },
     "about": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/about.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/about.json"
     },
     "license": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/license.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/license.json"
     },
     "image": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/image.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/image.json"
     },
     "dateCreated": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/dateCreated.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
     },
     "datePublished": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/datePublished.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/datePublished.json"
     },
     "inLanguage": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/inLanguage.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/inLanguage.json"
     },
     "publisher": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/publisher.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/publisher.json"
     },
     "learningResourceType": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/learningResourceType.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/learningResourceType.json"
     },
     "audience": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/audience.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/audience.json"
     },
     "isBasedOn": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/isBasedOn.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/isBasedOn.json"
     },
     "isPartOf": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/isPartOf.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/isPartOf.json"
     },
     "hasPart": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/hasPart.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/hasPart.json"
     },
     "mainEntityOfPage": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/mainEntityOfPage.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json"
     },
     "keywords": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/keywords.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/keywords.json"
     },
     "encoding": {
-      "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/encoding.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/encoding.json"
     }
   },
   "required": [
