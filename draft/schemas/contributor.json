@@ -6,6 +6,10 @@
   "type": "array",
   "items": {
     "type": "object",
+    "required": [
+      "name",
+      "type"
+    ],
     "properties": {
       "type": {
         "title": "Type",
@@ -28,9 +32,5 @@
         "$ref": "https://dini-ag-kim.github.io/amb/draft/schemas/affiliation.json"
       }
     }
-  },
-  "required": [
-    "name",
-    "type"
-  ]
+  }
 }
