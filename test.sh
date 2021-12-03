@@ -9,8 +9,8 @@ for version in "draft"; do
 #	for ` $version/schemas/schema.json`; do
 #		echo "Testing $schema_file"
 #		schema_name=$(echo "$schema_file" | cut -f 1 -d '.')
-		ajv test -s $version/schemas/schema.json -r "$version/schemas/*.json" -d "$version/examples/valid/*.json" --valid
-		ajv test -s $version/schemas/schema.json -r "$version/schemas/*.json" -d "$version/examples/invalid/*.json" --invalid
+		ajv test -s $version/schemas/schema.json -r "$version/schemas/!(schema).json" -d "$version/examples/valid/*.json" --valid
+		ajv test -s $version/schemas/schema.json -r "$version/schemas/!(schema)" -d "$version/examples/invalid/*.json" --invalid
 #		echo ""
 #	done
 done
