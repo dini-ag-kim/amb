@@ -3,7 +3,7 @@ name: Build
 on:
   push
 env:
-  NODE_VERSION: '14.15.3'
+  NODE_VERSION: '16.13.1'
 
 jobs:
   build:
@@ -16,6 +16,6 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - run: |
-        npm install -g ajv-cli@3.0.0
+        npm install -g ajv-cli ajv-formats
         chmod +x ./test.sh
         bash ./test.sh
