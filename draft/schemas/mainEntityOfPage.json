@@ -23,8 +23,7 @@
       },
       "dateModified": {
         "title": "Date of last modification of the metadata",
-        "type": "string",
-        "format": "date"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/iso8601date.json"
       }
     },
     "required": [
