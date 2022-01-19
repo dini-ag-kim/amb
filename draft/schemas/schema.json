@@ -81,6 +81,9 @@
     },
     "encoding": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/encoding.json"
+    },
+    "conditionsOfAccess": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json"
     }
   },
   "required": [
