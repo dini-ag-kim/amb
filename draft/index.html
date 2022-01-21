@@ -232,6 +232,26 @@ HTTP/1.1 200 OK
 Link: <[...]>; rel="describedby"
 ```
 
+### Anmerkung zur Interpretation
+
+Beim Einlesen steht es dem Programm frei, ob die Metadaten als JSON oder als JSON-LD interpretiert werden. Dementsprechend MÜSSEN Metadaten den hier vorgestellten JSON-Strukturen folgen. So ist es bei der Angabe der Lizenz wichtig, dass die Form
+
+```json
+{
+  "license": {
+    "id": "..."
+  }
+}
+```
+
+eingehalten wird. Die Angabe der Lizenz in der für JSON-LD äquivalenten Form als String und nicht über ein Objekt ist NICHT ERLAUBT:
+
+```json
+{
+  "license": "..."
+}
+```
+
 </section>
 
 <section id="profile">
