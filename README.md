@@ -5,6 +5,7 @@
 **English description**
 
 A schema.org/LRMI-based profile for describing learning resources.
+
 - GitHub Repo: <https://github.com/dini-ag-kim/amb>
 - draft HTML specification: <https://w3id.org/kim/amb/draft/>
 - JSON Schema: <https://w3id.org/kim/amb/draft/schemas/schema.json>
@@ -12,6 +13,7 @@ A schema.org/LRMI-based profile for describing learning resources.
 ---
 
 Ein schema.org-/LRMI-basiertes Metadatenprofil für die Beschreibung von Lehr- und Lernressourcen mit Fokus auf den deutschsprachigen Raum.
+
 - GitHub Repo: <https://github.com/dini-ag-kim/amb>
 - HTML-Spezifikation: <https://w3id.org/kim/amb/draft/>
 - JSON Schema: <https://w3id.org/kim/amb/draft/schemas/schema.json>.
@@ -32,12 +34,11 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 - Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann), ([GitLab](https://gitlab.com/mirjan))
 - Steffen Roertgen (GWDG), [@sroertgen](https://github.com/sroertgen)
 - Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx) ([GitLab](https://gitlab.com/TobiasNx))
-- *Ergänze dich selbst, wenn du Interesse hast mitzumachen*
+- _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
 
 ### Lokales Setup
 
 #### Ansicht der HTML-Spezifikation im Browser
-
 
 Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Repo und wechsle in das `amb`-Verzeichnis:
 
@@ -52,6 +53,13 @@ Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localh
 #### Tests
 
 Schema-Tests werden gegen valide ([draft/examples/valid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/valid)) und invalide ([draft/examples/invalid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/invalid)) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ bash test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
+
+Um die Tests laufen lassen zu können, müssen die NPM Packete [`ajv-cli`](https://www.npmjs.com/package/ajv-cli) und [`ajv-formats`](https://www.npmjs.com/package/ajv-formats) installiert sein:
+
+```
+npm install -g ajv-cli
+npm install -g ajv-formats
+```
 
 ### Weiterführende Informationen
 
