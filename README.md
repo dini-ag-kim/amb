@@ -34,6 +34,7 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 - Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann), ([GitLab](https://gitlab.com/mirjan))
 - Steffen Roertgen (GWDG), [@sroertgen](https://github.com/sroertgen)
 - Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx) ([GitLab](https://gitlab.com/TobiasNx))
+- Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
 - _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
 
 ### Lokales Setup
@@ -52,7 +53,7 @@ Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localh
 
 #### Tests
 
-Schema-Tests werden gegen valide ([draft/examples/valid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/valid)) und invalide ([draft/examples/invalid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/invalid)) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ bash test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
+Schema-Tests werden gegen valide ([draft/examples/valid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/valid)) und invalide ([draft/examples/invalid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/invalid)) Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ sh test.sh` ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des Profils zu gewährleisten.
 
 Um die Tests laufen lassen zu können, müssen die NPM Packete [`ajv-cli`](https://www.npmjs.com/package/ajv-cli) und [`ajv-formats`](https://www.npmjs.com/package/ajv-formats) installiert sein:
 
