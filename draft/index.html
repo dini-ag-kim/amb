@@ -486,7 +486,7 @@ Thumbnail der Ressource.
 
 ### <dfn>dateCreated</dfn>
 
-Erstellungsdatum der Ressource. MUSS einer Datumsangabe gemäß [[!ISO8601]] entsprechen.
+Erstellungsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Datumsangaben oder ein String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -495,7 +495,8 @@ Erstellungsdatum der Ressource. MUSS einer Datumsangabe gemäß [[!ISO8601]] ent
 <dd>`Date`</dd>
 <dd>`DateTime`</dd>
 <dt>Werte</dt>
-<dd>[[!ISO8601]]</dd>
+<dd>`Date`: String der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
+<dd>`DateTime`: String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe [[!ISO8601]], Kapitel 5.4)</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/dateCreated.json">JSON Schema</a></dd>
 </dl>
@@ -507,7 +508,7 @@ Erstellungsdatum der Ressource. MUSS einer Datumsangabe gemäß [[!ISO8601]] ent
 
 ### <dfn>datePublished</dfn>
 
-Publikationssdatum der Ressource. MUSS einer Datumsangabe gemäß [[!ISO8601]] entsprechen.
+Publikationssdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Datumsangaben oder ein String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -516,7 +517,8 @@ Publikationssdatum der Ressource. MUSS einer Datumsangabe gemäß [[!ISO8601]] e
 <dd>`Date`</dd>
 <dd>`DateTime`</dd>
 <dt>Werte</dt>
-<dd>[[!ISO8601]]</dd>
+<dd>`Date`: String der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
+<dd>`DateTime`: String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe [[!ISO8601]], Kapitel 5.4)</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/datePublished.json">JSON Schema</a></dd>
 </dl>
