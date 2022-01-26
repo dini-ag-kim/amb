@@ -697,6 +697,66 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
 
 </section>
 
+<section data-dfn-for="teaches">
+
+### <dfn>teaches</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschreibenen Ressource erreicht werden können:
+
+- `id` zur Angabe der ID der Kompetenz (in Form einer URI)
+- `prefLabel`: Zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/teaches.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="assesses">
+
+### <dfn>assesses</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschreibenen Ressource festgestellt werden können:
+
+- `id` zur Angabe der ID der Kompetenz (in Form einer URI)
+- `prefLabel`: Zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/assesses.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="competencyRequired">
+
+### <dfn>competencyRequired</dfn>
+
+Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachgewiesen werden müssen, um die Lernressource zu verstehen und bearbeiten zu können:
+
+- `id` zur Angabe der ID der Kenntnis, Fähigkeit oder Eigenschaft (in Form einer URI)
+- `prefLabel`: Zur Angabe einer Bezeichnung für die Kenntnis, Fähigkeit oder Eigenschaft
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/competencyRequired.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 </section>
 
 
