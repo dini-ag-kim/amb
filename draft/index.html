@@ -197,11 +197,11 @@ Mit Blick auf den Hochschulbereich nutzen beide Profile dieselben Werte für die
 
 ## Format und Bereitstellung
 
-Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten.
+Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten. Die Form des JSON-Dokuments MUSS den Vorgaben dieser Spezifikation und des enthaltenen JSON Schemas entsprechen.
 
-Das Metadatendokument einer Ressource MUSS im JSON-LD-Format ([[JSON-LD11]]) bereitgestellt werden, entweder eingebettet in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite oder als eigenständige Webressource – d.h. unter einer dedizierten URL.
+Das JSON-Dokument zur Beschreibung einer Ressource muss entweder in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite eingebettet werden oder als eigenständige Webressource – d.h. unter einer dedizierten URL abrufbar sein.
 
-Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht durch die Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context) mit dem <a>@context</a> Keyword.
+Das JSON-Dokument MUSS auch als [[JSON-LD11]] interpretierbar sein. Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht mittels der Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context), siehe die <a>@context</a>-Property.
 
 ### In eine HTML-Seite eingebettete Metadaten
 
@@ -253,7 +253,7 @@ Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele
 
 ### <dfn>@context</dfn>
 
-Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/amb/draft/context.jsonld`. Außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert.
+Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/amb/draft/context.jsonld`. Außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar.
 
 Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 
