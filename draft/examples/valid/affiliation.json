@@ -13,7 +13,8 @@
   ],
   "creator": [
     {
-      "name": "HansD",
+      "honorificPrefix": "Dr.",
+      "name": "Hans Dampf",
       "type": "Person",
       "affiliation": {
         "id": "http://www.wikidata.org/entity/Q54096",

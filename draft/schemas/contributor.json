@@ -28,6 +28,10 @@
         "title": "Name",
         "type": "string"
       },
+      "honorificPrefix": {
+        "title": "Academic title",
+        "type": "string"
+      },
       "affiliation": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/affiliation.json"
       }

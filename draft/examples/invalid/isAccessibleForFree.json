@@ -12,12 +12,5 @@
     "LearningResource"
   ],
   "datePublished": "2020-02-02",
-  "contributor": [
-    {
-      "honorificPrefix": "Dr.",
-      "name": "Hans Dampf",
-      "type": "Person",
-      "id": "https://example.org/hansd"
-    }
-  ]
+  "isAccessibleForFree": "no"
 }
