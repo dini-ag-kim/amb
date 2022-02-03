@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/draft/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": [
+    "Course",
+    "LearningResource"
+  ],
+  "teaches": [{
+    "id": "https://example.org/competencies/3",
+    "prefLabel": "Awesomeness"
+  }]
+}
