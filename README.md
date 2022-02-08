@@ -32,7 +32,7 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 - Axel Klinger (TIB), [@axel-klinger](https://github.com/axel-klinger) ([GitLab](https://gitlab.com/axel-klinger)
 - Fabian Steeg (hbz), [@fsteeg](https://github.com/fsteeg) ([GitLab](https://gitlab.com/fsteeg))
 - Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann), ([GitLab](https://gitlab.com/mirjan))
-- Steffen Roertgen (GWDG), [@sroertgen](https://github.com/sroertgen)
+- Steffen Rörtgen (GWDG), [@sroertgen](https://github.com/sroertgen)
 - Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx) ([GitLab](https://gitlab.com/TobiasNx))
 - Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
 - _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
