@@ -32,6 +32,10 @@
                 name: "Tobias Bülte",
                 company: "hbz",
                 companyURL: "https://www.hbz-nrw.de/"
+            }, {
+                name: "Stephan Kulla",
+                company: "Serlo Education e.V.",
+                companyURL: "https://serlo.org/"
             }],
             format: "markdown",
             localBiblio: {
@@ -193,11 +197,11 @@ Mit Blick auf den Hochschulbereich nutzen beide Profile dieselben Werte für die
 
 ## Format und Bereitstellung
 
-Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten.
+Die Metadaten einer Ressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten. Die Form des JSON-Dokuments MUSS den Vorgaben dieser Spezifikation und des enthaltenen JSON Schemas entsprechen.
 
-Das Metadatendokument einer Ressource MUSS im JSON-LD-Format ([[JSON-LD11]]) bereitgestellt werden, entweder eingebettet in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite oder als eigenständige Webressource – d.h. unter einer dedizierten URL.
+Das JSON-Dokument zur Beschreibung einer Ressource muss entweder in die Bildungsressource selbst bzw. – bei Nicht-HTML-basierten Lernressourcen – in die HTML-Beschreibungsseite eingebettet werden oder als eigenständige Webressource – d.h. unter einer dedizierten URL abrufbar sein.
 
-Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht durch die Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context) mit dem <a>@context</a> Keyword.
+Das JSON-Dokument MUSS auch als [[JSON-LD11]] interpretierbar sein. Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht mittels der Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context), siehe die <a>@context</a>-Property.
 
 ### In eine HTML-Seite eingebettete Metadaten
 
@@ -249,7 +253,7 @@ Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele
 
 ### <dfn>@context</dfn>
 
-Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/amb/draft/context.jsonld`. Außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert.
+Die `@context`-Property enthält einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils: `https://w3id.org/kim/amb/draft/context.jsonld`. Außerdem mit einem JSON-Objekt zur Angabe der im JSON-Dokument genutzten Sprache mittels dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar.
 
 Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 
@@ -338,7 +342,7 @@ Titel der Ressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -357,7 +361,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 
 ### <dfn>contributor</dfn>
 
-Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -444,6 +448,23 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/keywords.json">JSON Schema</a></dd>
 </dl>
 
+</section>
+
+<section data-dfn-for="isAccessibleForFree">
+
+### <dfn>isAccessibleForFree</dfn>
+
+Angabe, ob der Zugang zu einer Ressource kostenpflichtig ist oder nicht. MUSS Booleschen Wert (`true`/`false`) enthalten.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`boolean`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json">JSON Schema</a></dd>
+</dl>
+    
 </section>
 
 <section data-dfn-for="license">
@@ -707,6 +728,66 @@ In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den ein
 <dd>`array[object]`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="teaches">
+
+### <dfn>teaches</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Ressource erreicht werden können:
+
+- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/teaches.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="assesses">
+
+### <dfn>assesses</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Ressource festgestellt werden können:
+
+- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/assesses.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="competencyRequired">
+
+### <dfn>competencyRequired</dfn>
+
+Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachgewiesen werden müssen, um die Lernressource zu verstehen und bearbeiten zu können:
+
+- `id` zur Angabe eines Identifikators der Kenntnis, Fähigkeit oder Eigenschaft mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kenntnis, Fähigkeit oder Eigenschaft
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/competencyRequired.json">JSON Schema</a></dd>
 </dl>
 
 </section>

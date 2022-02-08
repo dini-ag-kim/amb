@@ -84,6 +84,18 @@
     },
     "conditionsOfAccess": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json"
+    },
+    "assesses": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/assesses.json"
+    },
+    "competencyRequired": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/competencyRequired.json"
+    },
+    "teaches": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/teaches.json"
+    },
+    "isAccessibleForFree": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json"
     }
   },
   "required": [
