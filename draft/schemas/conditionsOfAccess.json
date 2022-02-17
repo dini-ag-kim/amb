@@ -3,9 +3,40 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "conditionsOfAccess",
   "description": "Description if login is needed to use the source.",
-  "type": "string",
-  "enum": [
-    "No login required",
-    "Login required"
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Concept"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "enum": [
+        "http://w3id.org/kim/conditionsOfAccess/no_login",
+        "http://w3id.org/kim/conditionsOfAccess/login"
+      ]
+    },
+    "inScheme": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "http://w3id.org/kim/conditionsOfAccess/"
+          ]
+        }
+      }
+    },
+    "prefLabel": {
+      "title": "The preferred label of the concept",
+      "description": "A localized string for prefLabel of a SKOS concept",
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
+    }
+  },
+  "required": [
+    "id"
   ]
 }

@@ -488,14 +488,13 @@ Lizenz der Ressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` mi
 
 ### <dfn>conditionsOfAccess</dfn>
 
-Klärung, ob für den Zugang zu Ressource eine Registrierung und Login erfordert ist. MUSS entweder den Wert `"No login required"` oder 
-`"Login required"` beinhalten.
+Klärung, ob für den Zugang zu Ressource eine Registrierung und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine Property `id` mit der URI eines Konzepts aus dem [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/) als Wert enthalten muss.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`string`</dd>
+<dd>JSON-Object mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
 </dl>
