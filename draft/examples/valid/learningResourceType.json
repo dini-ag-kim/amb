@@ -11,6 +11,12 @@
     "LearningResource",
     "Course"
   ],
+  "publisher": [
+    {
+      "type": "Person",
+      "name": "Maxima Mustermensch"
+    }
+  ],
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/course"

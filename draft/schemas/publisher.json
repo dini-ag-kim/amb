@@ -11,7 +11,8 @@
         "title": "Type",
         "type": "string",
         "enum": [
-          "Organization"
+          "Organization",
+          "Person"
         ]
       },
       "id": {
