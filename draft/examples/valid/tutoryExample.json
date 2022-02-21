@@ -44,6 +44,10 @@
   "license": {
     "id": "https://creativecommons.org/publicdomain/zero/1.0/"
   },
+  "conditionsOfAccess": {
+    "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
+    "type": "Concept"
+  },
   "dateCreated": "2019-07-02",
     "inLanguage": [
     "fr"
