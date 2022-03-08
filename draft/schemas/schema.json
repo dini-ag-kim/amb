@@ -17,7 +17,7 @@
   },
   "properties": {
     "@context": {
-      "$ref": "https://w3id.org/kim/amb/draft/schemas/context-schema.json"
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/context.json"
     },
     "id": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
