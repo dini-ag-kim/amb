@@ -27,7 +27,7 @@
       },
       "contentSize": {
         "title": "Content Size",
-        "description": "The size of the media object in (kilo/mega/giga) bytes.",
+        "description": "The size of the media object in bytes (B) without units.",
         "type": "string"
       },
       "sha256": {
@@ -43,7 +43,7 @@
       },
       "bitrate": {
         "title": "Bitrate",
-        "description": "The bitrate of an audio or video object.",
+        "description": "The bitrate of an audio or video object in kilobyte per second (kb/s) without units. ",
         "type": "string"
       }
     },
