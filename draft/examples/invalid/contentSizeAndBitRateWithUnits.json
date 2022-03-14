@@ -29,16 +29,16 @@
       "type": "MediaObject",
       "encodingFormat": "video/mp4",
       "sha256": "5daa33f7826285c1af76c7a2341707b5103e0208c7c425b71f00a72ff9beadde",
-      "bitrate": "1651",
-      "contentSize": "568000000",
+      "bitrate": "1651 kb/s",
+      "contentSize": "568MB",
       "contentUrl": "https://tib.flowcenter.de/mfc/medialink/3/dea844a48268f9c1d10e340613eb0d0c87fcdc8e04b9980efa06743a026e99a979/_FOSDEM_2014__The_road_ahead_for_network_freedom_4vNMAOJDhhw_v1500a128.mp4"
     },
     {
       "type": "MediaObject",
       "encodingFormat": "video/mp4",
       "sha256": "af96aba0790476495cfb5fa6d5612b91d8e404bb0d53aaf4b19bb8bd49843959",
-      "bitrate": "831",
-      "contentSize": "286000000",
+      "bitrate": "831 kb/s",
+      "contentSize": "286MB",
       "contentUrl": "https://tib.flowcenter.de/mfc/medialink/3/dececd3fadf9ab5d198c6c2fb886fadacfe208efc67b76c5f2503dab055bace61b/_FOSDEM_2014__The_road_ahead_for_network_freedom_4vNMAOJDhhw.mp4",
       "embedUrl": "https://av.tib.eu/player/32641"
     }
