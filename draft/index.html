@@ -201,11 +201,11 @@ Wenn die Metadaten in die Lernressource oder ihre Beschreibungsseite eingebettet
 
 Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden. Ein HTTP Link Header zur Verlinkung auf dieses Profil KANN ebenefalls ergänzt werden.
 
-```
+<pre class="nolinks HTTP">
 HTTP/1.1 200 OK
 Content-Type: application/ld+json
-Link: <https://w3id.org/kim/lrmi-profile/2021mmdd/>; rel="profile"
-```
+Link: &lt;https://w3id.org/kim/lrmi-profile/2021mmdd/>; rel="profile"
+</pre>
 
 Der Metadatensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite eingebunden werden:
 
@@ -219,10 +219,10 @@ ODER
 
 2. Ein `Link` Header, der das JSON-Dokument referenziert, MUSS gemeinsam mit der Webseite ausgeliefert werden:
 
-```
+<pre class="nolinks HTTP">
 HTTP/1.1 200 OK
-Link: <https://example.org/metadaten-dokument.json>; rel="describedby"
-```
+Link: &lt;https://example.org/metadaten-dokument.json>; rel="describedby"
+</pre>
 
 </section>
 
