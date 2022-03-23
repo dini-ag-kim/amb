@@ -100,6 +100,9 @@
     "teaches": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/teaches.json"
     },
+    "educationalLevel": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/educationalLevel.json"
+    },
     "isAccessibleForFree": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json"
     }

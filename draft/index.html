@@ -99,6 +99,16 @@
                     "href": "http://w3id.org/kim/schulfaecher/",
                     "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
+                "Bildungsstufen": {
+                    "title": "Werteliste für Bildungsstufen",
+                    "href": "http://w3id.org/comein/vocabs/educationalLevel-ComeIn/",
+                    "publisher": "ComeIn (NRW)"
+                },
+                "Schulstufen": {
+                    "title": "Werteliste für Schulstufen",
+                    "href": "http://w3id.org/openeduhub/vocabs/educationalLevel/",
+                    "publisher": "OpenEduHub"
+                },
                 "Wikidata": {
                     title: "Wikidata",
                     href: "https://www.wikidata.org/",
@@ -464,7 +474,7 @@ Angabe, ob der Zugang zu einer Ressource kostenpflichtig ist oder nicht. MUSS Bo
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json">JSON Schema</a></dd>
 </dl>
-    
+
 </section>
 
 <section data-dfn-for="license">
@@ -824,6 +834,29 @@ Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachge
 
 </section>
 
+<section data-dfn-for="educationalLevel">
+
+### <dfn>educationalLevel</dfn>
+
+Verweis auf eine Stufe im Bildungssystem als Lehr-/Lernkontext, für den eine Ressource ausgewiesen ist. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` aufweisen MÜSSEN und weitere Properties aufweisen KÖNNEN.
+Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] ODER aus den [[Schulstufen]] entsprechen.
+
+- `id` zur Angabe eines Identifikators der Stufe
+- `prefLabel` zur Angabe einer Bezeichnung für die Stufe
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Werte</dt>
+<dd>Werte aus [[Bildungsstufen]] der DINI-AG-KIM oder [[Schulstufen]] des [[OEHRT]] </a></dd>
+<dt>Validierung</dt>
+<dd><a href="schemas/educationalLevel.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 </section>
 
 
@@ -896,7 +929,7 @@ Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. 
 <dt><abbr title="World Wide Web Consortium">W3C</abbr></dt>
 <dd>World Wide Web Consortium</dd>
 </dl>
- 
+
 </section>
 
 <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
