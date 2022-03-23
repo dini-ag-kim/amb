@@ -1,5 +1,5 @@
 {
-    "$id": "https://comein-nrw.github.io/schemas/draft/educationalLevel.json",
+    "$id": "https://w3id.org/kim/amb/draft/schemas/educationalLevel.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "In welchen Lehr-/Lernkontexten kann die Ressource verwendet werden?",
     "type": "array",
@@ -15,7 +15,7 @@
             "id": {
                 "type": "string",
                 "format": "uri",
-                "pattern": "(^https:\/\/w3id.org\/comein\/vocabs\/educationalLevel-ComeIn\/.*|http:\/\/w3id.org\/openeduhub\/vocabs\/educationalLevel\/.*)"
+                "pattern": "(^https:\/\/w3id.org\/kim\/value-lists\/educationalLevel\/.*)"
             },
             "inScheme": {
                 "type": "object",
@@ -23,8 +23,7 @@
                     "id": {
                         "type": "string",
                         "enum": [
-                            "http://w3id.org/comein/vocabs/educationalLevel-ComeIn/",
-                            "http://w3id.org/openeduhub/vocabs/educationalLevel/"
+                            "https://w3id.org/kim/value-lists/educationalLevel/"
                         ]
                     }
                 }
@@ -32,7 +31,7 @@
             "prefLabel": {
                 "title": "The preferred label of the concept",
                 "description": "A localized string for prefLabel of a SKOS concept",
-                "$ref": "https://comein-nrw.github.io/schemas/draft/LocalizedString.json"
+                "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
             }
         },
         "required": [
