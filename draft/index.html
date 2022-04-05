@@ -273,7 +273,7 @@ Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 <dd>ja</dd>
 <dt>Typ</dt>
 <dd>`array[string/object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>`https://w3id.org/kim/amb/draft/context.jsonld`</dd>
 <dd>`object`</dd>
 <dt>Validierung</dt>
@@ -313,7 +313,7 @@ Art der Ressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Wert
 <dd>ja</dd>
 <dt>Typ</dt>
 <dd>`array[string]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/type.json">JSON Schema</a></dd>
@@ -349,7 +349,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 <dd>nein</dd>
 <dt>Typ</dd>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
@@ -368,7 +368,7 @@ Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthal
 <dd>nein</dd>
 <dt>Typ</dd>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
@@ -425,7 +425,7 @@ enthalten MÜSSEN.
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/about.json">JSON Schema</a></dd>
@@ -567,7 +567,7 @@ Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[string]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>[[!BCP47]]</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
@@ -586,7 +586,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 <dd>ja</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Object mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
@@ -605,7 +605,7 @@ Die Organisation oder Person, die für die Veöffentlichung der Ressource verant
 <dd>ja</dd>
 <dt>Typ</dd>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
@@ -624,7 +624,7 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[string (URI)]` </dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/audience.json">JSON Schema</a></dd>
@@ -643,7 +643,7 @@ Möglichkeiten zum Download der Ressource.
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]` </dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe) , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie `encodingFormat`, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/encoding.json">JSON Schema</a></dd>
@@ -679,7 +679,7 @@ Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Te
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt mit Property `id`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
@@ -698,7 +698,7 @@ Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
-<dt>Werte</dt>
+<dt>Elemente</dt>
 <dd>JSON-Objekt mit Property `id`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
