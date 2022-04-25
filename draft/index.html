@@ -642,11 +642,30 @@ Möglichkeiten zum Download der Ressource.
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[object]` </dd>
+<dd>`array[object]`</dd>
 <dt>Elemente</dt>
 <dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe) , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie `encodingFormat`, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/encoding.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="caption">
+
+### <dfn>caption</dfn>
+
+Untertiteldatei (bei AV-Ressourcen).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `"type":"MediaObject"` und im Feld `"id"` die URL zur Untertiteldatei enthalten MUSS und folgende weitere Properties enthalten KANN: `encodingFormat` mit einem Wert aus [[IANA-MEDIA-TYPES]], `inLanguage` mit Angabe genau eines Sprachcodes gemäß [[BCP47]].</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/caption.json">JSON Schema</a></dd>
 </dl>
 
 </section>
