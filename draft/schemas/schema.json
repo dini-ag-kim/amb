@@ -82,6 +82,9 @@
     "encoding": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/encoding.json"
     },
+    "caption": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/caption.json"
+    },
     "conditionsOfAccess": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json"
     },

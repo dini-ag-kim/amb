@@ -23,6 +23,7 @@
       }
     }
   ],
+  "duration": "T47M58S",
   "image": "https://av.tib.eu/thumbnail/32641",
   "encoding": [
     {
@@ -43,18 +44,13 @@
       "embedUrl": "https://av.tib.eu/player/32641"
     }
   ],
-  "caption":[
-    {
-       "id":"https://example.org/subs-de.vtt",
-       "type":"MediaObject",
-       "encodingFormat":"text/vtt",
-       "inLanguage":"de"
-    },
-    {
-       "id":"https://example.org/subs-en.vtt",
-       "type":"MediaObject",
-       "encodingFormat":"text/vtt",
-       "inLanguage":"en"
-    }
- ]
+  "caption": {
+    "id": "https://example.org/subs.vtt",
+    "type": "MediaObject",
+    "encodingFormat": "text/vtt",
+    "inLanguage": [
+      "de",
+      "en"
+    ]
+  }
 }
