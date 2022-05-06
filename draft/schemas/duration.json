@@ -2,7 +2,7 @@
   "$id": "https://w3id.org/kim/amb/draft/schemas/duration.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Duration",
-  "description": "The duration of the item (video, audio recording, etc.) in ISO 8601 date format.",
+  "description": "The duration of the item (video, audio recording, etc.) in ISO 8601 duration format.",
   "type": "string",
   "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
 }
