@@ -24,7 +24,7 @@
         "title": "Encoding Format",
         "description": "The media type of the media object, conforming to https://www.iana.org/assignments/media-types/media-types.xml",
         "type": "string",
-        "pattern": "^(application|audio|example|font|image|message|model|multipart|text|video)/[a-zA-Z0-9\\-+.]+$"
+        "pattern": "^(application|audio|example|font|image|message|model|multipart|text|video)/[a-zA-Z0-9\\-+_.]+$"
       },
       "contentSize": {
         "title": "Content Size",
