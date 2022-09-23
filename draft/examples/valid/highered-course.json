@@ -15,7 +15,8 @@
     {
       "id": "https://orcid.org/0000-0002-3064-147X",
       "type": "Person",
-      "name": "Jens Lechtenbörger"
+      "name": "Jens Lechtenbörger",
+      "honorificPrefix": "Dr."
     }
   ],
   "description": "A course on Operating Systems (following the book Operating Systems and Middleware: Supporting Controlled Interaction by Max Hailperin) as part of the module Computer Structures and Operating Systems for 4th-term students in the Bachelor program in Information Systems at the University of Münster, Germany.",
@@ -36,10 +37,17 @@
     "Operation Systems",
     "Computer Structures"
   ],
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": {
+    "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
+    "type": "Concept"
+  },
   "license": {
     "id": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "inLanguage": [ "en" ],
+  "inLanguage": [
+    "en"
+  ],
   "audience": [
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
@@ -49,6 +57,15 @@
       "type": "Concept",
       "inScheme": {
         "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      }
+    }
+  ],
+  "educationalLevel": [
+    {
+      "id": "https://w3id.org/kim/educationalLevel/level_06",
+      "prefLabel": {
+        "de": "Bachelor oder äquivalent",
+        "en": "Bachelor or equivalent"
       }
     }
   ],

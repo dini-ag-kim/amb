@@ -15,7 +15,8 @@
     {
       "id": "https://orcid.org/0000-0002-3064-147X",
       "type": "Person",
-      "name": "Jens Lechtenbörger"
+      "name": "Jens Lechtenbörger",
+      "honorificPrefix": "Dr."
     }
   ],
   "description": "A presentation on virtual memory in a course on Operating Systems (following the book Operating Systems and Middleware: Supporting Controlled Interaction by Max Hailperin). Learning objectives: Explain mechanisms and uses for virtual memory (including principle of locality and page fault handling as well as access of data on disk); Explain and perform address translation with page tables",
@@ -35,6 +36,11 @@
     "Computer Science",
     "Virtual Memory"
   ],
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": {
+    "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
+    "type": "Concept"
+  },
   "license": {
     "id": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
