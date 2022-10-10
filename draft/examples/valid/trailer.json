@@ -11,7 +11,7 @@
         "Course"
     ],
     "name": "An example course",
-    "trailer": [
+    "trailer":
         {
             "type": "VideoObject",
             "encodingFormat": "video/mp4",
@@ -19,5 +19,4 @@
             "contentUrl": "https://example.org/trailer.mp4",
             "embedUrl": "https://embed.example.org/trailer.mp4"
         }
-    ]
 }

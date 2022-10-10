@@ -46,6 +46,9 @@
     "image": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/image.json"
     },
+    "trailer": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/trailer.json"
+    },
     "dateCreated": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
     },
