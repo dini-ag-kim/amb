@@ -15,9 +15,11 @@
     {
       "id": "https://orcid.org/0000-0002-3064-147X",
       "type": "Person",
-      "name": "Jens Lechtenbörger"
+      "name": "Jens Lechtenbörger",
+      "honorificPrefix": "Dr."
     }
   ],
+  "isAccessibleForFree": true,
   "license": {
     "id": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
