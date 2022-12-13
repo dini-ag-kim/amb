@@ -11,7 +11,7 @@
         "type": "string",
         "format": "uri",
         "enum": [
-          "https://w3id.org/kim/amb/draft/context.jsonld"
+          "https://w3id.org/kim/amb/context.jsonld"
         ]
       }
     },
