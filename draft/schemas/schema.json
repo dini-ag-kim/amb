@@ -55,6 +55,9 @@
     "datePublished": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/datePublished.json"
     },
+    "dateModified": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
+    },
     "duration": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/duration.json"
     },
