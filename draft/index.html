@@ -258,9 +258,12 @@ Im Folgenden wird die Struktur eines OER-Metadatensatzes beschrieben.
 Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt.
 Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele gegeben.
 
+<section id="allgemein">
+### Allgemein
+
 <section data-dfn-for="@context">
 
-### <dfn>@context</dfn>
+#### <dfn>@context</dfn>
 
 Die `@context`-Property MUSS einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils enthalten: `https://w3id.org/kim/amb/context.jsonld`. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar. Außerdem MUSS ein JSON-Objekt enthalten sein mit dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert, Angabe der im JSON-Dokument genutzten Sprache. Damit die strukturierten Metadaten auch durch Suchmaschinen wie Google und Bing erkannt und verarbeitet werden können, KANN zusätzlich der Wert `https://schema.org` im Array angegeben werden.
 
@@ -291,6 +294,7 @@ Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 </dl>
 
 </section>
+
 
 <section data-dfn-for="id">
 
@@ -342,61 +346,6 @@ Titel der Ressource.
 <dd>`string`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/name.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="creator">
-
-### <dfn>creator</dfn>
-
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dd>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="contributor">
-
-### <dfn>contributor</dfn>
-
-Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dd>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="affiliation">
-
-### <dfn>affiliation</dfn>
-
-Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Lernressource. MUSS ein JSON-Objekt enthalten, das wiederum `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu  [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dd>
-<dd>`object`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/affiliation.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -458,53 +407,21 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 
 </section>
 
-<section data-dfn-for="isAccessibleForFree">
+<section data-dfn-for="inLanguage">
 
-### <dfn>isAccessibleForFree</dfn>
+### <dfn>inLanguage</dfn>
 
-Angabe, ob der Zugang zu einer Ressource kostenpflichtig ist oder nicht. MUSS Booleschen Wert (`true`/`false`) enthalten.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`boolean`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="license">
-
-### <dfn>license</dfn>
-
-Lizenz der Ressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` mit einem URI als Wert enthält, der auf eine Creative Commons-Lizenz, GNU, Apache, MIT oder BSD verlinkt. Für die URI-Werteliste siehe [hier](https://w3id.org/kim/amb/draft/schemas/license.json).
+Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`object`</dd>
+<dd>`array[string]`</dd>
+<dt>Elemente</dt>
+<dd>[[!BCP47]]</dd>
 <dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/license.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="conditionsOfAccess">
-
-### <dfn>conditionsOfAccess</dfn>
-
-Klärung, ob für den Zugang zu Ressource eine Registrierung und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine Property `id` mit der URI eines Konzepts aus dem [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/) als Wert enthalten muss.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>JSON-Object mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -544,7 +461,67 @@ Ein Trailer/Video-Teaser zu einer Ressource. MUSS ein JSON-Objekt enthalten, das
 </dl>
 
 </section>
+        
+<!-- ende allgemein -->
+</section>
 
+<section id="entstehung">
+### Entstehung
+
+<section data-dfn-for="creator">
+
+### <dfn>creator</dfn>
+
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="contributor">
+
+### <dfn>contributor</dfn>
+
+Sonstige Beitragende zu der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="affiliation">
+
+### <dfn>affiliation</dfn>
+
+Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Lernressource. MUSS ein JSON-Objekt enthalten, das wiederum `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu  [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dd>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/affiliation.json">JSON Schema</a></dd>
+</dl>
+
+</section>
 
 <section data-dfn-for="dateCreated">
 
@@ -601,41 +578,87 @@ Modifikationsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Dat
 
 </section>
 
-<section data-dfn-for="duration">
+<section data-dfn-for="provider">
 
-### <dfn>duration</dfn>
+### <dfn>publisher</dfn>
 
-Dauer der Wiedergabe einer Audio/Video-Ressource.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`string` der Form `PnYnMnDTnHnMnS` gemäß [[!ISO8601]] "Duration"-Format.</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/duration.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="inLanguage">
-
-### <dfn>inLanguage</dfn>
-
-Sprache(n) der Ressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+Die Organisation oder Person, die für die Veöffentlichung der Ressource verantwortlich ist. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` oder `Person` und `name` Properties aufweisen.
 
 <dl>
 <dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[string]`</dd>
+<dd>ja</dd>
+<dt>Typ</dd>
+<dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>[[!BCP47]]</dd>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
 <dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
 </dl>
 
 </section>
+<!-- ende entstehung -->
+</section>
+
+
+<section id="kosten">
+### Kosten und Rechte
+
+<section data-dfn-for="isAccessibleForFree">
+
+### <dfn>isAccessibleForFree</dfn>
+
+Angabe, ob der Zugang zu einer Ressource kostenpflichtig ist oder nicht. MUSS Booleschen Wert (`true`/`false`) enthalten.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`boolean`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="license">
+
+### <dfn>license</dfn>
+
+Lizenz der Ressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` mit einem URI als Wert enthält, der auf eine Creative Commons-Lizenz, GNU, Apache, MIT oder BSD verlinkt. Für die URI-Werteliste siehe [hier](https://w3id.org/kim/amb/draft/schemas/license.json).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/license.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="conditionsOfAccess">
+
+### <dfn>conditionsOfAccess</dfn>
+
+Klärung, ob für den Zugang zu Ressource eine Registrierung und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine Property `id` mit der URI eines Konzepts aus dem [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/) als Wert enthalten muss.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>JSON-Object mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<!-- Ende Kosten und Rechte -->
+</section>
+
+<section id="paedagogisch">
+### Pädagogisch
 
 <section data-dfn-for="learningResourceType">
 
@@ -656,25 +679,6 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 
 </section>
 
-<section data-dfn-for="provider">
-
-### <dfn>publisher</dfn>
-
-Die Organisation oder Person, die für die Veöffentlichung der Ressource verantwortlich ist. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` oder `Person` und `name` Properties aufweisen.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>ja</dd>
-<dt>Typ</dd>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
 <section data-dfn-for="audience">
 
 ### <dfn>audience</dfn>
@@ -690,121 +694,6 @@ Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]
 <dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/audience.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="encoding">
-
-### <dfn>encoding</dfn>
-
-Möglichkeiten zum Download der Ressource.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe) , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie `encodingFormat`, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.</a></dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/encoding.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="caption">
-
-### <dfn>caption</dfn>
-
-Untertiteldatei (bei AV-Ressourcen).
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt, das `"type":"MediaObject"` und im Feld `"id"` die URL zur Untertiteldatei enthalten MUSS und folgende weitere Properties enthalten KANN: `encodingFormat` mit einem Wert aus [[IANA-MEDIA-TYPES]], `inLanguage` mit Angabe genau eines Sprachcodes gemäß [[BCP47]].</a></dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/caption.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="isBasedOn">
-
-### <dfn>isBasedOn</dfn>
-
-Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="isPartOf">
-
-### <dfn>isPartOf</dfn>
-
-Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Property `id`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="hasPart">
-
-### <dfn>hasPart</dfn>
-
-Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Property `id`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="mainEntityOfPage">
-
-### <dfn>mainEntityOfPage</dfn>
-
-In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
-
-- `id` zur Angabe der Landing-Page der Metadaten
-- `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
-- `dateCreated` zur Angabe des Erstellungsdatums der Metadaten
-- `dateModified` zur Angabe des Änderungsdatums der Metadaten (mit einem String der Form `CCYY-MM-DD` oder `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert)
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>nein</dd>
-<dt>Typ</dt>
-<dd>`array[object]`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
 </dl>
 
 </section>
@@ -890,6 +779,156 @@ Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
 <dd><a href="schemas/educationalLevel.json">JSON Schema</a></dd>
 </dl>
 
+</section>
+<!-- Ende Pädagogisch -->
+</section>
+
+
+<section id="relation">
+### Relation
+
+<section data-dfn-for="isBasedOn">
+
+### <dfn>isBasedOn</dfn>
+
+Verweis auf andere Ressource, von der die beschriebene Ressource ein Derivat ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isPartOf">
+
+### <dfn>isPartOf</dfn>
+
+Verweis auf andere Ressource(n), von der/denen die beschriebene Ressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="hasPart">
+
+### <dfn>hasPart</dfn>
+
+Verweis auf andere Ressource(n), die von der die beschriebene Ressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+<!-- Ende Relation -->
+</section>
+
+<section id="metametadata">
+### Meta-Metadata
+
+<section data-dfn-for="mainEntityOfPage">
+
+### <dfn>mainEntityOfPage</dfn>
+
+In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
+
+- `id` zur Angabe der Landing-Page der Metadaten
+- `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
+- `dateCreated` zur Angabe des Erstellungsdatums der Metadaten
+- `dateModified` zur Angabe des Änderungsdatums der Metadaten (mit einem String der Form `CCYY-MM-DD` oder `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert)
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<!-- Ende Metametadata -->
+</section>
+
+<section id="technisch">
+### Technisch
+<section data-dfn-for="duration">
+
+### <dfn>duration</dfn>
+
+Dauer der Wiedergabe einer Audio/Video-Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` der Form `PnYnMnDTnHnMnS` gemäß [[!ISO8601]] "Duration"-Format.</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/duration.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="encoding">
+
+### <dfn>encoding</dfn>
+
+Möglichkeiten zum Download der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe) , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie `encodingFormat`, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/encoding.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="caption">
+
+### <dfn>caption</dfn>
+
+Untertiteldatei (bei AV-Ressourcen).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `"type":"MediaObject"` und im Feld `"id"` die URL zur Untertiteldatei enthalten MUSS und folgende weitere Properties enthalten KANN: `encodingFormat` mit einem Wert aus [[IANA-MEDIA-TYPES]], `inLanguage` mit Angabe genau eines Sprachcodes gemäß [[BCP47]].</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/caption.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+<!-- Ende Technisch -->
 </section>
 
 </section>
