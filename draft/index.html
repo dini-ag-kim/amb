@@ -108,6 +108,11 @@
                     "href": "https://w3id.org/kim/educationalLevel/",
                     "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
                 },
+                "Lehr-/Lernform": {
+                    "title": "Werteliste für Lehr-/Lernformen",
+                    "href": "https://w3id.org/kim/interactivityType/",
+                    "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
                 "Wikidata": {
                     title: "Wikidata",
                     href: "https://www.wikidata.org/",
@@ -461,7 +466,7 @@ Ein Trailer/Video-Teaser zu einer Ressource. MUSS ein JSON-Objekt enthalten, das
 </dl>
 
 </section>
-        
+
 <!-- ende allgemein -->
 </section>
 
@@ -777,6 +782,26 @@ Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
 <dd>JSON-Object mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM. </a></dd>
 <dt>Validierung</dt>
 <dd><a href="schemas/educationalLevel.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="interactivityType">
+
+### <dfn>interactivityType</dfn>
+
+Kennzeichnet die vorherrschende Lehr-/Lernform der Ressource und gibt an, ob Lehr-/Lernprozesse mit dieser Ressource eher fremdgesteuert (<i>expositive</i>), selbstgesteuert (<i>active</i>) oder in einer Mischform (<i>mixed</i>) im Hinblick auf die primären Lernziele der Ressource stattfinden.
+
+- `id` zur Angabe eines Identifikators der Lehr-/Lernform
+- `prefLabel` zur Angabe einer Bezeichnung für die Lehr-/Lernform
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>JSON-Object mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/interactivityType.json">JSON Schema</a></dd>
 </dl>
 
 </section>

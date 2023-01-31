@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Selbstlernmodul",
+  "id": "https://example.org/oer",
+  "type": [
+    "LearningResource",
+    "Course"
+  ],
+  "interactivityType": {
+    "id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
+    "type": "Concept"
+  }
+}
