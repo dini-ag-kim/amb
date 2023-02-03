@@ -111,6 +111,9 @@
     },
     "isAccessibleForFree": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json"
+    },
+    "interactivityType": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/interactivityType.json"
     }
   },
   "required": [
