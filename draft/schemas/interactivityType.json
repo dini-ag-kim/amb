@@ -26,7 +26,7 @@
         "id": {
           "type": "string",
           "enum": [
-            "http://w3id.org/kim/interactivityType/"
+            "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
           ]
         }
       }
