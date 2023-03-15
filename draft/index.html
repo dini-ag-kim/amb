@@ -606,6 +606,26 @@ Die Organisation oder Person, die für die Veöffentlichung der Ressource verant
 </dl>
 
 </section>
+
+<section data-dfn-for="funder">
+
+### <dfn>funder</dfn>
+
+Angabe, welche Person, Organisation oder welches Förderprogramm an der (finanziellen) Förderung der Ressource beteiligt ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dd>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/funder.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 <!-- end provenance -->
 </section>
 
@@ -660,25 +680,6 @@ Klärung, ob für den Zugang zu Ressource eine Registrierung und Login erfordert
 <dd>JSON-Object mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="funder">
-
-### <dfn>funder</dfn>
-
-Angabe, welche Person, Organisation oder welches Förderprogramm an der (finanziellen) Förderung der Ressource beteiligt ist.
-
-<dl>
-<dt>Pflichtfeld</dt>
-<dd>ja</dd>
-<dt>Typ</dd>
-<dd>`array[object]`</dd>
-<dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
-<dt>Validierung</dt>
-<dd><a href="https://w3id.org/kim/amb/draft/schemas/funder.json">JSON Schema</a></dd>
 </dl>
 
 </section>
