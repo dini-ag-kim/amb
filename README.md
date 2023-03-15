@@ -35,6 +35,7 @@ Siehe auch die [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoebe
 - Steffen Rörtgen (GWDG), [@sroertgen](https://github.com/sroertgen)
 - Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx) ([GitLab](https://gitlab.com/TobiasNx))
 - Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
+- Mikey Stengel (Serlo Education e.V.), [@CodingDive](https://github.com/CodingDive)
 - Sebastian Herrmann (SHRIMP_PODS, Uni Leipzig), [@smherrmann](https://github.com/smherrmann)
 - Manuel Oellers (WWU Münster), [@oellers](https://github.com/oellers)
 - _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
