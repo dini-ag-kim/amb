@@ -1,0 +1,7 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/datePublished.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Publication Date",
+  "description": "The publication date in ISO 8601 format: YYYY-MM-DD",
+  "$ref": "https://w3id.org/kim/amb/draft/schemas/iso8601date.json"
+}

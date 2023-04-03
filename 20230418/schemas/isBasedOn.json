@@ -1,0 +1,40 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/isBasedOn.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Based on",
+  "description": "Resources the described learning resources derived from.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "id": {
+        "title": "URL",
+        "type": "string",
+        "format": "uri"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "creator": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/creator.json"
+      },
+      "license": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/license.json"
+      },
+      "provider": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

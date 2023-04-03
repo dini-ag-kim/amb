@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "https://oer.gitlab.io/OS/Operating-Systems-Memory-I.html",
+  "type": [
+    "LearningResource",
+    "PresentationDigitalDocument"
+  ],
+  "name": "OS08: Virtual Memory I",
+  "creator": [
+    {
+      "id": "https://orcid.org/0000-0002-3064-147X",
+      "type": "Person",
+      "name": "Jens Lechtenbörger",
+      "honorificPrefix": "Dr."
+    }
+  ],
+  "description": "A presentation on virtual memory in a course on Operating Systems (following the book Operating Systems and Middleware: Supporting Controlled Interaction by Max Hailperin). Learning objectives: Explain mechanisms and uses for virtual memory (including principle of locality and page fault handling as well as access of data on disk); Explain and perform address translation with page tables",
+  "about": [
+    {
+      "id": "https://w3id.org/kim/hochschulfaechersystematik/n079",
+      "prefLabel": {
+        "de": "Informatik"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
+      }
+    }
+  ],
+  "keywords": [
+    "Computer Science",
+    "Virtual Memory"
+  ],
+  "isAccessibleForFree": true,
+  "conditionsOfAccess": {
+    "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
+    "type": "Concept"
+  },
+  "license": {
+    "id": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "image": "https://dini-ag-kim.github.io/amb/draft/img/os08-image.png",
+  "dateCreated": "2020-06-25",
+  "datePublished": "2020-06-29",
+  "inLanguage": [ "en" ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/slide",
+      "prefLabel": {
+        "de": "Präsentation",
+        "en": "Presentation"
+      }
+    }
+  ],
+  "audience": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+      "prefLabel": {
+        "en": "student"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      }
+    }
+  ],
+  "isPartOf": [
+    {
+      "id": "https://oer.gitlab.io/OS",
+      "type": [
+        "LearningResource",
+        "Course"
+      ],
+      "name": "Computer Structures and Operating Systems"
+    }
+  ],
+  "hasPart": [
+    {
+      "id": "https://oer.gitlab.io/OS/figures/OS/hail_f0613_with_embedded_frame_nos.png",
+      "type": [
+        "LearningResource",
+        "ImageObject"
+      ],
+      "name": "A-32 two-level page table"
+    }
+  ]
+}

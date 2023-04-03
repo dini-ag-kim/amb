@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    },
+    "https://json-ld.org/contexts/person.jsonld"
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": [
+    "LearningResource",
+    "Course"
+  ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/interactivityType.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "interactivityType",
+  "description": "A concept scheme that defines the predominate interact mode of the learning resource being described.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Concept"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "enum": [
+        "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
+        "http://purl.org/dcx/lrmi-vocabs/interactivityType/expositive",
+        "http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed"
+      ]
+    },
+    "inScheme": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
+          ]
+        }
+      }
+    },
+    "prefLabel": {
+      "title": "The preferred label of the concept",
+      "description": "A localized string for prefLabel of a SKOS concept",
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

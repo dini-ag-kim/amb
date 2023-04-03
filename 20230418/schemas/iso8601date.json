@@ -1,0 +1,17 @@
+{
+    "$id": "https://w3id.org/kim/amb/draft/schemas/iso8601date.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ISO 8601 Date",
+    "description": "A date in ISO 8601 format.",
+    "oneOf": [
+      {
+        "type": "string",
+        "format": "date"
+      },
+      {
+        "type": "string",
+        "format": "date-time"
+      }
+    ]
+
+  }

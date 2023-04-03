@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "mbox": "http://xmlns.com/foaf/0.1/mbox"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": [
+    "LearningResource",
+    "Course"
+  ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course"
+    }
+  ]
+}

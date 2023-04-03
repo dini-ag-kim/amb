@@ -1,0 +1,43 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/about.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Subject",
+  "description": "The subject of the learning resource, taken from Destatis classification or OpenEduHub-Fächersystematik",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "Concept"
+        ]
+      },
+      "id": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "(^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*|http:\/\/w3id.org\/kim\/schulfaecher\/.*)"
+      },
+      "inScheme": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "https://w3id.org/kim/hochschulfaechersystematik/scheme",
+              "http://w3id.org/kim/schulfaecher/"
+            ]
+          }
+        }
+      },
+      "prefLabel": {
+        "title": "The preferred label of the concept",
+        "description": "A localized string for prefLabel of a SKOS concept",
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  }
+}

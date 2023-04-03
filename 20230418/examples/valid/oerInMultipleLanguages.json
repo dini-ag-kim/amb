@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielressource",
+  "id": "https://example.org/oer",
+  "image": "https://example.org/oer/image.png",
+  "type": [
+    "LearningResource"
+  ],
+  "creator": [
+    {
+      "name": "HansD",
+      "type": "Person"
+    }
+  ],
+  "description": "Eine OER",
+  "license": {
+    "id": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "dateCreated": "2019-07-03",
+  "inLanguage": [
+    "fr",
+    "en",
+    "de"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/context-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON-LD Context",
+  "description": "The JSON-LD context for the structured resource descriptions",
+  "type": "array",
+  "minItems": 2,
+  "allOf": [
+    {
+      "contains": {
+        "type": "string",
+        "format": "uri",
+        "enum": [
+          "https://w3id.org/kim/amb/context.jsonld"
+        ]
+      }
+    },
+    {
+      "contains": {
+        "type": "object",
+        "properties": {
+          "@language": {
+            "$ref": "https://w3id.org/kim/amb/draft/schemas/Language.json"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "@language"
+        ]
+      }
+    }
+  ]
+}

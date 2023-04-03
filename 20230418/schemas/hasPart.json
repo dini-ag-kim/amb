@@ -1,0 +1,24 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/hasPart.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Has part",
+  "description": "Resources that are part of the described learning resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
+      },
+      "type": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/type.json"
+      },
+      "name": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/name.json"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  }
+}

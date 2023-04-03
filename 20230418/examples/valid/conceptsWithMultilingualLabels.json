@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
+  "id": "https://www.tutory.de/w/fbbadf1a",
+  "image": "https://www.tutory.de/worksheet/fbbadf1a-145a-463d-9a43-1ae9965c86b9.jpg?width=1000",
+  "type": [
+    "LearningResource"
+  ],
+  "creator": [
+    {
+      "name": "HerunterS",
+      "type": "Person"
+    }
+  ],
+  "description": "Französisch-Arbeitsblatt",
+  "about": [
+    {
+      "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
+      "prefLabel": {
+        "de": "Französisch",
+        "en": "French",
+        "fr": "Français"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
+      }
+    }
+  ],
+  "license": {
+    "id": "http://www.gnu.org/licenses/agpl-3.0"
+  },
+  "dateCreated": "2019-07-03",
+    "inLanguage": [
+    "fr"
+  ],
+  "publisher": [
+    {
+      "type": "Organization",
+      "name": "Tutory",
+      "id": "https://www.tutory.de"
+    }
+  ],
+  "audience": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+      "prefLabel": {
+        "en": "student",
+        "de": "Lernende"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      }
+    }
+  ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course",
+      "prefLabel": {
+        "en": "Course",
+        "de": "Kurs"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "https://w3id.org/kim/hcrt/scheme"
+      }
+    }
+  ]
+}

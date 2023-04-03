@@ -1,0 +1,8 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/duration.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Duration",
+  "description": "The duration of an audio/video resource (the time it takes to play the audio/video resource) in ISO 8601 duration format: P[n]Y[n]M[n]DT[n]H[n]M[n]S",
+  "type": "string",
+  "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$"
+}
