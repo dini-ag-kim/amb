@@ -1,0 +1,38 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/license.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "License",
+  "description": "An object that links to an open source license. Public Domain, Creative Commons, GNU, Apache, MIT and BSD are allowed",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "oneOf": [
+        {
+          "description": "Creative Commons License or Public Domain",
+          "pattern": "^http[s]?:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
+        },
+        {
+          "description": "GNU License",
+          "pattern": "^http[s]?:\/\/www.gnu.org\/licenses\/.*"
+        },
+        {
+          "description": "Apache License",
+          "pattern": "^http[s]?:\/\/www.apache.org\/licenses\/.*"
+        },
+        {
+          "description": "MIT License",
+          "pattern": "http[s]?://opensource.org/licenses/MIT"
+        },
+        {
+          "description": "BSD License",
+          "pattern": "^http[s]?:\/\/www.opensource.org\/licenses\/BSD.*"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

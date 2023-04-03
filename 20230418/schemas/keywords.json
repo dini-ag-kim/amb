@@ -1,0 +1,10 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/keywords.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Keywords",
+  "description": "Keywords or tags used to describe this content",
+  "type": "array",
+  "items": {
+    "type": "string"
+  }
+}

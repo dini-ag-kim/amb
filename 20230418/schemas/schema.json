@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/schema.json",
+  "title": "OER",
+  "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
+  "type": "object",
+  "default": {
+    "@context": [
+      "https://w3id.org/kim/amb/context.jsonld",
+      {
+        "@language": "de"
+      }
+    ],
+    "type": [
+      "LearningResource"
+    ]
+  },
+  "properties": {
+    "@context": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/context-schema.json"
+    },
+    "id": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/id.json"
+    },
+    "type": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/type.json"
+    },
+    "name": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/name.json"
+    },
+    "creator": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/creator.json"
+    },
+    "contributor": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/contributor.json"
+    },
+    "description": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/description.json"
+    },
+    "about": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/about.json"
+    },
+    "license": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/license.json"
+    },
+    "image": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/image.json"
+    },
+    "trailer": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/trailer.json"
+    },
+    "dateCreated": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/dateCreated.json"
+    },
+    "datePublished": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/datePublished.json"
+    },
+    "dateModified": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/dateModified.json"
+    },
+    "duration": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/duration.json"
+    },
+    "inLanguage": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/inLanguage.json"
+    },
+    "publisher": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/publisher.json"
+    },
+    "learningResourceType": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/learningResourceType.json"
+    },
+    "audience": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/audience.json"
+    },
+    "isBasedOn": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/isBasedOn.json"
+    },
+    "isPartOf": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/isPartOf.json"
+    },
+    "hasPart": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/hasPart.json"
+    },
+    "mainEntityOfPage": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/mainEntityOfPage.json"
+    },
+    "keywords": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/keywords.json"
+    },
+    "encoding": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/encoding.json"
+    },
+    "caption": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/caption.json"
+    },
+    "conditionsOfAccess": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/conditionsOfAccess.json"
+    },
+    "assesses": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/assesses.json"
+    },
+    "competencyRequired": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/competencyRequired.json"
+    },
+    "teaches": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/teaches.json"
+    },
+    "educationalLevel": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/educationalLevel.json"
+    },
+    "isAccessibleForFree": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/isAccessibleForFree.json"
+    },
+    "interactivityType": {
+      "$ref": "https://w3id.org/kim/amb/20230418/schemas/interactivityType.json"
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "name",
+    "type"
+  ]
+}

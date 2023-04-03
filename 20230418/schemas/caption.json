@@ -1,0 +1,36 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/caption.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Caption",
+  "description": "The caption/subtitle file for an audio/video resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": [
+          "MediaObject"
+        ]
+      },
+      "id": {
+        "type": "string",
+        "format": "uri"
+      },
+      "encodingFormat": {
+        "title": "Encoding Format",
+        "description": "The media type of the media object, conforming to https://www.iana.org/assignments/media-types/media-types.xml",
+        "type": "string"
+      },
+      "inLanguage": {
+        "$ref": "https://w3id.org/kim/amb/20230418/schemas/Language.json"
+      } 
+    },
+    "required": [
+      "id",
+      "type"
+    ]
+
+  }
+}

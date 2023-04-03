@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": [
+    "Course",
+    "LearningResource"
+  ],
+  "datePublished": "2020-02-02",
+  "isAccessibleForFree": true
+}

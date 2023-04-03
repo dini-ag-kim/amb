@@ -1,0 +1,23 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/assesses.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assesses",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uri"
+      },
+      "prefLabel": {
+        "title": "The preferred label of the concept",
+        "description": "A localized string",
+        "$ref": "https://w3id.org/kim/amb/20230418/schemas/LocalizedString.json"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  }
+}

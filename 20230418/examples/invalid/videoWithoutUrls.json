@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "type": [
+    "LearningResource",
+    "VideoObject"
+  ],
+  "name": "The road ahead for network freedom",
+  "inLanguage": [
+    "en"
+  ],
+  "id": "https://av.tib.eu/media/32641",
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/video",
+      "prefLabel": {
+        "de": "Video",
+        "en": "Video"
+      }
+    }
+  ],
+  "image": "https://av.tib.eu/thumbnail/32641",
+  "encoding": [
+    {
+      "type": "MediaObject",
+      "sha256": "af96aba0790476495cfb5fa6d5612b91d8e404bb0d53aaf4b19bb8bd49843959",
+      "bitrate": "831 kb/s",
+      "contentSize": "286MB"
+    }
+  ]
+}

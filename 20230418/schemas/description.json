@@ -1,0 +1,7 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/description.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Description",
+  "description": "A description of the learning resource",
+  "type": "string"
+}

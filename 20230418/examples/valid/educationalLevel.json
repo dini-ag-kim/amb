@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Silbenkette als orthographiedidaktisches Instrument",
+  "id": "https://go.wwu.de/silbenkette",
+  "type": [
+    "LearningResource"
+  ],
+  "publisher": [
+    {
+      "type": "Person",
+      "name": "Prof. Dr. Anne Berkemeier"
+    }
+  ],
+  "educationalLevel": [
+    {
+      "id": "https://w3id.org/kim/educationalLevel/level_0",
+      "prefLabel": {
+        "de": "Elementarbereich",
+        "en": "Early childhood education"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "$id": "https://w3id.org/kim/amb/20230418/schemas/dateModified.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Modification Date",
+  "description": "The modification date in ISO 8601 format: YYYY-MM-DD",
+  "$ref": "https://w3id.org/kim/amb/20230418/schemas/iso8601date.json"
+}
