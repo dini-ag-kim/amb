@@ -32,7 +32,7 @@
             "prefLabel": {
                 "title": "The preferred label of the concept",
                 "description": "A localized string for prefLabel of a SKOS concept",
-                "$ref": "https://w3id.org/kim/amb/draft/schemas/LocalizedString.json"
+                "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
             }
         },
         "required": [

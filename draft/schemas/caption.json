@@ -24,7 +24,7 @@
         "type": "string"
       },
       "inLanguage": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/Language.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
       } 
     },
     "required": [
