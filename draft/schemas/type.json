@@ -6,7 +6,7 @@
   "type": "array",
   "items": {
     "type": "string",
-    "default": "learningResource",
+    "default": "LearningResource",
     "enum": [
       "3DModel",
       "AmpStory",
