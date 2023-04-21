@@ -1,7 +1,7 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/teaches.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Teaches",
+  "title": "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
   "type": "array",
   "items": {
     "type": "object",
