@@ -23,7 +23,6 @@
             "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
           }
         },
-        "additionalProperties": false,
         "required": [
           "@language"
         ]
