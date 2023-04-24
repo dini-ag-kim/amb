@@ -15,8 +15,7 @@
         ]
       },
       "id": {
-        "type": "string",
-        "format": "uri"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
       },
       "encodingFormat": {
         "title": "Encoding Format",
