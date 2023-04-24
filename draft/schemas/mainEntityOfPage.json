@@ -8,9 +8,7 @@
     "type": "object",
     "properties": {
       "id": {
-        "title": "URL of the metadata",
-        "type": "string",
-        "format": "uri"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
       },
       "type": {
         "type": "string"
@@ -22,8 +20,7 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
       },
       "dateModified": {
-        "title": "Date of last modification of the metadata",
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/iso8601date.json"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
       }
     },
     "required": [
