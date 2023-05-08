@@ -2,6 +2,7 @@
   "$id": "https://w3id.org/kim/amb/draft/schemas/competencyRequired.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Competency Required",
+  "description": "Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.",
   "type": "array",
   "items": {
     "type": "object",
