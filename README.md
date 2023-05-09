@@ -51,6 +51,11 @@ Siehe auch die
 
 ### Lokales Setup
 
+#### Installation der notwendigen Packete
+
+Über `npm install` kannst du die für die Entwicklung notwendigen Packete
+installieren.
+
 #### Ansicht der HTML-Spezifikation im Browser
 
 Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Repo
@@ -71,19 +76,20 @@ Schema-Tests werden gegen valide
 ([draft/examples/valid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/valid))
 und invalide
 ([draft/examples/invalid](https://github.com/dini-ag-kim/amb/tree/master/draft/examples/invalid))
-Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ sh test.sh`
-ausgeführt werden. Durch die inkrementelle Ergänzung von invaliden Beispielen
-soll das Schema stetig genauer werden, um in der Praxis die Einhaltung des
-Profils zu gewährleisten.
+Beispiel-Dateien durchgeführt. Lokal können die Tests mit `$ sh test.sh` oder
+mit `npm run test` ausgeführt werden. Durch die inkrementelle Ergänzung von
+invaliden Beispielen soll das Schema stetig genauer werden, um in der Praxis die
+Einhaltung des Profils zu gewährleisten.
 
 Um die Tests laufen lassen zu können, müssen die NPM Packete
 [`ajv-cli`](https://www.npmjs.com/package/ajv-cli) und
-[`ajv-formats`](https://www.npmjs.com/package/ajv-formats) installiert sein:
+[`ajv-formats`](https://www.npmjs.com/package/ajv-formats) installiert sein, was
+du über `npm install` erreichst.
 
-```
-npm install -g ajv-cli
-npm install -g ajv-formats
-```
+#### Formatierung
+
+Über `npm run format` kannst du alle Dateien formatieren. Zur Formatierung
+nutzen wir [`prettier`](https://prettier.io/).
 
 ### Weiterführende Informationen
 
