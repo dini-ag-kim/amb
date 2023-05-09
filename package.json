@@ -12,5 +12,9 @@
   "bugs": {
     "url": "https://github.com/dini-ag-kim/amb/issues"
   },
-  "homepage": "https://github.com/dini-ag-kim/amb#readme"
+  "homepage": "https://github.com/dini-ag-kim/amb#readme",
+  "devDependencies": {
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^2.1.1"
+  }
 }
