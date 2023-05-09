@@ -2,7 +2,7 @@ name: Build
 
 on: push
 env:
-  NODE_VERSION: '16.13.1'
+  NODE_VERSION: '18.16.0'
 
 jobs:
   build:
@@ -14,7 +14,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - run: |
-          npm install -g ajv-cli ajv-formats
-          chmod +x ./test.sh
-          bash ./test.sh
+      - run: npm install
+      - run: npm run test
