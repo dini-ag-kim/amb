@@ -1,18 +1,18 @@
 {
   "name": "amb",
+  "description": "A LRMI-/schema.org-based profile for describing educational resources",
+  "author": "DINI AG KIM",
   "version": "0.0.0",
   "private": true,
-  "description": "A LRMI-/schema.org-based profile for describing educational resources",
-  "scripts": {},
+  "homepage": "https://github.com/dini-ag-kim/amb#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dini-ag-kim/amb.git"
   },
-  "author": "DINI AG KIM",
   "bugs": {
     "url": "https://github.com/dini-ag-kim/amb/issues"
   },
-  "homepage": "https://github.com/dini-ag-kim/amb#readme",
+  "scripts": {},
   "devDependencies": {
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^2.1.1"
