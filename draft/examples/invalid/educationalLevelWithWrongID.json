@@ -7,9 +7,7 @@
   ],
   "name": "Silbenkette als orthographiedidaktisches Instrument",
   "id": "https://go.wwu.de/silbenkette",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "publisher": [
     {
       "type": "Person",

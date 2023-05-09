@@ -11,9 +11,7 @@
         "@language": "de"
       }
     ],
-    "type": [
-      "LearningResource"
-    ]
+    "type": ["LearningResource"]
   },
   "properties": {
     "@context": {
@@ -116,10 +114,5 @@
       "$ref": "https://w3id.org/kim/amb/draft/schemas/interactivityType.json"
     }
   },
-  "required": [
-    "@context",
-    "id",
-    "name",
-    "type"
-  ]
+  "required": ["@context", "id", "name", "type"]
 }

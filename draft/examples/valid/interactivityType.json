@@ -7,10 +7,7 @@
   ],
   "name": "Selbstlernmodul",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource",
-    "Course"
-  ],
+  "type": ["LearningResource", "Course"],
   "interactivityType": {
     "id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
     "type": "Concept",

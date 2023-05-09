@@ -9,14 +9,12 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": [
-          "Concept"
-        ]
+        "enum": ["Concept"]
       },
       "id": {
         "type": "string",
         "format": "uri",
-        "pattern": "(^https:\/\/w3id.org\/kim\/hochschulfaechersystematik\/.*|http:\/\/w3id.org\/kim\/schulfaecher\/.*)"
+        "pattern": "(^https://w3id.org/kim/hochschulfaechersystematik/.*|http://w3id.org/kim/schulfaecher/.*)"
       },
       "inScheme": {
         "type": "object",
@@ -36,8 +34,6 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
       }
     },
-    "required": [
-      "id"
-    ]
+    "required": ["id"]
   }
 }

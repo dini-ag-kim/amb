@@ -7,9 +7,7 @@
   "properties": {
     "type": {
       "type": "string",
-      "enum": [
-        "Concept"
-      ]
+      "enum": ["Concept"]
     },
     "id": {
       "type": "string",
@@ -24,9 +22,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "enum": [
-            "http://w3id.org/kim/conditionsOfAccess/"
-          ]
+          "enum": ["http://w3id.org/kim/conditionsOfAccess/"]
         }
       }
     },
@@ -36,7 +32,5 @@
       "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
     }
   },
-  "required": [
-    "id"
-  ]
+  "required": ["id"]
 }

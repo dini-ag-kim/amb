@@ -11,15 +11,15 @@
       "oneOf": [
         {
           "description": "Creative Commons License or Public Domain",
-          "pattern": "^http[s]?:\/\/creativecommons.org\/(licenses|licences|publicdomain)\/.*"
+          "pattern": "^http[s]?://creativecommons.org/(licenses|licences|publicdomain)/.*"
         },
         {
           "description": "GNU License",
-          "pattern": "^http[s]?:\/\/www.gnu.org\/licenses\/.*"
+          "pattern": "^http[s]?://www.gnu.org/licenses/.*"
         },
         {
           "description": "Apache License",
-          "pattern": "^http[s]?:\/\/www.apache.org\/licenses\/.*"
+          "pattern": "^http[s]?://www.apache.org/licenses/.*"
         },
         {
           "description": "MIT License",
@@ -27,12 +27,10 @@
         },
         {
           "description": "BSD License",
-          "pattern": "^http[s]?:\/\/www.opensource.org\/licenses\/BSD.*"
+          "pattern": "^http[s]?://www.opensource.org/licenses/BSD.*"
         }
       ]
     }
   },
-  "required": [
-    "id"
-  ]
+  "required": ["id"]
 }

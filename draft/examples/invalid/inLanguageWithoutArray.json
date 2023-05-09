@@ -8,9 +8,7 @@
   "name": "Beispielressource",
   "id": "https://example.org/oer",
   "image": "https://example.org/oer/image.png",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "creator": [
     {
       "name": "HansD",

@@ -20,9 +20,7 @@
     }
   ],
   "image": "https://example.org/oer/image.png",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "creator": [
     {
       "name": "HansD",
@@ -39,9 +37,7 @@
     "id": "https://creativecommons.org/publicdomain/zero/1.0/"
   },
   "dateCreated": "2019-07-03",
-    "inLanguage": [
-    "fr"
-  ],
+  "inLanguage": ["fr"],
   "publisher": [
     {
       "type": "Organization",

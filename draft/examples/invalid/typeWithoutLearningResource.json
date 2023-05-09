@@ -7,7 +7,5 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": [
-    "Course"
-  ]
+  "type": ["Course"]
 }

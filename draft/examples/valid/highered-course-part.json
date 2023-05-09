@@ -6,10 +6,7 @@
     }
   ],
   "id": "https://oer.gitlab.io/OS/Operating-Systems-Memory-I.html",
-  "type": [
-    "LearningResource",
-    "PresentationDigitalDocument"
-  ],
+  "type": ["LearningResource", "PresentationDigitalDocument"],
   "name": "OS08: Virtual Memory I",
   "creator": [
     {
@@ -32,10 +29,7 @@
       }
     }
   ],
-  "keywords": [
-    "Computer Science",
-    "Virtual Memory"
-  ],
+  "keywords": ["Computer Science", "Virtual Memory"],
   "isAccessibleForFree": true,
   "conditionsOfAccess": {
     "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
@@ -47,7 +41,7 @@
   "image": "https://dini-ag-kim.github.io/amb/draft/img/os08-image.png",
   "dateCreated": "2020-06-25",
   "datePublished": "2020-06-29",
-  "inLanguage": [ "en" ],
+  "inLanguage": ["en"],
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/slide",
@@ -72,20 +66,14 @@
   "isPartOf": [
     {
       "id": "https://oer.gitlab.io/OS",
-      "type": [
-        "LearningResource",
-        "Course"
-      ],
+      "type": ["LearningResource", "Course"],
       "name": "Computer Structures and Operating Systems"
     }
   ],
   "hasPart": [
     {
       "id": "https://oer.gitlab.io/OS/figures/OS/hail_f0613_with_embedded_frame_nos.png",
-      "type": [
-        "LearningResource",
-        "ImageObject"
-      ],
+      "type": ["LearningResource", "ImageObject"],
       "name": "A-32 two-level page table"
     }
   ]

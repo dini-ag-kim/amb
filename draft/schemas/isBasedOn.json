@@ -33,8 +33,6 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
       }
     },
-    "required": [
-      "name"
-    ]
+    "required": ["name"]
   }
 }
