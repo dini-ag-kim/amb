@@ -2,7 +2,7 @@ name: Build
 
 on: push
 env:
-  NODE_VERSION: "16.13.1"
+  NODE_VERSION: '16.13.1'
 
 jobs:
   build:
