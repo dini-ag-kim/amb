@@ -95,6 +95,9 @@
     "conditionsOfAccess": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json"
     },
+    "funder": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/funder.json"
+    },
     "assesses": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/assesses.json"
     },
