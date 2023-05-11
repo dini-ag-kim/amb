@@ -611,6 +611,26 @@ Die Organisation oder Person, die für die Veöffentlichung der Bildungsressourc
 </dl>
 
 </section>
+
+<section data-dfn-for="funder">
+
+### <dfn>funder</dfn>
+
+Angabe, welche Person, Organisation oder welches Förderprogramm an der (finanziellen) Förderung der Ressource beteiligt ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dd>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/funder.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
 <!-- end provenance -->
 </section>
 
@@ -662,7 +682,7 @@ Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Log
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>JSON-Object mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
+<dd>JSON-Objekt mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
 </dl>
@@ -687,7 +707,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Object mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
+<dd>JSON-Objekt mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
 </dl>
@@ -789,7 +809,7 @@ Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Object mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM. </a></dd>
+<dd>JSON-Objekt mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM. </a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/educationalLevel.json">JSON Schema</a></dd>
 </dl>
@@ -809,7 +829,7 @@ Kennzeichnet die vorherrschende Lehr-/Lernform der Bildungsressource und gibt an
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>JSON-Object mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular</a></dd>
+<dd>JSON-Objekt mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular</a></dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/interactivityType.json">JSON Schema</a></dd>
 </dl>
