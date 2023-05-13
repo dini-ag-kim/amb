@@ -88,8 +88,11 @@ du über `npm install` erreichst.
 
 #### Formatierung
 
-Über `npm run format` kannst du alle Dateien formatieren. Zur Formatierung
-nutzen wir [`prettier`](https://prettier.io/).
+Über `npm run format` kannst du die Dateien in diesem Repository formatieren.
+Zur Formatierung nutzen wir [`prettier`](https://prettier.io/), siehe
+[`.prettierrc.json`](./.prettierrc.json) für unsere Konfigurationseinstellungen.
+Für `prettier` gibt es auch
+[Integrationsmöglichkeiten in vielen Editoren](https://prettier.io/docs/en/editors.html).
 
 ### Weiterführende Informationen
 
