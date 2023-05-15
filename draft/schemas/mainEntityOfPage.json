@@ -23,8 +23,6 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
       }
     },
-    "required": [
-      "id"
-    ]
+    "required": ["id"]
   }
 }

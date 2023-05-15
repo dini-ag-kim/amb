@@ -6,18 +6,12 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "name",
-      "type"
-    ],
+    "required": ["name", "type"],
     "properties": {
       "type": {
         "title": "Type",
         "type": "string",
-        "enum": [
-          "Person",
-          "Organization"
-        ]
+        "enum": ["Person", "Organization"]
       },
       "id": {
         "title": "URL",

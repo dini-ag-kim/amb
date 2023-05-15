@@ -10,9 +10,7 @@
       "type": {
         "title": "Type",
         "type": "string",
-        "enum": [
-          "MediaObject"
-        ]
+        "enum": ["MediaObject"]
       },
       "contentUrl": {
         "title": "Content URL",
@@ -53,16 +51,10 @@
     },
     "anyOf": [
       {
-        "required": [
-          "type",
-          "contentUrl"
-        ]
+        "required": ["type", "contentUrl"]
       },
       {
-        "required": [
-          "type",
-          "embedUrl"
-        ]
+        "required": ["type", "embedUrl"]
       }
     ]
   }

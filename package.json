@@ -1,0 +1,26 @@
+{
+  "name": "amb",
+  "description": "A LRMI-/schema.org-based profile for describing educational resources",
+  "author": "DINI AG KIM",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/dini-ag-kim/amb#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dini-ag-kim/amb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dini-ag-kim/amb/issues"
+  },
+  "scripts": {
+    "format": "prettier . --write",
+    "lint:prettier": "prettier .",
+    "test": "./test.sh"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^2.1.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-sh": "^0.12.8"
+  }
+}

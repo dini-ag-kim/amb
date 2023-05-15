@@ -2,9 +2,9 @@
 
 set -e
 
-run_ajv () {
+run_ajv() {
   ajv test -s draft/schemas/schema.json -r "draft/schemas/!(schema).json" \
-           -d "$1" -c ajv-formats $2
+    -d "$1" -c ajv-formats $2
 }
 
 run_ajv "draft/examples/valid/*.json" --valid

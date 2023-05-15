@@ -7,9 +7,7 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "license": {
     "id": "https://opensource.org/licenses/MIT"
   }

@@ -8,9 +8,7 @@
   "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
   "id": "https://www.tutory.de/w/fbbadf1a",
   "image": "https://www.tutory.de/worksheet/fbbadf1a-145a-463d-9a43-1ae9965c86b9.jpg?width=1000",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "creator": [
     {
       "name": "HerunterS",
@@ -30,11 +28,9 @@
       }
     }
   ],
-  "keywords": [
-    "Französisch",
-    "Niveau A2"
-  ],
-  "learningResourceType": [{
+  "keywords": ["Französisch", "Niveau A2"],
+  "learningResourceType": [
+    {
       "id": "https://w3id.org/kim/hcrt/worksheet"
     },
     {
@@ -49,9 +45,7 @@
     "type": "Concept"
   },
   "dateCreated": "2019-07-02",
-    "inLanguage": [
-    "fr"
-  ],
+  "inLanguage": ["fr"],
   "publisher": [
     {
       "type": "Organization",

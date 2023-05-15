@@ -10,9 +10,7 @@
       "type": {
         "title": "Type",
         "type": "string",
-        "enum": [
-          "MediaObject"
-        ]
+        "enum": ["MediaObject"]
       },
       "id": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
@@ -24,12 +22,8 @@
       },
       "inLanguage": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
-      } 
+      }
     },
-    "required": [
-      "id",
-      "type"
-    ]
-
+    "required": ["id", "type"]
   }
 }

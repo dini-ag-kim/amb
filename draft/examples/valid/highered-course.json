@@ -6,10 +6,7 @@
     }
   ],
   "id": "https://oer.gitlab.io/OS",
-  "type": [
-    "LearningResource",
-    "Course"
-  ],
+  "type": ["LearningResource", "Course"],
   "name": "Computer Structures and Operating Systems",
   "creator": [
     {
@@ -32,11 +29,7 @@
       }
     }
   ],
-  "keywords": [
-    "Computer Science",
-    "Operation Systems",
-    "Computer Structures"
-  ],
+  "keywords": ["Computer Science", "Operation Systems", "Computer Structures"],
   "isAccessibleForFree": true,
   "conditionsOfAccess": {
     "id": "http://w3id.org/kim/conditionsOfAccess/no_login",
@@ -45,9 +38,7 @@
   "license": {
     "id": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "inLanguage": [
-    "en"
-  ],
+  "inLanguage": ["en"],
   "audience": [
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
@@ -72,42 +63,27 @@
   "hasPart": [
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-JiTT.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "JiTT for OS"
     },
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Overview.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "OS Overview"
     },
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Introduction.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "OS Introduction"
     },
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Interrupts.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "OS02: Interrupts"
     },
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Memory-I.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "OS08: Virtual Memory I"
     }
   ]

@@ -9,9 +9,7 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": [
-          "Concept"
-        ]
+        "enum": ["Concept"]
       },
       "id": {
         "type": "string",
@@ -22,9 +20,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "enum": [
-              "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-            ]
+            "enum": ["http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"]
           }
         }
       },
@@ -34,8 +30,6 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
       }
     },
-    "required": [
-      "id"
-    ]
+    "required": ["id"]
   }
 }

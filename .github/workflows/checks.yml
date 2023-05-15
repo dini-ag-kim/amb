@@ -1,0 +1,30 @@
+name: Checks
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate JSON files in `examples/`
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 18
+      - run: npm install
+      - run: npm run test
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate JSON files in `examples/`
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 18
+      - run: npm install
+      - run: npm run lint:prettier

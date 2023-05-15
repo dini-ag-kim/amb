@@ -7,9 +7,7 @@
   "properties": {
     "type": {
       "type": "string",
-      "enum": [
-        "Concept"
-      ]
+      "enum": ["Concept"]
     },
     "id": {
       "type": "string",
@@ -25,9 +23,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "enum": [
-            "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
-          ]
+          "enum": ["http://purl.org/dcx/lrmi-vocabs/interactivityType/"]
         }
       }
     },
@@ -37,7 +33,5 @@
       "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
     }
   },
-  "required": [
-    "id"
-  ]
+  "required": ["id"]
 }

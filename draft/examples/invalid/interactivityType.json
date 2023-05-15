@@ -7,10 +7,7 @@
   ],
   "name": "Selbstlernmodul",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource",
-    "Course"
-  ],
+  "type": ["LearningResource", "Course"],
   "interactivityType": {
     "prefLabel": "active",
     "type": "Concept"

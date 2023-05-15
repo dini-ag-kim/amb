@@ -6,10 +6,7 @@
     }
   ],
   "id": "https://oer.gitlab.io/OS/figures/OS/hail_f0613_with_embedded_frame_nos.png",
-  "type": [
-    "LearningResource",
-    "ImageObject"
-  ],
+  "type": ["LearningResource", "ImageObject"],
   "name": "A-32 two-level page table",
   "creator": [
     {
@@ -46,10 +43,7 @@
   "isPartOf": [
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Memory-I.html",
-      "type": [
-        "LearningResource",
-        "PresentationDigitalDocument"
-      ],
+      "type": ["LearningResource", "PresentationDigitalDocument"],
       "name": "OS08: Virtual Memory I"
     }
   ]

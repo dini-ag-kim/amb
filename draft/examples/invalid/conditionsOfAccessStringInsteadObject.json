@@ -7,9 +7,6 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource",
-    "Course"
-  ],
-	"conditionsOfAccess": "kostenfrei"
+  "type": ["LearningResource", "Course"],
+  "conditionsOfAccess": "kostenfrei"
 }

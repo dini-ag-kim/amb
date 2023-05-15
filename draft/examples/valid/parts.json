@@ -7,9 +7,7 @@
   ],
   "name": "Beispielressource",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource"
-  ],
+  "type": ["LearningResource"],
   "creator": [
     {
       "name": "HansD",
@@ -19,9 +17,7 @@
   "isPartOf": [
     {
       "id": "https://example.org/broader",
-      "type": [
-        "LearningResource"
-      ],
+      "type": ["LearningResource"],
       "name": "Super-Ressource",
       "creator": [
         {
@@ -35,9 +31,7 @@
   "hasPart": [
     {
       "id": "https://example.org/module",
-      "type": [
-        "LearningResource"
-      ],
+      "type": ["LearningResource"],
       "name": "Sub-Ressource",
       "creator": [
         {

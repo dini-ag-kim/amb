@@ -7,8 +7,5 @@
   ],
   "name": "Beispielkurs",
   "id": "https://example.org/oer",
-  "type": [
-    "LearningResource",
-    "http://vivoweb.org/ontology/core#Course"
-  ]
+  "type": ["LearningResource", "http://vivoweb.org/ontology/core#Course"]
 }

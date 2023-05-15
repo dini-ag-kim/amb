@@ -17,8 +17,6 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
       }
     },
-    "required": [
-      "id"
-    ]
+    "required": ["id"]
   }
 }

@@ -10,9 +10,7 @@
       "contains": {
         "type": "string",
         "format": "uri",
-        "enum": [
-          "https://w3id.org/kim/amb/context.jsonld"
-        ]
+        "enum": ["https://w3id.org/kim/amb/context.jsonld"]
       }
     },
     {
@@ -23,9 +21,7 @@
             "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
           }
         },
-        "required": [
-          "@language"
-        ]
+        "required": ["@language"]
       }
     }
   ]

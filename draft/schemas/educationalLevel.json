@@ -1,42 +1,36 @@
 {
-    "$id": "https://w3id.org/kim/amb/draft/schemas/educationalLevel.json",
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Educational context",
-    "description": "The level in terms of progression through an educational context for which the learning resource is designated.",
-    "type": "array",
-    "items": {
+  "$id": "https://w3id.org/kim/amb/draft/schemas/educationalLevel.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Educational context",
+  "description": "The level in terms of progression through an educational context for which the learning resource is designated.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": ["Concept"]
+      },
+      "id": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "(^https://w3id.org/kim/educationalLevel/.*)"
+      },
+      "inScheme": {
         "type": "object",
         "properties": {
-            "type": {
-                "type": "string",
-                "enum": [
-                    "Concept"
-                ]
-            },
-            "id": {
-                "type": "string",
-                "format": "uri",
-                "pattern": "(^https:\/\/w3id.org\/kim\/educationalLevel\/.*)"
-            },
-            "inScheme": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "enum": [
-                            "https://w3id.org/kim/educationalLevel/"
-                        ]
-                    }
-                }
-            },
-            "prefLabel": {
-                "title": "The preferred label of the concept",
-                "description": "A localized string for prefLabel of a SKOS concept",
-                "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
-            }
-        },
-        "required": [
-          "id"
-        ]
-    }
+          "id": {
+            "type": "string",
+            "enum": ["https://w3id.org/kim/educationalLevel/"]
+          }
+        }
+      },
+      "prefLabel": {
+        "title": "The preferred label of the concept",
+        "description": "A localized string for prefLabel of a SKOS concept",
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+      }
+    },
+    "required": ["id"]
+  }
 }

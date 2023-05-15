@@ -9,8 +9,5 @@
   "id": "https://example.org/oer",
   "dateCreated": "2011-03-03",
   "datePublished": "2021-03-03",
-  "type": [
-    "Course",
-    "LearningResource"
-  ]
+  "type": ["Course", "LearningResource"]
 }

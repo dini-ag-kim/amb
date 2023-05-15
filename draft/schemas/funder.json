@@ -8,11 +8,7 @@
     "type": {
       "title": "Type",
       "type": "string",
-      "enum": [
-        "Person",
-        "FundingScheme",
-        "Organization"
-      ]
+      "enum": ["Person", "FundingScheme", "Organization"]
     },
     "id": {
       "title": "URL",
@@ -24,8 +20,5 @@
       "type": "string"
     }
   },
-  "required": [
-    "type",
-    "name"
-  ]
+  "required": ["type", "name"]
 }

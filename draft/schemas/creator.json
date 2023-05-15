@@ -10,10 +10,7 @@
       "type": {
         "title": "Type",
         "type": "string",
-        "enum": [
-          "Person",
-          "Organization"
-        ]
+        "enum": ["Person", "Organization"]
       },
       "id": {
         "title": "URL",
@@ -32,9 +29,6 @@
         "type": "string"
       }
     },
-    "required": [
-      "name",
-      "type"
-    ]
+    "required": ["name", "type"]
   }
 }

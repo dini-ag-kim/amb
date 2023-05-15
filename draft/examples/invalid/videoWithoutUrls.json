@@ -5,14 +5,9 @@
       "@language": "de"
     }
   ],
-  "type": [
-    "LearningResource",
-    "VideoObject"
-  ],
+  "type": ["LearningResource", "VideoObject"],
   "name": "The road ahead for network freedom",
-  "inLanguage": [
-    "en"
-  ],
+  "inLanguage": ["en"],
   "id": "https://av.tib.eu/media/32641",
   "learningResourceType": [
     {
