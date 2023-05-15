@@ -7,12 +7,14 @@
   ],
   "name": "Beispielressource",
   "image": "https://example.org/oer/image.png",
-  "type": ["LearningResource"],
+  "type": [
+    "LearningResource"
+  ],
   "funder": [
     {
-      "type": "Offer",
-      "id": "https://example.org/foerderprogramm",
-      "name": "Förderprogramm A"
+        "type": "Offer",
+        "id": "https://example.org/foerderprogramm",
+        "name": "Förderprogramm A"
     }
   ],
   "creator": [
@@ -58,7 +60,9 @@
     "id": "https://creativecommons.org/publicdomain/zero/1.0/"
   },
   "dateCreated": "2019-07-03",
-  "inLanguage": ["fr"],
+  "inLanguage": [
+    "fr"
+  ],
   "publisher": [
     {
       "type": "Organization",

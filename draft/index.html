@@ -1,1333 +1,1068 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
+<html lang='de'>
+<head>
+    <meta charset='utf-8'>
     <title>Allgemeines Metadatenprofil für Bildungsressourcen (AMB)</title>
-    <script
-      src="https://w3c.github.io/respec/builds/respec-dini.js"
-      async
-      class="remove"
-    ></script>
-    <script class="remove">
-      // ReSpec-Konfiguration
-      // Dokumentation: https://github.com/w3c/respec/wiki/Configuration-(respecConfig)
-      var respecConfig = {
-        editors: [
-          {
-            name: 'Adrian Pohl',
-            company: 'hbz',
-            companyURL: 'https://www.hbz-nrw.de/',
-          },
-          {
-            name: 'Axel Klinger',
-            company: 'TIB',
-            companyURL: 'https://www.tib.eu/',
-          },
-          {
-            name: 'Fabian Steeg',
-            company: 'hbz',
-            companyURL: 'https://www.hbz-nrw.de/',
-          },
-          {
-            name: 'Mirjan Hoffmann',
-            company: 'TIB',
-            companyURL: 'https://www.tib.eu/',
-          },
-          {
-            name: 'Steffen Rörtgen',
-            company: 'hbz',
-            companyURL: 'https://www.hbz-nrw.de/',
-          },
-          {
-            name: 'Tobias Bülte',
-            company: 'hbz',
-            companyURL: 'https://www.hbz-nrw.de/',
-          },
-          {
-            name: 'Stephan Kulla',
-            company: 'Serlo Education e.V.',
-            companyURL: 'https://serlo.org/',
-          },
-          {
-            name: 'Mikey Stengel',
-            company: 'Serlo Education e.V.',
-            companyURL: 'https://serlo.org/',
-          },
-          {
-            name: 'Manuel Oellers',
-            company: 'Universität Münster',
-            companyURL: 'https://www.uni-muenster.de/',
-          },
-        ],
-        format: 'markdown',
-        localBiblio: {
-          GND: {
-            title: 'Gemeinsame Normdatei (GND)',
-            href: 'https://www.dnb.de/gnd',
-            publisher: 'GND-Kooperative',
-          },
-          'JSON Schema': {
-            title: 'JSON Schema: A Media Type for Describing JSON Documents',
-            href: 'https://tools.ietf.org/html/draft-handrews-json-schema-02',
-            publisher: 'Internet Engineering Task Force ',
-          },
-          LRMI: {
-            title: 'LRMI Concept Schemes',
-            href: 'https://www.dublincore.org/specifications/lrmi/concept_schemes/',
-            publisher: 'Dublin Core Metadata Initiative (DCMI)',
-          },
-          OEHRT: {
-            title: 'OpenEduHub Ressourcentypen',
-            href: 'http://w3id.org/openeduhub/vocabs/learningResourceType/',
-            publisher: 'OpenEduHub',
-          },
-          ORCID: {
-            title: 'ORCID',
-            href: 'https://orcid.org/',
-            publisher: 'ORCID, Inc.',
-          },
-          ROR: {
-            title: 'Research Organization Registry',
-            href: 'https://ror.org/',
-            publisher:
-              'California Digital Library, Crossref, DataCite, and Digital Science',
-          },
-          'schema.org': {
-            title: 'schema.org Vocabulary',
-            href: 'https://schema.org',
-            publisher: 'Schema.org W3C Community Group',
-          },
-          SKOS: {
-            title: 'Simple Knowledge Organization System',
-            href: 'https://www.w3.org/TR/skos-reference/',
-            publisher: 'W3C',
-          },
-          'HS-OER-LOM': {
-            title: 'LOM for Higher Education OER Repositories',
-            href: 'https://w3id.org/kim/hs-oer-lom-profil/latest/',
-            publisher: 'Kompetenzzentrum Interoperable Metadaten (KIM)',
-          },
-          Hochschulfächersystematik: {
-            title:
-              'Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer',
-            href: 'https://w3id.org/kim/hochschulfaechersystematik/scheme',
-            publisher: 'Kompetenzzentrum Interoperable Metadaten (KIM)',
-          },
-          HCRT: {
-            title: 'Hochschulcampus Ressourcentypen',
-            href: 'https://w3id.org/kim/hcrt/scheme',
-            publisher: 'Kompetenzzentrum Interoperable Metadaten (KIM)',
-          },
-          Schulfächerliste: {
-            title: 'Werteliste für allgemeinbildende Schulfächer',
-            href: 'http://w3id.org/kim/schulfaecher/',
-            publisher: 'Kompetenzzentrum Interoperable Metadaten (KIM)',
-          },
-          Bildungsstufen: {
-            title: 'Werteliste für Bildungsstufen',
-            href: 'https://w3id.org/kim/educationalLevel/',
-            publisher: 'Kompetenzzentrum Interoperable Metadaten (KIM)',
-          },
-          'Lehr-/Lernform': {
-            title: 'LRMI Vokabular der Interaktivitätstypen',
-            href: 'http://purl.org/dcx/lrmi-vocabs/interactivityType/',
-            publisher: 'Dublin Core Metadata Initiative (DCMI)',
-          },
-          Wikidata: {
-            title: 'Wikidata',
-            href: 'https://www.wikidata.org/',
-            publisher: 'The Wikimedia Foundation, Inc.',
-          },
-        },
-        logos: [],
-        otherLinks: [
-          {
-            key: 'Links zur Spezifikation',
-            data: [
-              {
-                value: 'Permalink zur aktuellsten Version',
-                href: 'https://w3id.org/kim/amb/latest/',
-              }, //{
-              // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
-              // value: "Permalink zu dieser Version",
-              // href: "https://w3id.org/kim/[spec]/[version]/"
-              // },
-              {
-                value: 'Letzter Entwurf zur Kommentierung',
-                href: 'https://w3id.org/kim/amb/draft/',
-              },
-            ],
-          },
-          {
-            key: 'Mitmachen',
-            data: [
-              {
-                value: 'GitHub-Repository',
-                href: 'https://github.com/dini-ag-kim/amb',
-              },
-              {
-                value: 'Änderungshistorie',
-                href: 'https://github.com/dini-ag-kim/amb/commits/main',
-              },
-            ],
-          },
-        ],
-        publishDate: '', // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
-        specStatus: 'unofficial',
-      }
+    <script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
+    <script class='remove'>
+        // ReSpec-Konfiguration
+        // Dokumentation: https://github.com/w3c/respec/wiki/Configuration-(respecConfig)
+        var respecConfig = {
+            editors: [{
+                name: "Adrian Pohl",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/"
+            }, {
+                name: "Axel Klinger",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/"
+            }, {
+                name: "Fabian Steeg",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/"
+            }, {
+                name: "Mirjan Hoffmann",
+                company: "TIB",
+                companyURL: "https://www.tib.eu/"
+            }, {
+                name: "Steffen Rörtgen",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/"
+            }, {
+                name: "Tobias Bülte",
+                company: "hbz",
+                companyURL: "https://www.hbz-nrw.de/"
+            }, {
+                name: "Stephan Kulla",
+                company: "Serlo Education e.V.",
+                companyURL: "https://serlo.org/"
+            },
+            {
+                name: "Mikey Stengel",
+                company: "Serlo Education e.V.",
+                companyURL: "https://serlo.org/"
+            }, {
+                name: "Manuel Oellers",
+                company: "Universität Münster",
+                companyURL: "https://www.uni-muenster.de/"
+            }],
+            format: "markdown",
+            localBiblio: {
+                "GND": {
+                    title: "Gemeinsame Normdatei (GND)",
+                    href: "https://www.dnb.de/gnd",
+                    publisher: "GND-Kooperative"
+                },
+                "JSON Schema": {
+                    title: "JSON Schema: A Media Type for Describing JSON Documents",
+                    href: "https://tools.ietf.org/html/draft-handrews-json-schema-02",
+                    publisher: "Internet Engineering Task Force "
+                },
+                "LRMI": {
+                    title: "LRMI Concept Schemes",
+                    href: "https://www.dublincore.org/specifications/lrmi/concept_schemes/",
+                    publisher: "Dublin Core Metadata Initiative (DCMI)"
+                },
+                "OEHRT": {
+                    title: "OpenEduHub Ressourcentypen",
+                    href: "http://w3id.org/openeduhub/vocabs/learningResourceType/",
+                    publisher: "OpenEduHub"
+                },
+                "ORCID": {
+                    title: "ORCID",
+                    href: "https://orcid.org/",
+                    publisher: "ORCID, Inc."
+                },
+                "ROR": {
+                    title: "Research Organization Registry",
+                    href: "https://ror.org/",
+                    publisher: "California Digital Library, Crossref, DataCite, and Digital Science"
+                },
+                "schema.org": {
+                    title: "schema.org Vocabulary",
+                    href: "https://schema.org",
+                    publisher: "Schema.org W3C Community Group"
+                },
+                "SKOS": {
+                    title: "Simple Knowledge Organization System",
+                    href: "https://www.w3.org/TR/skos-reference/",
+                    publisher: "W3C"
+                },
+                "HS-OER-LOM": {
+                    title: "LOM for Higher Education OER Repositories",
+                    href: "https://w3id.org/kim/hs-oer-lom-profil/latest/",
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "Hochschulfächersystematik": {
+                    title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
+                    href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "HCRT": {
+                    title: "Hochschulcampus Ressourcentypen",
+                    href: "https://w3id.org/kim/hcrt/scheme",
+                    publisher: "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "Schulfächerliste": {
+                    "title": "Werteliste für allgemeinbildende Schulfächer",
+                    "href": "http://w3id.org/kim/schulfaecher/",
+                    "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "Bildungsstufen": {
+                    "title": "Werteliste für Bildungsstufen",
+                    "href": "https://w3id.org/kim/educationalLevel/",
+                    "publisher": "Kompetenzzentrum Interoperable Metadaten (KIM)"
+                },
+                "Lehr-/Lernform": {
+                    "title": "LRMI Vokabular der Interaktivitätstypen",
+                    "href": "http://purl.org/dcx/lrmi-vocabs/interactivityType/",
+                    "publisher": "Dublin Core Metadata Initiative (DCMI)"
+                },
+                "Wikidata": {
+                    title: "Wikidata",
+                    href: "https://www.wikidata.org/",
+                    publisher: "The Wikimedia Foundation, Inc."
+                }
+            },
+            logos: [],
+            otherLinks: [{
+                key: "Links zur Spezifikation",
+                data: [{
+                    value: "Permalink zur aktuellsten Version",
+                    href: "https://w3id.org/kim/amb/latest/"
+                }, //{
+                    // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
+                   // value: "Permalink zu dieser Version",
+                   // href: "https://w3id.org/kim/[spec]/[version]/"
+                // },
+                {
+                    value: "Letzter Entwurf zur Kommentierung",
+                    href: "https://w3id.org/kim/amb/draft/"
+                }]
+            }, {
+                key: "Mitmachen",
+                data: [{
+                    value: "GitHub-Repository",
+                    href: "https://github.com/dini-ag-kim/amb"
+                }, {
+                    value: "Änderungshistorie",
+                    href: "https://github.com/dini-ag-kim/amb/commits/main"
+                }]
+            }],
+            publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
+            specStatus: "unofficial"
+        };
     </script>
-  </head>
-  <body>
-    <section id="abstract">
-      ## Zusammenfassung Ein bildungsbereichübergreifendes Metadatenprofil für
-      die Beschreibung von Lehr- und Lernressourcen, das hauptsächlich auf
-      [[?schema.org]] bzw. Learning Resource Metadata Initiative [[?LRMI]]
-      basiert und zusätzlich Teile von Simple Knowledge Organization System
-      [[?SKOS]] nutzt. Definiert wird eine [[JSON-LD11]]-konforme Datenstruktur
-      in Form dieser HTML-Spezifikation inklusive eines JSON-Schemas, gegen das
-      Daten automatisiert auf Konformität mit dem Profil geprüft werden können.
+</head>
+<body>
 
-      <div
-        class="copyright"
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        "
-      >
-        <div>
-          <img
-            alt="CC-BY"
-            src="https://licensebuttons.net/p/zero/1.0/80x15.png"
-          />
-          Dieses Werk ist lizenziert unter
-          <a
-            rel="license"
-            href="https://creativecommons.org/publicdomain/zero/1.0/"
-          >
-            Creative Commons Public Domain Dedication 1.0</a
-          >.
-        </div>
-        <a target="_blank" href="https://www.dublincore.org/about/lrmi/"
-          ><img
+<section id="abstract">
+
+## Zusammenfassung
+
+Ein bildungsbereichübergreifendes Metadatenprofil für die Beschreibung von Lehr- und Lernressourcen, das hauptsächlich auf [[?schema.org]] bzw. Learning Resource Metadata Initiative [[?LRMI]] basiert und zusätzlich Teile von Simple Knowledge Organization System [[?SKOS]] nutzt. Definiert wird eine [[JSON-LD11]]-konforme Datenstruktur in Form dieser HTML-Spezifikation inklusive eines JSON-Schemas, gegen das Daten automatisiert auf Konformität mit dem Profil geprüft werden können.
+
+<div class="copyright" style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div>
+        <img alt="CC-BY" src="https://licensebuttons.net/p/zero/1.0/80x15.png" />
+        Dieses Werk ist lizenziert unter
+        <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+            Creative Commons Public Domain Dedication 1.0</a>.
+    </div>
+    <a target="_blank" href="https://www.dublincore.org/about/lrmi/"><img
             src="https://raw.githubusercontent.com/dcmi/lrmi/main/images/enhanced-Long_small+bright.png"
-            alt="LRMI enhanced"
-        /></a>
-      </div>
-    </section>
+            alt="LRMI enhanced" /></a>
+</div>
+</section>
 
-    <section id="introduction" class="informative">
-      ## Einleitung Metadaten sind beschreibende Daten, die das Auffinden von
-      relevanten Wissensressourcen erleichtern sollen. Metadaten für
-      Bildungsressourcen sollen das Finden und den Austausch von im Web
-      verfügbaren Lehr- und Lernressourcen unterstützen. Es existieren bereits
-      eine Menge unterschiedlicher Metadatenschemas für die Beschreibung von
-      Webressourcen. Prominente Beispiele sind [[DC-Terms]] oder [[schema.org]].
-      Diese Schemas sind oft sehr allgemein gehalten, damit sie von einer
-      Vielzahl von Angeboten sinnvoll nutzbar sind. Community- oder
-      anwendungsspezifische Konkretisierungen, Erweiterungen oder auch
-      Kombinationen von Metadatenschemas werden in sogenannten Metadatenprofilen
-      (Englisch "metadata profiles", häufig auch "application profiles" genannt)
-      festgehalten. Metadatenprofile beschreiben also die Art und Weise der
-      Nachnutzung existierender Metadatenschemas, indem sie folgende
-      Informationen angeben: - Welche Properties (Metadatenfelder) und Typen aus
-      welchen Metadatenschemas werden benutzt? - Welche zusätzlichen
-      Einschränkungen bei der Nutzung sind festgelegt, z.B. Pflichtfelder,
-      Wiederholbarkeit eines Feldes, Formatvorgaben für Werte, genutzte
-      kontrollierte Vokabulare? ### Bildungsbereiche Das Allgemeine
-      Metadatenprofil für Bildungsressourcen (AMB) ist bewusst so allgemein
-      gehalten, dass sie sowohl den Schul- als auch den Hochschulbereich
-      abdeckt. Bei Unterschieden in beiden Bildungsbereichen (fachliche
-      Zuordnung, Ressourcentyp) wird auf bereichsspezifische Best Practices
-      verwiesen. ### Basis-Metadatenschemas Das AMB baut hauptsächlich auf
-      [[schema.org]] auf und nutzt eine Untermenge von Typen und Properties des
-      schema.org-Typs [`CreativeWork`](https://schema.org/CreativeWork). Viele
-      der hier genutzten Elemente wurden durch die Learning Resource Metadata
-      Intitiative ([[LRMI]]) in [[schema.org]] ergänzt. Zudem verlangt das AMB
-      die Nutzung kontrollierter Vokabulare, die [[SKOS]]-konform veröffentlicht
-      wurden, weshalb auch einige wenige SKOS-Properties enthalten sind. ###
-      Beziehung zu HS-OER-LOM Mit dem Allgemeinen Metadatenprofil für
-      Bildungsressourcen veröffentlicht das Kompetenzzentrum Interoperable
-      Metadaten (KIM) eine zweite Spezifikation zur Auszeichnung von Lehr- und
-      Lernressourcen mit Metadaten. Mit [[HS-OER-LOM]] wurde Anfang 2020 bereits
-      ein LOM-basiertes Metadatenprofil veröffentlicht, das auf den
-      Hochschulbereich zugeschnitten ist. Die Profile unterscheiden sich in
-      folgenden Hinsichten: | | HS-OER-LOM | AMB | | --- | --- | --- | |
-      Quell-Schema | LOM | schema.org | | Format | XML | JSON-LD | | Linked-Data
-      | nein | ja | | Bildungsbereich | Hochschule | Schule & Hochschule | Mit
-      Blick auf den Hochschulbereich nutzen beide Profile dieselben Werte für
-      die Ausweisung des Ressourcentyps und die Zuweisung einer
-      Bildungsressource zu einem Fach. Die Werte kommen aus kontrollierten
-      Vokabularen, die ebenfalls von KIM bereitgestellt werden: die
-      [[Hochschulfächersystematik]] und das Ressourcentypen-Vokabular [[HCRT]].
-      Damit wird Interoperabilität der Metadatenprofile in Bezug auf den
-      Hochschulbereich hergestellt.
-    </section>
+<section id="introduction" class="informative">
 
-    <section id="conformance"></section>
+## Einleitung
 
-    <section id="format">
-      ## Format und Bereitstellung Die Metadaten einer Bildungsressource werden
-      durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige
-      obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des
-      <a href="#profile">Profils</a> beinhalten. Die Form des JSON-Dokuments
-      MUSS den Vorgaben dieser Spezifikation und des enthaltenen JSON Schemas
-      entsprechen. Das JSON-Dokument zur Beschreibung einer Bildungsressource
-      muss entweder in die Ressource selbst bzw. – bei Nicht-HTML-basierten
-      Ressourcen – in die HTML-Beschreibungsseite der Bildungsressource
-      eingebettet werden oder als eigenständige Webressource – d.h. unter einer
-      dedizierten URL abrufbar sein. Das JSON-Dokument MUSS auch als
-      [[JSON-LD11]] interpretierbar sein. Die [[JSON-LD11]]-konforme
-      Bereitstellung wird erreicht mittels der Verlinkung eines
-      [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context),
-      siehe die <a>@context</a>-Property. ### In eine HTML-Seite eingebettete
-      Metadaten Wenn die Metadaten in die Bildungsressource oder ihre
-      Beschreibungsseite eingebettet werden, MUSS das JSON-Dokument in einem
-      `script`-Element im `head`-Bereich der Webseite eingefügt werden: ```
-      <script type="application/ld+json">
-        [...]
-      </script>
-      ``` ### Metadaten als eigenständige Webressource Werden die Metadaten als
-      Webressource unter einer eigenständigen URL angeboten, MUSS der
-      `Content-Type` Header auf `application/ld+json` gesetzt werden: ```
-      Content-Type: application/ld+json ``` Der Metadatensatz MUSS auf eine der
-      folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite
-      eingebunden werden: 1. Ein `link`-Element , das das JSON-Dokument
-      referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
-      ```
-      <link
-        rel="describedby"
-        type="application/ld+json"
-        href="[...]"
-        title="Resource metadata"
-      />
-      ``` ODER 2. Ein `Link` Header, der das JSON-Dokument referenziert, MUSS
-      gemeinsam mit der Webseite ausgeliefert werden:
+Metadaten sind beschreibende Daten, die das Auffinden von relevanten Wissensressourcen erleichtern sollen. Metadaten für Bildungsressourcen sollen das Finden und den Austausch von im Web verfügbaren Lehr- und Lernressourcen unterstützen.
 
-      <pre class="nolinks HTTP">
+Es existieren bereits eine Menge unterschiedlicher Metadatenschemas für die Beschreibung von Webressourcen. Prominente Beispiele sind [[DC-Terms]] oder [[schema.org]]. Diese Schemas sind oft sehr allgemein gehalten, damit sie von einer Vielzahl von Angeboten sinnvoll nutzbar sind. Community- oder anwendungsspezifische Konkretisierungen, Erweiterungen oder auch Kombinationen von Metadatenschemas werden in sogenannten Metadatenprofilen (Englisch "metadata profiles", häufig auch "application profiles" genannt) festgehalten.
+
+Metadatenprofile beschreiben also die Art und Weise der Nachnutzung existierender Metadatenschemas, indem sie folgende Informationen angeben:
+
+- Welche Properties (Metadatenfelder) und Typen aus welchen Metadatenschemas werden benutzt?
+- Welche zusätzlichen Einschränkungen bei der Nutzung sind festgelegt, z.B. Pflichtfelder, Wiederholbarkeit eines Feldes, Formatvorgaben für Werte, genutzte kontrollierte Vokabulare?
+
+### Bildungsbereiche
+
+Das Allgemeine Metadatenprofil für Bildungsressourcen (AMB) ist bewusst so allgemein gehalten, dass sie sowohl den Schul- als auch den Hochschulbereich abdeckt. Bei Unterschieden in beiden Bildungsbereichen (fachliche Zuordnung, Ressourcentyp) wird auf bereichsspezifische Best Practices verwiesen.
+
+### Basis-Metadatenschemas
+
+Das AMB baut hauptsächlich auf [[schema.org]] auf und nutzt eine Untermenge von Typen und Properties des schema.org-Typs [`CreativeWork`](https://schema.org/CreativeWork). Viele der hier genutzten Elemente wurden durch die Learning Resource Metadata Intitiative ([[LRMI]]) in [[schema.org]] ergänzt.
+
+Zudem verlangt das AMB die Nutzung kontrollierter Vokabulare, die [[SKOS]]-konform veröffentlicht wurden, weshalb auch einige wenige SKOS-Properties enthalten sind.
+
+### Beziehung zu HS-OER-LOM
+
+Mit dem Allgemeinen Metadatenprofil für Bildungsressourcen veröffentlicht das Kompetenzzentrum Interoperable Metadaten (KIM) eine zweite Spezifikation zur Auszeichnung von Lehr- und Lernressourcen mit Metadaten. Mit [[HS-OER-LOM]] wurde Anfang 2020 bereits ein LOM-basiertes Metadatenprofil veröffentlicht, das auf den Hochschulbereich zugeschnitten ist.
+
+Die Profile unterscheiden sich in folgenden Hinsichten:
+
+|   |   HS-OER-LOM    |   AMB    |
+|  ---  |  ---  |  ---  |
+| Quell-Schema  | LOM  | schema.org  |
+| Format  |  XML  |  JSON-LD |
+| Linked-Data  |  nein  |  ja  |
+| Bildungsbereich  |  Hochschule  |  Schule & Hochschule  |
+
+Mit Blick auf den Hochschulbereich nutzen beide Profile dieselben Werte für die Ausweisung des Ressourcentyps und die Zuweisung einer Bildungsressource zu einem Fach. Die Werte kommen aus kontrollierten Vokabularen, die ebenfalls von KIM bereitgestellt werden: die [[Hochschulfächersystematik]] und das Ressourcentypen-Vokabular [[HCRT]]. Damit wird Interoperabilität der Metadatenprofile in Bezug auf den Hochschulbereich hergestellt.
+
+</section>
+
+<section id="conformance"></section>
+
+<section id="format" >
+
+## Format und Bereitstellung
+
+Die Metadaten einer Bildungsressource werden durch ein JSON-Dokument repräsentiert. Dieses JSON-Dokument MUSS einige obligatorische und KANN zusätzlich optionale Schlüssel/Werte-Paare des <a href="#profile">Profils</a> beinhalten. Die Form des JSON-Dokuments MUSS den Vorgaben dieser Spezifikation und des enthaltenen JSON Schemas entsprechen.
+
+Das JSON-Dokument zur Beschreibung einer Bildungsressource muss entweder in die Ressource selbst bzw. – bei Nicht-HTML-basierten Ressourcen – in die HTML-Beschreibungsseite der Bildungsressource eingebettet werden oder als eigenständige Webressource – d.h. unter einer dedizierten URL abrufbar sein.
+
+Das JSON-Dokument MUSS auch als [[JSON-LD11]] interpretierbar sein. Die [[JSON-LD11]]-konforme Bereitstellung wird erreicht mittels der Verlinkung eines [JSON-LD-Kontext-Dokuments](https://www.w3.org/TR/json-ld/#the-context), siehe die <a>@context</a>-Property.
+
+### In eine HTML-Seite eingebettete Metadaten
+
+Wenn die Metadaten in die Bildungsressource oder ihre Beschreibungsseite eingebettet werden, MUSS das JSON-Dokument in einem `script`-Element im `head`-Bereich der Webseite eingefügt werden:
+
+```
+<script type="application/ld+json">[...]</script>
+```
+
+### Metadaten als eigenständige Webressource
+
+Werden die Metadaten als Webressource unter einer eigenständigen URL angeboten, MUSS der `Content-Type` Header auf `application/ld+json` gesetzt werden:
+
+```
+Content-Type: application/ld+json
+```
+
+Der Metadatensatz MUSS auf eine der folgenden Arten in die Bildungsressource bzw. ihre Beschreibungsseite eingebunden werden:
+
+1. Ein `link`-Element , das das JSON-Dokument referenziert, MUSS in den `head`-Bereich der Webseite eingebettet werden:
+
+```
+<link rel="describedby" type="application/ld+json" href="[...]" title="Resource metadata" />
+```
+
+ODER
+
+2. Ein `Link` Header, der das JSON-Dokument referenziert, MUSS gemeinsam mit der Webseite ausgeliefert werden:
+
+<pre class="nolinks HTTP">
 HTTP/1.1 200 OK
 Link: <[...]>; rel="describedby"
-</pre
-      >
-    </section>
-
-    <section id="profile">
-      ## Profil Als Basis-Metadatenschema für die Beschreibung einer Educational
-      Resource dient [[!schema.org]]. Ergänzt wird schema.org durch [[!SKOS]]
-      (Simple Knowledge Organization System) für die Beschreibung referenzierter
-      Werte eines kontrollierten Vokabulars. Im Folgenden wird die Struktur
-      eines OER-Metadatensatzes beschrieben. Nebst einer Kurzbeschreibung wird
-      angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich
-      handelt. Wenn erforderlich wird der Wertebereich festgelegt und es werden
-      kurze Beispiele gegeben.
-
-      <section id="general">
-        ### Allgemein
-
-        <section data-dfn-for="@context">
-          ### <dfn>@context</dfn>
-
-          Die `@context`-Property MUSS einen Array mit einem URI-String zur
-          Referenzierung des
-          [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des
-          Profils enthalten: `https://w3id.org/kim/amb/context.jsonld`. Durch
-          diese Ergänzung wird das JSON-Dokument auch als Linked Data
-          ([[JSON-LD11]]) interpretierbar. Außerdem MUSS ein JSON-Objekt
-          enthalten sein mit dem JSON-LD-Keyword `@language` und einem
-          [[?BCP47]] Sprachcode als Wert, Angabe der im JSON-Dokument genutzten
-          Sprache. Damit die strukturierten Metadaten auch durch Suchmaschinen
-          wie Google und Bing erkannt und verarbeitet werden können, KANN
-          zusätzlich der Wert `https://schema.org` im Array angegeben werden.
-          Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt
-          aus: ```json { "@context":[ "https://w3id.org/kim/amb/context.jsonld",
-          "https://schema.org", { "@language":"de" } ] } ```
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`array[string/object]`</dd>
-            <dt>Elemente</dt>
-            <dd>`https://w3id.org/kim/amb/context.jsonld`</dd>
-            <dd>`object`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/context-schema.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="id">
-          ### <dfn>id</dfn>
-
-          Ein dereferenzierbarer HTTP-URI, welcher die Bildungsressource
-          eindeutig identifiziert. Der URI KANN als URL direkt zur
-          Bildungsressource auflösen oder auf eine beschreibende Webseite
-          (Landing Page) verweisen (vgl. Abschnitt
-          <a href="#format">Format und Bereitstellung</a>).
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`string` (URI)</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/id.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="type">
-          ### <dfn>type</dfn>
-
-          Art der Bildungsressource. MUSS den Wert `LearningResource` enthalten.
-          KANN weitere Werte aus den Unterklassen von
-          `https://schema.org/CreativeWork` enthalten.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`array[string]`</dd>
-            <dt>Elemente</dt>
-            <dd>`LearningResource` und Unterklassen von CreativeWork</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/type.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="name">
-          ### <dfn>name</dfn>
-
-          Titel der Ressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`string`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/name.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="description">
-          ### <dfn>description</dfn>
-
-          Beschreibung der Bildungsressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`string`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/description.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="about">
-          ### <dfn>about</dfn>
-
-          Fach/Thema der Inhalte. MUSS ein oder mehrere JSON-Objekte enthalten,
-          die eine Property `id` mit einem URI aus der
-          [[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der
-          DINI-AG-KIM enthalten MÜSSEN.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>
-              Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]]
-              der DINI-AG-KIM
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/about.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="keywords">
-          ### <dfn>keywords</dfn>
-
-          Schlagworte zur Beschreibung des Inhalts der Ressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[string]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/keywords.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="inLanguage">
-          ### <dfn>inLanguage</dfn>
-
-          Sprache(n) der Bildungsressource. MUSS den Sprachcodes gemäß
-          [[!BCP47]] entsprechen.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[string]`</dd>
-            <dt>Elemente</dt>
-            <dd>[[!BCP47]]</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="image">
-          ### <dfn>image</dfn>
-
-          Thumbnail der Ressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`string` (URI)</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/image.json"
-                >JSON Schema</a
-              >
-            </dd>
-            <dd></dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="trailer">
-          ### <dfn>trailer</dfn>
-
-          Ein Trailer/Video-Teaser zu einer Bildungsressource. MUSS ein
-          JSON-Objekt enthalten, das <code>"type": "VideoObject"</code> sowie
-          die Property <code>contentUrl</code> oder
-          <code>embedUrl</code> enthalten MUSS und folgende weitere Properties
-          enthalten KANN: <code>contentSize</code> (in bytes ohne Maßangabe) ,
-          <code>embedUrl</code>, <code>sha256</code>, <code>bitrate</code> (in
-          kb/s ohne Maßangabe) sowie <code>encodingFormat</code>, das bei
-          Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`object`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/trailer.json"
-                >JSON Schema</a
-              >
-            </dd>
-            <dd></dd>
-          </dl>
-        </section>
-
-        <!-- end general -->
-      </section>
-
-      <section id="provenance">
-        ### Entstehung
-
-        <section data-dfn-for="creator">
-          ### <dfn>creator</dfn>
-
-          Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte
-          enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN
-          und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]],
-          [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen –
-          eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL
-          als vollständiger Name ohne akademischen Titeln angegeben werden, bei
-          Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname
-          Nachname". Der akademische Grad KANN separat als `honorificPrefix`
-          angegeben werden.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/creator.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="contributor">
-          ### <dfn>contributor</dfn>
-
-          Sonstige Beitragende zu der Bildungsressource. MUSS ein oder mehrere
-          JSON-Objekte enthalten, die wiederum `type` und `name` Properties
-          aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]],
-          [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei
-          Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name
-          (`name`) SOLL als vollständiger Name ohne akademischen Titeln
-          angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der
-          Form "Vorname Nachname". Der akademische Grad KANN separat als
-          `honorificPrefix` angegeben werden.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/contributor.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="affiliation">
-          ### <dfn>affiliation</dfn>
-
-          Die Affiliierung einer beitragenden Person im Kontext der Erstellung
-          der Bildungsressource. MUSS ein JSON-Objekt enthalten, das wiederum
-          `type` und `name` Properties aufweisen MUSS und `id` – mit einer
-          URI-Referenz zu [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen
-          SOLL.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`object`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/affiliation.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="dateCreated">
-          ### <dfn>dateCreated</dfn>
-
-          Erstellungsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD`
-          für Datumsangaben oder ein String der Form
-          `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
-            <dd>
-              `string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe
-              [[!ISO8601]], Kapitel 5.4)
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="datePublished">
-          ### <dfn>datePublished</dfn>
-
-          Publikationssdatum der Bildungsressource. MUSS ein String der Form
-          `CCYY-MM-DD` für Datumsangaben oder ein String der Form
-          `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
-            <dd>
-              `string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe
-              [[!ISO8601]], Kapitel 5.4)
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/datePublished.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="dateModified">
-          ### <dfn>dateModified</dfn>
-
-          Modifikationsdatum der Ressource. MUSS ein String der Form
-          `CCYY-MM-DD` für Datumsangaben oder ein String der Form
-          `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
-            <dd>
-              `string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe
-              [[!ISO8601]], Kapitel 5.4)
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/dateModified.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="publisher">
-          ### <dfn>publisher</dfn>
-
-          Die Organisation oder Person, die für die Veöffentlichung der
-          Bildungsressource verantwortlich ist. MUSS ein oder mehrere
-          JSON-Objekte enthalten, die mindestens `type` mit value `Organization`
-          oder `Person` und `name` Properties aufweisen.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/publisher.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="funder">
-          ### <dfn>funder</dfn>
-
-          Angabe, welche Person, Organisation oder welches Förderprogramm an der
-          (finanziellen) Förderung der Ressource beteiligt ist.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Properties `type` und `name`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/funder.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <!-- end provenance -->
-      </section>
-
-      <section id="rights">
-        ### Kosten und Rechte
-
-        <section data-dfn-for="isAccessibleForFree">
-          ### <dfn>isAccessibleForFree</dfn>
-
-          Angabe, ob der Zugang zu einer Bildungsressource kostenpflichtig ist
-          oder nicht. MUSS Booleschen Wert (`true`/`false`) enthalten.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`boolean`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="license">
-          ### <dfn>license</dfn>
-
-          Lizenz der Bildungsressource. MUSS ein JSON-Objekt enthalten, das eine
-          Property `id` mit einem URI als Wert enthält, der auf eine Creative
-          Commons-Lizenz, GNU, Apache, MIT oder BSD verlinkt. Für die
-          URI-Werteliste siehe
-          [hier](https://w3id.org/kim/amb/draft/schemas/license.json).
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`object`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/license.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="conditionsOfAccess">
-          ### <dfn>conditionsOfAccess</dfn>
-
-          Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung
-          und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine
-          Property `id` mit der URI eines Konzepts aus dem
-          [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/)
-          als Wert enthalten muss.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>
-              JSON-Objekt mit `id`-Wert aus
-              <a href="https://w3id.org/kim/conditionsOfAccess/"
-                >Zugangsbedingungen-Vokabular</a
-              >
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <!-- end rights -->
-      </section>
-
-      <section id="pedagogical">
-        ### Pädagogisch
-
-        <section data-dfn-for="learningResourceType">
-          ### <dfn>learningResourceType</dfn>
-
-          Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die
-          eine Property `id` mit einem URI aus [[HCRT]] ODER [[OEHRT]] als URI
-          enthalten MÜSSEN.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>ja</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="audience">
-          ### <dfn>audience</dfn>
-
-          Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role*
-          von [[!LRMI]] entsprechen.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[string (URI)]`</dd>
-            <dt>Elemente</dt>
-            <dd>
-              <a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-                >LRMI Educational Audience Roles</a
-              >
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/audience.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="teaches">
-          ### <dfn>teaches</dfn>
-
-          Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen
-          Bildungsressource erreicht werden können: - `id` zur Angabe eines
-          Identifikators der Kompetenz mit einem URI als Wert - `prefLabel` zur
-          Angabe einer Bezeichnung für die Kompetenz
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/teaches.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="assesses">
-          ### <dfn>assesses</dfn>
-
-          Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen
-          Bildungsressource festgestellt werden können: - `id` zur Angabe eines
-          Identifikators der Kompetenz mit einem URI als Wert - `prefLabel` zur
-          Angabe einer Bezeichnung für die Kompetenz
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/assesses.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="competencyRequired">
-          ### <dfn>competencyRequired</dfn>
-
-          Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften,
-          die nachgewiesen werden müssen, um die Bildungsressource zu verstehen
-          und bearbeiten zu können: - `id` zur Angabe eines Identifikators der
-          Kenntnis, Fähigkeit oder Eigenschaft mit einem URI als Wert -
-          `prefLabel` zur Angabe einer Bezeichnung für die Kenntnis, Fähigkeit
-          oder Eigenschaft
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/competencyRequired.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="educationalLevel">
-          ### <dfn>educationalLevel</dfn>
-
-          Verweis auf eine Stufe im Bildungssystem als Lehr-/Lernkontext, für
-          den eine Bildungsressource ausgewiesen ist. MUSS ein oder mehrere
-          JSON-Objekte enthalten, die eine Property `id` aufweisen MÜSSEN, die
-          Property `prefLabel` aufweisen SOLLEN und weitere Properties aufweisen
-          KÖNNEN. Die Property `id` MUSS einem URI aus den [[Bildungsstufen]]
-          entsprechen. - `id` zur Angabe eines Identifikators der Stufe -
-          `prefLabel` zur Angabe einer Bezeichnung für die Stufe
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>
-              JSON-Objekt mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM.
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/educationalLevel.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="interactivityType">
-          ### <dfn>interactivityType</dfn>
-
-          Kennzeichnet die vorherrschende Lehr-/Lernform der Bildungsressource
-          und gibt an, ob Lehr-/Lernprozesse mit dieser Ressource eher
-          fremdgesteuert (<i>expositive</i>), selbstgesteuert (<i>active</i>)
-          oder in einer Mischform (<i>mixed</i>) im Hinblick auf die primären
-          Lernziele der Bildungsressource stattfinden. - `id` zur Angabe eines
-          Identifikators der Lehr-/Lernform - `prefLabel` zur Angabe einer
-          Bezeichnung für die Lehr-/Lernform
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>
-              JSON-Objekt mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/interactivityType.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-        <!-- end pedagogical -->
-      </section>
-
-      <section id="relation">
-        ### Relation
-
-        <section data-dfn-for="isBasedOn">
-          ### <dfn>isBasedOn</dfn>
-
-          Verweis auf eine andere Ressource, von der die beschriebene
-          Bildungsressource ein Derivat ist.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/isBasedOn.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="isPartOf">
-          ### <dfn>isPartOf</dfn>
-
-          Verweis auf andere Ressource(n), von der/denen die beschriebene
-          Bildungsressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte
-          enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties
-          enthalten KÖNNEN.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Property `id`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="hasPart">
-          ### <dfn>hasPart</dfn>
-
-          Verweis auf andere Ressource(n), die von der die beschriebene
-          Bildungsressource ein Teil ist/sind. MUSS ein oder mehrere
-          JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere
-          Properties enthalten KÖNNEN.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>JSON-Objekt mit Property `id`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-        <!-- end relation -->
-      </section>
-
-      <section id="metametadata">
-        ### Meta-Metadata
-
-        <section data-dfn-for="mainEntityOfPage">
-          ### <dfn>mainEntityOfPage</dfn>
-
-          In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche
-          den eingebetten Strukturkontext der bereitgestellten Metadaten
-          erfassen: - `id` zur Angabe der Landing-Page der Metadaten -
-          `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen
-          Objekt, das `id`,`type` und `name` des Providers angibt -
-          `dateCreated` zur Angabe des Erstellungsdatums der Metadaten (mit
-          einem String der Form `CCYY-MM-DD` oder
-          `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert) - `dateModified` zur
-          Angabe des Änderungsdatums der Metadaten (mit einem String der Form
-          `CCYY-MM-DD` oder `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert)
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a
-                href="https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <!-- end metametadata -->
-      </section>
-
-      <section id="technical">
-        ### Technisch
-        <section data-dfn-for="duration">
-          ### <dfn>duration</dfn>
-
-          Dauer der Wiedergabe einer Audio/Video-Ressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>
-              `string` der Form `PnYnMnDTnHnMnS` gemäß [[!ISO8601]]
-              "Duration"-Format.
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/duration.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="encoding">
-          ### <dfn>encoding</dfn>
-
-          Möglichkeiten zum Download der Bildungsressource.
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>
-              JSON-Objekt, das `"type": "MediaObject"` sowie die Property
-              `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere
-              Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe)
-              , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie
-              `encodingFormat`, das bei Verwendung Werte aus
-              [[IANA-MEDIA-TYPES]] enthalten MUSS.
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/encoding.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-
-        <section data-dfn-for="caption">
-          ### <dfn>caption</dfn>
-
-          Untertiteldatei (bei AV-Ressourcen).
-
-          <dl>
-            <dt>Pflichtfeld</dt>
-            <dd>nein</dd>
-            <dt>Typ</dt>
-            <dd>`array[object]`</dd>
-            <dt>Elemente</dt>
-            <dd>
-              JSON-Objekt, das `"type":"MediaObject"` und im Feld `"id"` die URL
-              zur Untertiteldatei enthalten MUSS und folgende weitere Properties
-              enthalten KANN: `encodingFormat` mit einem Wert aus
-              [[IANA-MEDIA-TYPES]], `inLanguage` mit Angabe genau eines
-              Sprachcodes gemäß [[BCP47]].
-            </dd>
-            <dt>Validierung</dt>
-            <dd>
-              <a href="https://w3id.org/kim/amb/draft/schemas/caption.json"
-                >JSON Schema</a
-              >
-            </dd>
-          </dl>
-        </section>
-        <!-- end technical -->
-      </section>
-    </section>
-
-    <section id="validation">
-      ## Validierung Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON
-      Schema]] entwickelt. Es ermöglicht, die eigenen Daten gegen das Profil zu
-      validieren. Das Hauptschema verweist dabei auf Unterschemas für die
-      einzelnen Properties. Diese Unterschemas sind im Abschnitt
-      [Profil](#profile) bei der jeweiligen Property verlinkt.
-
-      <section id="json-schema">
-        <h3>JSON Schema</h3>
-        <pre
-          data-include="https://w3id.org/kim/amb/draft/schemas/schema.json"
-          data-include-format="text"
-        ></pre>
-        <a href="https://w3id.org/kim/amb/draft/schemas/schema.json"
-          >Link zum Schema</a
-        >
-      </section>
-    </section>
-
-    <section id="examples" class="informative">
-      <h2>Beispiele</h2>
-
-      <section id="full-example-higher-education">
-        <h2>Beispiele aus dem Bereich Hochschule</h2>
-        <pre
-          class="example"
-          title="Beschreibung eines Kurses"
-          data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-course.json"
-          data-include-format="text"
-        ></pre>
-        <pre
-          class="example"
-          title="Beschreibung der Präsentation einer Kurseinheit"
-          data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-course-part.json"
-          data-include-format="text"
-        ></pre>
-        <pre
-          class="example"
-          title="Beschreibung einer in eine Präsentation eingebetteten Grafik"
-          data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-figure.json"
-          data-include-format="text"
-        ></pre>
-      </section>
-
-      <section id="full-example-school">
-        <h2>Beispiele aus dem Bereich Schule</h2>
-        <pre
-          class="example"
-          title="Beschreibung eines Arbeitsblattes für das Schulfach Französisch"
-          data-include="https://w3id.org/kim/amb/draft/examples/valid/tutoryExample.json"
-          data-include-format="text"
-        ></pre>
-      </section>
-    </section>
-
-    <section id="glossary" class="appendix">
-      ## Glossar
-
-      <dl>
-        <dt><abbr title="Application Programming Interface">API</abbr></dt>
-        <dd>Application Programming Interface</dd>
-        <dt>
-          <abbr title="Bundesministerium für Bildung und Forschung">BMBF</abbr>
-        </dt>
-        <dd>Bundesministerium für Bildung und Forschung</dd>
-        <dt><abbr title="Dublin Core">DC</abbr></dt>
-        <dd>Dublin Core</dd>
-        <dt><abbr title="Digital Object Identifier">DOI</abbr></dt>
-        <dd>Digital Object Identifier</dd>
-        <dt><abbr title="Digital Repositories Interoperability">DRI</abbr></dt>
-        <dd>Digital Repositories Interoperability</dd>
-        <dt><abbr title="Globally Unique Identifier">GUID</abbr></dt>
-        <dd>Globally Unique Identifier</dd>
-        <dt><abbr title="Hypertext Transfer Protocol">HTTP</abbr></dt>
-        <dd>Hypertext Transfer Protocol</dd>
-        <dt><abbr title="JavaScript Object Notation">JSON</abbr></dt>
-        <dd>JavaScript Object Notation</dd>
-        <dt>
-          <abbr title="JavaScript Object Notation for Linked Data"
-            >JSON-LD</abbr
-          >
-        </dt>
-        <dd>JavaScript Object Notation for Linked Data</dd>
-        <dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
-        <dd>Learning Object Metadata</dd>
-        <dt><abbr title="Learning Object Repository">LOR</abbr></dt>
-        <dd>Learning Object Repository</dd>
-        <dt>
-          <abbr
-            title="Open Archives Initiative – Protocol for Metadata Harvesting"
-            >OAI-PMH</abbr
-          >
-        </dt>
-        <dd>Open Archives Initiative – Protocol for Metadata Harvesting</dd>
-        <dt><abbr title="Open Educational Resource">OER</abbr></dt>
-        <dd>Open Educational Resource</dd>
-        <dt><abbr title="Uniform Resource Identifier">URI</abbr></dt>
-        <dd>Uniform Resource Identifier</dd>
-        <dt><abbr title="Uniform Resource Locator">URL</abbr></dt>
-        <dd>Uniform Resource Locator</dd>
-        <dt><abbr title="World Wide Web Consortium">W3C</abbr></dt>
-        <dd>World Wide Web Consortium</dd>
-      </dl>
-    </section>
-
-    <!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
-    <script src="https://hypothes.is/embed.js" async></script>
-  </body>
+</pre>
+
+</section>
+
+<section id="profile">
+
+## Profil
+
+Als Basis-Metadatenschema für die Beschreibung einer Educational Resource dient [[!schema.org]].
+Ergänzt wird schema.org durch [[!SKOS]] (Simple Knowledge Organization System) für die Beschreibung referenzierter Werte eines kontrollierten Vokabulars.
+
+Im Folgenden wird die Struktur eines OER-Metadatensatzes beschrieben.
+Nebst einer Kurzbeschreibung wird angegeben, ob der Wert eine Pflichtangabe ist und um welchen Typ es sich handelt.
+Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele gegeben.
+
+<section id="general">
+### Allgemein
+
+<section data-dfn-for="@context">
+
+### <dfn>@context</dfn>
+
+Die `@context`-Property MUSS einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils enthalten: `https://w3id.org/kim/amb/context.jsonld`. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar. Außerdem MUSS ein JSON-Objekt enthalten sein mit dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert, Angabe der im JSON-Dokument genutzten Sprache. Damit die strukturierten Metadaten auch durch Suchmaschinen wie Google und Bing erkannt und verarbeitet werden können, KANN zusätzlich der Wert `https://schema.org` im Array angegeben werden.
+
+Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
+
+```json
+{
+    "@context":[
+      "https://w3id.org/kim/amb/context.jsonld",
+      "https://schema.org",
+      {
+        "@language":"de"
+      }
+    ]
+  }
+```
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array[string/object]`</dd>
+<dt>Elemente</dt>
+<dd>`https://w3id.org/kim/amb/context.jsonld`</dd>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/context-schema.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+
+<section data-dfn-for="id">
+
+### <dfn>id</dfn>
+
+Ein dereferenzierbarer HTTP-URI, welcher die Bildungsressource eindeutig identifiziert. Der URI KANN als URL direkt zur Bildungsressource auflösen oder auf eine beschreibende Webseite (Landing Page) verweisen (vgl. Abschnitt <a href="#format">Format und Bereitstellung</a>).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`string` (URI)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/id.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="type">
+
+### <dfn>type</dfn>
+
+Art der Bildungsressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
+
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array[string]`</dd>
+<dt>Elemente</dt>
+<dd>`LearningResource` und Unterklassen von CreativeWork</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/type.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="name">
+
+### <dfn>name</dfn>
+
+Titel der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`string`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/name.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
+
+### <dfn>description</dfn>
+
+Beschreibung der Bildungsressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/description.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="about">
+
+### <dfn>about</dfn>
+
+Fach/Thema der Inhalte.
+MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus der
+[[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der DINI-AG-KIM
+enthalten MÜSSEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/about.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="keywords">
+
+### <dfn>keywords</dfn>
+
+Schlagworte zur Beschreibung des Inhalts der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[string]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/keywords.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="inLanguage">
+
+### <dfn>inLanguage</dfn>
+
+Sprache(n) der Bildungsressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[string]`</dd>
+<dt>Elemente</dt>
+<dd>[[!BCP47]]</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="image">
+
+### <dfn>image</dfn>
+
+Thumbnail der Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` (URI)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/image.json">JSON Schema</a></dd>
+<dd></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="trailer">
+
+### <dfn>trailer</dfn>
+
+Ein Trailer/Video-Teaser zu einer Bildungsressource. MUSS ein JSON-Objekt enthalten, das <code>"type": "VideoObject"</code> sowie die Property <code>contentUrl</code> oder <code>embedUrl</code> enthalten MUSS und folgende weitere Properties enthalten KANN: <code>contentSize</code> (in bytes ohne Maßangabe) , <code>embedUrl</code>, <code>sha256</code>, <code>bitrate</code> (in kb/s ohne Maßangabe) sowie <code>encodingFormat</code>, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/trailer.json">JSON Schema</a></dd>
+<dd></dd>
+</dl>
+
+</section>
+
+<!-- end general -->
+</section>
+
+<section id="provenance">
+### Entstehung
+
+<section data-dfn-for="creator">
+
+### <dfn>creator</dfn>
+
+Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="contributor">
+
+### <dfn>contributor</dfn>
+
+Sonstige Beitragende zu der Bildungsressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="affiliation">
+
+### <dfn>affiliation</dfn>
+
+Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Bildungsressource. MUSS ein JSON-Objekt enthalten, das wiederum `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu  [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/affiliation.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="dateCreated">
+
+### <dfn>dateCreated</dfn>
+
+Erstellungsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Datumsangaben oder ein String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
+<dd>`string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe [[!ISO8601]], Kapitel 5.4)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/dateCreated.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+
+<section data-dfn-for="datePublished">
+
+### <dfn>datePublished</dfn>
+
+Publikationssdatum der Bildungsressource. MUSS ein String der Form `CCYY-MM-DD` für Datumsangaben oder ein String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
+<dd>`string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe [[!ISO8601]], Kapitel 5.4)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/datePublished.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="dateModified">
+
+### <dfn>dateModified</dfn>
+
+Modifikationsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Datumsangaben oder ein String der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` für Zeitangaben sein.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` der Form `CCYY-MM-DD` (siehe [[!ISO8601]])</dd>
+<dd>`string` der Form `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` (siehe [[!ISO8601]], Kapitel 5.4)</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/dateModified.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="publisher">
+
+### <dfn>publisher</dfn>
+
+Die Organisation oder Person, die für die Veöffentlichung der Bildungsressource verantwortlich ist. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` oder `Person` und `name` Properties aufweisen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="funder">
+
+### <dfn>funder</dfn>
+
+Angabe, welche Person, Organisation oder welches Förderprogramm an der (finanziellen) Förderung der Ressource beteiligt ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/funder.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<!-- end provenance -->
+</section>
+
+
+<section id="rights">
+### Kosten und Rechte
+
+<section data-dfn-for="isAccessibleForFree">
+
+### <dfn>isAccessibleForFree</dfn>
+
+Angabe, ob der Zugang zu einer Bildungsressource kostenpflichtig ist oder nicht. MUSS Booleschen Wert (`true`/`false`) enthalten.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`boolean`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="license">
+
+### <dfn>license</dfn>
+
+Lizenz der Bildungsressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` mit einem URI als Wert enthält, der auf eine Creative Commons-Lizenz, GNU, Apache, MIT oder BSD verlinkt. Für die URI-Werteliste siehe [hier](https://w3id.org/kim/amb/draft/schemas/license.json).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`object`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/license.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="conditionsOfAccess">
+
+### <dfn>conditionsOfAccess</dfn>
+
+Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine Property `id` mit der URI eines Konzepts aus dem [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/) als Wert enthalten muss.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>JSON-Objekt mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<!-- end rights -->
+</section>
+
+<section id="pedagogical">
+### Pädagogisch
+
+<section data-dfn-for="learningResourceType">
+
+### <dfn>learningResourceType</dfn>
+
+Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus [[HCRT]] ODER [[OEHRT]] als URI enthalten MÜSSEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>ja</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="audience">
+
+### <dfn>audience</dfn>
+
+Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[string (URI)]` </dd>
+<dt>Elemente</dt>
+<dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/audience.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="teaches">
+
+### <dfn>teaches</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource erreicht werden können:
+
+- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/teaches.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="assesses">
+
+### <dfn>assesses</dfn>
+
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource festgestellt werden können:
+
+- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/assesses.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="competencyRequired">
+
+### <dfn>competencyRequired</dfn>
+
+Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachgewiesen werden müssen, um die Bildungsressource zu verstehen und bearbeiten zu können:
+
+- `id` zur Angabe eines Identifikators der Kenntnis, Fähigkeit oder Eigenschaft mit einem URI als Wert
+- `prefLabel` zur Angabe einer Bezeichnung für die Kenntnis, Fähigkeit oder Eigenschaft
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/competencyRequired.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="educationalLevel">
+
+### <dfn>educationalLevel</dfn>
+
+Verweis auf eine Stufe im Bildungssystem als Lehr-/Lernkontext, für den eine Bildungsressource ausgewiesen ist. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` aufweisen MÜSSEN, die Property `prefLabel` aufweisen SOLLEN und weitere Properties aufweisen KÖNNEN.
+Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
+
+- `id` zur Angabe eines Identifikators der Stufe
+- `prefLabel` zur Angabe einer Bezeichnung für die Stufe
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM.</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/educationalLevel.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="interactivityType">
+
+### <dfn>interactivityType</dfn>
+
+Kennzeichnet die vorherrschende Lehr-/Lernform der Bildungsressource und gibt an, ob Lehr-/Lernprozesse mit dieser Ressource eher fremdgesteuert (<i>expositive</i>), selbstgesteuert (<i>active</i>) oder in einer Mischform (<i>mixed</i>) im Hinblick auf die primären Lernziele der Bildungsressource stattfinden.
+
+- `id` zur Angabe eines Identifikators der Lehr-/Lernform
+- `prefLabel` zur Angabe einer Bezeichnung für die Lehr-/Lernform
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>JSON-Objekt mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/interactivityType.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+<!-- end pedagogical -->
+</section>
+
+
+<section id="relation">
+### Relation
+
+<section data-dfn-for="isBasedOn">
+
+### <dfn>isBasedOn</dfn>
+
+Verweis auf eine andere Ressource, von der die beschriebene Bildungsressource ein Derivat ist.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="isPartOf">
+
+### <dfn>isPartOf</dfn>
+
+Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="hasPart">
+
+### <dfn>hasPart</dfn>
+
+Verweis auf andere Ressource(n), die von der die beschriebene Bildungsressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt mit Property `id`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+<!-- end relation -->
+</section>
+
+<section id="metametadata">
+### Meta-Metadata
+
+<section data-dfn-for="mainEntityOfPage">
+
+### <dfn>mainEntityOfPage</dfn>
+
+In diesem Feld können die Struktur-Metadaten ausgeführt werden, welche den eingebetten Strukturkontext der bereitgestellten Metadaten erfassen:
+
+- `id` zur Angabe der Landing-Page der Metadaten
+- `provider` zur Angabe des Metadaten-Providers mit einem dazugehörigen Objekt, das `id`,`type` und `name` des Providers angibt
+- `dateCreated` zur Angabe des Erstellungsdatums der Metadaten (mit einem String der Form `CCYY-MM-DD` oder `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert)
+- `dateModified` zur Angabe des Änderungsdatums der Metadaten (mit einem String der Form `CCYY-MM-DD` oder `CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]` als Wert)
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<!-- end metametadata -->
+</section>
+
+<section id="technical">
+### Technisch
+<section data-dfn-for="duration">
+
+### <dfn>duration</dfn>
+
+Dauer der Wiedergabe einer Audio/Video-Ressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`string` der Form `PnYnMnDTnHnMnS` gemäß [[!ISO8601]] "Duration"-Format.</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/duration.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="encoding">
+
+### <dfn>encoding</dfn>
+
+Möglichkeiten zum Download der Bildungsressource.
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `"type": "MediaObject"` sowie die Property `contentUrl` oder `embedUrl` enthalten MUSS und folgende weitere Properties enthalten KANN: `contentSize` (in bytes ohne Maßangabe) , `embedUrl`, `sha256`, `bitrate` (in kb/s ohne Maßangabe) sowie `encodingFormat`, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/encoding.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="caption">
+
+### <dfn>caption</dfn>
+
+Untertiteldatei (bei AV-Ressourcen).
+
+<dl>
+<dt>Pflichtfeld</dt>
+<dd>nein</dd>
+<dt>Typ</dt>
+<dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `"type":"MediaObject"` und im Feld `"id"` die URL zur Untertiteldatei enthalten MUSS und folgende weitere Properties enthalten KANN: `encodingFormat` mit einem Wert aus [[IANA-MEDIA-TYPES]], `inLanguage` mit Angabe genau eines Sprachcodes gemäß [[BCP47]].</dd>
+<dt>Validierung</dt>
+<dd><a href="https://w3id.org/kim/amb/draft/schemas/caption.json">JSON Schema</a></dd>
+</dl>
+
+</section>
+<!-- end technical -->
+</section>
+
+</section>
+
+
+<section id="validation">
+
+## Validierung
+
+Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. Es ermöglicht, die eigenen Daten gegen das Profil zu validieren. Das Hauptschema verweist dabei auf Unterschemas für die einzelnen Properties. Diese Unterschemas sind im Abschnitt [Profil](#profile) bei der jeweiligen Property verlinkt.
+
+<section id="json-schema">
+<h3>JSON Schema</h3>
+<pre data-include="https://w3id.org/kim/amb/draft/schemas/schema.json" data-include-format="text"></pre>
+<a href="https://w3id.org/kim/amb/draft/schemas/schema.json">Link zum Schema</a>
+</section>
+
+</section>
+
+<section id="examples" class="informative">
+<h2>Beispiele</h2>
+
+<section id="full-example-higher-education">
+<h2>Beispiele aus dem Bereich Hochschule</h2>
+<pre class="example" title="Beschreibung eines Kurses" data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-course.json" data-include-format="text"></pre>
+<pre class="example" title="Beschreibung der Präsentation einer Kurseinheit" data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-course-part.json" data-include-format="text"></pre>
+<pre class="example" title="Beschreibung einer in eine Präsentation eingebetteten Grafik" data-include="https://w3id.org/kim/amb/draft/examples/valid/highered-figure.json" data-include-format="text"></pre>
+</section>
+
+<section id="full-example-school">
+<h2>Beispiele aus dem Bereich Schule</h2>
+<pre class="example" title="Beschreibung eines Arbeitsblattes für das Schulfach Französisch" data-include="https://w3id.org/kim/amb/draft/examples/valid/tutoryExample.json" data-include-format="text"></pre>
+</section>
+
+</section>
+
+<section id="glossary" class="appendix">
+
+## Glossar
+
+<dl>
+<dt><abbr title="Application Programming Interface">API</abbr></dt>
+<dd>Application Programming Interface</dd>
+<dt><abbr title="Bundesministerium für Bildung und Forschung">BMBF</abbr></dt>
+<dd>Bundesministerium für Bildung und Forschung</dd>
+<dt><abbr title="Dublin Core">DC</abbr></dt>
+<dd>Dublin Core</dd>
+<dt><abbr title="Digital Object Identifier">DOI</abbr></dt>
+<dd>Digital Object Identifier</dd>
+<dt><abbr title="Digital Repositories Interoperability">DRI</abbr></dt>
+<dd>Digital Repositories Interoperability</dd>
+<dt><abbr title="Globally Unique Identifier">GUID</abbr></dt>
+<dd>Globally Unique Identifier</dd>
+<dt><abbr title="Hypertext Transfer Protocol">HTTP</abbr></dt>
+<dd>Hypertext Transfer Protocol</dd>
+<dt><abbr title="JavaScript Object Notation">JSON</abbr></dt>
+<dd>JavaScript Object Notation</dd>
+<dt><abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr></dt>
+<dd>JavaScript Object Notation for Linked Data</dd>
+<dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
+<dd>Learning Object Metadata</dd>
+<dt><abbr title="Learning Object Repository">LOR</abbr></dt>
+<dd>Learning Object Repository</dd>
+<dt><abbr title="Open Archives Initiative – Protocol for Metadata Harvesting">OAI-PMH</abbr></dt>
+<dd>Open Archives Initiative – Protocol for Metadata Harvesting</dd>
+<dt><abbr title="Open Educational Resource">OER</abbr></dt>
+<dd>Open Educational Resource</dd>
+<dt><abbr title="Uniform Resource Identifier">URI</abbr></dt>
+<dd>Uniform Resource Identifier</dd>
+<dt><abbr title="Uniform Resource Locator">URL</abbr></dt>
+<dd>Uniform Resource Locator</dd>
+<dt><abbr title="World Wide Web Consortium">W3C</abbr></dt>
+<dd>World Wide Web Consortium</dd>
+</dl>
+
+</section>
+
+<!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
+<script src="https://hypothes.is/embed.js" async></script>
+</body>
+
 </html>
