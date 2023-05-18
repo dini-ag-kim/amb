@@ -1,21 +1,18 @@
 {
   "@context": [
-      "https://w3id.org/kim/amb/context.jsonld",
-      {
-          "@language": "de"
-      }
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
   ],
   "id": "https://example.org/course",
   "name": "Beispielkurs",
-  "type": [
-      "LearningResource",
-      "Course"
-  ],
+  "type": ["LearningResource", "Course"],
   "funder": [
     {
-        "type": "FundingScheme",
-        "id": "https://example.org/foerderprogramm",
-        "name": "Förderprogramm A"
+      "type": "FundingScheme",
+      "id": "https://example.org/foerderprogramm",
+      "name": "Förderprogramm A"
     }
   ]
 }
