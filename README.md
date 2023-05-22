@@ -36,17 +36,17 @@ Siehe auch die
   ([GitLab](https://gitlab.com/axel-klinger)
 - Fabian Steeg (hbz), [@fsteeg](https://github.com/fsteeg)
   ([GitLab](https://gitlab.com/fsteeg))
-- Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann),
-  ([GitLab](https://gitlab.com/mirjan))
-- Steffen Rörtgen (GWDG), [@sroertgen](https://github.com/sroertgen)
-- Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx)
-  ([GitLab](https://gitlab.com/TobiasNx))
-- Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
+- Manuel Oellers (WWU Münster), [@oellers](https://github.com/oellers)
 - Mikey Stengel (Serlo Education e.V.),
   [@CodingDive](https://github.com/CodingDive)
+- Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann),
+  ([GitLab](https://gitlab.com/mirjan))
 - Sebastian Herrmann (SHRIMP_PODS, Uni Leipzig),
   [@smherrmann](https://github.com/smherrmann)
-- Manuel Oellers (WWU Münster), [@oellers](https://github.com/oellers)
+- Steffen Rörtgen (GWDG), [@sroertgen](https://github.com/sroertgen)
+- Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
+- Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx)
+  ([GitLab](https://gitlab.com/TobiasNx))
 - _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
 
 ### Lokales Setup
