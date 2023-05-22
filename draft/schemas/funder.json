@@ -4,21 +4,24 @@
   "title": "Funder",
   "description": "Financial contributor of the learning resource",
   "type": "array",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "type": "string",
-      "enum": ["Person", "FundingScheme", "Organization"]
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": ["Person", "FundingScheme", "Organization"]
+      },
+      "id": {
+        "title": "URL",
+        "type": "string",
+        "format": "uri"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      }
     },
-    "id": {
-      "title": "URL",
-      "type": "string",
-      "format": "uri"
-    },
-    "name": {
-      "title": "Name",
-      "type": "string"
-    }
-  },
-  "required": ["type", "name"]
+    "required": ["type", "name"]
+  }
 }
