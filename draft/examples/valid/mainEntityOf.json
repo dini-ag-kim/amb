@@ -10,7 +10,7 @@
   "mainEntityOfPage": [
     {
       "id": "https://example.org/oer-description.html",
-      "type": "Text",
+      "type": "Dataset",
       "provider": {
         "id": "https://oerworldmap.org/resource/urn:uuid:4062c64d-b0ac-4941-95c2-8116f137326d",
         "name": "ZOERR"
