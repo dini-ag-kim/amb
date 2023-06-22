@@ -604,7 +604,7 @@ Modifikationsdatum der Ressource. MUSS ein String der Form `CCYY-MM-DD` für Dat
 
 ### <dfn>publisher</dfn>
 
-Die Organisation oder Person, die für die Veöffentlichung der Bildungsressource verantwortlich ist. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` oder `Person` und `name` Properties aufweisen.
+Die Organisation oder Person, die für die Veröffentlichung der Bildungsressource verantwortlich ist. MUSS ein oder mehrere JSON-Objekte enthalten, die mindestens `type` mit value `Organization` oder `Person` und `name` Properties aufweisen. Des weiteren SOLL das JSON-Objekt eine Property `id` enthalten, welches eine URI ist und den Publisher eindeutig bezeichnet.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -612,7 +612,7 @@ Die Organisation oder Person, die für die Veöffentlichung der Bildungsressourc
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dd>JSON-Objekt mit Properties `type`, `name` und `id`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
 </dl>
