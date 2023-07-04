@@ -13,7 +13,7 @@
       "type": {
         "title": "Type",
         "type": "string",
-        "enum": ["Dataset"]
+        "enum": ["Dataset", "WebAPI"]
       },
       "provider": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
