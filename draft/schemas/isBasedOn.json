@@ -8,20 +8,13 @@
     "type": "object",
     "properties": {
       "type": {
-        "title": "Type",
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/type.json"
       },
       "id": {
-        "title": "URL",
-        "type": "string",
-        "format": "uri"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
       },
       "name": {
-        "title": "Name",
-        "type": "string"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/name.json"
       },
       "creator": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/creator.json"
