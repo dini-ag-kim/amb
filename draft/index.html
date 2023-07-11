@@ -725,15 +725,15 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 
 ### <dfn>audience</dfn>
 
-Zielgruppe(n) des Angebotes. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
+`audience` beschreibt die Zielgruppe(n), für die diese Bildungsresource didaktisiert wurde. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[string (URI)]` </dd>
+<dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd><a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a></dd>
+<dd>JSON-Objekt, welches eine Property `id` mit einem Wert aus <a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a> aufweisen MUSS. Es SOLL die Eigenschaften `type`, `inScheme` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` und der Wert von `inScheme` gleich `http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/` sein. Über `prefLabel` SOLL die Zielgruppe bezeichnet werden.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/audience.json">JSON Schema</a></dd>
 </dl>
