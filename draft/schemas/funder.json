@@ -13,13 +13,10 @@
         "enum": ["Person", "FundingScheme", "Organization"]
       },
       "id": {
-        "title": "URL",
-        "type": "string",
-        "format": "uri"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
       },
       "name": {
-        "title": "Name",
-        "type": "string"
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/name.json"
       }
     },
     "required": ["type", "name"]

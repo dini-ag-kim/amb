@@ -631,7 +631,7 @@ Angabe, welche Person, Organisation oder welches Förderprogramm an der (finanzi
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dd>JSON-Objekt, welches die Eigenschaften `type` und `name` aufweisen MUSS. `type` MUSS eines der Werte `"Person"`, `"FundingScheme"` und `"Organization"` sein, während `name` ein String sein MUSS. Das Objekt SOLL zusätzlich eine `id` aufweisen, die als URL auf das Förderprogramm verweist.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/funder.json">JSON Schema</a></dd>
 </dl>
