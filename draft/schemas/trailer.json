@@ -8,7 +8,7 @@
     "type": {
       "title": "Type",
       "type": "string",
-      "enum": ["VideoObject"]
+      "enum": ["VideoObject", "AudioObject"]
     },
     "contentUrl": {
       "title": "Content URL",
