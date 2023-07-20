@@ -399,9 +399,6 @@ Beschreibung der Bildungsressource.
 ### <dfn>about</dfn>
 
 Fach/Thema der Inhalte.
-MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus der
-[[Hochschulfächersystematik]] ODER aus der [[Schulfächerliste]] der DINI-AG-KIM
-enthalten MÜSSEN.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -409,7 +406,7 @@ enthalten MÜSSEN.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>Werte aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM</dd>
+<dd>JSON-Objekte, die die Property `id` aufweisen MÜSSEN, welche auf einen Wert aus einer Vokabelliste verweist. Mindestens ein JSON-Objekt MUSS für `id` einen Wert aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] der DINI-AG-KIM aufweisen.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/about.json">JSON Schema</a></dd>
 </dl>

@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Arbeitsblatt - Mon avenir - Französisch - tutory.de",
+  "id": "https://www.tutory.de/w/fbbadf1a",
+  "type": ["LearningResource"],
+  "about": [
+    {
+      "id": "http://w3id.org/kim/schulfaecher/s1009",
+      "prefLabel": {
+        "de": "Französisch"
+      },
+      "type": "Concept",
+      "inScheme": {
+        "id": "http://w3id.org/kim/schulfaecher/"
+      }
+    }
+  ]
+}
