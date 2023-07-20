@@ -710,7 +710,7 @@ Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Log
 
 ### <dfn>learningResourceType</dfn>
 
-Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` mit einem URI aus [[HCRT]] ODER [[OEHRT]] als URI enthalten MÜSSEN.
+Art des Lernmittels.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -718,7 +718,7 @@ Art des Lernmittels. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Prop
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit `id`-Wert aus [[HCRT]] oder [[OEHRT]]</dd>
+<dd>JSON-Objekt, welches die Property `id` enthalten MUSS. Mindestens ein JSON-Objekt MUSS als `id` einen Wert aus [[HCRT]] oder [[OEHRT]] enthalten.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
 </dl>
