@@ -13,8 +13,7 @@
       },
       "id": {
         "type": "string",
-        "format": "uri",
-        "pattern": "(^https://w3id.org/kim/hochschulfaechersystematik/.*|http://w3id.org/kim/schulfaecher/.*)"
+        "format": "uri"
       },
       "inScheme": {
         "type": "object",
@@ -32,6 +31,17 @@
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",
         "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+      }
+    },
+    "required": ["id"]
+  },
+  "contains": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "(^https://w3id.org/kim/hochschulfaechersystematik/.*|http://w3id.org/kim/schulfaecher/.*)"
       }
     },
     "required": ["id"]
