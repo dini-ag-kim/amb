@@ -22,7 +22,7 @@
             "type": "string",
             "enum": [
               "https://w3id.org/kim/hcrt/scheme",
-              "http://w3id.org/openeduhub/vocabs/learningResourceType/"
+              "http://w3id.org/openeduhub/vocabs/new_lrt/"
             ]
           }
         }
@@ -41,7 +41,7 @@
       "id": {
         "type": "string",
         "format": "uri",
-        "pattern": "(^https://w3id.org/kim/hcrt/.*|http://w3id.org/openeduhub/vocabs/learningResourceType/.*)"
+        "pattern": "(^https://w3id.org/kim/hcrt/.*|http://w3id.org/openeduhub/vocabs/new_lrt/.*)"
       }
     },
     "required": ["id"]
