@@ -16,15 +16,6 @@
         "format": "uri",
         "pattern": "(^https://w3id.org/kim/educationalLevel/.*)"
       },
-      "inScheme": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "enum": ["https://w3id.org/kim/educationalLevel/"]
-          }
-        }
-      },
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",

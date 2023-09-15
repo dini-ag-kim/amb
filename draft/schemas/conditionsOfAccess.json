@@ -17,15 +17,6 @@
         "http://w3id.org/kim/conditionsOfAccess/login"
       ]
     },
-    "inScheme": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "enum": ["http://w3id.org/kim/conditionsOfAccess/"]
-        }
-      }
-    },
     "prefLabel": {
       "title": "The preferred label of the concept",
       "description": "A localized string for prefLabel of a SKOS concept",
