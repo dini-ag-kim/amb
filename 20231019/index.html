@@ -141,11 +141,10 @@
                 data: [{
                     value: "Permalink zur aktuellsten Version",
                     href: "https://w3id.org/kim/amb/latest/"
-                }, //{
-                    // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
-                   // value: "Permalink zu dieser Version",
-                   // href: "https://w3id.org/kim/[spec]/[version]/"
-                // },
+                }, {
+                   value: "Permalink zu dieser Version",
+                   href: "https://w3id.org/kim/amb/20231019/"
+                },
                 {
                     value: "Letzter Entwurf zur Kommentierung",
                     href: "https://w3id.org/kim/amb/draft/"
@@ -160,8 +159,8 @@
                     href: "https://github.com/dini-ag-kim/amb/commits/main"
                 }]
             }],
-            publishDate: "", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
-            specStatus: "unofficial"
+            publishDate: "2023-10-19", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
+            specStatus: "base"
         };
     </script>
 </head>
@@ -1070,8 +1069,6 @@ Als Kernbestandteil dieser Spezifikation wurde ein [[?JSON Schema]] entwickelt. 
 
 </section>
 
-<!-- Embed hypothes.is to allow live annotation of the draft. Remove when publishing new spec version. -->
-<script src="https://hypothes.is/embed.js" async></script>
 </body>
 
 </html>
