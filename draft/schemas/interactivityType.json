@@ -18,15 +18,6 @@
         "http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed"
       ]
     },
-    "inScheme": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "enum": ["http://purl.org/dcx/lrmi-vocabs/interactivityType/"]
-        }
-      }
-    },
     "prefLabel": {
       "title": "The preferred label of the concept",
       "description": "A localized string for prefLabel of a SKOS concept",

@@ -402,7 +402,7 @@ Fach/Thema der Inhalte.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekte, die die Property `id` aufweisen MÜSSEN, welche auf einen Wert aus einer Vokabelliste verweist. Mindestens ein JSON-Objekt MUSS für `id` einen Wert aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] aufweisen.</dd>
+<dd>JSON-Objekte, die die Property `id` aufweisen MÜSSEN, welche auf einen Wert aus einer Vokabelliste verweist. Mindestens ein JSON-Objekt MUSS für `id` einen Wert aus [[Hochschulfächersystematik]] oder [[Schulfächerliste]] aufweisen. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/about.json">JSON Schema</a></dd>
 </dl>
@@ -686,7 +686,7 @@ Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Log
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>JSON-Objekt mit `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a></dd>
+<dd>JSON-Objekt, das einen `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a> aufweisen MUSS. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
 </dl>
@@ -711,7 +711,7 @@ Art des Lernmittels.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt, welches die Property `id` enthalten MUSS. Mindestens ein JSON-Objekt MUSS als `id` einen Wert aus [[HCRT]] oder [[OEHRT]] enthalten.</dd>
+<dd>JSON-Objekt, welches die Property `id` enthalten MUSS. Mindestens ein JSON-Objekt MUSS als `id` einen Wert aus [[HCRT]] oder [[OEHRT]] enthalten. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/learningResourceType.json">JSON Schema</a></dd>
 </dl>
@@ -730,7 +730,7 @@ Art des Lernmittels.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt, welches eine Property `id` mit einem Wert aus <a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a> aufweisen MUSS. Es SOLL die Eigenschaften `type`, `inScheme` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` und der Wert von `inScheme` gleich `http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/` sein. Über `prefLabel` SOLL die Zielgruppe bezeichnet werden.</dd>
+<dd>JSON-Objekt, welches eine Property `id` mit einem Wert aus <a href="http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/">LRMI Educational Audience Roles</a> aufweisen MUSS. Es SOLL die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/audience.json">JSON Schema</a></dd>
 </dl>
@@ -813,7 +813,7 @@ Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM.</dd>
+<dd>JSON-Objekt, das einen `id`-Wert aus [[Bildungsstufen]] der DINI-AG-KIM aufweisen MUSS. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/educationalLevel.json">JSON Schema</a></dd>
 </dl>
@@ -833,7 +833,7 @@ Kennzeichnet die vorherrschende Lehr-/Lernform der Bildungsressource und gibt an
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>JSON-Objekt mit `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular</dd>
+<dd>JSON-Objekt, das einen `id`-Wert aus dem [[Lehr-/Lernform]]-Vokabular aufweisen MUSS. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/interactivityType.json">JSON Schema</a></dd>
 </dl>
