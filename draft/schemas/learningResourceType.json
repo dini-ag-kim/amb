@@ -15,18 +15,6 @@
         "type": "string",
         "format": "uri"
       },
-      "inScheme": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "enum": [
-              "https://w3id.org/kim/hcrt/scheme",
-              "http://w3id.org/openeduhub/vocabs/new_lrt/"
-            ]
-          }
-        }
-      },
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",

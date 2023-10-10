@@ -11,7 +11,11 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
       },
       "type": {
-        "type": "string"
+        "title": "Type",
+        "type": "string",
+        "enum": [
+          "WebContent"
+        ]
       },
       "provider": {
         "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
@@ -23,6 +27,8 @@
         "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
       }
     },
-    "required": ["id"]
+    "required": [
+      "id"
+    ]
   }
 }
