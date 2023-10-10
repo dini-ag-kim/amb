@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "id": "https://example.org/oer-course",
+  "type": ["LearningResource", "Course"],
+  "name": "An example course",
+  "trailer": {
+    "type": "VideoObject",
+    "encodingFormat": "video/mp4",
+    "contentSize": "9803150",
+    "contentUrl": "https://example.org/trailer.mp4",
+    "embedUrl": "https://embed.example.org/trailer.mp4"
+  }
+}

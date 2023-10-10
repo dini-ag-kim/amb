@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": ["Course", "LearningResource"],
+  "competencyRequired": {
+    "id": "https://example.org/competencies/2",
+    "prefLabel": {
+      "de": "Awesomeness"
+    }
+  }
+}

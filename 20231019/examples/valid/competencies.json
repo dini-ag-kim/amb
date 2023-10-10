@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": ["Course", "LearningResource"],
+  "assesses": [
+    {
+      "id": "https://example.org/competencies/1",
+      "prefLabel": {
+        "de": "Awesomeness"
+      }
+    }
+  ],
+  "competencyRequired": [
+    {
+      "id": "https://example.org/competencies/2",
+      "prefLabel": {
+        "de": "Humor"
+      }
+    }
+  ],
+  "teaches": [
+    {
+      "id": "https://example.org/competencies/3",
+      "prefLabel": {
+        "de": "Resilience"
+      }
+    }
+  ]
+}

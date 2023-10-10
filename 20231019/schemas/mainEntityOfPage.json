@@ -1,0 +1,34 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Metadata/Structured descriptions",
+  "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
+      },
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": [
+          "WebContent"
+        ]
+      },
+      "provider": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
+      },
+      "dateCreated": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
+      },
+      "dateModified": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  }
+}

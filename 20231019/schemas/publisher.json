@@ -1,0 +1,28 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/publisher.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Publisher",
+  "description": "The publisher of the educational resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": ["Organization", "Person"]
+      },
+      "id": {
+        "title": "URL",
+        "description": "The URL/URI of the publisher, preferably from GND, Wikidata or RoR.",
+        "type": "string",
+        "format": "uri"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      }
+    },
+    "required": ["name", "type"]
+  }
+}
