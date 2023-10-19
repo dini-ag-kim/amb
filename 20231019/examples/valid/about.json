@@ -14,10 +14,7 @@
       "prefLabel": {
         "de": "Französisch"
       },
-      "type": "Concept",
-      "inScheme": {
-        "id": "http://w3id.org/kim/schulfaecher/"
-      }
+      "type": "Concept"
     }
   ]
 }

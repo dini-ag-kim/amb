@@ -24,10 +24,7 @@
         "en": "French",
         "fr": "Français"
       },
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-      }
+      "type": "Concept"
     }
   ],
   "license": {
@@ -49,10 +46,7 @@
         "en": "student",
         "de": "Lernende"
       },
-      "type": "Concept",
-      "inScheme": {
-        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-      }
+      "type": "Concept"
     }
   ],
   "learningResourceType": [
@@ -62,10 +56,7 @@
         "en": "Course",
         "de": "Kurs"
       },
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hcrt/scheme"
-      }
+      "type": "Concept"
     }
   ]
 }
