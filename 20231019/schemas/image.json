@@ -1,0 +1,7 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/image.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Image",
+  "type": "string",
+  "format": "uri"
+}

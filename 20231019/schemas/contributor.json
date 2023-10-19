@@ -1,0 +1,34 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/contributor.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Contributor",
+  "description": "Contributor(s) to the creation of the learning resource",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "type"],
+    "properties": {
+      "type": {
+        "title": "Type",
+        "type": "string",
+        "enum": ["Person", "Organization"]
+      },
+      "id": {
+        "title": "URL",
+        "type": "string",
+        "format": "uri"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "honorificPrefix": {
+        "title": "Academic title",
+        "type": "string"
+      },
+      "affiliation": {
+        "$ref": "https://w3id.org/kim/amb/draft/schemas/affiliation.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$id": "https://w3id.org/kim/amb/draft/schemas/trailer.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trailer",
+  "description": "Ein Trailer/Video-Teaser zu einer Ressource",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "enum": ["VideoObject", "AudioObject"]
+    },
+    "contentUrl": {
+      "title": "Content URL",
+      "description": "The download URL of the media object",
+      "type": "string",
+      "format": "uri"
+    },
+    "encodingFormat": {
+      "title": "Encoding Format",
+      "description": "The media type of the media object, conforming to https://www.iana.org/assignments/media-types/media-types.xml",
+      "type": "string",
+      "pattern": "^(application|audio|example|font|image|message|model|multipart|text|video)/[a-zA-Z0-9\\-+_.]+$"
+    },
+    "contentSize": {
+      "title": "Content Size",
+      "description": "The size of the media object in bytes (B) without units.",
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "sha256": {
+      "title": "sha256",
+      "description": "The SHA-2 SHA256 hash of the content of the media object.",
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "embedUrl": {
+      "title": "Embed URL",
+      "description": "A URL pointing to a player for a video. In general, this is the information in the src element of an embed tag.",
+      "type": "string",
+      "format": "uri"
+    },
+    "bitrate": {
+      "title": "Bitrate",
+      "description": "The bitrate of an audio or video object in kilobyte per second (kb/s) without units. ",
+      "type": "string",
+      "pattern": "^\\d+$"
+    }
+  },
+  "anyOf": [
+    {
+      "required": ["type", "contentUrl"]
+    },
+    {
+      "required": ["type", "embedUrl"]
+    }
+  ]
+}

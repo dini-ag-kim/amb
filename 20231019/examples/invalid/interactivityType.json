@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Selbstlernmodul",
+  "id": "https://example.org/oer",
+  "type": ["LearningResource", "Course"],
+  "interactivityType": {
+    "prefLabel": "active",
+    "type": "Concept"
+  }
+}

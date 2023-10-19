@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": ["LearningResource", "Course"],
+  "learningResourceType": [
+    {
+      "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
+    }
+  ]
+}

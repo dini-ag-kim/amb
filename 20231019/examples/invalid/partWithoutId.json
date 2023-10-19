@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielressource",
+  "id": "https://example.org/oer",
+  "type": ["LearningResource"],
+  "creator": [
+    {
+      "name": "HansD",
+      "type": "Person"
+    }
+  ],
+  "isPartOf": [
+    {
+      "type": ["LearningResource"],
+      "name": "Super-Ressource",
+      "creator": [
+        {
+          "name": "Skye Blue",
+          "type": "Person"
+        }
+      ],
+      "license": {
+        "id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    }
+  ],
+  "hasPart": [
+    {
+      "type": ["LearningResource"],
+      "name": "Sub-Ressource",
+      "creator": [
+        {
+          "name": "Skye Blue",
+          "type": "Person"
+        }
+      ],
+      "license": {
+        "id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    }
+  ]
+}

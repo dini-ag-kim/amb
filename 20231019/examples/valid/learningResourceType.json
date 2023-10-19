@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielkurs",
+  "id": "https://example.org/oer",
+  "type": ["LearningResource", "Course"],
+  "publisher": [
+    {
+      "type": "Person",
+      "name": "Maxima Mustermensch"
+    }
+  ],
+  "learningResourceType": [
+    {
+      "id": "https://w3id.org/kim/hcrt/course"
+    },
+    {
+      "id": "http://w3id.org/openeduhub/vocabs/new_lrt/4e16015a-7862-49ed-9b5e-6c1c6e0ffcd1"
+    }
+  ]
+}

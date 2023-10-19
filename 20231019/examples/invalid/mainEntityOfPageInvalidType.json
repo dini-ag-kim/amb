@@ -1,0 +1,19 @@
+{
+    "@context": [
+        "https://w3id.org/kim/amb/context.jsonld",
+        {
+            "@language": "de"
+        }
+    ],
+    "name": "Beispielressource",
+    "id": "https://example.org/oer",
+    "mainEntityOfPage": [
+        {
+            "id": "https://example.org/oer-description.html",
+            "type": "Text"
+        }
+    ],
+    "type": [
+        "LearningResource"
+    ]
+}
