@@ -20,10 +20,7 @@
     {
       "id": "https://w3id.org/kim/hochschulfaechersystematik/n059",
       "prefLabel": "Französisch",
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-      }
+      "type": "Concept"
     }
   ],
   "license": {
@@ -42,20 +39,14 @@
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
       "prefLabel": "Lernende",
-      "type": "Concept",
-      "inScheme": {
-        "id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
-      }
+      "type": "Concept"
     }
   ],
   "learningResourceType": [
     {
       "id": "https://w3id.org/kim/hcrt/course",
       "prefLabel": "Kurs",
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hcrt/scheme"
-      }
+      "type": "Concept"
     }
   ]
 }

@@ -6,7 +6,10 @@
     }
   ],
   "id": "https://oer.gitlab.io/OS/figures/OS/hail_f0613_with_embedded_frame_nos.png",
-  "type": ["LearningResource", "ImageObject"],
+  "type": [
+    "LearningResource",
+    "ImageObject"
+  ],
   "name": "A-32 two-level page table",
   "creator": [
     {
@@ -29,21 +32,28 @@
       }
     }
   ],
-  "isbasedOn": {
-    "id": "https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction/blob/9fc6cbc76348fb091449741fac15e211776e8aba/hail_f0613.pdf",
-    "name": "Figure 6.13",
-    "creator": {
-      "type": "Person",
-      "name": "Max Hailperin"
-    },
-    "license": {
-      "id": "https://creativecommons.org/licenses/by-sa/3.0/"
+  "isBasedOn": [
+    {
+      "id": "https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction/blob/9fc6cbc76348fb091449741fac15e211776e8aba/hail_f0613.pdf",
+      "name": "Figure 6.13",
+      "creator": [
+        {
+          "type": "Person",
+          "name": "Max Hailperin"
+        }
+      ],
+      "license": {
+        "id": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
     }
-  },
+  ],
   "isPartOf": [
     {
       "id": "https://oer.gitlab.io/OS/Operating-Systems-Memory-I.html",
-      "type": ["LearningResource", "PresentationDigitalDocument"],
+      "type": [
+        "LearningResource",
+        "PresentationDigitalDocument"
+      ],
       "name": "OS08: Virtual Memory I"
     }
   ]

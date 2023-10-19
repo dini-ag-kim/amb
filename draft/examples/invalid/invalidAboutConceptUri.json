@@ -14,10 +14,7 @@
       "prefLabel": {
         "de": "Foo"
       },
-      "type": "Concept",
-      "inScheme": {
-        "id": "https://w3id.org/kim/hochschulfaechersystematik/scheme"
-      }
+      "type": "Concept"
     }
   ]
 }
