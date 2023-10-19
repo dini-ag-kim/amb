@@ -29,7 +29,7 @@
       "id": {
         "type": "string",
         "format": "uri",
-        "pattern": "(^https://w3id.org/kim/hcrt/.*|http://w3id.org/openeduhub/vocabs/new_lrt/.*)"
+        "pattern": "^(https://w3id.org/kim/hcrt/.*|http://w3id.org/openeduhub/vocabs/new_lrt/.*)"
       }
     },
     "required": ["id"]

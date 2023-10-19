@@ -11,6 +11,9 @@
   "learningResourceType": [
     {
       "id": "http://purl.org/dcx/lrmi-vocabs/learningResourceType/course"
+    },
+    {
+      "id": "xxxhttp://w3id.org/openeduhub/vocabs/new_lrt/588efe4f-976f-48eb-84aa-8bcb45679f85"
     }
   ]
 }
