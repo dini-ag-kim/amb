@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/competencyRequired.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/competencyRequired.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Competency Required",
   "description": "Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.",
@@ -14,7 +14,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string",
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
       }
     },
     "required": ["id"]

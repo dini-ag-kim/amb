@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/mainEntityOfPage.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Metadata/Structured descriptions",
   "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
@@ -8,7 +8,7 @@
     "type": "object",
     "properties": {
       "id": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/id.json"
       },
       "type": {
         "title": "Type",
@@ -18,13 +18,13 @@
         ]
       },
       "provider": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/provider.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/provider.json"
       },
       "dateCreated": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/dateCreated.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/dateCreated.json"
       },
       "dateModified": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/dateModified.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/dateModified.json"
       }
     },
     "required": [

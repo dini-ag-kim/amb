@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/creator.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/creator.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Creator",
   "description": "The creator(s) of the learning resource",
@@ -22,7 +22,7 @@
         "type": "string"
       },
       "affiliation": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/affiliation.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/affiliation.json"
       },
       "honorificPrefix": {
         "title": "Academic title",

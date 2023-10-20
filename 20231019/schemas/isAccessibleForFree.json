@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/isAccessibleForFree.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/isAccessibleForFree.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Status of free accessibility",
   "description": "States if a ressource is free to access and to use. This also can be a ressource without an open license",

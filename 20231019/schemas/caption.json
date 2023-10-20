@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/caption.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/caption.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Caption",
   "description": "The caption/subtitle file for an audio/video resource",
@@ -13,7 +13,7 @@
         "enum": ["MediaObject"]
       },
       "id": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/id.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/id.json"
       },
       "encodingFormat": {
         "title": "Encoding Format",
@@ -21,7 +21,7 @@
         "type": "string"
       },
       "inLanguage": {
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/language.json"
       }
     },
     "required": ["id", "type"]

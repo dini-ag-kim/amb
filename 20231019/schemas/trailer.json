@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/trailer.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/trailer.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Trailer",
   "description": "Ein Trailer/Video-Teaser zu einer Ressource",

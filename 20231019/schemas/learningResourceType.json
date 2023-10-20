@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/learningResourceType.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/learningResourceType.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Learning Resource Type",
   "description": "The learning resource type of the resource, taken from the controlled HCRT list or the OpenEduHub vocabulary for learningResourceType",
@@ -18,7 +18,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string for prefLabel of a SKOS concept",
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
       }
     },
     "required": ["id"]

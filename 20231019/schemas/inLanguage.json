@@ -1,10 +1,10 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/inLanguage.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/inLanguage.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Language",
   "description": "The language of the learning resource",
   "type": "array",
   "items": {
-    "$ref": "https://w3id.org/kim/amb/draft/schemas/language.json"
+    "$ref": "https://w3id.org/kim/amb/20231019/schemas/language.json"
   }
 }

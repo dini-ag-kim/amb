@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/conditionsOfAccess.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "conditionsOfAccess",
   "description": "Description if login is needed to use the source.",
@@ -20,7 +20,7 @@
     "prefLabel": {
       "title": "The preferred label of the concept",
       "description": "A localized string for prefLabel of a SKOS concept",
-      "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+      "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
     }
   },
   "required": ["id"]

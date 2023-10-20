@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/keywords.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/keywords.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Keywords",
   "description": "Keywords or tags used to describe this content",

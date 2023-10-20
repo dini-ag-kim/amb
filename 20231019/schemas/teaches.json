@@ -1,5 +1,5 @@
 {
-  "$id": "https://w3id.org/kim/amb/draft/schemas/teaches.json",
+  "$id": "https://w3id.org/kim/amb/20231019/schemas/teaches.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Teaches",
   "description": "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
@@ -14,7 +14,7 @@
       "prefLabel": {
         "title": "The preferred label of the concept",
         "description": "A localized string",
-        "$ref": "https://w3id.org/kim/amb/draft/schemas/localizedString.json"
+        "$ref": "https://w3id.org/kim/amb/20231019/schemas/localizedString.json"
       }
     },
     "required": ["id"]
