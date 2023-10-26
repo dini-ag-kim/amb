@@ -141,10 +141,11 @@
                 data: [{
                     value: "Permalink zur aktuellsten Version",
                     href: "https://w3id.org/kim/amb/latest/"
-                }, {
-                   value: "Permalink zu dieser Version",
-                   href: "https://w3id.org/kim/amb/20231019/"
-                },
+                }, //{
+                    // Bei Entwürfen sollte dieser Link nicht aufgeführt werden.
+                   // value: "Permalink zu dieser Version",
+                   // href: "https://w3id.org/kim/[spec]/[version]/"
+                // },
                 {
                     value: "Letzter Entwurf zur Kommentierung",
                     href: "https://w3id.org/kim/amb/draft/"
@@ -160,7 +161,7 @@
                 }]
             }],
             publishDate: "2023-10-19", // Veröffentlichungsdatum der Spezifikation im ISO 8601-Format (YYYY-MM-DD). Bei Entwürfen leer lassen!
-            specStatus: "base"
+            specStatus: "unofficial"
         };
     </script>
 </head>
