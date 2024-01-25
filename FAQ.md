@@ -2,7 +2,7 @@
 
 Hier sammeln und beantworten wir häufig gestellte Fragen und geben Best-Practice Beispiele.
 
-## Wie gebe ich ein Projekt als Entstehungszusammenhang einer Ressource an? (in Abgrenzung zu Förderinformationen) (siehe
+## Wie gebe ich ein Projekt als Entstehungszusammenhang einer Ressource an? (in Abgrenzung zu Förderinformationen)
 
 OER entstehen häufig im Rahmen von Projekten, an denen mehrere Institutionen beteiligt sein können. In NRW – und soweit ich weiß auch in Niedersachsen – wurde angedacht, diese Projekte zu erfassen, ihnen also eigene Identifier und strukturierte Beschreibungen zu geben. Eine Anforderung wäre dann, in einem Projekt entstandene OER mit dem Projekt zu verlinken, um schließlich Materialien – etwa in OERSI – nach Projekt filtern zu können.
 Nehmen wir als Beispiel [OER-Content.NRW](https://www.dh.nrw/kooperationen/OER-Content.nrw-42), wo Materialien durch Konsortien aus mindestens drei Organisationen erstellt werden. Das Projekt "Einführung in die Betriebswirtschaftslehre" (mit der beispielhaften URI `https://example.org/bwl-oer`) wird etwa von einem Konsortium aus sieben Organisationen durchgeführt.
