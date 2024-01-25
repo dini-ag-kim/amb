@@ -31,6 +31,10 @@ Publiziert
 Siehe auch die
 [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs).
 
+## Frequently Asked Questions
+
+In unserem [FAQ](./FAQ.md) beantworten wir häufig gestellte Fragen.
+
 ### Beteiligte Personen
 
 - Adrian Pohl (hbz & KIM), [@acka47](https://github.com/acka47)
