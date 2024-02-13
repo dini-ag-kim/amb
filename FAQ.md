@@ -6,7 +6,7 @@ Hier sammeln und beantworten wir häufig gestellte Fragen und geben Best-Practic
 
 OER entstehen häufig im Rahmen von Projekten, an denen mehrere Institutionen beteiligt sein können. In NRW – und nach aktuellem Kenntnisstand auch in Niedersachsen – wurde erwogen, diese Projekte zu erfassen, ihnen also eigene Identifier und strukturierte Beschreibungen zu geben. Eine Anforderung wäre dann, in einem Projekt entstandene OER mit dem Projekt zu verlinken, um schließlich Materialien – etwa in OERSI – nach Projekt filtern zu können.
 Nehmen wir als Beispiel [OER-Content.NRW](https://www.dh.nrw/kooperationen/OER-Content.nrw-42), wo Materialien durch Konsortien aus mindestens drei Organisationen erstellt werden. Das Projekt "Einführung in die Betriebswirtschaftslehre" (mit der beispielhaften URI `https://example.org/bwl-oer`) wird etwa von einem Konsortium aus sieben Organisationen durchgeführt.
-Materialien sollen nach Herkunftsprojekt gefiltert werden, d.h. ich muss das Material in den Metadaten irgendwo einem Projekt zuordnen. Dafür würde sich etwa [`sdo:producer`](https://schema.org/producer) anbieten ([`sdo:Project`](https://schema.org/Project) ist derzeit als ein Untertyp von `Organization` in pending eingetragen, so dass es hier auch mit dem für `producer` erwarteten Typ `Organization` passen würde):
+Materialien sollen nach Herkunftsprojekt gefiltert werden, d.h. ich muss das Material in den Metadaten irgendwo einem Projekt zuordnen. Dafür würde sich etwa [`sdo:producer`](https://schema.org/producer) anbieten ([`sdo:Project`](https://schema.org/Project) ist ein Untertyp von `Organization`, so dass es hier auch mit dem für `producer` erwarteten Typ `Organization` passen würde):
 
 ```json
 {
@@ -21,6 +21,8 @@ Materialien sollen nach Herkunftsprojekt gefiltert werden, d.h. ich muss das Mat
     ]
 }
 ```
+
+Verwandtes Ticket: [#17](https://github.com/dini-ag-kim/amb/issues/17)
 
 ## Wie gebe ich Förderinformationen als Entstehungskontext einer Ressource an? (in Abgrenzung zu Projekt)
 
@@ -48,10 +50,14 @@ Angaben zu einer Förderung können über das Feld [`funder`](https://dini-ag-ki
 }
 ```
 
+Verwandtes Ticket: [#102](https://github.com/dini-ag-kim/amb/issues/102)
+
 
 ## Wie gebe ich Serienzugehörigkeit an?
 
 Die Serienzugehörigkeit kann über das Feld `isPartOf` abgebildet werden.
+
+Beispiel:
 
 ```json
 {
@@ -76,6 +82,8 @@ Die Serienzugehörigkeit kann über das Feld `isPartOf` abgebildet werden.
    }
 }
 ```
+
+Verwandte Tickets: [#174](https://github.com/dini-ag-kim/amb/issues/174), [#175](https://github.com/dini-ag-kim/amb/issues/175))
 
 ## Wie erfasse ich die Metadatenersteller:in?
 
@@ -115,8 +123,5 @@ Dort kann ein Attribut `creator` hinterlegt werden, in dem die Metadatenerstelle
       "name":"Geschichte interaktiv"
    }
 }
-
-
-
 ```
 
