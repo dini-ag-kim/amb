@@ -125,3 +125,10 @@ Dort kann ein Attribut `creator` hinterlegt werden, in dem die Metadatenerstelle
 }
 ```
 
+## Können Organisationen auch Affiliations zu anderen Organisationen haben?
+
+Nein, das ist gemäß er Property https://schema.org/affiliation, die wir im AMB nachnutzen, nicht vorgesehen.
+
+## Wie ist das Veröffentlichungsdatum (inhaltlich) gemeint? Das Datum der ersten Veröffentlichung des Werks? Das Datum der letzten (aktuellsten) Veröffentlichung/Überarbeitung?
+
+Laut der Beschreibung der Property https://schema.org/datePublished, die wir im AMB nachnutzen, handelt es sich um das Datum der ersten Veröffentlichung. Für Überarbeitungen eignet sich [`dateModified`](https://w3id.org/kim/amb/latest/#datemodified).
