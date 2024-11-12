@@ -12,7 +12,7 @@ Falls Du weitere Akteure kennst oder hier selbst gelistet werden möchtest, meld
 - [MeinBildungsraum](https://www.meinbildungsraum.de/)
     - AMB wird zur Lieferung von Daten an den gemeinsamen Datenraum empfohlen
 - [Open Educational Resource Search Index (OERSI)](https://oersi.org)
-    - Empfiehlt AMB zur Besreitstellung der Daten
+    - Empfiehlt AMB zur Bereitstellung der Daten
     - Liefert AMB für bereitgestellte Datensätze
 - [Open Music Academy](https://openmusic.academy/)
     - Bereitstellung der eigenen Daten nach AMB
