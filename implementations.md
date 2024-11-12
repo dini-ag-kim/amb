@@ -8,7 +8,7 @@ Falls Du weitere Akteure kennst oder hier selbst gelistet werden möchtest, meld
 - [e-teaching.org](https://e-teaching.org)
     - Die auf der [XML-Sitemap](https://www.e-teaching.org/oer-sitemap.xml) gelisteten Seiten betten JSON-LD nach AMB ein
 - [HessenHub](https://www.hessenhub.de/)
-    - Bereitstelung der eigenen Daten nach AMB
+    - Bereitstellung der eigenen Daten nach AMB
 - [MeinBildungsraum](https://www.meinbildungsraum.de/)
     - AMB wird zur Lieferung von Daten an den gemeinsamen Datenraum empfohlen
 - [Open Educational Resource Search Index (OERSI)](https://oersi.org)
