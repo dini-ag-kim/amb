@@ -31,6 +31,11 @@ Publiziert
 Siehe auch die
 [StöberSpecs-Prozesse](https://github.com/dini-ag-kim/oer-stoeberspecs).
 
+## Implementierungen
+
+In der [implementations.md](./implementations.md) sammeln wir Akteure, die das Profil verwenden.
+Falls du weitere Akteure kennst, trage sie dort gerne ein oder melde dich bei uns.
+
 ## Frequently Asked Questions
 
 In unserem [FAQ](./FAQ.md) beantworten wir häufig gestellte Fragen.
