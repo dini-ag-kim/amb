@@ -10,7 +10,7 @@ Falls Du weitere Akteure kennst oder hier selbst gelistet werden möchtest, meld
 - [HessenHub](https://www.hessenhub.de/)
     - Bereitstellung der eigenen Daten nach AMB
 - [MeinBildungsraum](https://www.meinbildungsraum.de/)
-    - AMB wird zur Lieferung von Daten an den gemeinsamen Datenraum empfohlen
+    - AMB wird zur Lieferung von Daten an den gemeinsamen Datenraum empfohlen und wird offenbar als Internformat genutzt, siehe das [datenraum-oss](https://gitlab.opencode.de/mbr/datenraum/datenraum-oss)-Repo
 - [Open Educational Resource Search Index (OERSI)](https://oersi.org)
     - Empfiehlt AMB zur Bereitstellung der Daten
     - Liefert AMB für bereitgestellte Datensätze
