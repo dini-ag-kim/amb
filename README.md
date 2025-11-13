@@ -49,6 +49,7 @@ In unserem [FAQ](./FAQ.md) beantworten wir häufig gestellte Fragen.
 - Fabian Steeg (hbz), [@fsteeg](https://github.com/fsteeg)
   ([GitLab](https://gitlab.com/fsteeg))
 - Manuel Oellers (WWU Münster), [@oellers](https://github.com/oellers)
+- Martin Christian (DIE), [@martin-christian](https://github.com/martin-christian)
 - Mikey Stengel (Serlo Education e.V.),
   [@CodingDive](https://github.com/CodingDive)
 - Mirjan Hoffmann (TIB), [@mirjan-hoffmann](https://github.com/mirjan-hoffmann),
