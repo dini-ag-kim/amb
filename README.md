@@ -59,6 +59,7 @@ In unserem [FAQ](./FAQ.md) beantworten wir häufig gestellte Fragen.
 - Stephan Kulla (Serlo Education e.V.), [@kulla](https://github.com/kulla)
 - Tobias Bülte (hbz), [@TobiasNx](https://github.com/TobiasNx)
   ([GitLab](https://gitlab.com/TobiasNx))
+- Martin Christian (DIE), [@martin-christian](https://github.com/martin-christian)
 - _Ergänze dich selbst, wenn du Interesse hast mitzumachen_
 
 ### Lokales Setup
