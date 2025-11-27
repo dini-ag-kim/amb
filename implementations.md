@@ -3,6 +3,8 @@
 Hier sind einige Akteure aufgeführt, von denen uns bekannt ist, dass sie das Allgemeine Metadatenprofil für Bildungsressourcen (AMB) verwenden.
 Falls Du weitere Akteure kennst oder hier selbst gelistet werden möchtest, melde Dich gerne bei uns oder bearbeite diese Datei und stelle anschließend einen PR gegen das Repo.
 
+- [AMB-DidO Plugin](https://github.com/HoF-Halle-Wittenberg/amb-dido) des Institut für Hochschulforschung Halle-Wittenberg (HoF)
+    - ein Wordpress-Plugin zur Erstellung von Metadaten für didaktische und Organisationsressourcen angelehnt an das AMB
 - [ComeIn.nrw](https://comein.nrw/portal), [ComeArts](https://comearts.uni-due.de/), [ComeSport](https://comesport.uni-due.de/)
     - Bereitstellung der eigenen Daten nach AMB
 - [e-teaching.org](https://e-teaching.org)
