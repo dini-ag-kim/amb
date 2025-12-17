@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/type.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Type",
   "description": "The type (rdf:type / @type) of the learning resource, taken from sub-classes of sdo:CreativeWork.",
   "type": "array",

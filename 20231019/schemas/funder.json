@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/20231019/schemas/funder.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Funder",
   "description": "Financial contributor of the learning resource",
   "type": "array",

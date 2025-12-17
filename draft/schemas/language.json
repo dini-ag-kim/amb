@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/language.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Language code",
   "description": "An enumeration of ISO 639-1.conformant two-digit language codes.",
   "type": "string",

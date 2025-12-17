@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/audience.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Intended Audience",
   "description": "The audience the educational resource is intended for.",
   "type": "array",
