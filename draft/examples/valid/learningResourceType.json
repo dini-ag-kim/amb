@@ -11,7 +11,12 @@
   "publisher": [
     {
       "type": "Person",
-      "name": "Maxima Mustermensch"
+      "name": "Maxima Mustermensch",
+      "affiliation": {
+        "id": "http://www.wikidata.org/entity/Q54096",
+        "type": "Organization",
+        "name": "Universität Köln"
+      }
     }
   ],
   "learningResourceType": [
