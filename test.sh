@@ -3,7 +3,7 @@
 set -e
 
 run_ajv() {
-  ajv test -s draft/schemas/schema.json -r "draft/schemas/!(schema).json" \
+  ajv test --spec=draft2020  -s draft/schemas/schema.json -r "draft/schemas/!(schema).json" \
     -d "$1" -c ajv-formats $2
 }
 

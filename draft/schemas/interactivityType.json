@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/interactivityType.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "interactivityType",
   "description": "A concept scheme that defines the predominate interact mode of the learning resource being described.",
   "type": "object",

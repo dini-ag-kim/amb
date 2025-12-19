@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/license.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "License",
   "description": "An object that links to an open source license. Public Domain, Creative Commons, GNU, Apache, MIT and BSD are allowed",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Metadata/Structured descriptions",
   "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
   "type": "array",
