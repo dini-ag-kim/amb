@@ -14,17 +14,8 @@
       "name": "Maxima Mustermensch",
       "affiliation": {
         "id": "http://www.wikidata.org/entity/Q54096",
-        "type": "Organization",
-        "name": "Universität Köln"
+        "type": "Organization"
       }
-    }
-  ],
-  "learningResourceType": [
-    {
-      "id": "https://w3id.org/kim/hcrt/course"
-    },
-    {
-      "id": "http://w3id.org/openeduhub/vocabs/new_lrt/4e16015a-7862-49ed-9b5e-6c1c6e0ffcd1"
     }
   ]
 }
