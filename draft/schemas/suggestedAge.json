@@ -6,16 +6,27 @@
   "type": "object",
   "properties": {
     "value": {
-        "title": "value",
-        "type": "number"
+      "title": "value",
+      "type": "integer"
     },
-        "minValue": {
-        "title": "minValue",
-        "type": "number"
+    "minValue": {
+      "title": "minValue",
+      "type": "integer"
     },
-        "maxValue": {
-        "title": "maxValue",
-        "type": "number"
+    "maxValue": {
+      "title": "maxValue",
+      "type": "integer"
     }
-  }
+  },
+  "anyOf": [
+    {
+      "required": ["value"]
+    },
+    {
+      "required": ["minValue"]
+    },
+    {
+      "required": ["maxValue"]
+    }
+  ]
 }
