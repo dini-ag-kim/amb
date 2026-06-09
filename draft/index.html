@@ -287,7 +287,7 @@ Wenn erforderlich wird der Wertebereich festgelegt und es werden kurze Beispiele
 
 ### <dfn>@context</dfn>
 
-Die `@context`-Property MUSS einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils enthalten: `https://w3id.org/kim/amb/context.jsonld`. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar. Außerdem MUSS ein JSON-Objekt enthalten sein mit dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert, Angabe der im JSON-Dokument genutzten Sprache. Damit die strukturierten Metadaten auch durch Suchmaschinen wie Google und Bing erkannt und verarbeitet werden können, KANN zusätzlich der Wert `https://schema.org` im Array angegeben werden.
+Die `@context`-Property MUSS einen Array mit einem URI-String zur Referenzierung des [JSON-LD-Kontext](https://www.w3.org/TR/json-ld/#the-context) des Profils enthalten: `https://w3id.org/kim/amb/context.jsonld`. Durch diese Ergänzung wird das JSON-Dokument auch als Linked Data ([[JSON-LD11]]) interpretierbar.
 
 Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 
@@ -309,8 +309,7 @@ Für ein deutschsprachiges Metadatendokument sieht es z.B. wie folgt aus:
 <dt>Typ</dt>
 <dd>`array[string/object]`</dd>
 <dt>Elemente</dt>
-<dd>`https://w3id.org/kim/amb/context.jsonld`</dd>
-<dd>`object`</dd>
+<dd>MUSS den String `https://w3id.org/kim/amb/context.jsonld` enthalten und ein JSON-Objekt mit dem JSON-LD-Keyword `@language` und einem [[?BCP47]] Sprachcode als Wert zur Angabe der im JSON-Dokument genutzten Sprache. KANN zusätzlich den Wert `https://schema.org` enthalten (damit die strukturierten Metadaten auch durch Suchmaschinen wie Google und Bing erkannt und verarbeitet werden können).</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/context-schema.json">JSON Schema</a></dd>
 </dl>
@@ -348,7 +347,7 @@ Art der Bildungsressource. MUSS den Wert `LearningResource` enthalten. KANN weit
 <dt>Typ</dt>
 <dd>`array[string]`</dd>
 <dt>Elemente</dt>
-<dd>`LearningResource` und Unterklassen von CreativeWork</dd>
+<dd>`LearningResource` und Unterklassen von `CreativeWork`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/type.json">JSON Schema</a></dd>
 </dl>
@@ -467,13 +466,16 @@ Thumbnail der Ressource.
 
 ### <dfn>trailer</dfn>
 
-Ein AV- oder Audio-Trailer zu einer Bildungsressource. MUSS ein JSON-Objekt enthalten, das <code>"type": "VideoObject"</code> oder <code>"type": "AudioObject"</code> sowie die Property <code>contentUrl</code> oder <code>embedUrl</code> enthalten MUSS und folgende weitere Properties enthalten KANN: <code>contentSize</code> (in bytes ohne Maßangabe) , <code>embedUrl</code>, <code>sha256</code>, <code>bitrate</code> (in kb/s ohne Maßangabe) sowie <code>encodingFormat</code>, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.
+Ein AV- oder Audio-Trailer zu einer Bildungsressource.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`object`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, welches <code>"type": "VideoObject"</code> oder <code>"type": "AudioObject"</code> sowie die Property <code>contentUrl</code> oder <code>embedUrl</code> enthalten MUSS und folgende weitere Properties enthalten KANN: <code>contentSize</code> (in bytes ohne Maßangabe) , <code>embedUrl</code>, <code>sha256</code>, <code>bitrate</code> (in kb/s ohne Maßangabe) sowie <code>encodingFormat</code>, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.
+</dd><dt>Validierung</dt>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/trailer.json">JSON Schema</a></dd>
 <dd></dd>
@@ -491,7 +493,7 @@ Ein AV- oder Audio-Trailer zu einer Bildungsressource. MUSS ein JSON-Objekt enth
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+Urheber:innen der Ressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN als `honorificPrefix` angegeben werden.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -499,8 +501,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
-<dt>Validierung</dt>
+<dd>JSON-Objekt, welches `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd><dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
 </dl>
 
@@ -510,7 +511,7 @@ Urheber:innen der Ressource. MUSS ein oder mehrere JSON-Objekte enthalten, die w
 
 ### <dfn>contributor</dfn>
 
-Sonstige Beitragende zu der Bildungsressource. MUSS ein oder mehrere JSON-Objekte enthalten, die wiederum `type` und `name` Properties aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN separat als `honorificPrefix` angegeben werden.
+Sonstige Beitragende zu der Bildungsressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN als `honorificPrefix` angegeben werden.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -518,7 +519,7 @@ Sonstige Beitragende zu der Bildungsressource. MUSS ein oder mehrere JSON-Objekt
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Properties `type` und `name`</dd>
+<dd>JSON-Objekt, welches `type` und `name` Properties aufweisen MUSS und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLL sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KANN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
 </dl>
@@ -529,13 +530,15 @@ Sonstige Beitragende zu der Bildungsressource. MUSS ein oder mehrere JSON-Objekt
 
 ### <dfn>affiliation</dfn>
 
-Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Bildungsressource MUSS ein JSON-Objekt sein, das wiederum `type` und `name` Properties aufweisen MUSS. In diesem Fall MUSS der `type` den Wert `Organization` aufweisen. Das JSON-Objekt SOLL eine Property `id` enthalten. Diese SOLL eine URI-Referenz zu  [[?GND]], [[?Wikidata]] oder [[?ROR]] sein.
+Die Affiliierung einer beitragenden Person im Kontext der Erstellung der Bildungsressource.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`object`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das `type` mit Wert `Organization` und `name` Properties aufweisen MUSS und  eine Property `id` – mit einer URI-Referenz zu [[?GND]], [[?Wikidata]] oder [[?ROR]] – enthalten SOLL.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/affiliation.json">JSON Schema</a></dd>
 </dl>
@@ -663,13 +666,15 @@ Angabe, ob der Zugang zu einer Bildungsressource kostenpflichtig ist oder nicht.
 
 ### <dfn>license</dfn>
 
-Lizenz der Bildungsressource.  MUSS ein JSON-Objekt enthalten, das eine Property `id` mit einem URI als Wert enthält, der auf eine Creative Commons-Lizenz, GNU, Apache, MIT oder BSD verlinkt. Für die URI-Werteliste siehe [hier](https://w3id.org/kim/amb/draft/schemas/license.json).
+Lizenz der Bildungsressource.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`object`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das eine Property `id` mit einem URI aus einer [Liste](https://w3id.org/kim/amb/draft/schemas/license.json) als Wert enthält. </dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/license.json">JSON Schema</a></dd>
 </dl>
@@ -680,12 +685,14 @@ Lizenz der Bildungsressource.  MUSS ein JSON-Objekt enthalten, das eine Property
 
 ### <dfn>conditionsOfAccess</dfn>
 
-Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Login erfordert ist. MUSS ein JSON-Objekt enthalten, das eine Property `id` mit der URI eines Konzepts aus dem [Zugangsbedingungen-Vokabular](https://w3id.org/kim/conditionsOfAccess/) als Wert enthalten muss.
+Klärung, ob für den Zugang zu der Bildungsressource eine Registrierung und Login erfordert ist.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
+<dd>`object`</dd>
+<dt>Elemente</dt>
 <dd>JSON-Objekt, das einen `id`-Wert aus <a href="https://w3id.org/kim/conditionsOfAccess/">Zugangsbedingungen-Vokabular</a> aufweisen MUSS. Zudem SOLL das Objekt die Eigenschaften `type` und `prefLabel` aufweisen. Wenn vorhanden MUSS der Wert von `type` gleich `Concept` sein.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/conditionsOfAccess.json">JSON Schema</a></dd>
@@ -722,7 +729,7 @@ Art des Lernmittels.
 
 ### <dfn>audience</dfn>
 
-`audience` beschreibt die Zielgruppe(n), für die diese Bildungsresource didaktisiert wurde. MUSS einer *Educational Audience Role* von [[!LRMI]] entsprechen.
+Die Zielgruppe(n), für die diese Bildungsresource didaktisiert wurde.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -758,16 +765,15 @@ Gibt das empfohlene Alter der Zielgruppe an. MUSS ein JSON-Objekt mit einer Prop
 
 ### <dfn>teaches</dfn>
 
-Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource erreicht werden können:
-
-- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
-- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource erreicht werden können.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, welches die Property `id` enthalten MUSS und `prefLabel` enthalten KANN. </dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/teaches.json">JSON Schema</a></dd>
 </dl>
@@ -778,16 +784,15 @@ Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource err
 
 ### <dfn>assesses</dfn>
 
-Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource festgestellt werden können:
-
-- `id` zur Angabe eines Identifikators der Kompetenz mit einem URI als Wert
-- `prefLabel` zur Angabe einer Bezeichnung für die Kompetenz
+Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource festgestellt werden können.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, welches die Property `id` enthalten MUSS und `prefLabel` enthalten KANN. </dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/assesses.json">JSON Schema</a></dd>
 </dl>
@@ -798,16 +803,15 @@ Verweis auf Kompetenz(en), die mit Hilfe der beschriebenen Bildungsressource fes
 
 ### <dfn>competencyRequired</dfn>
 
-Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachgewiesen werden müssen, um die Bildungsressource zu verstehen und bearbeiten zu können:
-
-- `id` zur Angabe eines Identifikators der Kenntnis, Fähigkeit oder Eigenschaft mit einem URI als Wert
-- `prefLabel` zur Angabe einer Bezeichnung für die Kenntnis, Fähigkeit oder Eigenschaft
+Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachgewiesen werden müssen, um die Bildungsressource zu verstehen und bearbeiten zu können.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, welches die Property `id` enthalten MUSS und `prefLabel` enthalten KANN. </dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/competencyRequired.json">JSON Schema</a></dd>
 </dl>
@@ -818,11 +822,7 @@ Verweis auf Kenntnisse, Fähigkeiten oder persönliche Eigenschaften, die nachge
 
 ### <dfn>educationalLevel</dfn>
 
-Verweis auf eine Stufe im Bildungssystem als Lehr-/Lernkontext, für den eine Bildungsressource ausgewiesen ist. MUSS ein oder mehrere JSON-Objekte enthalten, die eine Property `id` aufweisen MÜSSEN, die Property `prefLabel` aufweisen SOLLEN und weitere Properties aufweisen KÖNNEN.
-Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
-
-- `id` zur Angabe eines Identifikators der Stufe
-- `prefLabel` zur Angabe einer Bezeichnung für die Stufe
+Verweis auf eine Stufe im Bildungssystem als Lehr-/Lernkontext, für den eine Bildungsressource ausgewiesen ist.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -842,9 +842,6 @@ Die Property `id` MUSS einem URI aus den [[Bildungsstufen]] entsprechen.
 ### <dfn>interactivityType</dfn>
 
 Kennzeichnet die vorherrschende Lehr-/Lernform der Bildungsressource und gibt an, ob Lehr-/Lernprozesse mit dieser Ressource eher fremdgesteuert (<i>expositive</i>), selbstgesteuert (<i>active</i>) oder in einer Mischform (<i>mixed</i>) im Hinblick auf die primären Lernziele der Bildungsressource stattfinden.
-
-- `id` zur Angabe eines Identifikators der Lehr-/Lernform
-- `prefLabel` zur Angabe einer Bezeichnung für die Lehr-/Lernform
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -884,7 +881,7 @@ Verweis auf eine andere Ressource, von der die beschriebene Bildungsressource ei
 
 ### <dfn>isPartOf</dfn>
 
-Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressource ein Teil ist. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressource ein Teil ist.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -892,7 +889,7 @@ Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressourc
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Property `id`</dd>
+<dd>JSON-Objekt, das Property `id` enthalten MUSS und weitere Properties enthalten KANN.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
 </dl>
@@ -903,7 +900,7 @@ Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressourc
 
 ### <dfn>hasPart</dfn>
 
-Verweis auf andere Ressource(n), die von der die beschriebene Bildungsressource ein Teil ist/sind. MUSS ein oder mehrere JSON-Objekte enthalten, die `id` Property aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.
+Verweis auf andere Ressource(n), die von der die beschriebene Bildungsressource ein Teil ist/sind.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -911,7 +908,7 @@ Verweis auf andere Ressource(n), die von der die beschriebene Bildungsressource 
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt mit Property `id`</dd>
+<dd>JSON-Objekt, das Property `id` enthalten MUSS und weitere Properties enthalten KANN.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
 </dl>
