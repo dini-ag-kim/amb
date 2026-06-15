@@ -741,13 +741,13 @@ Art des Lernmittels.
 
 ### <dfn>suggestedAge</dfn>
 
-`suggestedAge` gibt das empfohlene Alter der Zielgruppe an. KANN ein Mindestalter, einen Altersbereich oder ein konkretes Alter als Empfehlung in Jahren hinterlegen.
+Gibt das empfohlene Alter der Zielgruppe an. MUSS ein JSON-Objekt mit einer Property enthalten. KANN ein Mindestalter mit der Property `minValue`, ein Maximalalter mit der Property `maxValue` oder einen Altersbereich mit beidem als Empfehlung in Jahren enthalten.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>JSON-Objekt, welches eine Property aus `value`, `minValue` oder `maxValue` aufweisen MUSS und weitere Properties enthalten KANN.</dd>
+<dd>`object`</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/suggestedAge.json">JSON Schema</a></dd>
 </dl>
