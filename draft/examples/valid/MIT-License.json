@@ -9,6 +9,6 @@
   "id": "https://example.org/oer",
   "type": ["LearningResource"],
   "license": {
-    "id": "https://opensource.org/licenses/MIT"
+    "id": "https://opensource.org/licenses/mit"
   }
 }
