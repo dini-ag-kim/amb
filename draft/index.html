@@ -338,8 +338,7 @@ Ein dereferenzierbarer HTTP-URI, welcher die Bildungsressource eindeutig identif
 
 ### <dfn>type</dfn>
 
-Art der Bildungsressource. MUSS den Wert `LearningResource` enthalten. KANN weitere Werte aus den Unterklassen von `https://schema.org/CreativeWork` enthalten.
-
+Art der Bildungsressource.
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -347,7 +346,7 @@ Art der Bildungsressource. MUSS den Wert `LearningResource` enthalten. KANN weit
 <dt>Typ</dt>
 <dd>`array[string]`</dd>
 <dt>Elemente</dt>
-<dd>`LearningResource` und Unterklassen von `CreativeWork`</dd>
+<dd>MUSS den Wert `LearningResource` enthalten und kann Unterklassen von `https://schema.org/CreativeWork` enthalten.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/type.json">JSON Schema</a></dd>
 </dl>
@@ -429,15 +428,13 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 
 ### <dfn>inLanguage</dfn>
 
-Sprache(n) der Bildungsressource. MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen.
+Sprache(n) der Bildungsressource.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[string]`</dd>
-<dt>Elemente</dt>
-<dd>[[!BCP47]]</dd>
+<dd>`array[string]`, MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
 </dl>
@@ -475,7 +472,7 @@ Ein AV- oder Audio-Trailer zu einer Bildungsressource.
 <dd>`object`</dd>
 <dt>Elemente</dt>
 <dd>JSON-Objekt, welches <code>"type": "VideoObject"</code> oder <code>"type": "AudioObject"</code> sowie <code>contentUrl</code> oder <code>embedUrl</code> enthalten MUSS und folgende weitere Properties enthalten KANN: <code>contentSize</code> (in bytes ohne Maßangabe) , <code>embedUrl</code>, <code>sha256</code>, <code>bitrate</code> (in kb/s ohne Maßangabe) sowie <code>encodingFormat</code>, das bei Verwendung Werte aus [[IANA-MEDIA-TYPES]] enthalten MUSS.
-</dd><dt>Validierung</dt>
+</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/trailer.json">JSON Schema</a></dd>
 <dd></dd>
@@ -493,7 +490,7 @@ Ein AV- oder Audio-Trailer zu einer Bildungsressource.
 
 ### <dfn>creator</dfn>
 
-Urheber:innen der Ressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN als `honorificPrefix` angegeben werden.
+Urheber:innen der Ressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -501,7 +498,7 @@ Urheber:innen der Ressource. Der Name (`name`) SOLL als vollständiger Name ohne
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd><dt>Validierung</dt>
+<dd>Ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd><dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/creator.json">JSON Schema</a></dd>
 </dl>
 
@@ -511,7 +508,7 @@ Urheber:innen der Ressource. Der Name (`name`) SOLL als vollständiger Name ohne
 
 ### <dfn>contributor</dfn>
 
-Sonstige Beitragende zu der Bildungsressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname". Der akademische Grad KANN als `honorificPrefix` angegeben werden.
+Sonstige Beitragende zu der Bildungsressource. Der Name (`name`) SOLL als vollständiger Name ohne akademischen Titeln angegeben werden, bei Namen aus dem deutschen Sprachraum z.B. in der Form "Vorname Nachname".
 
 <dl>
 <dt>Pflichtfeld</dt>
@@ -519,7 +516,7 @@ Sonstige Beitragende zu der Bildungsressource. Der Name (`name`) SOLL als vollst
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd>
+<dd>Ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN. Der akademische Grad KANN als `honorificPrefix` angegeben werden.</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/contributor.json">JSON Schema</a></dd>
 </dl>
@@ -612,7 +609,7 @@ Die Organisation oder Person, die für die Veröffentlichung der Bildungsressour
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN.</dd>
+<dd>ein oder mehrere JSON-Objekte, welche `type` und `name` aufweisen MÜSSEN und `id` – mit einer URI-Referenz zu [[?ORCID]], [[?GND]], [[?Wikidata]] oder [[?ROR]] – aufweisen SOLLEN sowie – bei Personen – eine <a>affiliation</a>-Angabe enthalten KÖNNEN</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/publisher.json">JSON Schema</a></dd>
 </dl>
@@ -674,7 +671,7 @@ Lizenz der Bildungsressource.
 <dt>Typ</dt>
 <dd>`object`</dd>
 <dt>Elemente</dt>
-<dd>JSON-Objekt, das `id` mit einem URI aus einer [Liste](https://w3id.org/kim/amb/draft/schemas/license.json) als Wert enthält. </dd>
+<dd>JSON-Objekt, das `id` mit einem URI aus einer [Liste](https://w3id.org/kim/amb/draft/schemas/license.json) als Wert enthält</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/license.json">JSON Schema</a></dd>
 </dl>
@@ -874,7 +871,7 @@ Verweis auf eine andere Ressource, von der die beschriebene Bildungsressource ei
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, die `name` aufweisen MÜSSEN, `id` enthalten SOLLEN und weitere Properties enthalten KÖNNEN.</dd>
+<dd>ein oder mehrere JSON-Objekte, die `name` aufweisen MÜSSEN, `id` enthalten SOLLEN und weitere Properties enthalten KÖNNEN</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/isBasedOn.json">JSON Schema</a></dd>
 </dl>
@@ -893,7 +890,7 @@ Verweis auf andere Ressource(n), von der/denen die beschriebene Bildungsressourc
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, die `id` enthalten MÜSSEN und weitere Properties enthalten KÖNNEN.</dd>
+<dd>ein oder mehrere JSON-Objekte, die `id` enthalten MÜSSEN und weitere Properties enthalten KÖNNEN</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/isPartOf.json">JSON Schema</a></dd>
 </dl>
@@ -912,7 +909,7 @@ Verweis auf andere Ressource(n), die von der die beschriebene Bildungsressource 
 <dt>Typ</dt>
 <dd>`array[object]`</dd>
 <dt>Elemente</dt>
-<dd>ein oder mehrere JSON-Objekte, die `id` aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN.</dd>
+<dd>ein oder mehrere JSON-Objekte, die `id` aufweisen MÜSSEN und weitere Properties enthalten KÖNNEN</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/hasPart.json">JSON Schema</a></dd>
 </dl>
