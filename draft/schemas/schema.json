@@ -115,6 +115,9 @@
     },
     "interactivityType": {
       "$ref": "https://w3id.org/kim/amb/draft/schemas/interactivityType.json"
+    },
+    "suggestedAge": {
+      "$ref": "https://w3id.org/kim/amb/draft/schemas/suggestedAge.json"
     }
   },
   "required": ["@context", "id", "name", "type"]

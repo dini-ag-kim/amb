@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://w3id.org/kim/amb/context.jsonld",
+    {
+      "@language": "de"
+    }
+  ],
+  "name": "Beispielressource mit Altersempfehlung ab 18",
+  "id": "https://example.org/oer",
+  "type": ["LearningResource"],
+  "publisher": [
+    {
+      "type": "Person",
+      "name": "Max Mustermann"
+    }
+  ],
+  "suggestedAge": {
+    "minValue": 18
+  }
+}
