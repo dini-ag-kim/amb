@@ -418,6 +418,8 @@ Schlagworte zur Beschreibung des Inhalts der Ressource.
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`array[string]`</dd>
+<dt>Elemente</dt>
+<dd>ein oder mehrere Strings</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/keywords.json">JSON Schema</a></dd>
 </dl>
@@ -434,7 +436,10 @@ Sprache(n) der Bildungsressource.
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
-<dd>`array[string]`, MUSS den Sprachcodes gemäß [[!BCP47]] entsprechen</dd>
+<dd>`array[string]`</dd>
+<dt>Elemente</dt>
+<dd>ein oder mehrere Strings, die einem Sprachcodes gemäß [[!BCP47]] entsprechen MÜSSEN
+</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/inLanguage.json">JSON Schema</a></dd>
 </dl>
@@ -745,13 +750,15 @@ Die Zielgruppe(n), für die diese Bildungsresource didaktisiert wurde.
 
 ### <dfn>suggestedAge</dfn>
 
-Gibt das empfohlene Alter der Zielgruppe an. MUSS ein JSON-Objekt mit einer Property enthalten. KANN ein Mindestalter mit der Property `minValue`, ein Maximalalter mit der Property `maxValue` oder einen Altersbereich mit beidem als Empfehlung in Jahren enthalten.
+Das empfohlene Alter der Zielgruppe.
 
 <dl>
 <dt>Pflichtfeld</dt>
 <dd>nein</dd>
 <dt>Typ</dt>
 <dd>`object`</dd>
+<dt>Elemente</dt>
+<dd>JSON-Objekt, das ein Mindestalter mit der Property `minValue`, ein Maximalalter mit der Property `maxValue` oder einen Altersbereich mit beidem als Empfehlung in Jahren enthalten KANN</dd>
 <dt>Validierung</dt>
 <dd><a href="https://w3id.org/kim/amb/draft/schemas/suggestedAge.json">JSON Schema</a></dd>
 </dl>
