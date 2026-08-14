@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://w3id.org/kim/amb/draft/schemas/schema.json",
-  "title": "OER",
+  "title": "Educational Resource",
   "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
   "type": "object",
   "default": {

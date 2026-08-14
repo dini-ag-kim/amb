@@ -1,7 +1,7 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/mainEntityOfPage.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Metadata/Structured descriptions",
+  "title": "Main Entity of Page",
   "description": "This object contains metametadata, i.e. information about the structured description(s) of the OER and its source(s).",
   "type": "array",
   "items": {
