@@ -2,7 +2,7 @@
   "$id": "https://w3id.org/kim/amb/draft/schemas/provider.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Provider",
-  "description": "A source that provides the educational resource or it metadata",
+  "description": "A source that provides the educational resource or its metadata",
   "type": "object",
   "properties": {
     "id": {
