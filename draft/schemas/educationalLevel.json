@@ -1,7 +1,7 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/educationalLevel.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Educational context",
+  "title": "Educational Level",
   "description": "The level in terms of progression through an educational context for which the learning resource is designated.",
   "type": "array",
   "items": {

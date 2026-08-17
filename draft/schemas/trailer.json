@@ -2,7 +2,7 @@
   "$id": "https://w3id.org/kim/amb/draft/schemas/trailer.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Trailer",
-  "description": "Ein Trailer/Video-Teaser zu einer Ressource",
+  "description": "A trailer or video teaser for a resource",
   "type": "object",
   "properties": {
     "type": {
