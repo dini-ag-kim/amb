@@ -1,7 +1,7 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/suggestedAge.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Suggested age",
+  "title": "Suggested Age",
   "description": "The recommended age of the target audience for the resource.",
   "type": "object",
   "properties": {

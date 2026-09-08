@@ -1,8 +1,8 @@
 {
   "$id": "https://w3id.org/kim/amb/draft/schemas/about.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Subject",
-  "description": "The subject of the learning resource, taken from Destatis classification or OpenEduHub-Fächersystematik",
+  "title": "About",
+  "description": "The subject of the learning resource",
   "type": "array",
   "items": {
     "type": "object",
